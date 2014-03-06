@@ -319,6 +319,9 @@
         margin-left:0!important;
     }
 }
+body{
+   /* font-family: 微軟正黑體;*/
+}
 h2 {
     margin-top:10px;
 }
@@ -402,7 +405,6 @@ h2 {
     cursor:pointer;
 }
 .feature p {
-    font-family:微軟正黑體;
     font-size:15px;
     line-height: 24px;
 }
@@ -418,7 +420,6 @@ h2 {
     margin:60px auto 40px;
 }
 .main-content p {
-    font-family:微軟正黑體;
     font-size:15px;
     line-height: 24px;
 }
@@ -437,7 +438,6 @@ h2 {
     border:15px solid #fff;
 }
 .main-text-area h3 {
-    font-family:微軟正黑體;
 }
 .main-text-area a {
     margin-top:16px;
@@ -474,7 +474,6 @@ h2 {
     border-color:#c00;
 }
 .gallery p {
-    font-family:微軟正黑體;
     font-size:15px;
     line-height: 24px;
 }
@@ -606,42 +605,71 @@ h2 {
 .left-menu {
     margin:20px 0;
 }
-.left-menu ul, .tutorial-menu li {
+.left-menu ul, .left-menu li {
     padding:0;
     margin:0;
 }
-.left-menu li {
+.left-menu>ul>li {
     font-size:18px;
     border-bottom:1px solid #ccc;
     padding:10px;
     font-weight:bold;
     cursor:pointer;
     margin-left:20px;
-    background:url(../img/menu_arrow.jpg) right -45px no-repeat;
+    background:url(../img/menu_arrow2.jpg) right 16px no-repeat;
 }
-.left-menu li a {
+.left-menu>ul>li>a {
     color:#666;
     text-decoration: none;
+    display:block;
+    width:100%;
 }
-.left-menu li:hover a {
+.left-menu>ul>li:hover>a {
     color:#000;
 }
-.left-menu li.actived {
-    background:url(../img/menu_arrow.jpg) right -92px no-repeat;
+.left-menu>ul>li.actived {
+    background:url(../img/menu_arrow2.jpg) right -213px no-repeat;
 }
-.left-menu li.actived a {
+.left-menu>ul>li.actived>a {
     color:#c00!important;
 }
-.left-menu li.actived:hover a {
+.left-menu>ul>li.actived:hover>a {
+    color:#c00;
+}
+.left-menu ul li ul{
+    margin:5px 10px 0;
+}
+.left-menu ul li ul li{
+    font-size:15px;
+    padding:5px 0;
+    font-weight:normal;
+    cursor:pointer;
+}
+.left-menu ul li ul li a{
+    color:#666;
+    text-decoration: none;
+    display:block;
+    width:100%;
+}
+.left-menu ul li ul li:hover a{
+    color:#000;
+}
+.left-menu ul li ul li.actived>a {
     color:#c00;
 }
 .right-content {
-    margin:3px 0;
+    margin:5px 0;
 }
 .right-content p {
-    font-family:微軟正黑體;
-    font-size:17px;
-    line-height: 28px;
+    font-size:15px;
+    line-height: 26px;
+}
+.right-content img{
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -o-border-radius:5px;
+    border-radius:5px;
+    margin-bottom:6px;
 }
 /*aboutus*/
  .banner-aboutus {
