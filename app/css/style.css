@@ -573,7 +573,7 @@ h2 {
     box-shadow:#000 0 3px 10px;
 }
 .banner-tutorial>img {
-    margin:-70px auto 0;
+    margin:-100px auto 0;
     width:100%;
 }
 .banner-tutorial .banner-tutorial-text {
@@ -671,6 +671,11 @@ h2 {
     border-radius:5px;
     margin-bottom:6px;
 }
+.component-table td{
+    text-align: center;
+    width:25%;
+    border-color:#eee!important;
+}
 /*aboutus*/
  .banner-aboutus {
     padding-left:0;
@@ -686,7 +691,7 @@ h2 {
     box-shadow:#000 0 3px 10px;
 }
 .banner-aboutus>img {
-    margin:-70px auto 0;
+    margin:-100px auto 0;
     width:100%;
 }
 .banner-aboutus .banner-aboutus-text {
