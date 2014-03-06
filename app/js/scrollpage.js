@@ -7,7 +7,7 @@ $(function () {
 
   $(window).scroll(function (event) {
 
-    if ($(window).width() >= 1012) {
+    if ($(window).width() >= 978) {
       $(window).scrollTop() > 200 ? $('.left-menu>ul').css({
         'position': 'fixed',
         'top': '65px',
