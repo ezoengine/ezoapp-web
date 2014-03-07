@@ -5,7 +5,7 @@ $(function () {
     'top': ($('.banner').height() / 2 - 100) + 'px'
   });
 
-  $(window).resize(function (event) {
+  $(window).resize(function () {
     $('.banner').width() <= 640 ? $('.banner-text').css({
       'top': ($('.banner').height() / 2 - 80) + 'px'
     }) : $('.banner-text').css({
@@ -14,7 +14,7 @@ $(function () {
   });
 
 
-  $(window).scroll(function (event) {
+  $(window).scroll(function () {
     $(window).scrollTop() > 0 ? $('.navbar-inverse').not(':animated').animate({
       'padding': '0'
     }).css({

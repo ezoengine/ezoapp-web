@@ -1,11 +1,11 @@
 $(function () {
   var leftMenuWidth = $('.left-menu').width();
 
-  $(window).resize(function (event) {
+  $(window).resize(function () {
     leftMenuWidth = $('.left-menu').width();
   });
 
-  $(window).scroll(function (event) {
+  $(window).scroll(function () {
 
     if ($(window).width() >= 978) {
       $(window).scrollTop() > 200 ? $('.left-menu>ul').css({
@@ -75,18 +75,18 @@ $(function () {
 
   $('.left-menu>ul>li>a').on('click', function () {
     var menuIndex = $(this).parent('li').index() + 1;
-    menuIndex > 1 ? $("html,body").not(':animated').animate({
-      "scrollTop": ($('#right-' + menuIndex).offset().top - 68) + 'px'
-    }, 900) : $("html,body").not(':animated').animate({
-      "scrollTop": '0'
+    menuIndex > 1 ? $('html,body').not(':animated').animate({
+      'scrollTop': ($('#right-' + menuIndex).offset().top - 68) + 'px'
+    }, 900) : $('html,body').not(':animated').animate({
+      'scrollTop': '0'
     }, 900);
   });
 
   $('.left-menu ul li ul li a').on('click', function () {
     var menuIndex1 = $(this).parent('li').index() + 1;
-    console.log(menuIndex1)
-    $("html,body").not(':animated').animate({
-      "scrollTop": ($('#right-1-' + menuIndex1).offset().top - 68) + 'px'
+    console.log(menuIndex1);
+    $('html,body').not(':animated').animate({
+      'scrollTop': ($('#right-1-' + menuIndex1).offset().top - 68) + 'px'
     }, 900);
   });
 
