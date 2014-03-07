@@ -358,6 +358,7 @@ h2 {
   width:100%;
 }
 .banner .banner-text {
+  display:none;
   position:absolute;
   top:50px;
   width:100%;

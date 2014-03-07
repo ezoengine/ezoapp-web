@@ -7,6 +7,9 @@ $(function () {
 
   $(window).scroll(function () {
 
+/**
+ * 卷軸往下捲到一定程度，左側選單會固定不動
+ */
     if ($(window).width() >= 978) {
       $(window).scrollTop() > 200 ? $('.left-menu>ul').css({
         'position': 'fixed',
@@ -25,68 +28,75 @@ $(function () {
       });
     }
 
-    if ($(window).scrollTop() >= 0 && $(window).scrollTop() < ($('#right-2').offset().top - 70)) {
+/*
+ *  判斷卷軸與第一層選單的連動 
+ */
+    if ($(window).scrollTop() >= 0 && $(window).scrollTop() < ($('.right-content-1').eq(1).offset().top - 70)) {
       $('.left-menu>ul>li').removeClass('actived');
-      $('.left-menu ul li#left-menu-1').addClass('actived');
-      $('.left-menu ul li ul li').removeClass('actived');
+      $('.left-menu-1').eq(0).addClass('actived');
+      $('.left-menu-1 ul li').removeClass('actived');
     }
-    if ($(window).scrollTop() >= ($('#right-2').offset().top - 70) && $(window).scrollTop() < ($('#right-3').offset().top - 70)) {
+    if ($(window).scrollTop() >= ($('.right-content-1').eq(1).offset().top - 70) && $(window).scrollTop() < ($('.right-content-1').eq(2).offset().top - 70)) {
       $('.left-menu>ul>li').removeClass('actived');
-      $('.left-menu ul li#left-menu-2').addClass('actived');
-      $('.left-menu ul li ul li').removeClass('actived');
+      $('.left-menu-1').eq(1).addClass('actived');
+      $('.left-menu-1 ul li').removeClass('actived');
     }
-    if ($(window).scrollTop() >= ($('#right-3').offset().top - 70) && $(window).scrollTop() < ($('#right-4').offset().top - 70)) {
+    if ($(window).scrollTop() >= ($('.right-content-1').eq(2).offset().top - 70) && $(window).scrollTop() < ($('.right-content-1').eq(3).offset().top - 70)) {
       $('.left-menu>ul>li').removeClass('actived');
-      $('.left-menu ul li#left-menu-3').addClass('actived');
+      $('.left-menu ul li.left-menu-1').eq(2).addClass('actived');
     }
-    if ($(window).scrollTop() >= ($('#right-4').offset().top - 70)) {
+    if ($(window).scrollTop() >= ($('.right-content-1').eq(3).offset().top - 70)) {
       $('.left-menu>ul>li').removeClass('actived');
-      $('.left-menu ul li#left-menu-4').addClass('actived');
+      $('.left-menu ul li.left-menu-1').eq(3).addClass('actived');
     }
 
 
-
-    if ($(window).scrollTop() >= ($('#right-1-1').offset().top - 70) && $(window).scrollTop() < ($('#right-1-2').offset().top - 70)) {
-      $('.left-menu ul li ul li').removeClass('actived');
-      $('.left-menu ul li ul li').eq(0).addClass('actived');
-    }
-    if ($(window).scrollTop() >= ($('#right-1-2').offset().top - 70) && $(window).scrollTop() < ($('#right-1-3').offset().top - 70)) {
-      $('.left-menu ul li ul li').removeClass('actived');
-      $('.left-menu ul li ul li').eq(1).addClass('actived');
-    }
-    if ($(window).scrollTop() >= ($('#right-1-3').offset().top - 70) && $(window).scrollTop() < ($('#right-1-4').offset().top - 70)) {
-      $('.left-menu ul li ul li').removeClass('actived');
-      $('.left-menu ul li ul li').eq(2).addClass('actived');
-    }
-    if ($(window).scrollTop() >= ($('#right-1-4').offset().top - 70) && $(window).scrollTop() < ($('#right-1-5').offset().top - 70)) {
-      $('.left-menu ul li ul li').removeClass('actived');
-      $('.left-menu ul li ul li').eq(3).addClass('actived');
-    }
-    if ($(window).scrollTop() >= ($('#right-1-5').offset().top - 70) && $(window).scrollTop() < ($('#right-1-6').offset().top - 70)) {
-      $('.left-menu ul li ul li').removeClass('actived');
-      $('.left-menu ul li ul li').eq(4).addClass('actived');
-    }
-    if ($(window).scrollTop() >= ($('#right-1-6').offset().top - 70) && $(window).scrollTop() < ($('#right-2').offset().top - 70)) {
-      $('.left-menu ul li ul li').removeClass('actived');
-      $('.left-menu ul li ul li').eq(5).addClass('actived');
+/*
+ *  判斷卷軸與第二層選單的連動 
+ */
+    if ($('.right-content-1-1')[0]) {
+      leftMenuGetSon1($('.right-content-1-1').length);
     }
 
   });
 
+/*
+ *  第二層選單的連動function 
+ */
+  function leftMenuGetSon1(rightSonNum) {
+    for (var i = 0; i < rightSonNum - 1; i++) {
+      if ($(window).scrollTop() >= ($('.right-content-1-1').eq(i).offset().top - 70) && $(window).scrollTop() < ($('.right-content-1-1').eq(i + 1).offset().top - 70)) {
+        $('.left-menu-1 ul li').removeClass('actived');
+        $('.left-menu-1 ul li').eq(i).addClass('actived');
+      }
+    }
+    if ($(window).scrollTop() >= ($('.right-content-1-1').eq(rightSonNum - 1).offset().top - 70) && $(window).scrollTop() < ($('.right-content-1').eq(1).offset().top - 70)) {
+      $('.left-menu-1 ul li').removeClass('actived');
+      $('.left-menu-1 ul li').eq(rightSonNum - 1).addClass('actived');
+    }
+  }
+
+/**
+ * 選單點選後跳到適當的位置
+ */
+
   $('.left-menu>ul>li>a').on('click', function () {
-    var menuIndex = $(this).parent('li').index() + 1;
-    menuIndex > 1 ? $('html,body').not(':animated').animate({
-      'scrollTop': ($('#right-' + menuIndex).offset().top - 68) + 'px'
-    }, 900) : $('html,body').not(':animated').animate({
-      'scrollTop': '0'
-    }, 900);
+    var menuIndex = $(this).parent('li').index();
+    if (menuIndex > 0) {
+      $('html,body').not(':animated').animate({
+        'scrollTop': ($('.right-content-1').eq(menuIndex).offset().top - 68) + 'px'
+      }, 900);
+    } else {
+      $('html,body').not(':animated').animate({
+        'scrollTop': '0'
+      }, 900);
+    }
   });
 
   $('.left-menu ul li ul li a').on('click', function () {
-    var menuIndex1 = $(this).parent('li').index() + 1;
-    console.log(menuIndex1);
+    var menuIndex1 = $(this).parent('li').index();
     $('html,body').not(':animated').animate({
-      'scrollTop': ($('#right-1-' + menuIndex1).offset().top - 68) + 'px'
+      'scrollTop': ($('.right-content-1-1').eq(menuIndex1).offset().top - 68) + 'px'
     }, 900);
   });
 
