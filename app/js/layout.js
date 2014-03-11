@@ -1,4 +1,5 @@
 $(function() {
+    $('#div0').css({'height':($('#div0').height()+$('.footer').height()*2)+'px'});
     /**
      * 上方主選單
      */

@@ -44,7 +44,7 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
       <h3 class="right-content-1">
-        <strong>基本元件實作 - 使用 google font</strong>
+        <strong>基本元件實作 - 使用 google fonts</strong>
       </h3>
       <div class="line"></div>
             <div style="display:table;">
@@ -54,7 +54,7 @@
                         <br/>
                         幸好隨著時代的進步，像是 google 就提供大量的免費字體讓使用者直接連結，只要在 CSS 內指定特殊字體，不管使用者在世界上任何一個角落，只要有網路，就能夠看到同樣的字體，是不是相當的便利呢！EZoApp 因為由 CSS 的樣式表來建構樣式，所以同樣支援開放字體，這個章節主要就是要介紹，如何使用 google font。( 不過比較可惜，目前都還只有英文字體 )
                         <br/>
-                        <br/>這是以下這個範例的教學連結：
+                        <br/>範例連結：
                         <br/>
                         <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5162563608248320" target="_blank">基本元件實作 - 使用 google font</a>
                         <br/>
@@ -69,9 +69,37 @@
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
-                    <img alt="使用 google font" src="../img/tutorial/tutorial_3_google_font_01.png" class="img-responsive" />
+                    <img alt="使用 google fonts" src="../img/tutorial/tutorial_3_google_font_01.png" class="img-responsive" />
                 </div>
             </div>
+            <br/>
+            <h5>
+                <strong>一、載入 google fonts</strong>
+            </h5>
+            <p>首先我們必須連上 google fonts 的網站，藉由他所提供的字體連結，將字體載入到我們的 CSS 當中，連上 google fonts 之後，可以看到 google 提供的一大堆免費字體，找到想到的字體後，點選 quick use，就可以看到相關的操作連結和說明。
+            </p>
+            <img alt="載入 google fonts" src="../img/tutorial/tutorial_3_google_font_02.png" class="img-responsive" />
+            <br/>
+            <p>點選後往下拉，可以看到「2. Choose the character sets you want:」，我們選擇 @import，就是要將此字體載入 CSS 的程式碼。
+            </p>
+            <img alt="載入 google fonts" src="../img/tutorial/tutorial_3_google_font_03.png" class="img-responsive" />
+            <br/>
+            <p>複製這串程式碼，回到 EZoApp 的 CSS 編輯畫面，將它貼在最上方，接著我們就可以使用這組字體囉！( 這邊有個要注意的地方，沒有網路的情況下，就會自動使用預設字體 )
+            </p>
+            <br/>
+            <h5>
+                <strong>二、使用 google fonts</strong>
+            </h5>
+            <p>打開 EZoApp 的編輯畫面，貼上剛剛複製的程式碼，然後在我們需要用到這組字體的樣式上加上字體名稱，就可以立馬在編輯區域中看到字體已經套用了 google font，是不是非常的方便實用呢！
+            </p>
+            <img alt="載入 google fonts" src="../img/tutorial/tutorial_3_google_font_04.gif" class="img-responsive" style="border-bottom:1px solid #ccc;" />
+            <br/>
+            <p>當然大家也可以不用一定要選擇 google fonts，也可以使用自己的字體，不過自己的自己缺點就是必須放在自己的空間，而且也可能會有相關的版權問題，因此免費又有授權的字體，當然就選擇這些大廠的公開字體囉！( 不過中文字就算是公開字體，還是鮮少有人使用，畢竟一套中文字體可以多達5MB以上，使用者大概不會有耐心等待這麼大的檔案下載吧 )
+            <br/>
+            使用自己的字體的方式：
+            </p>
+            <pre>@font-face {  <br/>  font-family: "font-name";  <br/>  src: url("http://xxx.com/abc.ttf"); <br/> }</pre>
+            <br/>
     </div>
   </div>
 
