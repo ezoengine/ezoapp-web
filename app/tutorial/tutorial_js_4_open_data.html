@@ -2,56 +2,55 @@
 <html lang="zh-tw">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <title>EZoApp - 基本介紹</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>EZoApp - 基本介紹</title>
 </head>
 
 <body page="tutorial" page-content="tutorial_js_4_open_data">
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">EZoApp</a>
+            </div>
+            <div class="collapse navbar-collapse  navbar-right">
+                <ul class="nav navbar-nav top-menu">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container banner-content">
+        <div class="banner-content-text">
+            <h1>EZoApp 教學實作</h1>
+            <h2>學習快速開發 app 的程式饗宴</h2>
+        </div>
+        <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
+    </div>
+
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">EZoApp</a>
-      </div>
-      <div class="collapse navbar-collapse  navbar-right">
-        <ul class="nav navbar-nav top-menu">
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="container banner-content">
-    <div class="banner-content-text">
-      <h1>EZoApp 教學實作</h1>
-      <h2>學習快速開發 app 的程式饗宴</h2>
-    </div>
-    <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
-  </div>
-
-  <div class="container">
-    <!--左側選單-->
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
-      <ul>
-      </ul>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
-      <h3 class="right-content-1">
-        <strong>結合 javascript 應用 - 串接公開資料</strong>
-      </h3>
-      <div class="line"></div>
+        <!--左側選單-->
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+            <ul>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+            <h3 class="right-content-1">
+                <strong>結合 javascript 應用 - 串接公開資料</strong>
+            </h3>
+            <div class="line"></div>
             <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
                 <p>
                     大家一定有使用過一些介紹各地美食或景點的網站或 app，甚至最近最夯的腳踏車資訊、公車資訊...等交通生活資訊也都可以藉由各種平台查詢，因此內心不免好奇這些資訊到底是從哪裡來的？其實許多的資訊，在各個政府機關的網站上，都有提供相關的公開資料讓民眾連結查詢，EZoApp 同樣提供了這個功能，藉由連結政府機關公開資料的 json 檔案，就能夠輕鬆獲取數據，製作相關的 app。
-                    <br/>
-                    不過這裡有個小問題要提醒大家的，因為我們是在電腦上操作，而電腦的瀏覽器對於獲取外部網站的資料有著比較嚴格的把關機制，因此我們直接使用瀏覽器開啟會有問題，如果要測試，我們必須使用 chrome 瀏覽器，並且把某個安全機制關閉，就能夠進行測試，下列會教導大家如何使用。
+                    <br/>不過這裡有個小問題要提醒大家的，因為我們是在電腦上操作，而電腦的瀏覽器對於獲取外部網站的資料有著比較嚴格的把關機制，因此我們直接使用瀏覽器開啟會有問題，如果要測試，我們必須使用 chrome 瀏覽器，並且把某個安全機制關閉，就能夠進行測試，下列會教導大家如何使用。
                     <br/>
                     <br/>範例連結：
                     <br/>
@@ -62,32 +61,32 @@
             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
                 <img alt="串接公開資料" src="../img/tutorial/tutorial_js_4_open_data_01.png" class="img-responsive" />
             </div>
+        </div>
     </div>
-  </div>
 
 
 
-  <div class="container footer">
-    <div class="container">
-      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
-        <ul class="footer-menu">
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
-        <ul class="social-menu">
-        </ul>
-      </div>
+    <div class="container footer">
+        <div class="container">
+            <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+                <ul class="footer-menu">
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+                <ul class="social-menu">
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright"></div>
     </div>
-    <div class="container copyright"></div>
-  </div>
 
 
 
-  <script src="../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../js/layout_tutorial.js"></script>
-  <script src="../js/banner.js"></script>
-  <script src="../js/tutorial.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../js/layout_tutorial.js"></script>
+    <script src="../js/banner.js"></script>
+    <script src="../js/tutorial.js"></script>
 
 
 
