@@ -763,3 +763,22 @@ h2 {
     font-weight: bold;
     cursor:default;
 }
+.tutorial-img-link img{
+    -webkit-transition:.3s;
+    -moz-transition:.3s;
+    -o-transition:.3s;
+    transition:.3s;
+    -webkit-border-radius:17px;
+    -moz-border-radius:17px;
+    -o-border-radius:17px;
+    border-radius:17px;
+
+}
+.tutorial-img-link:hover img{
+    -webkit-box-shadow:#000 0 6px 10px;
+    -moz-box-shadow:#000 0 6px 10px;
+    -o-box-shadow:#000 0 6px 10px;
+    box-shadow:#000 0 6px 10px;
+    margin-top:-10px;
+    margin-bottom:16px;
+}

@@ -70,7 +70,7 @@ $(function() {
         '<li page-content="tutorial_js_1_googlemap"><a href="tutorial_js_1_googlemap.html">1. google 地圖應用</a></li>' +
         '<li page-content="tutorial_js_2_swipe_page"><a href="tutorial_js_2_swipe_page.html">2. 滑動頁面實作</a></li>' +
         '<li page-content="tutorial_js_3_star_widget"><a href="tutorial_js_3_star_widget.html">3. 星號分數評比</a></li>' +
-        '<li page-content="tutorial_js_4_open_data"><a href="tutorial_js_4_open_data.html">4. 串接公開資料</a></li>' +
+        '<li page-content="tutorial_js_4_open_data"><a href="tutorial_js_4_open_data.html">4. 串接開放資料</a></li>' +
         '</ul>' +
         '</li>'
     );

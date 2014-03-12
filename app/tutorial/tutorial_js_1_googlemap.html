@@ -62,7 +62,7 @@
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
-                    <img alt="google 地圖應用" src="../img/tutorial/tutorial_js_1_googlemap_01.png" class="img-responsive" />
+                    <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6501098755981312" target="_blank" class="tutorial-img-link" title="google 地圖應用"><img alt="google 地圖應用" src="../img/tutorial/tutorial_js_1_googlemap_01.png" class="img-responsive" /></a>
                 </div>
             </div>
             <br/>
@@ -86,7 +86,7 @@
             </h5>
             <p>光是放上元件就想要讓按鈕和地圖連動？說真的這實在有點難度，不過 EZoApp 已經幫我們把門檻大大的降低，只要把 <kbd>navbar</kbd> 的頁籤改成都市的名稱，然後在 JS 的頁籤貼上下列這串程式碼，地圖就會按照我們點選的都市，跳轉到以該都市為中心的地點囉！
             </p>
-            <pre>$(document).on('pageinit', function () {    // 頁面開始時要執行的程式<br/>  $('#map_btn').on('click', function (e) {  // 點下 navbar 按鈕時要執行的程式<br/>    var addr = $(e.target).text();          // 讀取現在按下按鈕的都市名稱<br/>    $('#map').gk('address', addr);          // 以該都市為中心點顯示在地圖上<br/>  });<br/>});</pre>
+            <pre>$(document).on('pageinit', function () {    <span style="color:#4DAE1E;">// 頁面開始時要執行的程式</span><br/>  $('#map_btn').on('click', function (e) {  <span style="color:#4DAE1E;">// 點下 navbar 按鈕時要執行的程式</span><br/>    var addr = $(e.target).text();          <span style="color:#4DAE1E;">// 讀取現在按下按鈕的都市名稱</span><br/>    $('#map').gk('address', addr);          <span style="color:#4DAE1E;">// 以該都市為中心點顯示在地圖上</span><br/>  });<br/>});</pre>
             <br/>
             <p>但是不要忘記，在 navbar 要加上 id="map_btn"，在地圖要加上 id="map"。
             </p>
