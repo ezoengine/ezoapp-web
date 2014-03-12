@@ -2,9 +2,11 @@ $(function() {
     /**
      * 頁面高度不夠時，footer仍然維持在視窗底部
      */
-  if($('.footer').offset().top<($(window).height()-100)){
-    $('.footer').css({'margin-top':($(window).height()-100-$('.footer').offset().top)+'px'});
-  }
+    if ($('.footer').offset().top < ($(window).height() - 100)) {
+        $('.footer').css({
+            'margin-top': ($(window).height() - 100 - $('.footer').offset().top) + 'px'
+        });
+    }
     /**
      * 上方主選單
      */
@@ -35,14 +37,14 @@ $(function() {
         '<li page="blog"><a href="http://ezoui.wordpress.com/" target="_blank">Blog</a></li>'
     );
     $('.social-menu').append(
-        '<li><a href="https://plus.google.com/117990746163074166131" target="_blank"><img src="img/logo01.png" alt="google+" /></a></li>'+
-        '<li><a href="https://www.facebook.com/EZoUI" target="_blank"><img src="img/logo02.png" alt="faacebook" /></a></li>'+
-        '<li><a href="https://twitter.com/EZoService/status/405605560386461696" target="_blank"><img src="img/logo03.png" alt="twitter" /></a></li>'+
+        '<li><a href="https://plus.google.com/117990746163074166131" target="_blank"><img src="img/logo01.png" alt="google+" /></a></li>' +
+        '<li><a href="https://www.facebook.com/EZoUI" target="_blank"><img src="img/logo02.png" alt="faacebook" /></a></li>' +
+        '<li><a href="https://twitter.com/EZoService/status/405605560386461696" target="_blank"><img src="img/logo03.png" alt="twitter" /></a></li>' +
         '<li><a href="http://ezoui.wordpress.com/" target="_blank"><img src="img/logo04.png" alt="blog" /></a></li>'
     );
     $('.copyright').append(
         '<div>© InfoChamp Systems Corporation 2013</div>'
-      );
+    );
 
 
     /**
