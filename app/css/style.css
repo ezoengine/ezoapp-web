@@ -329,7 +329,7 @@ h2 {
     -o-box-shadow:#000 0 0 10px;
     box-shadow:#000 0 0 10px;
 }
-.navbar-inverse li a {
+.navbar-inverse a {
     -webkit-transition:.3s;
     -moz-transition:.3s;
     -o-transition:.3s;
