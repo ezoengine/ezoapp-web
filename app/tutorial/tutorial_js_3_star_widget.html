@@ -2,133 +2,140 @@
 <html lang="zh-tw">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/tomorrow.css">
-    <title>EZoApp 教學實作 - 星號分數評比</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速開發行動 app 的最佳工具" />
+  <meta name="description" content="後 PC 時代來臨，企業資訊化將面臨的新挑戰：瘋 ( Phone ) 起雲 ( Cloud ) 湧的開發新革命即將引爆。EZoApp 是一套開發行動載具 App 輸出標準 HTML5 的雲端開發服務，適合用來快速打造 App 畫面，支援 jQuery Mobile 開發與學習。">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,Java Script,JSON,EventBus,SpringBean,Cloud IDE,Mobile,WYSIWYG,GUL,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
+
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <title>EZoApp 教學實作 - 星號分數評比</title>
 </head>
 
-<body page="tutorial" page-content="tutorial_js_3_star_widget"  onload="prettyPrint()">
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../index.html">EZoApp</a>
-            </div>
-            <div class="collapse navbar-collapse  navbar-right">
-                <ul class="nav navbar-nav top-menu">
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="container banner-content">
-        <div class="banner-content-text">
-            <h1></h1>
-            <h2></h2>
-        </div>
-        <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 app 的利器" />
-    </div>
-
+<body page="tutorial" page-content="tutorial_js_3_star_widget" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-        <!--左側選單-->
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
-            <ul>
-            </ul>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
-            <h3 class="right-content-1">
-                <strong>結合 JavaScript 應用 - 星號分數評比</strong>
-            </h3>
-            <div class="line"></div>
-            <div style="display:table;">
-                <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
-                    <p>
-                        EZoApp 除了擁有 jQuery Mobile 的套件之外，也有 EZo 開發團隊自行研發的許多第三方元件 (3rd party)，除了前幾節介紹的地圖與滑動頁面之外，另外一個相當具有特色的元件就是 raty 這個利用星星給分的評分元件。
-                        <br/>就如同現在的許多歌唱或選秀節目，也如同 Google Play 或 App tore 上頭的給分機制一般，越來越多的 app 或網站都會提供使用者相關的給分機制，除了可以讓使用者參與內容品質的把關，也可以立即收到使用者的使用回饋。不過這個道理雖然大家都明瞭，但俗話說知易行難，背後的技術往往讓使用者不知道如何下手進行。
-                        <br/>EZoApp 所提供的 raty 元件，可以快速的產生星星給分的機制，只需要撰寫相當簡單的程式碼，就能夠進行給分的動作，非常的實用喔！
-                        <br/>
-                        <br/>範例連結：
-                        <br/>
-                        <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5434314779000832" target="_blank">結合 JavaScript 應用 - 星號分數評比</a>
-                        <br/>
-                    </p>
-                </div>
-                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
-                    <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5434314779000832" target="_blank" class="tutorial-img-link" title="星號分數評比"><img alt="星號分數評比" src="../img/tutorial/tutorial_js_3_star_widget_01.png" class="img-responsive" /></a>
-                </div>
-            </div>
-            <h5>
-                <strong>一、新增星號元件</strong>
-            </h5>
-            <p>與前面章節提過的步驟相同，利用拖曳的方式，將 3rd party 中的 <kbd>raty</kbd> 元件拖曳進入編輯畫面。
-            </p>
-            <img alt="新增星號元件" src="../img/tutorial/tutorial_js_3_star_widget_02.gif" class="img-responsive" />
-            <br/>
-            <h5>
-                <strong>二、新增 navbar 元件</strong>
-            </h5>
-            <p>與 <kbd>raty</kbd> 元件同樣的做法，在左側將 <kbd>navbar</kbd> 元件拖曳進入編輯區域，然後可以點選 <kbd>raty</kbd> 當中的按鈕，按下右上角的新增圖示，就可以新增按鈕。
-            </p>
-            <img alt="新增 navbar 元件" src="../img/tutorial/tutorial_js_3_star_widget_03.gif" class="img-responsive" />
-            <br/>
-            <h5>
-                <strong>三、使用 JavaScript 讓 navbar 與星號連動</strong>
-            </h5>
-            <p>所有元件都具備之後，接著就要讓兩個元件之間連動，也就是點選按鈕，會出現相對應的星號，而我們的連動機制是使用 EZoApp 獨有的 gk 元件，因為 gk 元件將許多程式都已經處理完成，我們幾乎只要打幾個字，就可以輕鬆完成連動的作業。
-                <br/>不過在進行連動之前，我們要先把 <kbd>navbar</kbd> 內加上一些標籤屬性，方便連動的時候有個對照的數值。
-                <br/>
-                <br/>HTML 頁籤程式：
-            </p>
-            <pre>&ltdiv id="home" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtScore&lt/h3&gt<br/>  &lt/div&gt<br/>  &ltdiv role="main" class="ui-content"&gt<br/>    &ltdiv is="raty" score="0" id="star1"&gt&lt/div&gt    //設定一開始為零顆星<br/>    &ltdiv data-role="navbar" id="star_btn1" style="margin:10px 0 30px;"&gt<br/>      &ltul&gt<br/>        &ltli&gt<br/>          &lta <strong>num="1"</strong>&gt不好&lt/a&gt  //按下不好顯示一顆星<br/>        &lt/li&gt<br/>        &ltli&gt<br/>          &lta <strong>num="3"</strong>&gt普通&lt/a&gt  //按下普通顯示三顆星<br/>        &lt/li&gt<br/>        &ltli&gt<br/>          &lta <strong>num="5"</strong>&gt很好&lt/a&gt  //按下很好顯示五顆星<br/>        &lt/li&gt<br/>      &lt/ul&gt<br/>    &lt/div&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre> 
-            <p>JS 頁籤程式：
-            </p>
-            <pre>$(document).on('pageinit', function () {<br/>  $('#star_btn1').on('click', function (e) {<br/>    var starnum = $(e.target).attr('num');<br/>    $('#star1').<strong>gk('score', starnum)</strong>;        //使用 gk 元件<br/>  });<br/>});</pre>
-            <img alt="使用 JavaScript 讓 navbar 與星號連動" src="../img/tutorial/tutorial_js_3_star_widget_04.gif" class="img-responsive" />
-            <br/>
-            <p>按下 preview 之後，我們就可以順利的看到點選按鈕，出現對應的星星數囉！
-                <br/>
-                <br/>範例連結：
-                <br/>
-                <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5434314779000832" target="_blank">結合 JavaScript 應用 - 星號分數評比</a>
-                <br/>
-                <br/>
-                <br/>
-            </p>
-        </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
     </div>
+  </div>
 
-
-
-    <div class="container footer">
-        <div class="container">
-            <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
-                <ul class="footer-menu">
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
-                <ul class="social-menu">
-                </ul>
-            </div>
-        </div>
-        <div class="container copyright"></div>
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
     </div>
+    <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 app 的利器" />
+  </div>
+
+  <div class="container">
+    <!--左側選單-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>結合 JavaScript 應用 - 星號分數評比</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            EZoApp 除了擁有 jQuery Mobile 的套件之外，也有 EZo 開發團隊自行研發的許多第三方元件 (3rd party)，除了前幾節介紹的地圖與滑動頁面之外，另外一個相當具有特色的元件就是 raty 這個利用星星給分的評分元件。
+            <br/>就如同現在的許多歌唱或選秀節目，也如同 Google Play 或 App tore 上頭的給分機制一般，越來越多的 app 或網站都會提供使用者相關的給分機制，除了可以讓使用者參與內容品質的把關，也可以立即收到使用者的使用回饋。不過這個道理雖然大家都明瞭，但俗話說知易行難，背後的技術往往讓使用者不知道如何下手進行。
+            <br/>EZoApp 所提供的 raty 元件，可以快速的產生星星給分的機制，只需要撰寫相當簡單的程式碼，就能夠進行給分的動作，非常的實用喔！
+            <br/>
+            <br/>範例連結：
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5434314779000832" target="_blank">結合 JavaScript 應用 - 星號分數評比</a>
+            <br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5434314779000832" target="_blank" class="tutorial-img-link" title="星號分數評比">
+            <img alt="星號分數評比" src="../img/tutorial/tutorial_js_3_star_widget_01.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <h5>
+        <strong>一、新增星號元件</strong>
+      </h5>
+      <p>與前面章節提過的步驟相同，利用拖曳的方式，將 3rd party 中的 <kbd>raty</kbd> 元件拖曳進入編輯畫面。
+      </p>
+      <img alt="新增星號元件" src="../img/tutorial/tutorial_js_3_star_widget_02.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>二、新增 navbar 元件</strong>
+      </h5>
+      <p>與 <kbd>raty</kbd> 元件同樣的做法，在左側將 <kbd>navbar</kbd> 元件拖曳進入編輯區域，然後可以點選 <kbd>raty</kbd> 當中的按鈕，按下右上角的新增圖示，就可以新增按鈕。
+      </p>
+      <img alt="新增 navbar 元件" src="../img/tutorial/tutorial_js_3_star_widget_03.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>三、使用 JavaScript 讓 navbar 與星號連動</strong>
+      </h5>
+      <p>所有元件都具備之後，接著就要讓兩個元件之間連動，也就是點選按鈕，會出現相對應的星號，而我們的連動機制是使用 EZoApp 獨有的 gk 元件，因為 gk 元件將許多程式都已經處理完成，我們幾乎只要打幾個字，就可以輕鬆完成連動的作業。
+        <br/>不過在進行連動之前，我們要先把 <kbd>navbar</kbd> 內加上一些標籤屬性，方便連動的時候有個對照的數值。
+        <br/>
+        <br/>HTML 頁籤程式：
+      </p>
+      <pre>&ltdiv id="home" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtScore&lt/h3&gt<br/>  &lt/div&gt<br/>  &ltdiv role="main" class="ui-content"&gt<br/>    &ltdiv is="raty" score="0" id="star1"&gt&lt/div&gt    //設定一開始為零顆星<br/>    &ltdiv data-role="navbar" id="star_btn1" style="margin:10px 0 30px;"&gt<br/>      &ltul&gt<br/>        &ltli&gt<br/>          &lta <strong>num="1"</strong>&gt不好&lt/a&gt  //按下不好顯示一顆星<br/>        &lt/li&gt<br/>        &ltli&gt<br/>          &lta <strong>num="3"</strong>&gt普通&lt/a&gt  //按下普通顯示三顆星<br/>        &lt/li&gt<br/>        &ltli&gt<br/>          &lta <strong>num="5"</strong>&gt很好&lt/a&gt  //按下很好顯示五顆星<br/>        &lt/li&gt<br/>      &lt/ul&gt<br/>    &lt/div&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre> 
+      <p>JS 頁籤程式：
+      </p>
+      <pre>$(document).on('pageinit', function () {<br/>  $('#star_btn1').on('click', function (e) {<br/>    var starnum = $(e.target).attr('num');<br/>    $('#star1').<strong>gk('score', starnum)</strong>;        //使用 gk 元件<br/>  });<br/>});</pre>
+      <img alt="使用 JavaScript 讓 navbar 與星號連動" src="../img/tutorial/tutorial_js_3_star_widget_04.gif" class="img-responsive" />
+      <br/>
+      <p>按下 preview 之後，我們就可以順利的看到點選按鈕，出現對應的星星數囉！
+        <br/>
+        <br/>範例連結：
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5434314779000832" target="_blank">結合 JavaScript 應用 - 星號分數評比</a>
+        <br/>
+        <br/>
+        <br/>
+      </p>
+    </div>
+  </div>
 
 
 
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
-    <script src="../js/layout.js"></script>
-    <script src="../js/layout_tutorial.js"></script>
-    <script src="../js/banner.js"></script>
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+
+
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/banner.js"></script>
 
 
 

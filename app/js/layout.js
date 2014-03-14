@@ -10,6 +10,19 @@ $(function() {
       'margin-top': ($window.height() - 100 - $('.footer').offset().top) + 'px'
     });
   }
+  /**
+   *  google analytics
+   */
+  $('body').append(
+    "<script> \
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ \
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), \
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) \
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); \
+    ga('create', 'UA-42490916-3', 'ezoui.com'); \
+    ga('send', 'pageview'); \
+    </script>"
+  );
 
   /**
    * 上方主選單
@@ -22,6 +35,10 @@ $(function() {
     //'<li page="pricing"><a href="'+path+'pricing.html">授權方案</a></li>' +
     '<li page="aboutus"><a href="' + path + 'aboutus.html">關於我們</a></li>' +
     '<li page="blog"><a href="http://ezoui.wordpress.com/" target="_blank">Blog</a></li>'
+  );
+
+  $('.navbar-header').append(
+    '<a class="navbar-brand" href="' + path + 'index.html" title="EZoApp - 快速開發行動 app 的最佳工具">EZoApp</a>'
   );
 
   /**

@@ -2,149 +2,156 @@
 <html lang="zh-tw">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/tomorrow.css">
-    <title>EZoApp 教學實作 - 打造入口頁面</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速開發行動 app 的最佳工具" />
+  <meta name="description" content="後 PC 時代來臨，企業資訊化將面臨的新挑戰：瘋 ( Phone ) 起雲 ( Cloud ) 湧的開發新革命即將引爆。EZoApp 是一套開發行動載具 App 輸出標準 HTML5 的雲端開發服務，適合用來快速打造 App 畫面，支援 jQuery Mobile 開發與學習。">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,Java Script,JSON,EventBus,SpringBean,Cloud IDE,Mobile,WYSIWYG,GUL,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
+
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <title>EZoApp 教學實作 - 打造入口頁面</title>
 </head>
 
-<body page="tutorial" page-content="tutorial_6_home_page"  onload="prettyPrint()">
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../index.html">EZoApp</a>
-            </div>
-            <div class="collapse navbar-collapse  navbar-right">
-                <ul class="nav navbar-nav top-menu">
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="container banner-content">
-        <div class="banner-content-text">
-            <h1></h1>
-            <h2></h2>
-        </div>
-        <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 app 的利器" />
-    </div>
-
+<body page="tutorial" page-content="tutorial_6_home_page" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-        <!--左側選單-->
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
-            <ul>
-            </ul>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
-            <h3 class="right-content-1">
-                <strong>基本元件實作 - 打造入口頁面</strong>
-            </h3>
-            <div class="line"></div>
-            <div style="display:table;">
-                <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
-                    <p>
-                        其實就算是視覺設計師，在做完 UI 交給工程師後，如何把畫面按照元搞呈現，往往偏左了些，往往間距大了點，總要一來一往好幾次才能確認，而確認後如果又遇到了客戶的 UI 需求變更，整個步驟又得重頭來過，不僅浪費成本，又幾乎把人力資源給耗竭。
-                        <br/>現在我們可以利用 EZoApp 這套雲端開發工具，運用它提供的現成元件，拖拉進入畫面，藉由簡單的程式碼編撰 ( 有的畫面甚至不需要 )，就可以輕輕鬆鬆排列出合適的畫面，甚至可以將外部編輯的網頁語法貼進編輯器，即時預覽產生的畫面格式，省下了不少前端與後端銜接的開發時間。 EZoApp 更提供了雲端儲存的功能，當開發者做好畫面後可即時提供給業主或客戶進行校稿，同時在雲端也提供了完善的版本機制和安全性，因此對於開發者來說更是不可或缺的一套工具。
-                        <br/>看過了五個章節的教學介紹，相信大家對於 EZoApp 的威能都有了一定程度的了解吧！接下來的這個章節，我們將用之前所學到的技巧，快速的來打造一個入口畫面。
-                        <br/>
-                        <br/>範例連結：
-                        <br/>
-                        <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5078785875509248" target="_blank">基本元件實作 - 打造入口頁面</a>
-                        <br/>
-                    </p>
-                </div>
-                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
-                    <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5078785875509248" target="_blank" class="tutorial-img-link" title="打造入口頁面"><img alt="打造入口頁面" src="../img/tutorial/tutorial_6_home_page_01.png" class="img-responsive" /></a>
-                </div>
-            </div>
-            <br/>
-            <h5>
-                <strong>一、直接利用元件來排版</strong>
-            </h5>
-            <p>如前幾節所述，我們只要利用拖拉的方式，就可以把這些元件一個個的加入到畫面當中，程式碼也會自動添加。不過只學會拖拉元件是沒有辦法在幾分鐘內完成排版的，這時候我們就要妥善的利用 EZoApp 實用的屬性面板工具，來快速的編輯我們所拖曳出來的元件。( 如果找不到屬性面版，可以把程式碼區塊的大小變小，或先隱藏起來，就可以看到屬性面版了 )
-            </p>
-            <img alt="直接利用元件來排版" src="../img/tutorial/tutorial_6_home_page_02.gif" class="img-responsive" />
-            <br/>
-            <h5>
-                <strong>二、利用屬性面板修改屬性</strong>
-            </h5>
-            <p>這裡我們使用屬性面板來編輯 <kbd>grid</kbd> 這個元件的屬性，我們就可以設定 <kbd>grid</kbd> 的欄位是一欄還是兩欄，若是需要有兩列以上，就直接再新增一個 <kbd>grid</kbd> 就可以囉！
-            </p>
-            <img alt="利用屬性面板修改屬性" src="../img/tutorial/tutorial_6_home_page_03.gif" class="img-responsive" />
-            <br/>
-            <h5>
-                <strong>三、塞入文字</strong>
-            </h5>
-            <p>我們同樣利用拖拉的方式，就可以輕鬆的把文字加入到 <kbd>grid</kbd> 裡頭，點選文字，就可以進行編輯，不過這邊有個要注意的地方，拖曳進來的文字預設為 h1 的字體大小且靠右對齊，因此我們可以將 h1 標籤加入 style=”text-align:center’”，就能夠讓文字置中囉！
-            </p>
-            <pre>&lth1 <strong>style="text-align:center;"</strong>&gt文字&lt/h1&gt</pre>
-            <img alt="塞入文字" src="../img/tutorial/tutorial_6_home_page_04.gif" class="img-responsive" />
-            <br/>
-            <h5>
-                <strong>四、加入圖片</strong>
-            </h5>
-            <p>關於圖片的載入，我們這裡使用了3rd Party 裡頭的 <kbd>image</kbd> 元件，不過因為該元件的預設寬度為 100%，高度為 250px，所以拖拉進入畫面後會有變形的現象，不過我們只要手動進行修改寬高，並且填入所需的圖片網址，就可以輕鬆的產生合適大小的圖片。
-            </p>
-            <img alt="加入圖片" src="../img/tutorial/tutorial_6_home_page_05.gif" class="img-responsive" />
-            <br/>
-            <h5>
-                <strong>五、修改 header 與 footer 的主題樣式</strong>
-            </h5>
-            <p><kbd>header</kbd> 與 <kbd>footer</kbd> 元件，是使用 jQuery Mobile 的基本元件，因此我們只要在 <kbd>header</kbd> 和 <kbd>footer</kbd> 的標籤內，分別加入 data-theme="b" 的一小段程式碼，就可以把樣式進行更換。
-            </p>
-            <pre>&ltdiv data-role="header" data-position="fixed" <strong>data-theme="b"</strong>&gt<br/>    &lth3&gt我是 Header &lt/h3&gt<br/>&lt/div&gt</pre> 
-            <img alt="修改 header 與 footer 的主題樣式" src="../img/tutorial/tutorial_6_home_page_06.gif" class="img-responsive" />
-            <br/>
-            <h5>
-                <strong>六、萬事俱備，只欠東風(背景)</strong>
-            </h5>
-            <p>其實到目前為止我們都只是利用拖拉元件，然後修改一下元件的程式碼，就可以把內容排列的差不多了( 不過其實編輯程式碼，還是需要對 css 有一些基本的認識，例如 margin 怎麼用？height 和 width 的設定...等 )，接下來我們只要挑一張合適的背景圖，放在最外層 div 裡頭當作背景圖就可以囉！
-            </p>
-            <pre>&ltdiv id="home" data-role="page" <strong>style="background:url(圖片網址); background-size:100% 100%;"</strong>&gt</pre>
-            <img alt="萬事俱備，只欠東風" src="../img/tutorial/tutorial_6_home_page_07.gif" class="img-responsive" />
-            <p>
-                <br/>範例連結：
-                <br/>
-                <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5078785875509248" target="_blank">基本元件實作 - 打造入口頁面</a>
-                <br/>
-            </p>
-            <br/>
-            <br/>
-        </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
     </div>
+  </div>
 
-
-
-    <div class="container footer">
-        <div class="container">
-            <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
-                <ul class="footer-menu">
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
-                <ul class="social-menu">
-                </ul>
-            </div>
-        </div>
-        <div class="container copyright"></div>
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
     </div>
+    <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 app 的利器" />
+  </div>
+
+  <div class="container">
+    <!--左側選單-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>基本元件實作 - 打造入口頁面</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            其實就算是視覺設計師，在做完 UI 交給工程師後，如何把畫面按照元搞呈現，往往偏左了些，往往間距大了點，總要一來一往好幾次才能確認，而確認後如果又遇到了客戶的 UI 需求變更，整個步驟又得重頭來過，不僅浪費成本，又幾乎把人力資源給耗竭。
+            <br/>現在我們可以利用 EZoApp 這套雲端開發工具，運用它提供的現成元件，拖拉進入畫面，藉由簡單的程式碼編撰 ( 有的畫面甚至不需要 )，就可以輕輕鬆鬆排列出合適的畫面，甚至可以將外部編輯的網頁語法貼進編輯器，即時預覽產生的畫面格式，省下了不少前端與後端銜接的開發時間。 EZoApp 更提供了雲端儲存的功能，當開發者做好畫面後可即時提供給業主或客戶進行校稿，同時在雲端也提供了完善的版本機制和安全性，因此對於開發者來說更是不可或缺的一套工具。
+            <br/>看過了五個章節的教學介紹，相信大家對於 EZoApp 的威能都有了一定程度的了解吧！接下來的這個章節，我們將用之前所學到的技巧，快速的來打造一個入口畫面。
+            <br/>
+            <br/>範例連結：
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5078785875509248" target="_blank">基本元件實作 - 打造入口頁面</a>
+            <br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5078785875509248" target="_blank" class="tutorial-img-link" title="打造入口頁面">
+            <img alt="打造入口頁面" src="../img/tutorial/tutorial_6_home_page_01.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <br/>
+      <h5>
+        <strong>一、直接利用元件來排版</strong>
+      </h5>
+      <p>如前幾節所述，我們只要利用拖拉的方式，就可以把這些元件一個個的加入到畫面當中，程式碼也會自動添加。不過只學會拖拉元件是沒有辦法在幾分鐘內完成排版的，這時候我們就要妥善的利用 EZoApp 實用的屬性面板工具，來快速的編輯我們所拖曳出來的元件。( 如果找不到屬性面版，可以把程式碼區塊的大小變小，或先隱藏起來，就可以看到屬性面版了 )
+      </p>
+      <img alt="直接利用元件來排版" src="../img/tutorial/tutorial_6_home_page_02.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>二、利用屬性面板修改屬性</strong>
+      </h5>
+      <p>這裡我們使用屬性面板來編輯 <kbd>grid</kbd> 這個元件的屬性，我們就可以設定 <kbd>grid</kbd> 的欄位是一欄還是兩欄，若是需要有兩列以上，就直接再新增一個 <kbd>grid</kbd> 就可以囉！
+      </p>
+      <img alt="利用屬性面板修改屬性" src="../img/tutorial/tutorial_6_home_page_03.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>三、塞入文字</strong>
+      </h5>
+      <p>我們同樣利用拖拉的方式，就可以輕鬆的把文字加入到 <kbd>grid</kbd> 裡頭，點選文字，就可以進行編輯，不過這邊有個要注意的地方，拖曳進來的文字預設為 h1 的字體大小且靠右對齊，因此我們可以將 h1 標籤加入 style=”text-align:center’”，就能夠讓文字置中囉！
+      </p>
+      <pre>&lth1 <strong>style="text-align:center;"</strong>&gt文字&lt/h1&gt</pre>
+      <img alt="塞入文字" src="../img/tutorial/tutorial_6_home_page_04.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>四、加入圖片</strong>
+      </h5>
+      <p>關於圖片的載入，我們這裡使用了3rd Party 裡頭的 <kbd>image</kbd> 元件，不過因為該元件的預設寬度為 100%，高度為 250px，所以拖拉進入畫面後會有變形的現象，不過我們只要手動進行修改寬高，並且填入所需的圖片網址，就可以輕鬆的產生合適大小的圖片。
+      </p>
+      <img alt="加入圖片" src="../img/tutorial/tutorial_6_home_page_05.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>五、修改 header 與 footer 的主題樣式</strong>
+      </h5>
+      <p><kbd>header</kbd> 與 <kbd>footer</kbd> 元件，是使用 jQuery Mobile 的基本元件，因此我們只要在 <kbd>header</kbd> 和 <kbd>footer</kbd> 的標籤內，分別加入 data-theme="b" 的一小段程式碼，就可以把樣式進行更換。
+      </p>
+      <pre>&ltdiv data-role="header" data-position="fixed" <strong>data-theme="b"</strong>&gt<br/>    &lth3&gt我是 Header &lt/h3&gt<br/>&lt/div&gt</pre> 
+      <img alt="修改 header 與 footer 的主題樣式" src="../img/tutorial/tutorial_6_home_page_06.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>六、萬事俱備，只欠東風(背景)</strong>
+      </h5>
+      <p>其實到目前為止我們都只是利用拖拉元件，然後修改一下元件的程式碼，就可以把內容排列的差不多了( 不過其實編輯程式碼，還是需要對 css 有一些基本的認識，例如 margin 怎麼用？height 和 width 的設定...等 )，接下來我們只要挑一張合適的背景圖，放在最外層 div 裡頭當作背景圖就可以囉！
+      </p>
+      <pre>&ltdiv id="home" data-role="page" <strong>style="background:url(圖片網址); background-size:100% 100%;"</strong>&gt</pre>
+      <img alt="萬事俱備，只欠東風" src="../img/tutorial/tutorial_6_home_page_07.gif" class="img-responsive" />
+      <p>
+        <br/>範例連結：
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5078785875509248" target="_blank">基本元件實作 - 打造入口頁面</a>
+        <br/>
+      </p>
+      <br/>
+      <br/>
+    </div>
+  </div>
 
 
 
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
-    <script src="../js/layout.js"></script>
-    <script src="../js/layout_tutorial.js"></script>
-    <script src="../js/banner.js"></script>
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+
+
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/banner.js"></script>
 
 
 
