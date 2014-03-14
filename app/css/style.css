@@ -478,7 +478,7 @@ h2 {
     width:100%;
     padding:20px 0 30px;
 }
-.footer-menu, li {
+.footer-menu>li {
     list-style:none;
     padding:0;
     margin:0;
@@ -782,3 +782,7 @@ h2 {
     margin-top:-10px;
     margin-bottom:16px;
 }
+pre strong{
+    background:#ffa;
+}
+

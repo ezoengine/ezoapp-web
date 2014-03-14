@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tomorrow.css">
     <title>EZoApp 教學實作 - 星號分數評比</title>
 </head>
 
-<body page="tutorial" page-content="tutorial_js_3_star_widget">
+<body page="tutorial" page-content="tutorial_js_3_star_widget"  onload="prettyPrint()">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -19,7 +20,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">EZoApp</a>
+                <a class="navbar-brand" href="../index.html">EZoApp</a>
             </div>
             <div class="collapse navbar-collapse  navbar-right">
                 <ul class="nav navbar-nav top-menu">
@@ -86,10 +87,10 @@
                 <br/>
                 <br/>HTML 頁籤程式：
             </p>
-            <pre>&ltdiv id="home" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtScore&lt/h3&gt<br/>  &lt/div&gt<br/>  &ltdiv role="main" class="ui-content"&gt<br/>    &ltdiv is="raty" score="0" id="star1"&gt&lt/div&gt    <span style="color:#4DAE1E;">//設定一開始為零顆星</span><br/>    &ltdiv data-role="navbar" id="star_btn1" style="margin:10px 0 30px;"&gt<br/>      &ltul&gt<br/>        &ltli&gt<br/>          &lta <strong style="color:red;">num="1"</strong>&gt不好&lt/a&gt  <span style="color:#4DAE1E;">//按下不好顯示一顆星</span><br/>        &lt/li&gt<br/>        &ltli&gt<br/>          &lta <strong style="color:red;">num="3"</strong>&gt普通&lt/a&gt  <span style="color:#4DAE1E;">//按下普通顯示三顆星</span><br/>        &lt/li&gt<br/>        &ltli&gt<br/>          &lta <strong style="color:red;">num="5"</strong>&gt很好&lt/a&gt  <span style="color:#4DAE1E;">//按下很好顯示五顆星</span><br/>        &lt/li&gt<br/>      &lt/ul&gt<br/>    &lt/div&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre> 
+            <pre  class="prettyprint linenums">&ltdiv id="home" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtScore&lt/h3&gt<br/>  &lt/div&gt<br/>  &ltdiv role="main" class="ui-content"&gt<br/>    &ltdiv is="raty" score="0" id="star1"&gt&lt/div&gt    //設定一開始為零顆星<br/>    &ltdiv data-role="navbar" id="star_btn1" style="margin:10px 0 30px;"&gt<br/>      &ltul&gt<br/>        &ltli&gt<br/>          &lta <strong>num="1"</strong>&gt不好&lt/a&gt  //按下不好顯示一顆星<br/>        &lt/li&gt<br/>        &ltli&gt<br/>          &lta <strong>num="3"</strong>&gt普通&lt/a&gt  //按下普通顯示三顆星<br/>        &lt/li&gt<br/>        &ltli&gt<br/>          &lta <strong>num="5"</strong>&gt很好&lt/a&gt  //按下很好顯示五顆星<br/>        &lt/li&gt<br/>      &lt/ul&gt<br/>    &lt/div&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre> 
             <p>JS 頁籤程式：
             </p>
-            <pre>$(document).on('pageinit', function () {<br/>  $('#star_btn1').on('click', function (e) {<br/>    var starnum = $(e.target).attr('num');<br/>    $('#star1').<strong style="color:red;">gk('score', starnum)</strong>;        <span style="color:#4DAE1E;">//使用 gk 元件</span><br/>  });<br/>});</pre>
+            <pre  class="prettyprint linenums">$(document).on('pageinit', function () {<br/>  $('#star_btn1').on('click', function (e) {<br/>    var starnum = $(e.target).attr('num');<br/>    $('#star1').<strong>gk('score', starnum)</strong>;        //使用 gk 元件<br/>  });<br/>});</pre>
             <img alt="使用 javascript 讓 navbar 與星號連動" src="../img/tutorial/tutorial_js_3_star_widget_04.gif" class="img-responsive" />
             <br/>
             <p>按下 preview 之後，我們就可以順利的看到點選按鈕，出現對應的星星數囉！
@@ -124,6 +125,7 @@
 
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
     <script src="../js/layout_tutorial.js"></script>
     <script src="../js/banner.js"></script>
     <script src="../js/tutorial.js"></script>

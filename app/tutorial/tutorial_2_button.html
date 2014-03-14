@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tomorrow.css">
     <title>EZoApp 教學實作 - 製作特色按鈕</title>
 </head>
 
-<body page="tutorial" page-content="tutorial_2_button">
+<body page="tutorial" page-content="tutorial_2_button"  onload="prettyPrint()">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -19,7 +20,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">EZoApp</a>
+                <a class="navbar-brand" href="../index.html">EZoApp</a>
             </div>
             <div class="collapse navbar-collapse  navbar-right">
                 <ul class="nav navbar-nav top-menu">
@@ -98,7 +99,7 @@
             <p>
                 點選按鈕後，我們便可以使用屬性面板來調整按鈕的屬性，調整屬性後，相關屬性的樣式名稱也會加入程式碼內，，這裡我們可以設定按鈕 icon 的位置、按鈕的大小...等屬性，而其他比較進階的屬性，後續就利用 CSS 來調整，下方列出<a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6230094909538304" target="_blank">範例檔案</a>中13個按鈕的基本樣式。
             </p>
-            <pre>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn ui-mini"&gtButton&lt/a&gt<br/>&lta class="ui-btn"&gtButton1&lt/a&gt<br/>&lta class="ui-btn"&gtButton2&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn ui-mini ui-btn-icon-top ui-icon-delete"&gtButton&lt/a&gt<br/>&lta class="ui-btn ui-btn-icon-top ui-icon-delete"&gtButton&lt/a&gt<br/>&lta class="ui-btn ui-icon-delete ui-btn-icon-right"&gtButton&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt</pre>
+            <pre class="prettyprint linenums">&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn ui-mini"&gtButton&lt/a&gt<br/>&lta class="ui-btn"&gtButton1&lt/a&gt<br/>&lta class="ui-btn"&gtButton2&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn ui-mini ui-btn-icon-top ui-icon-delete"&gtButton&lt/a&gt<br/>&lta class="ui-btn ui-btn-icon-top ui-icon-delete"&gtButton&lt/a&gt<br/>&lta class="ui-btn ui-icon-delete ui-btn-icon-right"&gtButton&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt</pre>
             <p>
                 <img alt="認識按鈕基本樣式" src="../img/tutorial/tutorial_2_button_04.gif" class="img-responsive" style="margin:20px 0;" />
             </p>
@@ -111,16 +112,16 @@
                 <br/>
                 <ol style="padding-left:15px;">
                     <li style="list-style:upper-roman;">
-                        <p><kbd>-webkit-box-radius:</kbd> 後方輸入數值，來設定按鈕四個角為圓角 (適用於 Chrome，Firefox 改為 -moz-box-radius，IE 改為 box-radius)，例如：</p><pre>-webkit-border-radius: 20px; <span style="color:#4DAE1E;">//四個圓角的半徑為20px</span></pre>
+                        <p><kbd>-webkit-box-radius:</kbd> 後方輸入數值，來設定按鈕四個角為圓角 (適用於 Chrome，Firefox 改為 -moz-box-radius，IE 改為 box-radius)，例如：</p><pre class="prettyprint linenums">-webkit-border-radius: 20px; //四個圓角的半徑為20px</pre>
                     </li>
                     <li style="list-style:upper-roman;">
-                        <p><kbd>-webkit-box-shadow:</kbd> 後方輸入數值，來設定按鈕陰影 (適用於 Chrome，Firefox 改為 -moz-box-shadow，IE 改為 box-shadow)，例如：</p><pre>-webkit-box-shadow: inset #ddd 0 0 10px; <span style="color:#4DAE1E;">//內陰影</span><br/>-webkit-box-shadow: #ddd 0 0 10px;       <span style="color:#4DAE1E;">//外陰影</span></pre>
+                        <p><kbd>-webkit-box-shadow:</kbd> 後方輸入數值，來設定按鈕陰影 (適用於 Chrome，Firefox 改為 -moz-box-shadow，IE 改為 box-shadow)，例如：</p><pre class="prettyprint linenums">-webkit-box-shadow: inset #ddd 0 0 10px; //內陰影<br/>-webkit-box-shadow: #ddd 0 0 10px;       //外陰影</pre>
                     </li>
                     <li style="list-style:upper-roman;">
-                        <p><kbd>background:</kbd> 後方可帶入背景圖片，但因為 JQueryMobile 元件的預設值，必須加入 !important 才能順利呈現，例如：</p><pre>background: url(圖片網址) center center no-repeat<strong style="color:red;">!important</strong>;</pre>
+                        <p><kbd>background:</kbd> 後方可帶入背景圖片，但因為 JQueryMobile 元件的預設值，必須加入 !important 才能順利呈現，例如：</p><pre class="prettyprint linenums">background: url(圖片網址) center center no-repeat<strong>!important</strong>;</pre>
                     </li>
                     <li style="list-style:upper-roman;">
-                        <p><kbd>display:</kbd> 因為按鈕本身是區塊 ( block ) 屬性，如果要讓按鈕可以一個接一個的排下去，最簡單的方法就是調整 display，例如：</p><pre>display: inline-block;</pre>
+                        <p><kbd>display:</kbd> 因為按鈕本身是區塊 ( block ) 屬性，如果要讓按鈕可以一個接一個的排下去，最簡單的方法就是調整 display，例如：</p><pre class="prettyprint linenums">display: inline-block;</pre>
                     </li>
                 </ol>
             </p>
@@ -166,6 +167,7 @@
 
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
     <script src="../js/layout_tutorial.js"></script>
     <script src="../js/banner.js"></script>
     <script src="../js/tutorial.js"></script>

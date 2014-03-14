@@ -1,12 +1,13 @@
-$(function() {
+(function(j,w) {
     /**
      * 頁面高度不夠時，footer仍然維持在視窗底部
      */
-    if ($('.footer').offset().top < ($(window).height() - 100)) {
+    if ($('.footer').offset().top < ($(w).height() - 100)) {
         $('.footer').css({
-            'margin-top': ($(window).height() - 100 - $('.footer').offset().top) + 'px'
+            'margin-top': ($(w).height() - 100 - $('.footer').offset().top) + 'px'
         });
     }
+
     /**
      * 上方主選單
      */
@@ -50,8 +51,8 @@ $(function() {
     /**
      * 捲動時上方選單高度與背景色變化
      */
-    $(window).scroll(function() {
-        $(window).scrollTop() > 0 ? $('.navbar-inverse').not(':animated').animate({
+    $(w).scroll(function() {
+        $(w).scrollTop() > 0 ? $('.navbar-inverse').not(':animated').animate({
             'padding': '0'
         }).css({
             'background': 'rgba(5,10,15,.85)'
@@ -63,4 +64,4 @@ $(function() {
             'background': 'rgba(7,7,7,1)'
         });
     });
-});
+})(jQuery,window);

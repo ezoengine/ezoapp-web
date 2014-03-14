@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tomorrow.css">
     <title>EZoApp 教學實作 - 滑動頁面實作</title>
 </head>
 
-<body page="tutorial" page-content="tutorial_js_2_swipe_page">
+<body page="tutorial" page-content="tutorial_js_2_swipe_page"  onload="prettyPrint()">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -19,7 +20,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">EZoApp</a>
+                <a class="navbar-brand" href="../index.html">EZoApp</a>
             </div>
             <div class="collapse navbar-collapse  navbar-right">
                 <ul class="nav navbar-nav top-menu">
@@ -90,7 +91,7 @@
             </h5>
             <p>只有新增頁面是不能夠進行滑動的，接著我們就要來撰寫一些 javascript 來讓頁面滑動，這裡提供給大家基本的頁面滑動寫法，只要複製在程式碼編輯區的 js 頁籤內貼上，按下 preview 的按鈕就可以左滑右滑囉！( 記得 id 的名稱要寫對，不然就無法順利進行 )
             </p>
-            <pre>var pages = <strong style="color:red;">['Page0', 'Page1', 'Page2']</strong>;            <span style="color:#4DAE1E;">//頁面的名稱(id)</span><br/>$(document).on('pageinit', '<strong style="color:red;">#Page0</strong>', function () {<br/><br/>  $(document).on("swiperight", function () {        <span style="color:#4DAE1E;">//往右滑的動作</span><br/>    var pageId = $.mobile.activePage.attr('id');<br/>    var idx = pages.indexOf(pageId);                <span style="color:#4DAE1E;">//頁面數量</span><br/>    idx = idx - 1 &lt 0 ? pages.length - 1 : idx - 1; <span style="color:#4DAE1E;">//讓頁面滑到底的時候會循環</span><br/>    $.mobile.changePage('#' + pages[idx], {         <span style="color:#4DAE1E;">//JQueryMobile 的手勢動作</span><br/>      'transition': 'slide',<br/>      'reverse': true<br/>    });<br/>  });<br/><br/>  $(document).on("swipeleft", function () {         <span style="color:#4DAE1E;">//往左滑的動作</span><br/>    var pageId = $.mobile.activePage.attr('id');<br/>    var idx = pages.indexOf(pageId);                <span style="color:#4DAE1E;">//頁面數量</span><br/>    idx = ++idx % pages.length;                     <span style="color:#4DAE1E;">//讓頁面滑到底的時候會循環</span><br/>    $.mobile.changePage('#' + pages[idx], {         <span style="color:#4DAE1E;">//JQueryMobile 的手勢動作</span><br/>      'transition': 'slide'<br/>    });<br/>  });<br/><br/>});</pre> 
+            <pre  class="prettyprint linenums">var pages = <strong>['Page0', 'Page1', 'Page2']</strong>;            //頁面的名稱(id)<br/>$(document).on('pageinit', '<strong>#Page0</strong>', function () {<br/><br/>  $(document).on("swiperight", function () {        //往右滑的動作<br/>    var pageId = $.mobile.activePage.attr('id');<br/>    var idx = pages.indexOf(pageId);                //頁面數量<br/>    idx = idx - 1 &lt 0 ? pages.length - 1 : idx - 1; //讓頁面滑到底的時候會循環<br/>    $.mobile.changePage('#' + pages[idx], {         //JQueryMobile 的手勢動作<br/>      'transition': 'slide',<br/>      'reverse': true<br/>    });<br/>  });<br/><br/>  $(document).on("swipeleft", function () {         //往左滑的動作<br/>    var pageId = $.mobile.activePage.attr('id');<br/>    var idx = pages.indexOf(pageId);                //頁面數量<br/>    idx = ++idx % pages.length;                     //讓頁面滑到底的時候會循環<br/>    $.mobile.changePage('#' + pages[idx], {         //JQueryMobile 的手勢動作<br/>      'transition': 'slide'<br/>    });<br/>  });<br/><br/>});</pre> 
             <img alt="撰寫滑動 javascript" src="../img/tutorial/tutorial_js_2_swipe_page_06.gif" class="img-responsive" />
             <br/>
             <p>就這樣我們可以輕鬆製作出一個簡易的滑動效果囉！
@@ -125,6 +126,7 @@
 
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
     <script src="../js/layout_tutorial.js"></script>
     <script src="../js/banner.js"></script>
     <script src="../js/tutorial.js"></script>

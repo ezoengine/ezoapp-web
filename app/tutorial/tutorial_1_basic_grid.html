@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tomorrow.css">
     <title>EZoApp 教學實作 - grid 基礎排版</title>
 </head>
 
-<body page="tutorial" page-content="tutorial_1_basic_grid">
+<body page="tutorial" page-content="tutorial_1_basic_grid"  onload="prettyPrint()">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -19,7 +20,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">EZoApp</a>
+                <a class="navbar-brand" href="../index.html">EZoApp</a>
             </div>
             <div class="collapse navbar-collapse  navbar-right">
                 <ul class="nav navbar-nav top-menu">
@@ -71,7 +72,7 @@
                 首先我們要放上文字，放上文字的方法很簡單，只需要用拖拉的方式將左側
                 <kbd>gk-text</kbd> 元件拖拉至畫面編輯區域當中，就能夠快速產生一個文字區塊，接著只需要改變文字以及用css將文字對齊就好囉！
             </p>
-            <pre>&lth1 is="gk-text" style="<span style="color:red;">text-align:center;</span>"&gtOvi Maps&lt/h1&gt</pre>
+            <pre class="prettyprint linenums">&lth1 is="gk-text" style="<strong>text-align:center;</strong>"&gtOvi Maps&lt/h1&gt</pre>
             <p>
                 <img alt="放上文字" src="../img/tutorial/tutorial_1_basic_grid_02.gif" class="img-responsive" style="margin:20px 0;" />
             </p>
@@ -83,7 +84,7 @@
                 相當快速的處理好文字之後，我們要來放上 gird 的元件，同樣以拖拉的方式把左側
                 <kbd>grid</kbd> 元件拖拉到編輯區域，就可以產生一個預設為三個欄位的 grid，如果我們要設定一個九宮格的 gird，只需要輕鬆拖拉三次即可完成，每個 gird 拖進去編輯區域後，都會產生下列對應的 html 程式碼，<kbd>class="ui-grid-b"</kbd> 是 JQueryMobile 的預設格式，代表這是三個欄位的 grid。
             </p>
-            <pre>&ltdiv <span style="color:red;">class="ui-grid-b"</span> style="height:95px;"&gt<br/>    &ltdiv class="ui-block-a" style="height:100%;"&gt&lt/div&gt<br/>    &ltdiv class="ui-block-b" style="height:100%;"&gt&lt/div&gt<br/>    &ltdiv class="ui-block-c" style="height:100%;"&gt&lt/div&gt<br/>&lt/div&gt</pre>
+            <pre class="prettyprint linenums">&ltdiv <strong>class="ui-grid-b"</strong> style="height:95px;"&gt<br/>    &ltdiv class="ui-block-a" style="height:100%;"&gt&lt/div&gt<br/>    &ltdiv class="ui-block-b" style="height:100%;"&gt&lt/div&gt<br/>    &ltdiv class="ui-block-c" style="height:100%;"&gt&lt/div&gt<br/>&lt/div&gt</pre>
             <p>
                 <img alt="放上 gird 元件" src="../img/tutorial/tutorial_1_basic_grid_03.gif" class="img-responsive" style="margin:20px 0;" />
             </p>
@@ -95,8 +96,8 @@
                 有了 grid 之後，我們只要在對應的欄位內，利用 3rd-party 元件的 <kbd>image</kbd> ，就能夠輕鬆的放上圖片元件，或是直接輸入圖片的 html 語法，也可以輕鬆加入圖片，這裡列出加入圖片的程式碼提供大家參考。
                 <br/>附帶說明一點，如果是自己加入的程式碼，可以在圖片的標籤內，加上 <kbd>is="dragable"</kbd> ，就能夠讓這張圖片轉換為 EZoApp 的圖片可拖拉元件，是不是相當的方便呢！
             </p>
-            <pre>&ltdiv class="ui-grid-b" style="height:95px"&gt<br/>    &ltdiv class="ui-block-a" style="height:100%"&gt<br/>        &ltimg <span style="color:red;">is="dragable"</span> src="圖片網址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt標題&lt/h5&gt<br/>    &lt/div&gt
-    &ltdiv class="ui-block-b" style="height:100%"&gt<br/>        &ltimg <span style="color:red;">is="dragable"</span>  src="圖片網址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt標題&lt/h5&gt<br/>    &lt/div&gt<br/>    &ltdiv class="ui-block-c" style="height:100%"&gt<br/>        &ltimg <span style="color:red;">is="dragable"</span>  src="圖片網址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt標題&lt/h5&gt<br/>    &lt/div&gt<br/>&lt/div&gt</pre>
+            <pre class="prettyprint linenums">&ltdiv class="ui-grid-b" style="height:95px"&gt<br/>    &ltdiv class="ui-block-a" style="height:100%"&gt<br/>        &ltimg <strong>is="dragable"</strong> src="圖片網址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt標題&lt/h5&gt<br/>    &lt/div&gt
+    &ltdiv class="ui-block-b" style="height:100%"&gt<br/>        &ltimg <strong>is="dragable"</strong>  src="圖片網址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt標題&lt/h5&gt<br/>    &lt/div&gt<br/>    &ltdiv class="ui-block-c" style="height:100%"&gt<br/>        &ltimg <strong>is="dragable"</strong>  src="圖片網址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt標題&lt/h5&gt<br/>    &lt/div&gt<br/>&lt/div&gt</pre>
             <br/>
             <h5>
                 <strong>四、放上 footer 元件</strong>
@@ -115,16 +116,16 @@
                 最後我們仍然利用拖拉的方式，拖拉 <kbd>button</kbd> 元件放到編輯區域的 footer 上方，就可以在 footer 的左右兩邊建立按鈕，然後同樣的由屬性面板更換按鈕的 icon 與文字，就能夠很快速的做出一個帶有按鈕的 footer 囉！
                 <br/>當然，除了可以由屬性面板調整按鈕的屬性，因為按鈕的元件也是建構在 JQueryMobile 的基礎元件之一，我們可以藉由下列的程式碼，更改按鈕的樣式，讓整體更具有設計感。
             </p>
-            <pre>&ltdiv data-role="footer" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtInfoChamp&lt/h3&gt<br/>    &lta <span style="color:red;">class="ui-btn ui-btn-left  ui-btn-icon-left ui-icon-gear ui-btn-icon-notext ui-corner-all"</span> style="margin-top:0;"&gt&lt/a&gt<br/>    &lta <span style="color:red;">class="ui-btn ui-btn-right ui-btn-icon-left ui-icon-delete ui-btn-icon-notext ui-corner-all"</span> style="margin-top:0;"&gt&lt/a&gt<br/>&lt/div&gt</pre>
+            <pre class="prettyprint linenums">&ltdiv data-role="footer" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtInfoChamp&lt/h3&gt<br/>    &lta <strong>class="ui-btn ui-btn-left  ui-btn-icon-left ui-icon-gear ui-btn-icon-notext ui-corner-all"</strong> style="margin-top:0;"&gt&lt/a&gt<br/>    &lta <strong>class="ui-btn ui-btn-right ui-btn-icon-left ui-icon-delete ui-btn-icon-notext ui-corner-all"</strong> style="margin-top:0;"&gt&lt/a&gt<br/>&lt/div&gt</pre>
             <p>
                 <img alt="放上 footer 元件" src="../img/tutorial/tutorial_1_basic_grid_05.gif" class="img-responsive" style="margin:20px 0;" />
-            </p>
             <br/>範例連結：
             <br/>
             <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5752447301582848" target="_blank">基本元件實作 - grid 基礎排版</a>
             <br/>
             <br/>
             <br/>
+            </p>
         </div>
     </div>
 
@@ -144,15 +145,12 @@
         <div class="container copyright"></div>
     </div>
 
-
-
     <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
     <script src="../js/layout_tutorial.js"></script>
     <script src="../js/banner.js"></script>
     <script src="../js/tutorial.js"></script>
-
-
 
 </body>
 

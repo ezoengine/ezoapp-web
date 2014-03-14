@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tomorrow.css">
     <title>EZoApp 教學實作 - google 地圖應用</title>
 </head>
 
-<body page="tutorial" page-content="tutorial_js_1_googlemap">
+<body page="tutorial" page-content="tutorial_js_1_googlemap"  onload="prettyPrint()">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -19,7 +20,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">EZoApp</a>
+                <a class="navbar-brand" href="../index.html">EZoApp</a>
             </div>
             <div class="collapse navbar-collapse  navbar-right">
                 <ul class="nav navbar-nav top-menu">
@@ -78,7 +79,7 @@
             </h5>
             <p><kbd>gmap</kbd> 元件是 EZo 研發團隊 所開發的元件，讓使用者可以簡單迅速的創造地圖，使用的方式也相當簡單，在元件的面版中，選擇 3rd Party 的元件，接著選擇 gmap 元件，拖曳進入畫面後，進行長寬尺寸的編輯，不過 <kbd>gmap</kbd> 元件不只有長寬尺寸的功能，你還可以改變 zoom 的數值控制地圖縮放的大小數字越大地圖放的越大，也可以由 address 來指定地圖置中的地點，是不是相當的方便呢！
             </p>
-            <pre>&ltdiv is="gmap" style="width:100%;height:200px;" <strong style="color:red;">zoom="12" address="Qianzhen, TW"</strong>&gt&lt/div&gt</pre>
+            <pre  class="prettyprint linenums">&ltdiv is="gmap" style="width:100%;height:200px;" <strong>zoom="12" address="Qianzhen, TW"</strong>&gt&lt/div&gt</pre>
             <img alt="使用 gmap 元件，建立地圖" src="../img/tutorial/tutorial_js_1_googlemap_03.gif" class="img-responsive" />
             <br/>
             <h5>
@@ -86,11 +87,11 @@
             </h5>
             <p>光是放上元件就想要讓按鈕和地圖連動？說真的這實在有點難度，不過 EZoApp 已經幫我們把門檻大大的降低，只要把 <kbd>navbar</kbd> 的頁籤改成都市的名稱，然後在 JS 的頁籤貼上下列這串程式碼，地圖就會按照我們點選的都市，跳轉到以該都市為中心的地點囉！
             </p>
-            <pre>$(document).on('pageinit', function () {    <span style="color:#4DAE1E;">// 頁面開始時要執行的程式</span><br/>  $('#map_btn').on('click', function (e) {  <span style="color:#4DAE1E;">// 點下 navbar 按鈕時要執行的程式</span><br/>    var addr = $(e.target).text();          <span style="color:#4DAE1E;">// 讀取現在按下按鈕的都市名稱</span><br/>    $('#map').gk('address', addr);          <span style="color:#4DAE1E;">// 以該都市為中心點顯示在地圖上</span><br/>  });<br/>});</pre>
+            <pre  class="prettyprint linenums">$(document).on('pageinit', function () {    // 頁面開始時要執行的程式<br/>  $('#map_btn').on('click', function (e) {  // 點下 navbar 按鈕時要執行的程式<br/>    var addr = $(e.target).text();          // 讀取現在按下按鈕的都市名稱<br/>    $('#map').gk('address', addr);          // 以該都市為中心點顯示在地圖上<br/>  });<br/>});</pre>
             <br/>
             <p>但是不要忘記，在 navbar 要加上 id="map_btn"，在地圖要加上 id="map"。
             </p>
-            <pre>&ltdiv data-role="navbar" <strong style="color:red;">id="map_btn"</strong>&gt<br/>&ltdiv is="gmap" <strong style="color:red;">id="map"</strong> style="width:100%;height:450px;" zoom="15" address="Qianzhen, TW"&gt&lt/div&gt</pre>
+            <pre  class="prettyprint linenums">&ltdiv data-role="navbar" <strong>id="map_btn"</strong>&gt<br/>&ltdiv is="gmap" <strong>id="map"</strong> style="width:100%;height:450px;" zoom="15" address="Qianzhen, TW"&gt&lt/div&gt</pre>
             <p>全部程式碼就只有這樣，是不是很簡單！編寫完成後，按下最上方 preview 的按鈕，就可以來測試效果如何囉！
             </p>
             <img alt="貼上這串程式碼，地圖程式完成" src="../img/tutorial/tutorial_js_1_googlemap_04.gif" class="img-responsive" />
@@ -125,6 +126,7 @@
 
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
     <script src="../js/layout_tutorial.js"></script>
     <script src="../js/banner.js"></script>
     <script src="../js/tutorial.js"></script>

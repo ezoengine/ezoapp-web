@@ -1,5 +1,5 @@
-$(function() {
-    if ($(window).width() >= 768) {
+(function(j,w) {
+    if ($(w).width() >= 768) {
         $('.feature>div>div').hover(function() {
             $(this).stop(false, false).animate({
                 'margin-top': '-20px',
@@ -52,4 +52,4 @@ $(function() {
     $('.gallery>div').eq(3).on('click', function() {
         window.open("started.html", "_top")
     });
-});
+})(jQuery,window);

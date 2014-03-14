@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tomorrow.css">
     <title>EZoApp 教學實作 - 使用 google fonts</title>
 </head>
 
-<body page="tutorial" page-content="tutorial_3_google_font">
+<body page="tutorial" page-content="tutorial_3_google_font"  onload="prettyPrint()">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -19,7 +20,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">EZoApp</a>
+                <a class="navbar-brand" href="../index.html">EZoApp</a>
             </div>
             <div class="collapse navbar-collapse  navbar-right">
                 <ul class="nav navbar-nav top-menu">
@@ -96,7 +97,7 @@
             <p>當然大家也可以不用一定要選擇 google fonts，也可以使用自己的字體，不過自己的自己缺點就是必須放在自己的空間，而且也可能會有相關的版權問題，因此免費又有授權的字體，當然就選擇這些大廠的公開字體囉！( 不過中文字就算是公開字體，還是鮮少有人使用，畢竟一套中文字體可以多達5MB以上，使用者大概不會有耐心等待這麼大的檔案下載吧 )
                 <br/>使用自己的字體的方式：
             </p>
-            <pre>@font-face {  <br/>  font-family: "font-name";  <br/>  src: url("http://xxx.com/abc.ttf"); <br/> }</pre>
+            <pre  class="prettyprint linenums">@font-face {  <br/>  font-family: "font-name";  <br/>  src: url("http://xxx.com/abc.ttf"); <br/> }</pre>
             <br/>範例連結：
             <br/>
             <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5162563608248320" target="_blank">基本元件實作 - 使用 google font</a>
@@ -126,6 +127,7 @@
 
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
     <script src="../js/layout_tutorial.js"></script>
     <script src="../js/banner.js"></script>
     <script src="../js/tutorial.js"></script>
