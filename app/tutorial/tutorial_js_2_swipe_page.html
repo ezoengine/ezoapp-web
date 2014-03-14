@@ -34,7 +34,7 @@
             <h1></h1>
             <h2></h2>
         </div>
-        <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
+        <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 app 的利器" />
     </div>
 
     <div class="container">
@@ -45,20 +45,20 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
             <h3 class="right-content-1">
-                <strong>結合 javascript 應用 - 滑動頁面實作</strong>
+                <strong>結合 JavaScript 應用 - 滑動頁面實作</strong>
             </h3>
             <div class="line"></div>
             <div style="display:table;">
                 <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
                     <p>
                         對於開發一個 app 而言，最重要的當然就是手指的觸控了！但對於熟悉 HTML 與 CSS 等網頁工具的開發者來書，手指與滑鼠的操作行為是截然不同的，如何能夠針對手持式裝置平台來設計手勢，便成為了開發者的一個重要課題。
-                        <br/>今天大家有福了！因為 EZoApp 也有提供了利用手勢滑動來轉換頁面的機制，使用者只要撰寫部分的 javascript ，就能夠利用手勢在不同頁面之間切換，完全設計出 app 的操作行為，而因為使用網頁的語法，在各種手持裝置平台都能夠順利運作，真是設計者與開發者的一大福音！
-                        <br/>對於 javascript 不熟悉的朋友也不用擔心，以下會提供相關的程式碼給大家參考，照著範例進行，就算不熟悉也可以做出相當有水準的產品喔！
+                        <br/>今天大家有福了！因為 EZoApp 也有提供了利用手勢滑動來轉換頁面的機制，使用者只要撰寫部分的 JavaScript ，就能夠利用手勢在不同頁面之間切換，完全設計出 app 的操作行為，而因為使用網頁的語法，在各種手持裝置平台都能夠順利運作，真是設計者與開發者的一大福音！
+                        <br/>對於 JavaScript 不熟悉的朋友也不用擔心，以下會提供相關的程式碼給大家參考，照著範例進行，就算不熟悉也可以做出相當有水準的產品喔！
 
                         <br/>
                         <br/>範例連結：
                         <br/>
-                        <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5081027949101056" target="_blank">結合 javascript 應用 - 滑動頁面實作</a>
+                        <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5081027949101056" target="_blank">結合 JavaScript 應用 - 滑動頁面實作</a>
                         <br/>
                     </p>
                 </div>
@@ -87,18 +87,18 @@
             <br/>
             <br/>
             <h5>
-                <strong>二、撰寫滑動 javascript</strong>
+                <strong>二、撰寫滑動 JavaScript</strong>
             </h5>
-            <p>只有新增頁面是不能夠進行滑動的，接著我們就要來撰寫一些 javascript 來讓頁面滑動，這裡提供給大家基本的頁面滑動寫法，只要複製在程式碼編輯區的 js 頁籤內貼上，按下 preview 的按鈕就可以左滑右滑囉！( 記得 id 的名稱要寫對，不然就無法順利進行 )
+            <p>只有新增頁面是不能夠進行滑動的，接著我們就要來撰寫一些 JavaScript 來讓頁面滑動，這裡提供給大家基本的頁面滑動寫法，只要複製在程式碼編輯區的 js 頁籤內貼上，按下 preview 的按鈕就可以左滑右滑囉！( 記得 id 的名稱要寫對，不然就無法順利進行 )
             </p>
-            <pre  class="prettyprint linenums">var pages = <strong>['Page0', 'Page1', 'Page2']</strong>;            //頁面的名稱(id)<br/>$(document).on('pageinit', '<strong>#Page0</strong>', function () {<br/><br/>  $(document).on("swiperight", function () {        //往右滑的動作<br/>    var pageId = $.mobile.activePage.attr('id');<br/>    var idx = pages.indexOf(pageId);                //頁面數量<br/>    idx = idx - 1 &lt 0 ? pages.length - 1 : idx - 1; //讓頁面滑到底的時候會循環<br/>    $.mobile.changePage('#' + pages[idx], {         //JQueryMobile 的手勢動作<br/>      'transition': 'slide',<br/>      'reverse': true<br/>    });<br/>  });<br/><br/>  $(document).on("swipeleft", function () {         //往左滑的動作<br/>    var pageId = $.mobile.activePage.attr('id');<br/>    var idx = pages.indexOf(pageId);                //頁面數量<br/>    idx = ++idx % pages.length;                     //讓頁面滑到底的時候會循環<br/>    $.mobile.changePage('#' + pages[idx], {         //JQueryMobile 的手勢動作<br/>      'transition': 'slide'<br/>    });<br/>  });<br/><br/>});</pre> 
-            <img alt="撰寫滑動 javascript" src="../img/tutorial/tutorial_js_2_swipe_page_06.gif" class="img-responsive" />
+            <pre>var pages = <strong>['Page0', 'Page1', 'Page2']</strong>;            //頁面的名稱(id)<br/>$(document).on('pageinit', '<strong>#Page0</strong>', function () {<br/><br/>  $(document).on("swiperight", function () {        //往右滑的動作<br/>    var pageId = $.mobile.activePage.attr('id');<br/>    var idx = pages.indexOf(pageId);                //頁面數量<br/>    idx = idx - 1 &lt 0 ? pages.length - 1 : idx - 1; //讓頁面滑到底的時候會循環<br/>    $.mobile.changePage('#' + pages[idx], {         //jQuery Mobile 的手勢動作<br/>      'transition': 'slide',<br/>      'reverse': true<br/>    });<br/>  });<br/><br/>  $(document).on("swipeleft", function () {         //往左滑的動作<br/>    var pageId = $.mobile.activePage.attr('id');<br/>    var idx = pages.indexOf(pageId);                //頁面數量<br/>    idx = ++idx % pages.length;                     //讓頁面滑到底的時候會循環<br/>    $.mobile.changePage('#' + pages[idx], {         //jQuery Mobile 的手勢動作<br/>      'transition': 'slide'<br/>    });<br/>  });<br/><br/>});</pre> 
+            <img alt="撰寫滑動 JavaScript" src="../img/tutorial/tutorial_js_2_swipe_page_06.gif" class="img-responsive" />
             <br/>
             <p>就這樣我們可以輕鬆製作出一個簡易的滑動效果囉！
             <br/>
             <br/>範例連結：
             <br/>
-            <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5081027949101056" target="_blank">結合 javascript 應用 - 滑動頁面實作</a>
+            <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5081027949101056" target="_blank">結合 JavaScript 應用 - 滑動頁面實作</a>
             <br/>
             <br/>
             <br/>
@@ -127,9 +127,9 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+    <script src="../js/layout.js"></script>
     <script src="../js/layout_tutorial.js"></script>
     <script src="../js/banner.js"></script>
-    <script src="../js/tutorial.js"></script>
 
 
 

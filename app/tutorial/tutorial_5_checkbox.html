@@ -34,7 +34,7 @@
             <h1></h1>
             <h2></h2>
         </div>
-        <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
+        <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 app 的利器" />
     </div>
 
     <div class="container">
@@ -52,26 +52,26 @@
                 <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
                     <p>
                         除了上一節介紹的下拉選單，CheckBox 也是網頁表單與 app 表單中相當常見的功能，以往我們使用 CSS ，面對這類型的表單元素都很難修改樣式，而且不同瀏覽器上顯示的樣式甚至不盡相同真是令人相當的頭疼。
-                        <br/>但是現在有了 EZoApp 之後，大家就可以利用 EZoApp 的拖拉方式，快速的建立 CheckBox，只需要用滑鼠點選，就能夠進行水平和垂直方式的排列，而且樣式也採用 JQueryMobile 的標準樣式，也是在行動裝置上常見的樣式，省去了許多不必要的麻煩工作。
-                        <br/>如果大家不滿足於基本的黑白兩種樣式，可以自己嘗試看看使用 HTML 或 CSS 來進行編輯，可以參考前幾篇「<a href="tutorial_2_button.html">製作特色按鈕</a>」、「<a href="tutorial_3_google_font.html">使用 google font</a>」，都有一些不錯的教學介紹喔！
+                        <br/>但是現在有了 EZoApp 之後，大家就可以利用 EZoApp 的拖拉方式，快速的建立 CheckBox，只需要用滑鼠點選，就能夠進行水平和垂直方式的排列，而且樣式也採用 jQuery Mobile 的標準樣式，也是在行動裝置上常見的樣式，省去了許多不必要的麻煩工作。
+                        <br/>如果大家不滿足於基本的黑白兩種樣式，可以自己嘗試看看使用 HTML 或 CSS 來進行編輯，可以參考前幾篇「<a href="tutorial_2_button.html">製作特色按鈕</a>」、「<a href="tutorial_3_google_font.html">使用 Google Fonts</a>」，都有一些不錯的教學介紹喔！
                         <br/>
                         <br/>範例連結：
                         <br/>
-                        <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6278739709132800" target="_blank">基本元件實作 - 設計 ChecBox (垂直)</a>
+                        <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6278739709132800" target="_blank">基本元件實作 - 設計 CheckBox ( 垂直 )</a>
                         <br/>
-                        <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6234576707911680" target="_blank">基本元件實作 - 設計 CheckBox (水平)</a>
+                        <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6234576707911680" target="_blank">基本元件實作 - 設計 CheckBox ( 水平 )</a>
                         <br/>
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
-                    <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6278739709132800" target="_blank" class="tutorial-img-link" title="設計 ChecBox (垂直)"><img alt="設計 CheckBox" src="../img/tutorial/tutorial_5_checklist_03.png" class="img-responsive" /></a>
+                    <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6278739709132800" target="_blank" class="tutorial-img-link" title="設計 CheckBox (垂直)"><img alt="設計 CheckBox" src="../img/tutorial/tutorial_5_checklist_03.png" class="img-responsive" /></a>
                 </div>
             </div>
             <br/>
             <h5>
                 <strong>一、放上 CheckBox 元件</strong>
             </h5>
-            <p>一如往常，使用 EZoApp 就是要使用它好用的元件，直接利用拖拉的方式，將 <kbd>controlgroup-checkbox</kbd> 的元件拖曳到編輯區域，就會自動產一個 CheckBox 元件。
+            <p>一如往常，使用 EZoApp 就是要使用它好用的元件，直接利用拖拉的方式，將 <kbd>controlgroup-checkbox</kbd> 的元件拖曳到編輯區域，就會自動產生一個 CheckBox 元件。
             </p>
             <img alt="放上 CheckBox 元件" src="../img/tutorial/tutorial_5_checklist_04.gif" class="img-responsive" />
             <br/>
@@ -94,14 +94,14 @@
             </h5>
             <p>一直到這一個步驟之前都相當容易，基本上都只需要動動滑鼠就可以解決，而這個步驟我們就是要直接修改樣式，讓 CheckBox 看起來更為美觀。修改的方式就是修改標題 <kbd>legend</kbd> 標籤的樣式，大家可以貼上下列紅色的的程式碼，就可以看到樣式的變化。
             </p>
-            <pre  class="prettyprint linenums">&ltlegend <strong>style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;"</strong>&gtCheckbox Group&lt/legend&gt</pre>
+            <pre>&ltlegend <strong>style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;"</strong>&gtCheckbox Group&lt/legend&gt</pre>
             <img alt="撰寫 CSS 變換樣式" src="../img/tutorial/tutorial_5_checklist_07.gif" class="img-responsive" style="border-bottom:1px solid #ccc;" />
             <br/>
             <p>使用了 EZoApp 之後，是不是覺得在設計畫面上變得相當的直覺容易呢！這就是 EZoApp 最好用的特色之一喔！
                 <br/>
                 <br/>範例連結：
                 <br/>
-                <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6278739709132800" target="_blank">基本元件實作 - 設計 ChecBox (垂直)</a>
+                <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6278739709132800" target="_blank">基本元件實作 - 設計 CheckBox (垂直)</a>
                 <br/>
                 <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6234576707911680" target="_blank">基本元件實作 - 設計 CheckBox (水平)</a>
                 <br/>
@@ -132,9 +132,9 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+    <script src="../js/layout.js"></script>
     <script src="../js/layout_tutorial.js"></script>
     <script src="../js/banner.js"></script>
-    <script src="../js/tutorial.js"></script>
 
 
 

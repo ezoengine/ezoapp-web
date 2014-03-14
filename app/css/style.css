@@ -606,6 +606,7 @@ h2 {
 .left-menu ul, .left-menu li {
     padding:0;
     margin:0;
+    list-style:none;
 }
 .left-menu>ul>li {
     font-size:18px;
@@ -714,6 +715,7 @@ h2 {
 .tutorial-left-menu ul, .left-menu li {
     padding:0;
     margin:0;
+    list-style:none;
 }
 .tutorial-left-menu>ul>li {
     font-size:18px;

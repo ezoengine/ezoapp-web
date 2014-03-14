@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/tomorrow.css">
-    <title>EZoApp 教學實作 - google 地圖應用</title>
+    <title>EZoApp 教學實作 - Google 地圖應用</title>
 </head>
 
 <body page="tutorial" page-content="tutorial_js_1_googlemap"  onload="prettyPrint()">
@@ -34,7 +34,7 @@
             <h1></h1>
             <h2></h2>
         </div>
-        <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
+        <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 app 的利器" />
     </div>
 
     <div class="container">
@@ -45,20 +45,20 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
             <h3 class="right-content-1">
-                <strong>結合 javascript 應用 - google 地圖應用</strong>
+                <strong>結合 JavaScript 應用 - Google 地圖應用</strong>
             </h3>
             <div class="line"></div>
             <div style="display:table;">
                 <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
                     <p>
-                        google 地圖是目前世界上最好用的開放地圖資訊平台，也是目前最多人使用的地圖，舉凡網頁、導航、Android、ios...等各式各樣的 Device 都會見到 goolge 地圖的身影。
+                        google 地圖是目前世界上最好用的開放地圖資訊平台，也是目前最多人使用的地圖，舉凡網頁、導航、Android、iOS...等各式各樣的 Device 都會見到 goolge 地圖的身影。
                         <br/>但很可惜的，對於不會撰寫程式的人而言，要在自己的網頁內加上一個地圖，簡直會要了他的命，不過如果這時候他用了 EZoApp，他的這條命就整個保住了！( 好冷 XD ) EZoApp 的 3rd Party 元件，當中就有一個名為 gmap 的元件供大家使用，搭配 EZo 研發團隊的語法，使用者只需要寫三行，共不到一百個字母的程式碼，就可以翹著二郎腿捻著鬍鬚觀賞自己做出來的地圖，這種心情真是無法想像的愉悅呀！ 雖然 EZoApp 已經是非常的方便使用，在製作之前，仍然必須要求大家要有一點點的 HTML 和 CSS 基礎，畢竟在一些排版上，還是需要用到相關的基礎知識喔！
                         <br/>接下來就讓我來用最快的速度來介紹這個最快可以寫好的地圖程式吧！打開 EZoApp！Let’s Go！
 
                         <br/>
                         <br/>範例連結：
                         <br/>
-                        <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6501098755981312" target="_blank">結合 javascript 應用 - google 地圖應用</a>
+                        <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6501098755981312" target="_blank">結合 JavaScript 應用 - Google 地圖應用</a>
                         <br/>
                     </p>
                 </div>
@@ -79,7 +79,7 @@
             </h5>
             <p><kbd>gmap</kbd> 元件是 EZo 研發團隊 所開發的元件，讓使用者可以簡單迅速的創造地圖，使用的方式也相當簡單，在元件的面版中，選擇 3rd Party 的元件，接著選擇 gmap 元件，拖曳進入畫面後，進行長寬尺寸的編輯，不過 <kbd>gmap</kbd> 元件不只有長寬尺寸的功能，你還可以改變 zoom 的數值控制地圖縮放的大小數字越大地圖放的越大，也可以由 address 來指定地圖置中的地點，是不是相當的方便呢！
             </p>
-            <pre  class="prettyprint linenums">&ltdiv is="gmap" style="width:100%;height:200px;" <strong>zoom="12" address="Qianzhen, TW"</strong>&gt&lt/div&gt</pre>
+            <pre>&ltdiv is="gmap" style="width:100%;height:200px;" <strong>zoom="12" address="Qianzhen, TW"</strong>&gt&lt/div&gt</pre>
             <img alt="使用 gmap 元件，建立地圖" src="../img/tutorial/tutorial_js_1_googlemap_03.gif" class="img-responsive" />
             <br/>
             <h5>
@@ -87,18 +87,18 @@
             </h5>
             <p>光是放上元件就想要讓按鈕和地圖連動？說真的這實在有點難度，不過 EZoApp 已經幫我們把門檻大大的降低，只要把 <kbd>navbar</kbd> 的頁籤改成都市的名稱，然後在 JS 的頁籤貼上下列這串程式碼，地圖就會按照我們點選的都市，跳轉到以該都市為中心的地點囉！
             </p>
-            <pre  class="prettyprint linenums">$(document).on('pageinit', function () {    // 頁面開始時要執行的程式<br/>  $('#map_btn').on('click', function (e) {  // 點下 navbar 按鈕時要執行的程式<br/>    var addr = $(e.target).text();          // 讀取現在按下按鈕的都市名稱<br/>    $('#map').gk('address', addr);          // 以該都市為中心點顯示在地圖上<br/>  });<br/>});</pre>
+            <pre>$(document).on('pageinit', function () {    // 頁面開始時要執行的程式<br/>  $('#map_btn').on('click', function (e) {  // 點下 navbar 按鈕時要執行的程式<br/>    var addr = $(e.target).text();          // 讀取現在按下按鈕的都市名稱<br/>    $('#map').gk('address', addr);          // 以該都市為中心點顯示在地圖上<br/>  });<br/>});</pre>
             <br/>
             <p>但是不要忘記，在 navbar 要加上 id="map_btn"，在地圖要加上 id="map"。
             </p>
-            <pre  class="prettyprint linenums">&ltdiv data-role="navbar" <strong>id="map_btn"</strong>&gt<br/>&ltdiv is="gmap" <strong>id="map"</strong> style="width:100%;height:450px;" zoom="15" address="Qianzhen, TW"&gt&lt/div&gt</pre>
+            <pre>&ltdiv data-role="navbar" <strong>id="map_btn"</strong>&gt<br/>&ltdiv is="gmap" <strong>id="map"</strong> style="width:100%;height:450px;" zoom="15" address="Qianzhen, TW"&gt&lt/div&gt</pre>
             <p>全部程式碼就只有這樣，是不是很簡單！編寫完成後，按下最上方 preview 的按鈕，就可以來測試效果如何囉！
             </p>
             <img alt="貼上這串程式碼，地圖程式完成" src="../img/tutorial/tutorial_js_1_googlemap_04.gif" class="img-responsive" />
             <p>
                 <br/>範例連結：
                 <br/>
-                <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6501098755981312" target="_blank">結合 javascript 應用 - google 地圖應用</a>
+                <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6501098755981312" target="_blank">結合 JavaScript 應用 - Google 地圖應用</a>
             </p>
             <br/>
             <br/>
@@ -127,9 +127,9 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+    <script src="../js/layout.js"></script>
     <script src="../js/layout_tutorial.js"></script>
     <script src="../js/banner.js"></script>
-    <script src="../js/tutorial.js"></script>
 
 
 
