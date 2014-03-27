@@ -1,15 +1,16 @@
-var path = '';
+var path;
 $(function() {
   'use strict';
   var $window = $(window);
-  /**
-   * 頁面高度不夠時，footer仍然維持在視窗底部
-   */
-  if ($('.footer').offset().top < ($window.height() - 100)) {
-    $('.footer').css({
-      'margin-top': ($window.height() - 100 - $('.footer').offset().top) + 'px'
-    });
-  }
+  if (!path) {
+    path = ''
+  };
+
+  $('head').append(
+    '<link rel="icon" href="' + path + 'favicon.ico" type="image/x-icon"/>' +
+    '<link rel="shortcut icon" href="' + path + 'favicon.ico" type="image/x-icon"/>'
+  );
+
   /**
    *  google analytics
    */
@@ -23,6 +24,14 @@ $(function() {
     ga('send', 'pageview'); \
     </script>"
   );
+  /**
+   * 頁面高度不夠時，footer仍然維持在視窗底部
+   */
+  if ($('.footer').offset().top < ($window.height() - 100)) {
+    $('.footer').css({
+      'margin-top': ($window.height() - 100 - $('.footer').offset().top) + 'px'
+    });
+  }
 
   /**
    * 上方主選單
