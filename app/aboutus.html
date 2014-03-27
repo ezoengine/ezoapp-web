@@ -9,9 +9,12 @@
   <meta name="application-name" content="EZoApp - 快速開發行動 app 的最佳工具" />
   <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App   的雲端服務，非常適合用來快速打造 App、行動元件與使用者介面，同時支援前端技術的開發與學習。">
   <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,Java Script,JSON,EventBus,SpringBean,Cloud IDE,Mobile,WYSIWYG,GUL,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
-
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/style.css -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- endbuild -->
   <title>EZoApp - 關於我們</title>
 </head>
 
@@ -137,14 +140,15 @@
     <div class="container copyright"></div>
   </div>
 
-
-
+  <!-- build:js js/vendor.js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/aboutus.js -->
   <script src="js/layout.js"></script>
   <script src="js/banner.js"></script>
   <script src="js/scrollpage.js"></script>
-
+  <!-- endbuild -->
 
 </body>
 
