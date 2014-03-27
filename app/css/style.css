@@ -320,6 +320,16 @@
 h2 {
     margin-top:10px;
 }
+.navbar-header img{
+    -webkit-transition:.3s;
+    -moz-transition:.3s;
+    -o-transition:.3s;
+    transition:.3s;
+    opacity:.7;
+}
+.navbar-header:hover img{
+    opacity:1;
+}
 .navbar-inverse {
     background:rgba(5, 10, 15, 1);
     border:none;
