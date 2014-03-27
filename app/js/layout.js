@@ -47,7 +47,7 @@ $(function() {
   );
 
   $('.navbar-header').append(
-    '<a class="navbar-brand" href="' + path + 'index.html" title="EZoApp - 快速開發行動 app 的最佳工具">EZoApp</a>'
+    '<a class="navbar-brand" href="http://www.ezoui.com" title="EZoApp - 快速開發行動 app 的最佳工具">EZoApp</a>'
   );
 
   /**
