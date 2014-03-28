@@ -62,7 +62,7 @@ $(function() {
     '<li page="index"><a href="index.html">首頁</a></li>' +
     '<li page="plays"><a href="http://jqmdesigner.appspot.com/1.4.2/designer.html" target="_blank">立刻體驗</a></li>' +
     '<li page="started"><a href="started.html">基本介紹</a></li>' +
-    '<li page="tutorial"><a href="tutorial/tutorial_1_basic_grid.html">教學實作</a></li>' +
+    '<li page="tutorial"><a href="tutorial_1_basic_grid.html">教學實作</a></li>' +
     '<li page="aboutus"><a href="aboutus.html">關於我們</a></li>' +
     '<li page="blog"><a href="http://ezoui.wordpress.com/" target="_blank">Blog</a></li>'
   );
