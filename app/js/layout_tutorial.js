@@ -6,7 +6,7 @@ $(function() {
 
   $('.banner-content-text').append(
     '<h1>EZoApp 教學實作</h1>' +
-    '<h2>學習快速開發 app 的程式饗宴</h2>'
+    '<h2>學習快速開發 App 的程式饗宴</h2>'
   );
   $('pre').addClass('prettyprint');
 
