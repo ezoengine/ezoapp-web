@@ -43,13 +43,13 @@ $(function() {
    * 下方四個區塊的連結，如果直接使用 a 會因為 bootstrap 的緣故導致版面錯亂
    */
   $('.gallery>div').eq(0).on('click', function() {
-    window.open('tutorial/tutorial_1_basic_grid.html', '_top');
+    window.open('tutorial_1_basic_grid.html', '_top');
   });
   $('.gallery>div').eq(1).on('click', function() {
-    window.open('tutorial/tutorial_6_home_page.html', '_top');
+    window.open('tutorial_6_home_page.html', '_top');
   });
   $('.gallery>div').eq(2).on('click', function() {
-    window.open('tutorial/tutorial_js_4_open_data.html', '_top');
+    window.open('tutorial_js_4_open_data.html', '_top');
   });
   $('.gallery>div').eq(3).on('click', function() {
     window.open('started.html', '_top');

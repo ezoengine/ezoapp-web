@@ -10,11 +10,11 @@
   <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，非常適合用來快速打造 App、行動元件與使用者介面，同時支援前端技術的開發與學習。">
   <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
   <!-- build:css css/vendor.css -->
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <!-- endbuild -->
   <!-- build:css(.tmp) css/tutorial.css -->
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/tomorrow.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tomorrow.css">
   <!-- endbuild -->
   <title>EZoApp 教學實作 - Google 地圖應用</title>
 </head>
@@ -42,7 +42,7 @@
       <h1></h1>
       <h2></h2>
     </div>
-    <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
+    <img src="img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
   </div>
 
   <div class="container">
@@ -72,7 +72,7 @@
         </div>
         <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
           <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=6501098755981312" target="_blank" class="tutorial-img-link" title="Google 地圖應用">
-            <img alt="Google 地圖應用" src="../img/tutorial/tutorial_js_1_googlemap_01.png" class="img-responsive" />
+            <img alt="Google 地圖應用" src="img/tutorial/tutorial_js_1_googlemap_01.png" class="img-responsive" />
           </a>
         </div>
       </div>
@@ -82,7 +82,7 @@
       </h5>
       <p><kbd>navber</kbd> 元件是常用的元件之一，顧名思義就是一個導覽頁籤的元件，這個元件的程式碼也很簡單，有幾個按鈕就有幾個 &ltli&gt&lta&gt&lt/a&gt&lt/li&gt，如果有多個按鈕需求的使用者，就自行添加就會自動長出按鈕。
       </p>
-      <img alt="使用 navbar 元件製作按鈕頁籤" src="../img/tutorial/tutorial_js_1_googlemap_02.gif" class="img-responsive" />
+      <img alt="使用 navbar 元件製作按鈕頁籤" src="img/tutorial/tutorial_js_1_googlemap_02.gif" class="img-responsive" />
       <br/>
       <h5>
         <strong>二、使用 gmap 元件，建立地圖</strong>
@@ -90,7 +90,7 @@
       <p><kbd>gmap</kbd> 元件是 EZo 研發團隊 所開發的元件，讓使用者可以簡單迅速的創造地圖，使用的方式也相當簡單，在元件的面版中，選擇 3rd Party 的元件，接著選擇 gmap 元件，拖曳進入畫面後，進行長寬尺寸的編輯，不過 <kbd>gmap</kbd> 元件不只有長寬尺寸的功能，你還可以改變 zoom 的數值控制地圖縮放的大小數字越大地圖放的越大，也可以由 address 來指定地圖置中的地點，是不是相當的方便呢！
       </p>
       <pre>&ltdiv is="gmap" style="width:100%;height:200px;" <strong>zoom="12" address="Qianzhen, TW"</strong>&gt&lt/div&gt</pre>
-      <img alt="使用 gmap 元件，建立地圖" src="../img/tutorial/tutorial_js_1_googlemap_03.gif" class="img-responsive" />
+      <img alt="使用 gmap 元件，建立地圖" src="img/tutorial/tutorial_js_1_googlemap_03.gif" class="img-responsive" />
       <br/>
       <h5>
         <strong>三、貼上這串程式碼，地圖程式完成！</strong>
@@ -104,7 +104,7 @@
       <pre>&ltdiv data-role="navbar" <strong>id="map_btn"</strong>&gt<br/>&ltdiv is="gmap" <strong>id="map"</strong> style="width:100%;height:450px;" zoom="15" address="Qianzhen, TW"&gt&lt/div&gt</pre>
       <p>全部程式碼就只有這樣，是不是很簡單！編寫完成後，按下最上方 preview 的按鈕，就可以來測試效果如何囉！
       </p>
-      <img alt="貼上這串程式碼，地圖程式完成" src="../img/tutorial/tutorial_js_1_googlemap_04.gif" class="img-responsive" />
+      <img alt="貼上這串程式碼，地圖程式完成" src="img/tutorial/tutorial_js_1_googlemap_04.gif" class="img-responsive" />
       <p>
         <br/>範例連結：
         <br/>
@@ -133,16 +133,16 @@
   </div>
 
   <!-- build:js js/vendor.js -->
-  <script src="../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- endbuild -->
   <!-- build:js js/prettify.js -->
-  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <script src="bower_components/google-code-prettify/src/prettify.js"></script>
   <!-- endbuild -->
   <!-- build:js({app,.tmp}) js/tutorial.js -->
-  <script src="../js/layout_tutorial.js"></script>
-  <script src="../js/layout.js"></script>
-  <script src="../js/banner.js"></script>
+  <script src="js/layout_tutorial.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/banner.js"></script>
   <!-- endbuild -->
 
 </body>

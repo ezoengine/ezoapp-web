@@ -10,11 +10,11 @@
   <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，非常適合用來快速打造 App、行動元件與使用者介面，同時支援前端技術的開發與學習。">
   <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
   <!-- build:css css/vendor.css -->
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <!-- endbuild -->
   <!-- build:css(.tmp) css/tutorial.css -->
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/tomorrow.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tomorrow.css">
   <!-- endbuild -->
   <title>EZoApp 教學實作 - 滑動頁面實作</title>
 </head>
@@ -42,7 +42,7 @@
       <h1></h1>
       <h2></h2>
     </div>
-    <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
+    <img src="img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
   </div>
 
   <div class="container">
@@ -72,7 +72,7 @@
         </div>
         <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
           <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5081027949101056" target="_blank" class="tutorial-img-link" title="滑動頁面實作">
-            <img alt="滑動頁面實作" src="../img/tutorial/tutorial_js_2_swipe_page_01.png" class="img-responsive" />
+            <img alt="滑動頁面實作" src="img/tutorial/tutorial_js_2_swipe_page_01.png" class="img-responsive" />
           </a>
         </div>
       </div>
@@ -81,19 +81,19 @@
       </h5>
       <p>滑動頁面顧名思義，就是用手指來左滑又滑頁面，因此我們必須要新增頁面來進行滑動的行為，這裡我們使用 EZoApp 所提供的頁面新增功能，只要點選下方 page 的黑色區域，就會打開頁面的版塊，再次點選就會收合起來。
       </p>
-      <img alt="滑動頁面實作" src="../img/tutorial/tutorial_js_2_swipe_page_02.gif" class="img-responsive" style="border-top:1px solid #ccc;" />
+      <img alt="滑動頁面實作" src="img/tutorial/tutorial_js_2_swipe_page_02.gif" class="img-responsive" style="border-top:1px solid #ccc;" />
       <br/>
       <p>打開 Page 版塊之後，可以看到上方有五個選項小圖示，分別是新增頁面，重新命名頁面、複製頁面、刪除頁面與重新刷新版面，我們只要點選新增頁面的圖示，就可以新增頁面了。
       </p>
-      <img alt="滑動頁面實作" src="../img/tutorial/tutorial_js_2_swipe_page_03.png" class="img-responsive" style="border:1px solid #ccc;" />
+      <img alt="滑動頁面實作" src="img/tutorial/tutorial_js_2_swipe_page_03.png" class="img-responsive" style="border:1px solid #ccc;" />
       <br/>
       <p>點選新增頁面圖示後，就會彈出視窗要我們命名新的頁面，這個名稱不能重複，因為頁面名稱在 HTML 當中是 id 的值，所以是不能重複的。
       </p>
-      <img alt="滑動頁面實作" src="../img/tutorial/tutorial_js_2_swipe_page_04.png" class="img-responsive" style="border:1px solid #ccc;" />
+      <img alt="滑動頁面實作" src="img/tutorial/tutorial_js_2_swipe_page_04.png" class="img-responsive" style="border:1px solid #ccc;" />
       <br/>
       <p>就這樣新增三個頁面，分別給予名稱，以及塞入一些內容做為頁面的辨識。( 這樣滑到哪一頁才清楚 )
       </p>
-      <img alt="滑動頁面實作" src="../img/tutorial/tutorial_js_2_swipe_page_05.png" class="img-responsive" />
+      <img alt="滑動頁面實作" src="img/tutorial/tutorial_js_2_swipe_page_05.png" class="img-responsive" />
       <br/>
       <br/>
       <h5>
@@ -102,7 +102,7 @@
       <p>只有新增頁面是不能夠進行滑動的，接著我們就要來撰寫一些 JavaScript 來讓頁面滑動，這裡提供給大家基本的頁面滑動寫法，只要複製在程式碼編輯區的 js 頁籤內貼上，按下 preview 的按鈕就可以左滑右滑囉！( 記得 id 的名稱要寫對，不然就無法順利進行 )
       </p>
       <pre>var pages = <strong>['Page0', 'Page1', 'Page2']</strong>;            //頁面的名稱(id)<br/>$(document).on('pageinit', '<strong>#Page0</strong>', function () {<br/><br/>  $(document).on("swiperight", function () {        //往右滑的動作<br/>    var pageId = $.mobile.activePage.attr('id');<br/>    var idx = pages.indexOf(pageId);                //頁面數量<br/>    idx = idx - 1 &lt 0 ? pages.length - 1 : idx - 1; //讓頁面滑到底的時候會循環<br/>    $.mobile.changePage('#' + pages[idx], {         //jQuery Mobile 的手勢動作<br/>      'transition': 'slide',<br/>      'reverse': true<br/>    });<br/>  });<br/><br/>  $(document).on("swipeleft", function () {         //往左滑的動作<br/>    var pageId = $.mobile.activePage.attr('id');<br/>    var idx = pages.indexOf(pageId);                //頁面數量<br/>    idx = ++idx % pages.length;                     //讓頁面滑到底的時候會循環<br/>    $.mobile.changePage('#' + pages[idx], {         //jQuery Mobile 的手勢動作<br/>      'transition': 'slide'<br/>    });<br/>  });<br/><br/>});</pre> 
-      <img alt="撰寫滑動 JavaScript" src="../img/tutorial/tutorial_js_2_swipe_page_06.gif" class="img-responsive" />
+      <img alt="撰寫滑動 JavaScript" src="img/tutorial/tutorial_js_2_swipe_page_06.gif" class="img-responsive" />
       <br/>
       <p>就這樣我們可以輕鬆製作出一個簡易的滑動效果囉！
         <br/>
@@ -133,16 +133,16 @@
   </div>
 
   <!-- build:js js/vendor.js -->
-  <script src="../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <!-- endbuild -->
   <!-- build:js js/prettify.js -->
-  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <script src="bower_components/google-code-prettify/src/prettify.js"></script>
   <!-- endbuild -->
   <!-- build:js({app,.tmp}) js/tutorial.js -->
-  <script src="../js/layout_tutorial.js"></script>
-  <script src="../js/layout.js"></script>
-  <script src="../js/banner.js"></script>
+  <script src="js/layout_tutorial.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/banner.js"></script>
   <!-- endbuild -->
 
 </body>

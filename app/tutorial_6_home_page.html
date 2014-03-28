@@ -10,11 +10,11 @@
   <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，非常適合用來快速打造 App、行動元件與使用者介面，同時支援前端技術的開發與學習。">
   <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
   <!-- build:css css/vendor.css -->
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <!-- endbuild -->
   <!-- build:css(.tmp) css/tutorial.css -->
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/tomorrow.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tomorrow.css">
   <!-- endbuild -->
   <title>EZoApp 教學實作 - 打造入口頁面</title>
 </head>
@@ -42,7 +42,7 @@
       <h1></h1>
       <h2></h2>
     </div>
-    <img src="../img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
+    <img src="img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
   </div>
 
   <div class="container">
@@ -71,7 +71,7 @@
         </div>
         <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
           <a href="http://jqmdesigner.appspot.com/1.4.0/designer.html#&ref=5078785875509248" target="_blank" class="tutorial-img-link" title="打造入口頁面">
-            <img alt="打造入口頁面" src="../img/tutorial/tutorial_6_home_page_01.png" class="img-responsive" />
+            <img alt="打造入口頁面" src="img/tutorial/tutorial_6_home_page_01.png" class="img-responsive" />
           </a>
         </div>
       </div>
@@ -81,14 +81,14 @@
       </h5>
       <p>如前幾節所述，我們只要利用拖拉的方式，就可以把這些元件一個個的加入到畫面當中，程式碼也會自動添加。不過只學會拖拉元件是沒有辦法在幾分鐘內完成排版的，這時候我們就要妥善的利用 EZoApp 實用的屬性面板工具，來快速的編輯我們所拖曳出來的元件。( 如果找不到屬性面版，可以把程式碼區塊的大小變小，或先隱藏起來，就可以看到屬性面版了 )
       </p>
-      <img alt="直接利用元件來排版" src="../img/tutorial/tutorial_6_home_page_02.gif" class="img-responsive" />
+      <img alt="直接利用元件來排版" src="img/tutorial/tutorial_6_home_page_02.gif" class="img-responsive" />
       <br/>
       <h5>
         <strong>二、利用屬性面板修改屬性</strong>
       </h5>
       <p>這裡我們使用屬性面板來編輯 <kbd>grid</kbd> 這個元件的屬性，我們就可以設定 <kbd>grid</kbd> 的欄位是一欄還是兩欄，若是需要有兩列以上，就直接再新增一個 <kbd>grid</kbd> 就可以囉！
       </p>
-      <img alt="利用屬性面板修改屬性" src="../img/tutorial/tutorial_6_home_page_03.gif" class="img-responsive" />
+      <img alt="利用屬性面板修改屬性" src="img/tutorial/tutorial_6_home_page_03.gif" class="img-responsive" />
       <br/>
       <h5>
         <strong>三、塞入文字</strong>
@@ -96,14 +96,14 @@
       <p>我們同樣利用拖拉的方式，就可以輕鬆的把文字加入到 <kbd>grid</kbd> 裡頭，點選文字，就可以進行編輯，不過這邊有個要注意的地方，拖曳進來的文字預設為 h1 的字體大小且靠右對齊，因此我們可以將 h1 標籤加入 style=”text-align:center’”，就能夠讓文字置中囉！
       </p>
       <pre>&lth1 <strong>style="text-align:center;"</strong>&gt文字&lt/h1&gt</pre>
-      <img alt="塞入文字" src="../img/tutorial/tutorial_6_home_page_04.gif" class="img-responsive" />
+      <img alt="塞入文字" src="img/tutorial/tutorial_6_home_page_04.gif" class="img-responsive" />
       <br/>
       <h5>
         <strong>四、加入圖片</strong>
       </h5>
       <p>關於圖片的載入，我們這裡使用了3rd Party 裡頭的 <kbd>image</kbd> 元件，不過因為該元件的預設寬度為 100%，高度為 250px，所以拖拉進入畫面後會有變形的現象，不過我們只要手動進行修改寬高，並且填入所需的圖片網址，就可以輕鬆的產生合適大小的圖片。
       </p>
-      <img alt="加入圖片" src="../img/tutorial/tutorial_6_home_page_05.gif" class="img-responsive" />
+      <img alt="加入圖片" src="img/tutorial/tutorial_6_home_page_05.gif" class="img-responsive" />
       <br/>
       <h5>
         <strong>五、修改 header 與 footer 的主題樣式</strong>
@@ -111,7 +111,7 @@
       <p><kbd>header</kbd> 與 <kbd>footer</kbd> 元件，是使用 jQuery Mobile 的基本元件，因此我們只要在 <kbd>header</kbd> 和 <kbd>footer</kbd> 的標籤內，分別加入 data-theme="b" 的一小段程式碼，就可以把樣式進行更換。
       </p>
       <pre>&ltdiv data-role="header" data-position="fixed" <strong>data-theme="b"</strong>&gt<br/>    &lth3&gt我是 Header &lt/h3&gt<br/>&lt/div&gt</pre> 
-      <img alt="修改 header 與 footer 的主題樣式" src="../img/tutorial/tutorial_6_home_page_06.gif" class="img-responsive" />
+      <img alt="修改 header 與 footer 的主題樣式" src="img/tutorial/tutorial_6_home_page_06.gif" class="img-responsive" />
       <br/>
       <h5>
         <strong>六、萬事俱備，只欠東風(背景)</strong>
@@ -119,7 +119,7 @@
       <p>其實到目前為止我們都只是利用拖拉元件，然後修改一下元件的程式碼，就可以把內容排列的差不多了( 不過其實編輯程式碼，還是需要對 CSS 有一些基本的認識，例如 margin 怎麼用？height 和 width 的設定...等 )，接下來我們只要挑一張合適的背景圖，放在最外層 div 裡頭當作背景圖就可以囉！
       </p>
       <pre>&ltdiv id="home" data-role="page" <strong>style="background:url(圖片網址); background-size:100% 100%;"</strong>&gt</pre>
-      <img alt="萬事俱備，只欠東風" src="../img/tutorial/tutorial_6_home_page_07.gif" class="img-responsive" />
+      <img alt="萬事俱備，只欠東風" src="img/tutorial/tutorial_6_home_page_07.gif" class="img-responsive" />
       <p>
         <br/>範例連結：
         <br/>
@@ -148,16 +148,16 @@
   </div>
 
   <!-- build:js js/vendor.js -->
-  <script src="../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <!-- endbuild -->
   <!-- build:js js/prettify.js -->
-  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <script src="bower_components/google-code-prettify/src/prettify.js"></script>
   <!-- endbuild -->
   <!-- build:js({app,.tmp}) js/tutorial.js -->
-  <script src="../js/layout_tutorial.js"></script>
-  <script src="../js/layout.js"></script>
-  <script src="../js/banner.js"></script>
+  <script src="js/layout_tutorial.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/banner.js"></script>
   <!-- endbuild -->
 
 </body>

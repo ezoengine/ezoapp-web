@@ -1,14 +1,14 @@
-var path;
+// var path;
 $(function() {
   'use strict';
   var $window = $(window);
-  if (!path) {
-    path = ''
-  };
+  // if (!path) {
+  //   path = ''
+  // };
 
   $('head').append(
-    '<link rel="icon" href="' + path + 'favicon.ico" type="image/x-icon"/>' +
-    '<link rel="shortcut icon" href="' + path + 'favicon.ico" type="image/x-icon"/>'
+    '<link rel="icon" href="favicon.ico" type="image/x-icon"/>' +
+    '<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>'
   );
 
   /**
@@ -37,17 +37,17 @@ $(function() {
    * 上方主選單
    */
   $('.top-menu').append(
-    '<li page="index"><a href="' + path + 'index.html">首頁</a></li>' +
+    '<li page="index"><a href="index.html">首頁</a></li>' +
     '<li page="play"><a href="http://jqmdesigner.appspot.com/1.4.2/designer.html" target="_blank">立刻體驗</a></li>' +
-    '<li page="started"><a href="' + path + 'started.html">基本介紹</a></li>' +
-    '<li page="tutorial"><a href="' + path + 'tutorial/tutorial_1_basic_grid.html">教學實作</a></li>' +
+    '<li page="started"><a href="started.html">基本介紹</a></li>' +
+    '<li page="tutorial"><a href="tutorial_1_basic_grid.html">教學實作</a></li>' +
     //'<li page="pricing"><a href="'+path+'pricing.html">授權方案</a></li>' +
-    '<li page="aboutus"><a href="' + path + 'aboutus.html">關於我們</a></li>' +
+    '<li page="aboutus"><a href="aboutus.html">關於我們</a></li>' +
     '<li page="blog"><a href="http://ezoui.wordpress.com/" target="_blank">Blog</a></li>'
   );
 
   $('.navbar-header').append(
-    '<a class="navbar-brand" href="http://www.ezoui.com" title="EZoApp - 快速開發行動 App 的最佳工具"><img src="' + path + 'img/logo.png" style="width:27px; margin:-3px 5px 0 0; border:none;">EZoApp</a>'
+    '<a class="navbar-brand" href="http://www.ezoui.com" title="EZoApp - 快速開發行動 App 的最佳工具"><img src="img/logo.png" style="width:27px; margin:-3px 5px 0 0; border:none;">EZoApp</a>'
   );
 
   /**
@@ -59,18 +59,18 @@ $(function() {
    * footer選單
    */
   $('.footer-menu').append(
-    '<li page="index"><a href="' + path + 'index.html">首頁</a></li>' +
+    '<li page="index"><a href="index.html">首頁</a></li>' +
     '<li page="plays"><a href="http://jqmdesigner.appspot.com/1.4.2/designer.html" target="_blank">立刻體驗</a></li>' +
-    '<li page="started"><a href="' + path + 'started.html">基本介紹</a></li>' +
-    '<li page="tutorial"><a href="' + path + 'tutorial/tutorial_1_basic_grid.html">教學實作</a></li>' +
-    '<li page="aboutus"><a href="' + path + 'aboutus.html">關於我們</a></li>' +
+    '<li page="started"><a href="started.html">基本介紹</a></li>' +
+    '<li page="tutorial"><a href="tutorial/tutorial_1_basic_grid.html">教學實作</a></li>' +
+    '<li page="aboutus"><a href="aboutus.html">關於我們</a></li>' +
     '<li page="blog"><a href="http://ezoui.wordpress.com/" target="_blank">Blog</a></li>'
   );
   $('.social-menu').append(
-    '<li><a href="https://plus.google.com/117990746163074166131" target="_blank"><img src="' + path + 'img/logo01.png" alt="google+" /></a></li>' +
-    '<li><a href="https://www.facebook.com/EZoUI" target="_blank"><img src="' + path + 'img/logo02.png" alt="faacebook" /></a></li>' +
-    '<li><a href="https://twitter.com/EZoService/status/405605560386461696" target="_blank"><img src="' + path + 'img/logo03.png" alt="twitter" /></a></li>' +
-    '<li><a href="http://ezoui.wordpress.com/" target="_blank"><img src="' + path + 'img/logo04.png" alt="blog" /></a></li>'
+    '<li><a href="https://plus.google.com/117990746163074166131" target="_blank"><img src="img/logo01.png" alt="google+" /></a></li>' +
+    '<li><a href="https://www.facebook.com/EZoUI" target="_blank"><img src="img/logo02.png" alt="faacebook" /></a></li>' +
+    '<li><a href="https://twitter.com/EZoService/status/405605560386461696" target="_blank"><img src="img/logo03.png" alt="twitter" /></a></li>' +
+    '<li><a href="http://ezoui.wordpress.com/" target="_blank"><img src="img/logo04.png" alt="blog" /></a></li>'
   );
   $('.copyright').append(
     '<div>© InfoChamp Systems Corporation 2013</div>'
