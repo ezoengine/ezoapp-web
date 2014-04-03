@@ -674,6 +674,16 @@ h2 {
     font-size:15px;
     line-height: 26px;
 }
+.right-content ul li{
+    font-size:15px;
+    line-height: 26px;
+    word-wrap:break-word;
+    padding:0;
+}
+.right-content ul{
+    padding:0;
+    padding-left:23px;
+}
 .right-content h5 {
     font-size:15px;
     line-height: 26px;

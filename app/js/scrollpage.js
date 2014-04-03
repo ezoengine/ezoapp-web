@@ -33,23 +33,22 @@ $(function() {
     /*
      *  判斷卷軸與第一層選單的連動
      */
+    var leftMenuLength = $('.left-menu-1').length - 1;
     if ($window.scrollTop() >= 0 && $window.scrollTop() < ($('.right-content-1').eq(1).offset().top - 70)) {
       $('.left-menu>ul>li').removeClass('active');
       $('.left-menu-1').eq(0).addClass('active');
       $('.left-menu-1 ul li').removeClass('active');
     }
-    if ($window.scrollTop() >= ($('.right-content-1').eq(1).offset().top - 70) && $window.scrollTop() < ($('.right-content-1').eq(2).offset().top - 70)) {
-      $('.left-menu>ul>li').removeClass('active');
-      $('.left-menu-1').eq(1).addClass('active');
-      $('.left-menu-1 ul li').removeClass('active');
+    for (var leftMenuNum = 1; leftMenuNum < leftMenuLength; leftMenuNum++) {
+      if ($window.scrollTop() >= ($('.right-content-1').eq(leftMenuNum).offset().top - 70) && $window.scrollTop() < ($('.right-content-1').eq(leftMenuNum+1).offset().top - 70)) {
+        $('.left-menu>ul>li').removeClass('active');
+        $('.left-menu-1').eq(leftMenuNum).addClass('active');
+        $('.left-menu-1 ul li').removeClass('active');
+      }
     }
-    if ($window.scrollTop() >= ($('.right-content-1').eq(2).offset().top - 70) && $window.scrollTop() < ($('.right-content-1').eq(3).offset().top - 70)) {
+    if ($window.scrollTop() >= ($('.right-content-1').eq(leftMenuNum).offset().top - 70)) {
       $('.left-menu>ul>li').removeClass('active');
-      $('.left-menu ul li.left-menu-1').eq(2).addClass('active');
-    }
-    if ($window.scrollTop() >= ($('.right-content-1').eq(3).offset().top - 70)) {
-      $('.left-menu>ul>li').removeClass('active');
-      $('.left-menu ul li.left-menu-1').eq(3).addClass('active');
+      $('.left-menu ul li.left-menu-1').eq(leftMenuNum).addClass('active');
     }
 
 
