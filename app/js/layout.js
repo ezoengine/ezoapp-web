@@ -67,10 +67,11 @@ $(function() {
     '<li page="blog"><a href="http://ezoui.wordpress.com/" target="_blank">Blog</a></li>'
   );
   $('.social-menu').append(
-    '<li><a href="https://plus.google.com/117990746163074166131" target="_blank"><img src="img/logo01.png" alt="google+" /></a></li>' +
-    '<li><a href="https://www.facebook.com/EZoUI" target="_blank"><img src="img/logo02.png" alt="faacebook" /></a></li>' +
-    '<li><a href="https://twitter.com/EZoService/status/405605560386461696" target="_blank"><img src="img/logo03.png" alt="twitter" /></a></li>' +
-    '<li><a href="http://ezoui.wordpress.com/" target="_blank"><img src="img/logo04.png" alt="blog" /></a></li>'
+    '<li><a href="mailto:EZoService@icsc.com.tw" target="_blank"><img src="img/logo05.png" alt="mail to us" title="mail to us" /></a></li>' +
+    '<li><a href="https://plus.google.com/117990746163074166131" target="_blank"><img src="img/logo01.png" alt="google+" title="Find us on Google+" /></a></li>' +
+    '<li><a href="https://www.facebook.com/EZoUI" target="_blank"><img src="img/logo02.png" alt="faacebook" title="Find us on Facebook" /></a></li>' +
+    '<li><a href="https://twitter.com/EZoService/status/405605560386461696" target="_blank"><img src="img/logo03.png" alt="twitter" title="Find us on Twitter" /></a></li>' +
+    '<li><a href="http://ezoui.wordpress.com/" target="_blank"><img src="img/logo04.png" alt="blog" title="Find us on blog" /></a></li>'
   );
   $('.copyright').append(
     '<div>© InfoChamp Systems Corporation 2013</div>'
