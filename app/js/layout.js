@@ -38,7 +38,7 @@ $(function() {
    */
   $('.top-menu').append(
     '<li page="index"><a href="index.html">首頁</a></li>' +
-    '<li page="play"><a href="http://jqmdesigner.appspot.com/1.4.2/designer.html" target="_blank">立刻體驗</a></li>' +
+    '<li page="play"><a href="http://jqmdesigner.appspot.com" target="_blank">立刻體驗</a></li>' +
     '<li page="started"><a href="started.html">基本介紹</a></li>' +
     '<li page="tutorial"><a href="tutorial_1_basic_grid.html">教學實作</a></li>' +
     //'<li page="pricing"><a href="'+path+'pricing.html">授權方案</a></li>' +
@@ -60,7 +60,7 @@ $(function() {
    */
   $('.footer-menu').append(
     '<li page="index"><a href="index.html">首頁</a></li>' +
-    '<li page="plays"><a href="http://jqmdesigner.appspot.com/1.4.2/designer.html" target="_blank">立刻體驗</a></li>' +
+    '<li page="plays"><a href="http://jqmdesigner.appspot.com" target="_blank">立刻體驗</a></li>' +
     '<li page="started"><a href="started.html">基本介紹</a></li>' +
     '<li page="tutorial"><a href="tutorial_1_basic_grid.html">教學實作</a></li>' +
     '<li page="aboutus"><a href="aboutus.html">關於我們</a></li>' +
@@ -74,7 +74,7 @@ $(function() {
     '<li><a href="http://ezoui.wordpress.com/" target="_blank"><img src="img/logo04.png" alt="blog" title="Find us on blog" /></a></li>'
   );
   $('.copyright').append(
-    '<div>© InfoChamp Systems Corporation 2013</div>'
+    '<div>© InfoChamp Systems Corporation 2014</div>'
   );
 
 
