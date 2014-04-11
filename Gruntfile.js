@@ -322,6 +322,17 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+
+        'ftp-deploy': {
+            build: {
+                auth: {
+                    host: 'www.ezoui.com',
+                    port: 21                   
+                },
+                src: '<%= config.dist %>',
+                dest: '.'
+            }
         }
     });
 
@@ -339,6 +350,8 @@ module.exports = function (grunt) {
             'watch'
         ]);
     });
+
+    grunt.registerTask('deploy', ['ftp-deploy']);   
 
     grunt.registerTask('server', function (target) {
         grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
