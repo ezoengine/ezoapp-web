@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速開發行動 App 的最佳工具" />
+  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，非常適合用來快速打造 App、行動元件與使用者介面，同時支援前端技術的開發與學習。">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tomorrow.css">
+  <!-- endbuild -->
+  <title>EZoApp 教學實作 - RSS 服務實作</title>
+</head>
+
+<body page="tutorial" page-content="tutorial_js_5_rss" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
+    </div>
+    <img src="img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
+  </div>
+
+  <div class="container">
+    <!--左側選單-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>結合 JavaScript 應用 - RSS 服務實作</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            RSS 的英文全名是 Really Simple Syndication，顧名思義是個非常簡單就能整合一切資訊的服務，也是個有點像電子報或新聞群組的東西，賦予我們非常強大的編輯設計能力，並讓我們能簡單的獲取豐富的資料。
+            <br/>
+            比較常見的範例就像是藉由訂閱報章雜誌的 RSS，就能夠獲得最新的文章標題與預覽內容，訂閱氣象局的 RSS 就能掌握最新的氣象資訊，訂閱名人的部落格 RSS，就能無時無刻了解名人的最新文章動態...等，諸如此類，都是 RSS 所帶給我們的便利。
+            <br/>
+            過去我們在 RSS 的應用範圍，往往都是藉由 RSS 的閱讀器或是 email 的通知方式進行，更不用去談論該如何將這些非常有用的即時資訊，應用到行動裝置的平台上，而這篇範例，將會介紹如何使用 EZoApp 的 <kbd>RSS</kbd> 元件，最快速的產出一系列的文章清單，快速的讀取各是報章雜誌的 RSS，讓我們輕鬆做出在行動裝置平台上的 RSS 閱讀程式，
+            <br/>
+
+            <br/>
+            <br/>範例連結：
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#ref=5272570941145088" target="_blank">結合 JavaScript 應用 - RSS 服務實作</a>
+            <br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#ref=5272570941145088" target="_blank" class="tutorial-img-link" title="RSS 服務實作">
+            <img alt="RSS 服務實作" src="img/tutorial/tutorial_js_5_rss_01.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <br/>
+      <h5>
+        <strong>一、建立基本樣版</strong>
+      </h5>
+      <p>在建立文章清單之前，我們首先要建立一個基本的樣板，主要希望點選上方 header 的按鈕，下方文章清單可以載入正確的 RSS 內容。
+      <br/>
+      與之前的章節所介紹的作法如出一轍，利用拖拉的方式將 <kbd>header</kbd>、<kbd>footer</kbd>、<kbd>navbar</kbd> 等元件放入畫面當中。
+      </p>
+      <img alt="建立基本樣版" src="img/tutorial/tutorial_js_5_rss_02.gif" class="img-responsive" />
+      <br/>
+      <p>接著我們在 navbar 的程式碼內，進行以下的修改，加入相對應的 RSS 網址，就完成了基本的樣板。( <kbd>RSS</kbd> 元件預設為 CNN 的 RSS 網址，請自行更換相對應的網址 ) 
+      </p>
+      <pre>
+&ltdiv data-role="navbar" class="menu"&gt
+  &ltul&gt
+    &ltli <strong>apple="http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/111"</strong>&gt
+      &lta class="ui-btn-active ui-state-persist"&gt3C 資訊&lt/a&gt
+    &lt/li&gt
+    &ltli <strong>apple="http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/102"</strong>&gt
+      &lta&gt社會新聞&lt/a&gt
+    &lt/li&gt
+    &ltli a<strong>pple="http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/107"</strong>&gt
+      &lta&gt體壇焦點&lt/a&gt
+    &lt/li&gt
+  &lt/ul&gt
+&lt/div&gt</pre>
+      <br/>
+      <h5>
+        <strong>二、使用 RSS 元件，建立文章清單</strong>
+      </h5>
+      <p>接著我們將 EZoApp 的 <kbd>RSS</kbd> 元件拖拉進入畫面當中，可以看到自動產生了一個具有標題的清單畫面，而清單上許多大括號的代碼，是當我們按下 preview 的按鈕之後，會將對應的 RSS 內容放入大括號內。
+      </p>
+      <img alt="使用 RSS 元件，建立文章清單" src="img/tutorial/tutorial_js_5_rss_03.gif" class="img-responsive" />
+      <br/>
+      <p>針對 RSS 元件的屬性，除了可以藉由旁邊的屬性面板，進行最基本的修改，也可以直接修改程式碼編輯器中的 html 面板內的程式。
+      </p>
+      <pre>&ltdiv id="gk-428PVoA" is="rss-news" <strong>service="http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/111" rownum="3"</strong>&gt
+&lt!--service 請換成第一頁的 RSS 網址 --&gt
+&lt!--rownum 代表產生的文章清單數量 --&gt
+  &ltul data-role="listview" data-autodividers="true" data-inset="true" is="json-listview"&gt
+    &ltli divider="<strong>{{publishedDate}}</strong>" is="listview-li"&gt
+      &ltspan&gt<strong>{{title}}</strong>&lt/span&gt
+      &ltbr&gt
+      &ltspan style="color:#666;font-size:0.8em;white-space: normal;"&gt<strong>{{contentSnippet}}</strong>&lt/span&gt
+      &ltbr&gt
+      &ltspan style="color:#666;font-size:0.8em;white-space: normal;"&gt
+        &lta href="<strong>{{link}}</strong>" target="_blank"&gtlink&lt/a&gt
+      &lt/span&gt
+    &lt/li&gt
+  &lt/ul&gt
+&lt/div&gt</pre>
+      <br/>
+      <h5>
+        <strong>三、修改 javascript 程式碼</strong>
+      </h5>
+      <p>畫面和 HTML 都完成之後，我們只要對 JavaScript 的程式碼進行修改，就可以輕鬆的製作出一個新聞的 RSS 閱讀器囉！
+      </p>
+      <img alt="貼上這串程式碼，地圖程式完成" src="img/tutorial/tutorial_js_5_rss_04.gif" class="img-responsive" />
+      <br/>
+      <pre>$(document).on("gkComponentsReady", function () {
+  var $ele = $("#gk-428PVoA"),
+    FEED_URL = $ele.attr("service"),
+    $listview = $("#gk-428PVoA").find('[data-role="listview"]');
+  rowNum = $ele.attr('rowNum');
+
+  $('.menu li').on('click', function () {
+    FEED_URL = $(this).attr('apple');     //點選按鈕載入網址
+    fn_rss(FEED_URL);
+  });
+
+  fn_rss(FEED_URL);                       //載入 HTML 上所寫第一頁的網址
+
+  function fn_rss(FEED_URL) {
+    if (FEED_URL) {
+      $.ajax({                            //利用 JQuery 的 ajax api
+        beforeSend: function () {
+          $listview.css('visibility', 'hidden');
+        },
+        url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=' + rowNum + '&callback=?&q=' + encodeURIComponent(FEED_URL),                    //利用 google 的 RSS 服務
+        dataType: 'json',
+        success: function (data) {
+          if (data.responseData.feed && data.responseData.feed.entries) {
+            var models = data.responseData.feed.entries;
+            $listview.gk('model', models);                      //利用 EZoApp 的 gk 元件 
+            $listview.css('visibility', 'visible');
+          }
+        }
+      });
+    }
+  }
+});</pre>
+      <br/>
+      <h5>
+        <strong>四、屬性設定解釋</strong>
+      </h5>
+      <p>
+        因為 EZoApp 的 <kbd>RSS</kbd> 元件應用了 google 所提供的 RSS 服務，因此在相對應的變數名稱上就必須按照 google 解析出來的名稱規則進行 ( 也就是兩個大括號內的變數名稱 )，以下將列出幾個 google RSS 服務所提供的屬性名稱：
+        <br/><strong>1.author：作者資訊</strong>
+        <br/><strong>2.content：</strong>詳細內容，包含標題、內容概要與連結
+        <br/><strong>3.contentSnippet：</strong>內容概要
+        <br/><strong>4.link：</strong>所對應的網址超連結
+        <br/><strong>5.publishedDate：</strong>發佈時間
+        <br/><strong>6.title：</strong>文章標題
+        <br/>
+        <br/>
+        我們只要善用這些屬性，就能夠做出專屬於自己的 RSS 閱讀器囉！當然，因為我們可以讀取到 RSS 所提供的資訊內容，我們也可以自己將內容解析出我們要的區塊或資訊，就能夠進行更彈性的應用與變化。
+      </p>
+      <p>
+        <br/>範例連結：
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#ref=5272570941145088" target="_blank">結合 JavaScript 應用 - RSS 服務實作</a>
+      </p>
+      <br/>
+      <br/>
+
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="js/layout_tutorial.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/banner.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>
