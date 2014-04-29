@@ -1,8 +1,13 @@
-var path = '../';
 $(function() {
   'use strict';
   var $window = $(window),
-    tutorialLeftMenuWidth = $('.tutorial-left-menu').width();
+    windowHeight, menuWidth, menuHeight, menuTop, scrollNum, menuHeight;
+
+  $('.tutorial-left-menu>ul').css({
+    'height': $window.height() - 90 + 'px'
+  });
+  menuHeight = $('.tutorial-left-menu>ul').height();
+  menuWidth = $('.tutorial-left-menu').width();
 
   $('.banner-content-text').append(
     '<h1>EZoApp 教學實作</h1>' +
@@ -25,7 +30,7 @@ $(function() {
     '<li page-content="tutorial_6_home_page"><a href="tutorial_6_home_page.html">6. 打造入口頁面</a></li>' +
     '</ul>' +
     '</li>' +
-    '<li><a>結合 JavaScript 應用</a>' +
+    '<li><a>JavaScript 應用</a><i></i>' +
     '<ul>' +
     '<li page-content="tutorial_js_1_googlemap"><a href="tutorial_js_1_googlemap.html">1. Google 地圖應用</a></li>' +
     '<li page-content="tutorial_js_2_swipe_page"><a href="tutorial_js_2_swipe_page.html">2. 滑動頁面實作</a></li>' +
@@ -45,24 +50,48 @@ $(function() {
 
 
   $window.resize(function() {
-    tutorialLeftMenuWidth = $('.tutorial-left-menu').width();
+    windowHeight = $window.height();
+    menuWidth = $('.tutorial-left-menu').width();
+    $('.tutorial-left-menu>ul').css({
+      'height': $window.height() - 90 + 'px'
+    });
+    $('.tutorial-left-menu>ul').css({
+      'width': menuWidth + 'px'
+    });
+    menuHeight = $('.tutorial-left-menu>ul').height();
   });
 
   $window.scroll(function() {
-
+    scrollNum = $(document).height() - menuHeight - 90;
+    menuTop = $('.tutorial-left-menu>ul').offset().top;
     /**
      * 卷軸往下捲到一定程度，左側選單會固定不動
      */
     if ($window.width() >= 978) {
-      $window.scrollTop() > 200 ? $('.tutorial-left-menu>ul').css({
-        'position': 'fixed',
-        'top': '65px',
-        'width': tutorialLeftMenuWidth + 'px'
-      }) : $('.tutorial-left-menu>ul').css({
-        'position': 'relative',
-        'top': '0',
-        'width': '100%'
-      });
+      if ($window.scrollTop() > 200 && $window.scrollTop() < scrollNum) {
+        $('.tutorial-left-menu>ul').css({
+          'position': 'fixed',
+          'top': '65px',
+          'width': menuWidth + 'px',
+          'height': $window.height() - 90 + 'px'
+        });
+      }
+      if ($window.scrollTop() <= 200) {
+        $('.tutorial-left-menu>ul').css({
+          'position': 'relative',
+          'top': '0',
+          'width': '100%',
+          'height': $window.height() - 90 + 'px'
+        });
+      }
+      if ($window.scrollTop() >= (scrollNum - 60)) {
+        $('.tutorial-left-menu>ul').css({
+          'position': 'fixed',
+          'top': '65px',
+          'height': (menuHeight + $(document).height() - $window.scrollTop() - menuHeight - 170) + 'px',
+          'width': menuWidth + 'px'
+        });
+      }
     } else {
       $('.tutorial-left-menu>ul').css({
         'position': 'relative',
@@ -72,5 +101,5 @@ $(function() {
     }
 
   });
-  
+
 });

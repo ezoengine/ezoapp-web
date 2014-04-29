@@ -737,6 +737,21 @@ h2 {
     margin:0;
     list-style:none;
 }
+.tutorial-left-menu>ul{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.tutorial-left-menu>ul::-webkit-scrollbar{
+    width:3px;
+}
+.tutorial-left-menu>ul::-webkit-scrollbar-track{
+    background:#eee;
+    border-radius: 3px;
+}
+.tutorial-left-menu>ul::-webkit-scrollbar-thumb{
+    background:#ddd;
+    border-radius: 3px;
+}
 .tutorial-left-menu>ul>li {
     font-size:18px;
     border-bottom:1px solid #ccc;
@@ -744,7 +759,9 @@ h2 {
     font-weight:bold;
     cursor:pointer;
     margin-left:20px;
-    background:url(../img/menu_arrow2.jpg) right 16px no-repeat;
+}
+.tutorial-left-menu>ul>li>a {
+    background:url(../img/menu_arrow2.jpg) right 6px no-repeat;
 }
 .tutorial-left-menu>ul>li>a {
     color:#666;
@@ -753,11 +770,9 @@ h2 {
     width:100%;
     cursor:default;
 }
-.tutorial-left-menu>ul>li.active {
-    background:url(../img/menu_arrow2.jpg) right -213px no-repeat;
-}
 .tutorial-left-menu>ul>li.active>a {
     color:#c00!important;
+    background:url(../img/menu_arrow2.jpg) right -222px no-repeat;
 }
 .tutorial-left-menu>ul>li.active:hover>a {
     color:#c00;
