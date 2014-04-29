@@ -63,7 +63,7 @@
             <br/>
             比較常見的範例就像是藉由訂閱報章雜誌的 RSS，就能夠獲得最新的文章標題與預覽內容，訂閱氣象局的 RSS 就能掌握最新的氣象資訊，訂閱名人的部落格 RSS，就能無時無刻了解名人的最新文章動態...等，諸如此類，都是 RSS 所帶給我們的便利。
             <br/>
-            過去我們在 RSS 的應用範圍，往往都是藉由 RSS 的閱讀器或是 email 的通知方式進行，更不用去談論該如何將這些非常有用的即時資訊，應用到行動裝置的平台上，而這篇範例，將會介紹如何使用 EZoApp 的 <kbd>RSS</kbd> 元件，最快速的產出一系列的文章清單，快速的讀取各是報章雜誌的 RSS，讓我們輕鬆做出在行動裝置平台上的 RSS 閱讀程式，
+            過去我們在 RSS 的應用範圍，往往都是藉由 RSS 的閱讀器或是 email 的通知方式進行，更不用去談論該如何將這些非常有用的即時資訊，應用到行動裝置的平台上，而這篇範例，將會介紹如何使用 EZoApp 的 <kbd>RSS</kbd> 元件，最快速的產出一系列的文章清單，快速的讀取各式報章雜誌的 RSS，讓我們輕鬆做出在行動裝置平台上的 RSS 閱讀程式，
             <br/>
 
             <br/>
@@ -109,11 +109,11 @@
       <h5>
         <strong>二、使用 RSS 元件，建立文章清單</strong>
       </h5>
-      <p>接著我們將 EZoApp 的 <kbd>RSS</kbd> 元件拖拉進入畫面當中，可以看到自動產生了一個具有標題的清單畫面，而清單上許多大括號的代碼，是當我們按下 preview 的按鈕之後，會將對應的 RSS 內容放入大括號內。
+      <p>接著我們將 EZoApp 的 <kbd>RSS</kbd> 元件拖拉進入畫面當中，可以看到自動產生了一個具有標題的清單畫面，而清單上許多大括號的代碼，是當我們按下 Preview 的按鈕之後，會將對應的 RSS 內容放入大括號內。
       </p>
       <img alt="使用 RSS 元件，建立文章清單" src="img/tutorial/tutorial_js_5_rss_03.gif" class="img-responsive" />
       <br/>
-      <p>針對 RSS 元件的屬性，除了可以藉由旁邊的屬性面板，進行最基本的修改，也可以直接修改程式碼編輯器中的 html 面板內的程式。
+      <p>針對 <kbd>RSS</kbd> 元件的屬性，除了可以藉由旁邊的屬性面板，進行最基本的修改，也可以直接修改程式碼編輯器中的 HTML 面板內的程式。
       </p>
       <pre>&ltdiv id="gk-428PVoA" is="rss-news" <strong>service="http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/111" rownum="3"</strong>&gt
 &lt!--service 請換成第一頁的 RSS 網址 --&gt
@@ -132,7 +132,7 @@
 &lt/div&gt</pre>
       <br/>
       <h5>
-        <strong>三、修改 javascript 程式碼</strong>
+        <strong>三、修改 JavaScript 程式碼</strong>
       </h5>
       <p>畫面和 HTML 都完成之後，我們只要對 JavaScript 的程式碼進行修改，就可以輕鬆的製作出一個新聞的 RSS 閱讀器囉！
       </p>
@@ -149,20 +149,20 @@
     fn_rss(FEED_URL);
   });
 
-  fn_rss(FEED_URL);                       //載入 HTML 上所寫第一頁的網址
+  fn_rss(FEED_URL);     //載入 HTML 上所寫第一頁的網址
 
   function fn_rss(FEED_URL) {
     if (FEED_URL) {
-      $.ajax({                            //利用 JQuery 的 ajax api
+      $.ajax({     //利用 JQuery 的 ajax api
         beforeSend: function () {
           $listview.css('visibility', 'hidden');
         },
-        url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=' + rowNum + '&callback=?&q=' + encodeURIComponent(FEED_URL),                    //利用 google 的 RSS 服務
+        url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=' + rowNum + '&callback=?&q=' + encodeURIComponent(FEED_URL),     //利用 google 的 RSS 服務
         dataType: 'json',
         success: function (data) {
           if (data.responseData.feed && data.responseData.feed.entries) {
             var models = data.responseData.feed.entries;
-            $listview.gk('model', models);                      //利用 EZoApp 的 gk 元件 
+            $listview.gk('model', models);     //利用 EZoApp 的 gk 元件 
             $listview.css('visibility', 'visible');
           }
         }
@@ -175,16 +175,18 @@
         <strong>四、屬性設定解釋</strong>
       </h5>
       <p>
-        因為 EZoApp 的 <kbd>RSS</kbd> 元件應用了 google 所提供的 RSS 服務，因此在相對應的變數名稱上就必須按照 google 解析出來的名稱規則進行 ( 也就是兩個大括號內的變數名稱 )，以下將列出幾個 google RSS 服務所提供的屬性名稱：
-        <br/><strong>1.author：作者資訊</strong>
-        <br/><strong>2.content：</strong>詳細內容，包含標題、內容概要與連結
-        <br/><strong>3.contentSnippet：</strong>內容概要
-        <br/><strong>4.link：</strong>所對應的網址超連結
-        <br/><strong>5.publishedDate：</strong>發佈時間
-        <br/><strong>6.title：</strong>文章標題
-        <br/>
-        <br/>
-        我們只要善用這些屬性，就能夠做出專屬於自己的 RSS 閱讀器囉！當然，因為我們可以讀取到 RSS 所提供的資訊內容，我們也可以自己將內容解析出我們要的區塊或資訊，就能夠進行更彈性的應用與變化。
+        因為 EZoApp 的 <kbd>RSS</kbd> 元件應用了 Google 所提供的 RSS 服務，因此在相對應的變數名稱上就必須按照 Google 解析出來的名稱規則進行 ( 也就是兩個大括號內的變數名稱 )，以下將列出幾個 Google RSS 服務所提供的屬性名稱：
+        <ol>
+          <li><strong>author：</strong>作者資訊</li>
+          <li><strong>content：</strong>詳細內容，包含標題、內容概要與連結</li>
+          <li><strong>contentSnippet：</strong>內容概要</li>
+          <li><strong>link：</strong>所對應的網址超連結</li>
+          <li><strong>publishedDate：</strong>發佈時間</li>
+          <li><strong>title：</strong>文章標題</li>
+        </ol>
+      </p>
+      <p>
+        由於我們可以讀取到 RSS 所提供的資訊內容，我們也可以自己將內容解析出我們要的區塊或資訊，就能夠進行更彈性的應用與變化，只要善用這些屬性，就能夠做出專屬於自己的 RSS 閱讀器囉！
       </p>
       <p>
         <br/>範例連結：

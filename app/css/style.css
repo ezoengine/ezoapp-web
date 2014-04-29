@@ -785,6 +785,13 @@ h2 {
     font-weight: bold;
     cursor:default;
 }
+.tutorial-left-menu ul li ul li a span{
+    display:inline-block;
+    width:18px;
+    height:9px;
+    margin-left:5px;
+    background:url(../img/icon_news.gif) 0 0 no-repeat;
+}
 .tutorial-img-link img{
     -webkit-transition:.3s;
     -moz-transition:.3s;
@@ -807,4 +814,16 @@ h2 {
 pre strong{
     background:#ffa;
 }
-
+ol,li{
+    padding:0;
+    margin:0;
+}
+.right-content ol{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:15px;
+    margin:0 0 0 20px;
+    font-family: arial;
+}
+.right-content ol li{
+    margin:0 0 5px;
+}
