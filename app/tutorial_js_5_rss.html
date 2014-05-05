@@ -60,10 +60,9 @@
         <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
           <p>
             RSS 的英文全名是 Really Simple Syndication，顧名思義是個非常簡單就能整合一切資訊的服務，也是個有點像電子報或新聞群組的東西，賦予我們非常強大的編輯設計能力，並讓我們能簡單的獲取豐富的資料。
-            <br/>
-            比較常見的範例就像是藉由訂閱報章雜誌的 RSS，就能夠獲得最新的文章標題與預覽內容，訂閱氣象局的 RSS 就能掌握最新的氣象資訊，訂閱名人的部落格 RSS，就能無時無刻了解名人的最新文章動態...等，諸如此類，都是 RSS 所帶給我們的便利。
-            <br/>
-            過去我們在 RSS 的應用範圍，往往都是藉由 RSS 的閱讀器或是 email 的通知方式進行，更不用去談論該如何將這些非常有用的即時資訊，應用到行動裝置的平台上，而這篇範例，將會介紹如何使用 EZoApp 的 <kbd>RSS</kbd> 元件，最快速的產出一系列的文章清單，快速的讀取各式報章雜誌的 RSS，讓我們輕鬆做出在行動裝置平台上的 RSS 閱讀程式，
+            <br/>比較常見的範例就像是藉由訂閱報章雜誌的 RSS，就能夠獲得最新的文章標題與預覽內容，訂閱氣象局的 RSS 就能掌握最新的氣象資訊，訂閱名人的部落格 RSS，就能無時無刻了解名人的最新文章動態...等，諸如此類，都是 RSS 所帶給我們的便利。
+            <br/>過去我們在 RSS 的應用範圍，往往都是藉由 RSS 的閱讀器或是 email 的通知方式進行，更不用去談論該如何將這些非常有用的即時資訊，應用到行動裝置的平台上，而這篇範例，將會介紹如何使用 EZoApp 的
+            <kbd>RSS</kbd> 元件，最快速的產出一系列的文章清單，快速的讀取各式報章雜誌的 RSS，讓我們輕鬆做出在行動裝置平台上的 RSS 閱讀程式。
             <br/>
 
             <br/>
@@ -84,12 +83,15 @@
         <strong>一、建立基本樣版</strong>
       </h5>
       <p>在建立文章清單之前，我們首先要建立一個基本的樣板，主要希望點選上方 header 的按鈕，下方文章清單可以載入正確的 RSS 內容。
-      <br/>
-      與之前的章節所介紹的作法如出一轍，利用拖拉的方式將 <kbd>header</kbd>、<kbd>footer</kbd>、<kbd>navbar</kbd> 等元件放入畫面當中。
+        <br/>與之前的章節所介紹的作法如出一轍，利用拖拉的方式將
+        <kbd>header</kbd>、
+        <kbd>footer</kbd>、
+        <kbd>navbar</kbd>等元件放入畫面當中。
       </p>
       <img alt="建立基本樣版" src="img/tutorial/tutorial_js_5_rss_02.gif" class="img-responsive" />
       <br/>
-      <p>接著我們在 navbar 的程式碼內，進行以下的修改，加入相對應的 RSS 網址，就完成了基本的樣板。( <kbd>RSS</kbd> 元件預設為 CNN 的 RSS 網址，請自行更換相對應的網址 ) 
+      <p>接著我們在 navbar 的程式碼內，進行以下的修改，加入相對應的 RSS 網址，就完成了基本的樣板。(
+        <kbd>RSS</kbd>元件預設為 CNN 的 RSS 網址，請自行更換相對應的網址 )
       </p>
       <pre>
 &ltdiv data-role="navbar" class="menu"&gt
@@ -109,11 +111,13 @@
       <h5>
         <strong>二、使用 RSS 元件，建立文章清單</strong>
       </h5>
-      <p>接著我們將 EZoApp 的 <kbd>RSS</kbd> 元件拖拉進入畫面當中，可以看到自動產生了一個具有標題的清單畫面，而清單上許多大括號的代碼，是當我們按下 Preview 的按鈕之後，會將對應的 RSS 內容放入大括號內。
+      <p>接著我們將 EZoApp 的
+        <kbd>RSS</kbd>元件拖拉進入畫面當中，可以看到自動產生了一個具有標題的清單畫面，而清單上許多大括號的代碼，是當我們按下 Preview 的按鈕之後，會將對應的 RSS 內容放入大括號內。
       </p>
       <img alt="使用 RSS 元件，建立文章清單" src="img/tutorial/tutorial_js_5_rss_03.gif" class="img-responsive" />
       <br/>
-      <p>針對 <kbd>RSS</kbd> 元件的屬性，除了可以藉由旁邊的屬性面板，進行最基本的修改，也可以直接修改程式碼編輯器中的 HTML 面板內的程式。
+      <p>針對
+        <kbd>RSS</kbd>元件的屬性，除了可以藉由旁邊的屬性面板，進行最基本的修改，也可以直接修改程式碼編輯器中的 HTML 面板內的程式。
       </p>
       <pre>&ltdiv id="gk-428PVoA" is="rss-news" <strong>service="http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/111" rownum="3"</strong>&gt
 &lt!--service 請換成第一頁的 RSS 網址 --&gt
@@ -175,14 +179,21 @@
         <strong>四、屬性設定解釋</strong>
       </h5>
       <p>
-        因為 EZoApp 的 <kbd>RSS</kbd> 元件應用了 Google 所提供的 RSS 服務，因此在相對應的變數名稱上就必須按照 Google 解析出來的名稱規則進行 ( 也就是兩個大括號內的變數名稱 )，以下將列出幾個 Google RSS 服務所提供的屬性名稱：
+        因為 EZoApp 的
+        <kbd>RSS</kbd>元件應用了 Google 所提供的 RSS 服務，因此在相對應的變數名稱上就必須按照 Google 解析出來的名稱規則進行 ( 也就是兩個大括號內的變數名稱 )，以下將列出幾個 Google RSS 服務所提供的屬性名稱：
         <ol>
-          <li><strong>author：</strong>作者資訊</li>
-          <li><strong>content：</strong>詳細內容，包含標題、內容概要與連結</li>
-          <li><strong>contentSnippet：</strong>內容概要</li>
-          <li><strong>link：</strong>所對應的網址超連結</li>
-          <li><strong>publishedDate：</strong>發佈時間</li>
-          <li><strong>title：</strong>文章標題</li>
+          <li>
+            <strong>author：</strong>作者資訊</li>
+          <li>
+            <strong>content：</strong>詳細內容，包含標題、內容概要與連結</li>
+          <li>
+            <strong>contentSnippet：</strong>內容概要</li>
+          <li>
+            <strong>link：</strong>所對應的網址超連結</li>
+          <li>
+            <strong>publishedDate：</strong>發佈時間</li>
+          <li>
+            <strong>title：</strong>文章標題</li>
         </ol>
       </p>
       <p>
