@@ -28,6 +28,7 @@ $(function() {
     '<li page-content="tutorial_4_droplist"><a href="tutorial_4_droplist.html">4. 建立下拉選單</a></li>' +
     '<li page-content="tutorial_5_checklist"><a href="tutorial_5_checkbox.html">5. 設計 CheckBox</a></li>' +
     '<li page-content="tutorial_6_home_page"><a href="tutorial_6_home_page.html">6. 打造入口頁面</a></li>' +
+    '<li page-content="tutorial_7_button"><a href="tutorial_7_button.html">7. 按鈕切換設定<span></span></a></li>' +
     '</ul>' +
     '</li>' +
     '<li><a>JavaScript 應用</a><i></i>' +
