@@ -8,7 +8,6 @@ $(function() {
   var urlParts = nowUrl.split('/');
   var fileName = urlParts.pop();
   var languageCheck = urlParts.pop();
-  console.log(languageCheck)
 
   if (languageCheck == 'en') {
     fn_en();
