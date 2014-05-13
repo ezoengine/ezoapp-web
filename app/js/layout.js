@@ -19,16 +19,7 @@ $(function() {
   var cnUrl = webUrl + 'zh-cn/' + fileName;
   var twUrl = webUrl + fileName;
 
-  fn_first_check_cookie();
-
-  /* 如果是按切換語系按鈕，則可切換語系，如果是直接連結，會根據已有的 cookie 切換語系 */
-  if ($.cookie('clickChangLang') == 'checked') {
-    $.cookie('clickChangLang', '', {
-      path: '/'
-    });
-  } else {
-    fn_check_cookie();
-  }
+  fn_check_cookie();
 
   /* 判斷不同語系網站，載入不同的 layout */
   if (languageCheck == 'en') {
@@ -50,32 +41,23 @@ $(function() {
 
   /* 載入 layout 之後，判斷是點選切換語系按鈕 */
   $('.language-tw a').on('click', function() {
-    $.cookie('clickChangLang', 'checked', {
-      path: '/'
-    });
     $.cookie('ezoapp_web_cookie', 'zh-tw', {
       path: '/'
     });
   });
   $('.language-cn a').on('click', function() {
-    $.cookie('clickChangLang', 'checked', {
-      path: '/'
-    });
     $.cookie('ezoapp_web_cookie', 'zh-cn', {
       path: '/'
     });
   });
   $('.language-en a').on('click', function() {
-    $.cookie('clickChangLang', 'checked', {
-      path: '/'
-    });
     $.cookie('ezoapp_web_cookie', 'en', {
       path: '/'
     });
   });
 
-  /* 第一次進入網站時，判斷瀏覽器語系，記錄cookie */
-  function fn_first_check_cookie() {
+  /* 進入網站時，判斷瀏覽器語系，記錄cookie */
+  function fn_check_cookie() {
     if (!$.cookie('ezoapp_web_cookie')) {
       var lang = window.navigator.userLanguage || window.navigator.language || window.navigator.browserLanguage;
       if (lang.toLowerCase().indexOf('tw') > -1) {
@@ -96,29 +78,25 @@ $(function() {
         });
         window.open(enUrl, '_self');
       }
-    }
-  }
-
-  /* 已經進入過網站，判斷 cookie*/
-  function fn_check_cookie() {
-    if ($.cookie('ezoapp_web_cookie') == 'zh-tw' && languageCheck != Url_3) {
-      $.cookie('ezoapp_web_cookie', 'zh-tw', {
-        path: '/'
-      });
-      window.open(twUrl, '_self');
-    }
-    if ($.cookie('ezoapp_web_cookie') == 'zh-cn' && languageCheck != 'zh-cn') {
-      $.cookie('ezoapp_web_cookie', 'zh-cn', {
-        path: '/'
-      });
-      window.open(cnUrl, '_self');
-    }
-    if ($.cookie('ezoapp_web_cookie') == 'en' && languageCheck != 'en') {
-      $.cookie('ezoapp_web_cookie', 'en', {
-        path: '/'
-      });
-      window.open(enUrl, '_self');
-
+    } else {
+      if ($.cookie('ezoapp_web_cookie') == 'zh-tw' && languageCheck != Url_3) {
+        $.cookie('ezoapp_web_cookie', 'zh-tw', {
+          path: '/'
+        });
+        window.open(twUrl, '_self');
+      }
+      if ($.cookie('ezoapp_web_cookie') == 'zh-cn' && languageCheck != 'zh-cn') {
+        $.cookie('ezoapp_web_cookie', 'zh-cn', {
+          path: '/'
+        });
+        window.open(cnUrl, '_self');
+      }
+      if ($.cookie('ezoapp_web_cookie') == 'en' && languageCheck != 'en') {
+        $.cookie('ezoapp_web_cookie', 'en', {
+          path: '/'
+        });
+        window.open(enUrl, '_self');
+      }
     }
   }
 
@@ -165,7 +143,6 @@ $(function() {
   );
 
   /* 繁體中文 */
-
   function fn_zh_tw() {
     $('head').append(
       '<link rel="icon" href="favicon.ico" type="image/x-icon"/>' +
@@ -213,7 +190,6 @@ $(function() {
   }
 
   /* 简体中文 */
-
   function fn_zh_cn() {
     $('head').append(
       '<link rel="icon" href="../favicon.ico" type="image/x-icon"/>' +
