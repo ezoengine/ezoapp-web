@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速开发行动 App 的最佳工具" />
+  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 开发行动 App 的云端服务，非常适合用来快速打造 App、行动组件与用户接口，同时支持前端技术的开发与学习。">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,云端平台,数据,组件,脚本,云端,软件,开发,工具,行动,触控,响应式,手机,平板,移动" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <!-- endbuild -->
+  <title>EZoApp 教学实作 - grid 基础排版</title>
+</head>
+
+<body page="tutorial" page-content="tutorial_1_basic_grid" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
+    </div>
+    <img src="../img/img1_1.jpg" alt="EZoApp 快速开发行动 App 的利器" />
+  </div>
+
+  <div class="container">
+    <!--左侧选单-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3>
+        <strong>基本组件实作 - grid 基础排版</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            讲到开发一支 App，排版往往是令开发者最头痛的环节之一，甚至有时候会耗费超过了一半的开发时间在调整版面，俗话说的好，「魔鬼往往藏在细节里」，看似很简单的排版，却往往会造成工程师大大的困扰。因此 EZoApp 提供了所见即所得的设计工具，只需要利用拖拉以及调整数字的方式，搭配大家熟悉的简易 CSS 语法，就能够轻松做出各式各样的版面，而开发者更能够将心力投入在其他的设计细节上。
+            <br/>这里开始的 EZoApp 教学实作，将由简单的排版开始介绍，相信只要有心！人人都可以成为排版大师的！
+            <br/>
+            <br/>范例链接：
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank">基本组件实作 - grid 基础排版</a>
+            <br/>
+            <br/>大家可以点击链接开启 EZoApp 的 grid 排版范例，一面阅读一面进行操作，相信对于 EZoApp 的使用，能够更快上手喔！
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank" class="tutorial-img-link">
+            <img alt="grid 基础排版" src="../img/tutorial/tutorial_1_basic_grid_01.png" class="img-responsive" title="grid 基础排版" />
+          </a>
+        </div>
+      </div>
+      <h5>
+        <strong>一、放上文字</strong>
+      </h5>
+      <p>
+        首先我们要放上文字，放上文字的方法很简单，只需要用拖拉的方式将左侧
+        <kbd>gk-text</kbd> 组件拖拉至画面编辑区域当中，就能够快速产生一个文本块，接着只需要改变文字以及用 CSS 将文字对齐就好啰！
+      </p>
+      <pre>&lth1 is="gk-text" style="<strong>text-align:center;</strong>"&gtOvi Maps&lt/h1&gt</pre>
+      <p>
+        <img alt="放上文字" src="../img/tutorial/tutorial_1_basic_grid_02.gif" class="img-responsive" style="margin:20px 0;" />
+      </p>
+      <br/>
+      <h5>
+        <strong>二、放上 grid 组件</strong>
+      </h5>
+      <p>
+        相当快速的处理好文字之后，我们要来放上 grid 的组件，同样以拖拉的方式把左侧
+        <kbd>grid</kbd> 组件拖拉到编辑区域，就可以产生一个预设为三个字段的 grid，如果我们要设定一个九宫格的 grid，只需要轻松拖拉三次即可完成，每个 grid 拖进去编辑区域后，都会产生下列对应的 HTML 程序代码，
+        <kbd>class="ui-grid-b"</kbd> 是 jQuery Mobile 的预设格式，代表这是三个字段的 grid。
+      </p>
+      <pre>&ltdiv <strong>class="ui-grid-b"</strong> style="height:95px;"&gt<br/>    &ltdiv class="ui-block-a" style="height:100%;"&gt&lt/div&gt<br/>    &ltdiv class="ui-block-b" style="height:100%;"&gt&lt/div&gt<br/>    &ltdiv class="ui-block-c" style="height:100%;"&gt&lt/div&gt<br/>&lt/div&gt</pre>
+      <p>
+        <img alt="放上 grid 组件" src="../img/tutorial/tutorial_1_basic_grid_03.gif" class="img-responsive" style="margin:20px 0;" />
+      </p>
+      <br/>
+      <h5>
+        <strong>三、加入图片与文字</strong>
+      </h5>
+      <p>
+        有了 grid 之后，我们只要在对应的字段内，利用 3rd Party 组件的
+        <kbd>image</kbd> ，就能够轻松的放上图片组件，或是直接输入图片的 HTML 语法，也可以轻松加入图片，这里列出加入图片的程序代码提供大家参考。
+        <br/>附带说明一点，如果是自己加入的程序代码，可以在图片的卷标内，加上
+        <kbd>is="dragable"</kbd> ，就能够让这张图片转换为 EZoApp 的图片可拖拉组件，是不是相当的方便呢！
+      </p>
+      <pre>&ltdiv class="ui-grid-b" style="height:95px"&gt<br/>    &ltdiv class="ui-block-a" style="height:100%"&gt<br/>        &ltimg <strong>is="dragable"</strong> src="图片网址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt标题&lt/h5&gt<br/>    &lt/div&gt
+    &ltdiv class="ui-block-b" style="height:100%"&gt<br/>        &ltimg <strong>is="dragable"</strong>  src="图片网址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt标题&lt/h5&gt<br/>    &lt/div&gt<br/>    &ltdiv class="ui-block-c" style="height:100%"&gt<br/>        &ltimg <strong>is="dragable"</strong>  src="图片网址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt标题&lt/h5&gt<br/>    &lt/div&gt<br/>&lt/div&gt</pre>
+      <br/>
+      <h5>
+        <strong>四、放上 footer 组件</strong>
+      </h5>
+      <p>
+        当我们把图片都一一放上之后，接着我们要制作一个 footer，制作 footer 的方法也相当简单，只需要拖拉
+        <kbd>footer</kbd> 组件进入编辑区域，接着在 footer 的属性面版上改变 footer 的样式，就能够轻松做出一个黑底样式的 footer。
+      </p>
+      <p>
+        <img alt="放上 footer 组件" src="../img/tutorial/tutorial_1_basic_grid_04.gif" class="img-responsive" style="margin:20px 0;" />
+      </p>
+      <br/>
+      <h5>
+        <strong>五、放上 button 组件</strong>
+      </h5>
+      <p>
+        最后我们仍然利用拖拉的方式，拖拉
+        <kbd>button</kbd> 组件放到编辑区域的 footer 上方，就可以在 footer 的左右两边建立按钮，然后同样的由属性面板更换按钮的 icon 与文字，就能够很快速的做出一个带有按钮的 footer 啰！
+        <br/>当然，除了可以由属性面板调整按钮的属性，因为按钮的组件也是建构在 jQuery Mobile 的基础组件之一，我们可以藉由下列的程序代码，更改按钮的样式，让整体更具有设计感。
+      </p>
+      <pre>&ltdiv data-role="footer" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtInfoChamp&lt/h3&gt<br/>    &lta <strong>class="ui-btn ui-btn-left  ui-btn-icon-left ui-icon-gear ui-btn-icon-notext ui-corner-all"</strong> style="margin-top:0;"&gt&lt/a&gt<br/>    &lta <strong>class="ui-btn ui-btn-right ui-btn-icon-left ui-icon-delete ui-btn-icon-notext ui-corner-all"</strong> style="margin-top:0;"&gt&lt/a&gt<br/>&lt/div&gt</pre>
+      <p>
+        <img alt="放上 footer 组件" src="../img/tutorial/tutorial_1_basic_grid_05.gif" class="img-responsive" style="margin:20px 0;" />
+        <br/>范例链接：
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank">基本组件实作 - grid 基础排版</a>
+        <br/>
+        <br/>
+        <br/>
+      </p>
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/banner.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>

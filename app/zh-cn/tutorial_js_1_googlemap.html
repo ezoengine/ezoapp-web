@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速开发行动 App 的最佳工具" />
+  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 开发行动 App 的云端服务，非常适合用来快速打造 App、行动组件与用户接口，同时支持前端技术的开发与学习。">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,云端平台,数据,组件,脚本,云端,软件,开发,工具,行动,触控,响应式,手机,平板,移动" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <!-- endbuild -->
+  <title>EZoApp 教学实作 - Google 地图应用</title>
+</head>
+
+<body page="tutorial" page-content="tutorial_js_1_googlemap" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
+    </div>
+    <img src="../img/img1_1.jpg" alt="EZoApp 快速开发行动 App 的利器" />
+  </div>
+
+  <div class="container">
+    <!--左侧选单-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>结合 JavaScript 应用 - Google 地图应用</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            Google 地图是目前世界上最好用的开放地图信息平台，也是目前最多人使用的地图，举凡网页、导航、Android、iOS...等各式各样的 Device 都会见到 Google 地图的身影。
+            <br/>但很可惜的，对于不会撰写程序的人而言，要在自己的网页内加上一个地图，简直会要了他的命，不过如果这时候他用了 EZoApp，他的这条命就整个保住了！( 好冷 XD ) EZoApp 的 3rd Party 组件，当中就有一个名为 gmap 的组件供大家使用，搭配 EZo 研发团队的语法，用户只需要写三行，共不到一百个字母的程序代码，就可以翘着二郎腿捻着胡须观赏自己做出来的地图，这种心情真是无法想象的愉悦呀！ 虽然 EZoApp 已经是非常的方便使用，在制作之前，仍然必须要求大家要有一点点的 HTML 和 CSS 基础，毕竟在一些排版上，还是需要用到相关的基础知识喔！
+            <br/>接下来就让我来用最快的速度来介绍这个最快可以写好的地图程序吧！打开 EZoApp！Let’s Go！
+
+            <br/>
+            <br/>范例链接：
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6501098755981312" target="_blank">结合 JavaScript 应用 - Google 地图应用</a>
+            <br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6501098755981312" target="_blank" class="tutorial-img-link" title="Google 地图应用">
+            <img alt="Google 地图应用" src="../img/tutorial/tutorial_js_1_googlemap_01.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <br/>
+      <h5>
+        <strong>一、使用 navbar 组件制作按钮页签</strong>
+      </h5>
+      <p>
+        <kbd>navber</kbd> 组件是常用的组件之一，顾名思义就是一个导览页签的组件，这个组件的程序代码也很简单，有几个按钮就有几个 &ltli&gt&lta&gt&lt/a&gt&lt/li&gt，如果有多个按钮需求的用户，就自行添加就会自动长出按钮。
+      </p>
+      <img alt="使用 navbar 组件制作按钮页签" src="../img/tutorial/tutorial_js_1_googlemap_02.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>二、使用 gmap 组件，建立地图</strong>
+      </h5>
+      <p>
+        <kbd>gmap</kbd> 组件是 EZo 研发团队 所开发的组件，让用户可以简单迅速的创造地图，使用的方式也相当简单，在组件的面版中，选择 3rd Party 的组件，接着选择 gmap 组件，拖曳进入画面后，进行长宽尺寸的编辑，不过
+        <kbd>gmap</kbd> 组件不只有长宽尺寸的功能，你还可以改变 zoom 的数值控制地图缩放的大小数字越大地图放的越大，也可以由 address 来指定地图置中的地点，是不是相当的方便呢！
+      </p>
+      <pre>&ltdiv is="gmap" style="width:100%;height:200px;" <strong>zoom="12" address="Qianzhen, TW"</strong>&gt&lt/div&gt</pre>
+      <img alt="使用 gmap 组件，建立地图" src="../img/tutorial/tutorial_js_1_googlemap_03.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>三、贴上这串程序代码，地图程序完成！</strong>
+      </h5>
+      <p>光是放上组件就想要让按钮和地图连动？说真的这实在有点难度，不过 EZoApp 已经帮我们把门坎大大的降低，只要把
+        <kbd>navbar</kbd> 的页签改成都市的名称，然后在 JS 的页签贴上下列这串程序代码，地图就会按照我们点选的都市，跳转到以该都市为中心的地点啰！
+      </p>
+      <pre>$(document).on('pageinit', function () {    // 页面开始时要执行的程序<br/>  $('#map_btn').on('click', function (e) {  // 点下 navbar 按钮时要执行的程序<br/>    var addr = $(e.target).text();          // 读取现在按下按钮的都市名称<br/>    $('#map').gk('address', addr);          // 以该都市为中心点显示在地图上<br/>  });<br/>});</pre>
+      <br/>
+      <p>但是不要忘记，在 navbar 要加上 id="map_btn"，在地图要加上 id="map"。
+      </p>
+      <pre>&ltdiv data-role="navbar" <strong>id="map_btn"</strong>&gt<br/>&ltdiv is="gmap" <strong>id="map"</strong> style="width:100%;height:450px;" zoom="15" address="Qianzhen, TW"&gt&lt/div&gt</pre>
+      <p>全部程序代码就只有这样，是不是很简单！编写完成后，按下最上方 preview 的按钮，就可以来测试效果如何啰！
+      </p>
+      <img alt="贴上这串程序代码，地图程序完成" src="../img/tutorial/tutorial_js_1_googlemap_04.gif" class="img-responsive" />
+      <p>
+        <br/>范例链接：
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6501098755981312" target="_blank">结合 JavaScript 应用 - Google 地图应用</a>
+      </p>
+      <br/>
+      <br/>
+
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/banner.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>

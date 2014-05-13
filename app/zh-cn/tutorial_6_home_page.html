@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速开发行动 App 的最佳工具" />
+  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 开发行动 App 的云端服务，非常适合用来快速打造 App、行动组件与用户接口，同时支持前端技术的开发与学习。">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,云端平台,数据,组件,脚本,云端,软件,开发,工具,行动,触控,响应式,手机,平板,移动" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <!-- endbuild -->
+  <title>EZoApp 教学实作 - 打造入口页面</title>
+</head>
+
+<body page="tutorial" page-content="tutorial_6_home_page" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
+    </div>
+    <img src="../img/img1_1.jpg" alt="EZoApp 快速开发行动 App 的利器" />
+  </div>
+
+  <div class="container">
+    <!--左侧选单-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>基本组件实作 - 打造入口页面</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            其实就算是视觉设计师，在做完 UI 交给工程师后，如何把画面按照元搞呈现，往往偏左了些，往往间距大了点，总要一来一往好几次才能确认，而确认后如果又遇到了客户的 UI 需求变更，整个步骤又得重头来过，不仅浪费成本，又几乎把人力资源给耗竭。
+            <br/>现在我们可以利用 EZoApp 这套云端开发工具，运用它提供的现成组件，拖拉进入画面，藉由简单的程序代码编撰 ( 有的画面甚至不需要 )，就可以轻轻松松排列出合适的画面，甚至可以将外部编辑的网页语法贴进编辑器，实时预览产生的画面格式，省下了不少前端与后端衔接的开发时间。 EZoApp 更提供了云端储存的功能，当开发者做好画面后可实时提供给业主或客户进行校稿，同时在云端也提供了完善的版本机制和安全性，因此对于开发者来说更是不可或缺的一套工具。
+            <br/>看过了五个章节的教学介绍，相信大家对于 EZoApp 的威能都有了一定程度的了解吧！接下来的这个章节，我们将用之前所学到的技巧，快速的来打造一个入口画面。
+            <br/>
+            <br/>范例链接：
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5078785875509248" target="_blank">基本组件实作 - 打造入口页面</a>
+            <br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5078785875509248" target="_blank" class="tutorial-img-link" title="打造入口页面">
+            <img alt="打造入口页面" src="../img/tutorial/tutorial_6_home_page_01.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <br/>
+      <h5>
+        <strong>一、直接利用组件来排版</strong>
+      </h5>
+      <p>如前几节所述，我们只要利用拖拉的方式，就可以把这些组件一个个的加入到画面当中，程序代码也会自动添加。不过只学会拖拉组件是没有办法在几分钟内完成排版的，这时候我们就要妥善的利用 EZoApp 实用的属性面板工具，来快速的编辑我们所拖曳出来的组件。( 如果找不到属性面版，可以把程序代码区块的大小变小，或先隐藏起来，就可以看到属性面版了 )
+      </p>
+      <img alt="直接利用组件来排版" src="../img/tutorial/tutorial_6_home_page_02.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>二、利用属性面板修改属性</strong>
+      </h5>
+      <p>这里我们使用属性面板来编辑
+        <kbd>grid</kbd> 这个组件的属性，我们就可以设定
+        <kbd>grid</kbd> 的字段是一栏还是两栏，若是需要有两列以上，就直接再新增一个
+        <kbd>grid</kbd> 就可以啰！
+      </p>
+      <img alt="利用属性面板修改属性" src="../img/tutorial/tutorial_6_home_page_03.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>三、塞入文字</strong>
+      </h5>
+      <p>我们同样利用拖拉的方式，就可以轻松的把文字加入到
+        <kbd>grid</kbd> 里头，点选文字，就可以进行编辑，不过这边有个要注意的地方，拖曳进来的文字默认为 h1 的字体大小且靠右对齐，因此我们可以将 h1 标签加入 style=”text-align:center’”，就能够让文字置中啰！
+      </p>
+      <pre>&lth1 <strong>style="text-align:center;"</strong>&gt文字&lt/h1&gt</pre>
+      <img alt="塞入文字" src="../img/tutorial/tutorial_6_home_page_04.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>四、加入图片</strong>
+      </h5>
+      <p>关于图片的加载，我们这里使用了3rd Party 里头的
+        <kbd>image</kbd> 组件，不过因为该组件的默认宽度为 100%，高度为 250px，所以拖拉进入画面后会有变形的现象，不过我们只要手动进行修改宽高，并且填入所需的图片网址，就可以轻松的产生合适大小的图片。
+      </p>
+      <img alt="加入图片" src="../img/tutorial/tutorial_6_home_page_05.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>五、修改 header 与 footer 的主题样式</strong>
+      </h5>
+      <p>
+        <kbd>header</kbd> 与
+        <kbd>footer</kbd> 组件，是使用 jQuery Mobile 的基本组件，因此我们只要在
+        <kbd>header</kbd> 和
+        <kbd>footer</kbd> 的标签内，分别加入 data-theme="b" 的一小段程序代码，就可以把样式进行更换。
+      </p>
+      <pre>&ltdiv data-role="header" data-position="fixed" <strong>data-theme="b"</strong>&gt<br/>    &lth3&gt我是 Header &lt/h3&gt<br/>&lt/div&gt</pre> 
+      <img alt="修改 header 与 footer 的主题样式" src="../img/tutorial/tutorial_6_home_page_06.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>六、万事俱备，只欠东风(背景)</strong>
+      </h5>
+      <p>其实到目前为止我们都只是利用拖拉组件，然后修改一下组件的程序代码，就可以把内容排列的差不多了( 不过其实编辑程序代码，还是需要对 CSS 有一些基本的认识，例如 margin 怎么用？height 和 width 的设定...等 )，接下来我们只要挑一张合适的背景图，放在最外层 div 里头当作背景图就可以啰！
+      </p>
+      <pre>&ltdiv id="home" data-role="page" <strong>style="background:url(图片网址); background-size:100% 100%;"</strong>&gt</pre>
+      <img alt="万事俱备，只欠东风" src="../img/tutorial/tutorial_6_home_page_07.gif" class="img-responsive" />
+      <p>
+        <br/>范例链接：
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5078785875509248" target="_blank">基本组件实作 - 打造入口页面</a>
+        <br/>
+      </p>
+      <br/>
+      <br/>
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/banner.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>

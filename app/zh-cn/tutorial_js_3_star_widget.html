@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速开发行动 App 的最佳工具" />
+  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 开发行动 App 的云端服务，非常适合用来快速打造 App、行动组件与用户接口，同时支持前端技术的开发与学习。">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,云端平台,数据,组件,脚本,云端,软件,开发,工具,行动,触控,响应式,手机,平板,移动" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <!-- endbuild -->
+  <title>EZoApp 教学实作 - 星号分数评比</title>
+</head>
+
+<body page="tutorial" page-content="tutorial_js_3_star_widget" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
+    </div>
+    <img src="../img/img1_1.jpg" alt="EZoApp 快速开发行动 App 的利器" />
+  </div>
+
+  <div class="container">
+    <!--左侧选单-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>结合 JavaScript 应用 - 星号分数评比</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            EZoApp 除了拥有 jQuery Mobile 的套件之外，也有 EZo 开发团队自行研发的许多第三方组件 (3rd Party)，除了前几节介绍的地图与滑动页面之外，另外一个相当具有特色的组件就是 raty 这个利用星星给分的评分组件。
+            <br/>就如同现在的许多歌唱或选秀节目，也如同 Google Play 或 App Store 上头的给分机制一般，越来越多的 App 或网站都会提供使用者相关的给分机制，除了可以让用户参与内容质量的把关，也可以立即收到使用者的使用回馈。不过这个道理虽然大家都明了，但俗话说知易行难，背后的技术往往让使用者不知道如何下手进行。
+            <br/>EZoApp 所提供的 raty 组件，可以快速的产生星星给分的机制，只需要撰写相当简单的程序代码，就能够进行给分的动作，非常的实用喔！
+            <br/>
+            <br/>范例链接：
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5434314779000832" target="_blank">结合 JavaScript 应用 - 星号分数评比</a>
+            <br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5434314779000832" target="_blank" class="tutorial-img-link" title="星号分数评比">
+            <img alt="星号分数评比" src="../img/tutorial/tutorial_js_3_star_widget_01.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <h5>
+        <strong>一、新增星号组件</strong>
+      </h5>
+      <p>与前面章节提过的步骤相同，利用拖曳的方式，将 3rd Party 中的
+        <kbd>raty</kbd>  组件拖曳进入编辑画面。
+      </p>
+      <img alt="新增星号组件" src="../img/tutorial/tutorial_js_3_star_widget_02.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>二、新增 navbar 组件</strong>
+      </h5>
+      <p>与
+        <kbd>raty</kbd> 组件同样的做法，在左侧将
+        <kbd>navbar</kbd> 组件拖曳进入编辑区域，然后可以点选
+        <kbd>raty</kbd> 当中的按钮，按下右上角的新增图示，就可以新增按钮。
+      </p>
+      <img alt="新增 navbar 组件" src="../img/tutorial/tutorial_js_3_star_widget_03.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>三、使用 JavaScript 让 navbar 与星号连动</strong>
+      </h5>
+      <p>所有组件都具备之后，接着就要让两个组件之间连动，也就是点选按钮，会出现相对应的星号，而我们的连动机制是使用 EZoApp 独有的 gk 组件，因为 gk 组件将许多程序都已经处理完成，我们几乎只要打几个字，就可以轻松完成连动的作业。
+        <br/>不过在进行连动之前，我们要先把
+        <kbd>navbar</kbd> 内加上一些卷标属性，方便连动的时候有个对照的数值。
+        <br/>
+        <br/>HTML 页签程序：
+      </p>
+      <pre>&ltdiv id="home" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtScore&lt/h3&gt<br/>  &lt/div&gt<br/>  &ltdiv role="main" class="ui-content"&gt<br/>    &ltdiv is="raty" score="0" id="star1"&gt&lt/div&gt    //设定一开始为零颗星<br/>    &ltdiv data-role="navbar" id="star_btn1" style="margin:10px 0 30px;"&gt<br/>      &ltul&gt<br/>        &ltli&gt<br/>          &lta <strong>num="1"</strong>&gt不好&lt/a&gt  //按下不好显示一颗星<br/>        &lt/li&gt<br/>        &ltli&gt<br/>          &lta <strong>num="3"</strong>&gt普通&lt/a&gt  //按下普通显示三颗星<br/>        &lt/li&gt<br/>        &ltli&gt<br/>          &lta <strong>num="5"</strong>&gt很好&lt/a&gt  //按下很好显示五颗星<br/>        &lt/li&gt<br/>      &lt/ul&gt<br/>    &lt/div&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre> 
+      <p>JS 页签程序：
+      </p>
+      <pre>$(document).on('pageinit', function () {<br/>  $('#star_btn1').on('click', function (e) {<br/>    var starnum = $(e.target).attr('num');<br/>    $('#star1').<strong>gk('score', starnum)</strong>;        //使用 gk 组件<br/>  });<br/>});</pre>
+      <img alt="使用 JavaScript 让 navbar 与星号连动" src="../img/tutorial/tutorial_js_3_star_widget_04.gif" class="img-responsive" />
+      <br/>
+      <p>按下 Preview 之后，我们就可以顺利的看到点选按钮，出现对应的星星数啰！
+        <br/>
+        <br/>范例链接：
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5434314779000832" target="_blank">结合 JavaScript 应用 - 星号分数评比</a>
+        <br/>
+        <br/>
+        <br/>
+      </p>
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/banner.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>

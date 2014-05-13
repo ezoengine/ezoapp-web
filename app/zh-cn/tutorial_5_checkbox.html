@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速开发行动 App 的最佳工具" />
+  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 开发行动 App 的云端服务，非常适合用来快速打造 App、行动组件与用户接口，同时支持前端技术的开发与学习。">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,云端平台,数据,组件,脚本,云端,软件,开发,工具,行动,触控,响应式,手机,平板,移动" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <!-- endbuild -->
+  <title>EZoApp 教学实作 - 设计 CheckBox</title>
+</head>
+
+<body page="tutorial" page-content="tutorial_5_checklist" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
+    </div>
+    <img src="../img/img1_1.jpg" alt="EZoApp 快速开发行动 App 的利器" />
+  </div>
+
+  <div class="container">
+    <!--左侧选单-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>基本组件实作 - 设计 CheckBox</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            除了上一节介绍的下拉选单，CheckBox 也是网页窗体与 App 窗体中相当常见的功能，以往我们使用 CSS ，面对这类型的窗体元素都很难修改样式，而且不同浏览器上显示的样式甚至不尽相同真是令人相当的头疼。
+            <br/>但是现在有了 EZoApp 之后，大家就可以利用 EZoApp 的拖拉方式，快速的建立 CheckBox，只需要用鼠标点选，就能够进行水平和垂直方式的排列，而且样式也采用 jQuery Mobile 的标准样式，也是在行动装置上常见的样式，省去了许多不必要的麻烦工作。
+            <br/>如果大家不满足于基本的黑白两种样式，可以自己尝试看看使用 HTML 或 CSS 来进行编辑，可以参考前几篇「<a href="tutorial_2_button.html">制作特色按钮</a>」、「<a href="tutorial_3_google_font.html">使用 Google Fonts</a>」，都有一些不错的教学介绍喔！
+            <br/>
+            <br/>范例链接：
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6278739709132800" target="_blank">基本组件实作 - 设计 CheckBox ( 垂直 )</a>
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6234576707911680" target="_blank">基本组件实作 - 设计 CheckBox ( 水平 )</a>
+            <br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6278739709132800" target="_blank" class="tutorial-img-link" title="设计 CheckBox (垂直)">
+            <img alt="设计 CheckBox" src="../img/tutorial/tutorial_5_checklist_03.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <br/>
+      <h5>
+        <strong>一、放上 CheckBox 组件</strong>
+      </h5>
+      <p>一如往常，使用 EZoApp 就是要使用它好用的组件，直接利用拖拉的方式，将
+        <kbd>controlgroup-checkbox</kbd> 的组件拖曳到编辑区域，就会自动产生一个 CheckBox 组件。
+      </p>
+      <img alt="放上 CheckBox 组件" src="../img/tutorial/tutorial_5_checklist_04.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>二、增加选项</strong>
+      </h5>
+      <p>接下来我们利用之前介绍过的方法，点选 CheckBox 的选项，按下右上方的绿色加号，就会自动新增选项了。
+      </p>
+      <img alt="增加选项" src="../img/tutorial/tutorial_5_checklist_05.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>三、改变垂直与水平方向</strong>
+      </h5>
+      <p>如果我们要改变垂直或水平的方向该怎做呢？只要打开属性面板，直接做方向的修改就可以啰！
+      </p>
+      <img alt="改变垂直与水平方向" src="../img/tutorial/tutorial_5_checklist_06.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>四、撰写 CSS 变换样式</strong>
+      </h5>
+      <p>一直到这一个步骤之前都相当容易，基本上都只需要动动鼠标就可以解决，而这个步骤我们就是要直接修改样式，让 CheckBox 看起来更为美观。修改的方式就是修改标题
+        <kbd>legend</kbd> 卷标的样式，大家可以贴上下列红色的的程序代码，就可以看到样式的变化。
+      </p>
+      <pre>&ltlegend <strong>style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;"</strong>&gtCheckbox Group&lt/legend&gt</pre>
+      <img alt="撰写 CSS 变换样式" src="../img/tutorial/tutorial_5_checklist_07.gif" class="img-responsive" style="border-bottom:1px solid #ccc;" />
+      <br/>
+      <p>使用了 EZoApp 之后，是不是觉得在设计画面上变得相当的直觉容易呢！这就是 EZoApp 最好用的特色之一喔！
+        <br/>
+        <br/>范例链接：
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6278739709132800" target="_blank">基本组件实作 - 设计 CheckBox (垂直)</a>
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6234576707911680" target="_blank">基本组件实作 - 设计 CheckBox (水平)</a>
+        <br/>
+      </p>
+      <br/>
+      <br/>
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/banner.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>

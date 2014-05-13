@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速开发行动 App 的最佳工具" />
+  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 开发行动 App 的云端服务，非常适合用来快速打造 App、行动组件与用户接口，同时支持前端技术的开发与学习。">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,云端平台,数据,组件,脚本,云端,软件,开发,工具,行动,触控,响应式,手机,平板,移动" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <!-- endbuild -->
+  <title>EZoApp 教学实作 - 串接开放资料</title>
+</head>
+
+<body page="tutorial" page-content="tutorial_js_4_open_data" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
+    </div>
+    <img src="../img/img1_1.jpg" alt="EZoApp 快速开发行动 App 的利器" />
+  </div>
+
+  <div class="container">
+    <!--左侧选单-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>结合 JavaScript 应用 - 串接开放数据</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            大家一定有使用过一些介绍各地美食或景点的网站或 App，甚至最近最夯的脚踏车信息、公交车信息...等交通生活信息也都可以藉由各种平台查询，因此内心不免好奇这些信息到底是从哪里来的？其实许多的信息，在各个政府机关的网站上，都有提供相关的公开数据让民众链接查询，EZoApp 同样提供了这个功能，藉由链接政府机关公开数据的 JSON 档案，就能够轻松获取数据，制作相关的 App。
+            <br/>不过这里有个小问题要提醒大家的，因为我们是在计算机上操作，而计算机的浏览器对于获取外部网站的数据有着比较严格的把关机制，因此我们直接使用浏览器开启会有问题，如果要测试，我们必须使用 Chrome 浏览器，并且把某个安全机制关闭，就能够进行测试，下列会教导大家如何使用。
+            <br/>
+            <br/>范例链接：
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#id=6462014553587712" target="_blank">结合 JavaScript 应用 - 串接开放数据</a>
+            <br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#id=6462014553587712" target="_blank" class="tutorial-img-link" title="串接开放资料">
+            <img alt="串接公开资料" src="../img/tutorial/tutorial_js_4_open_data_01.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <h5>
+        <strong>一、找一个开放资料平台获取档案</strong>
+      </h5>
+      <p>想当然尔，要串接开放数据一定得有开放数据的档案，这里我们以高雄市政府的开放资料平台作为例子，当然大家也可以去其他开放数据采集数据，进入开放数据平台之后，我们选择「高雄旅游网-餐饮数据」作为我们的数据源。
+        <br/>连结：
+        <a href="http://data.kaohsiung.gov.tw/Opendata/" target="_blank">高雄市政府的开放资料平台</a>
+      </p>
+      <br/>
+      <h5>
+        <strong>二、将浏览器的安全性关闭</strong>
+      </h5>
+      <p>如果我们要在计算机上的浏览器测试，就必须先把浏览器的某项安全性关闭，这是计算机的浏览器默认的规则，不过如果之后发布到行动装置上，就不会有这些安全性开关的问题，也因此如果要测试，就要先下指令关闭浏览器的设定。
+        <br/>设定的方法就是在 Chrome 的图示上右键单击 ( 这里我们以 Chrome 作为范例 )，选择「内容」，在「快捷方式」的页签内找到「目标」的字段，在 Chrome.exe 文件名后方加入以下文字：
+        <strong style="color:Red;">--args --disable-web-security</strong>，将 Chrome 的安全性关闭，就可以开始进行测试了
+      </p>
+      <img alt="串接公开资料" src="../img/tutorial/tutorial_js_4_open_data_02.png" class="img-responsive" style="border-bottom:1px solid #ccc;" />
+      <br/>
+      <h5>
+        <strong>三、新增页面</strong>
+      </h5>
+      <p>在范例中我们做了四个页面，第一页是入口页，指向不同的数据 ( 餐饮信息与玩乐信息 )，第二页为串接数据后呈现的店家与景点清单，第三页是点选列表后的详细讯息，第四页是地图。
+      </p>
+      <img alt="串接公开资料" src="../img/tutorial/tutorial_js_4_open_data_03.png" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>四、撰写各个页面的程序代码</strong>
+      </h5>
+      <p>逐一在各个页面贴入程序代码。
+        <br/>入口页：
+      </p>
+      <pre>&ltdiv id="home" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtApp&lt/h3&gt<br/>  &lt/div&gt<br/>  &ltdiv role="main" class="ui-content"&gt<br/>    &ltimg src="开头图片网址"&gt<br/>    &ltdiv class="ui-grid-a" style="height:115px; margin:20px auto; width:90%;" id="home_btn"&gt<br/>      &ltdiv class="ui-block-a" style="height:100%; text-align:center;"&gt<br/>        &lta href="#ListPage" data-transition="slide" id="a1"&gt       //data-transition 设定点选后是往左滑动<br/>          &ltimg src="餐饮图示"&gt<br/>          &lth4&gt高雄好好吃&lt/h4&gt<br/>        &lt/a&gt<br/>      &lt/div&gt<br/>      &ltdiv class="ui-block-b" style="height:100%; text-align:center;"&gt<br/>        &lta href="#ListPage" data-transition="slide" id="a2"&gt       //data-transition 设定点选后是往左滑动<br/>          &ltimg src="景点图示"&gt<br/>          &lth4&gt高雄好好玩&lt/h4&gt<br/>        &lt/a&gt<br/>      &lt/div&gt<br/>    &lt/div&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre>
+      <p>
+        清单页：
+      </p>
+      <pre>&ltdiv id="ListPage" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3 id="title"&gtHeader&lt/h3&gt<br/>    &lta class="ui-btn ui-btn-left" href="#home" data-transition="slide" <strong>data-direction="reverse"</strong>&gtBack&lt/a&gt<br/>     // 点选 back 反向滑回去<br/>  &lt/div&gt<br/>  &ltdiv class="ui-content"&gt<br/>    &ltul <strong>id="gk-219CcdN" data-role="listview" data-inset="true" is="json-listview" service data-filter="true"</strong>&gt<br/>     // 使用 gk 组件，预留 service 卷标串接公开数据<br/>      &ltli&gt<br/>        &lta href="#ContentPage" data-transition="slide" s1="{{Name}}" s2="{{Add}}" s3="{{Tel}}" s4="{{Opentime}}" s5="{{Description}}"&gt{{Name}}&lt/a&gt<br/>      &lt/li&gt<br/>    // 先将数据写入卷标内(比较简易无脑的做法)<br/>    &lt/ul&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre>
+      <p>
+        详细信息页：
+      </p>
+      <pre>&ltdiv id="ContentPage" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gt详细信息&lt/h3&gt<br/>    &lta class="ui-btn ui-btn-left" href="#ListPage" data-transition="slide" data-direction="reverse"&gtBack&lt/a&gt<br/>  &lt/div&gt<br/>  &ltdiv class="ui-content"&gt<br/>    &lth4&gt店名：&ltspan class="d1"&gt&lt/span&gt&lt/h4&gt<br/>    &lth4&gt地址：&ltspan class="d2"&gt&lt/span&gt&lt/h4&gt<br/>    &lth4&gt电话：&ltspan class="d3"&gt&lt/span&gt&lt/h4&gt<br/>    &lth4&gt营业时间：&ltspan class="d4"&gt&lt/span&gt&lt/h4&gt<br/>    &lth4&gt店家描述：&ltbr&gt&ltspan class="d5"&gt&lt/span&gt&lt/h4&gt<br/>  &lt/div&gt<br/>  &ltdiv data-position="fixed" data-role="footer" data-theme="b"&gt<br/>    &ltdiv data-role="navbar"&gt<br/>      &ltul&gt<br/>        &ltli&gt<br/>          &lta data-icon="bars" class="ui-btn-active  ui-state-persist"&gt详细信息&lt/a&gt<br/>        &lt/li&gt<br/>        &ltli id="btn2"&gt<br/>          &lta data-icon="location" href="#MapPage"&gt地图&lt/a&gt<br/>        &lt/li&gt<br/>      &lt/ul&gt<br/>    &lt/div&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre>
+      <p>
+        地图页：
+      </p>
+      <pre>&ltdiv id="MapPage" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gt地图&lt/h3&gt<br/>    &lta class="ui-btn ui-btn-left" href="#ListPage" data-transition="slide" data-direction="reverse"&gtBack&lt/a&gt<br/>  &lt/div&gt<br/>  &ltdiv class="ui-content"&gt<br/>    &ltdiv id="map1" is="gmap" style="width:310px;height:450px; zoom="16" address="Qianzhen, TW"&gt&lt/div&gt<br/>  &lt/div&gt<br/>  &ltdiv data-position="fixed" data-role="footer" data-theme="b"&gt<br/>    &ltdiv data-role="navbar" id="nav_bar"&gt<br/>      &ltul&gt<br/>        &ltli&gt<br/>          &lta data-icon="bars" href="#ContentPage"&gt详细信息&lt/a&gt<br/>        &lt/li&gt<br/>        &ltli&gt<br/>          &lta data-icon="location" class="ui-btn-active  ui-state-persist"&gt地图&lt/a&gt<br/>        &lt/li&gt<br/>      &lt/ul&gt<br/>    &lt/div&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre>
+      <br/>
+      <p>大致的长相如下图所示：
+      </p>
+      <img alt="串接公开资料" src="../img/tutorial/tutorial_js_4_open_data_04.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>五、撰写 JavaScript</strong>
+      </h5>
+      <p>接着就是撰写 JavaScript 档案，这个范例使用比较简易的方式，只是将各个信息写入卷标内。
+      </p>
+      <pre>var mapAddress;<br/>$(document).on('pageinit', function () {<br/>  $('#home_btn a').on('click', function (e) {<br/>    var headerTitle = $(this).find('h4').text();<br/>    $('#title').text(headerTitle);<br/>  });<br/><br/>  $('#a1').on('click', function (e) {<br/>    listContent("http://data.kaohsiung.gov.tw/Opendata/DownLoad.aspx?Type=2&CaseNo1=AV&CaseNo2=2&FileType=1&Lang=C");<br/>  });<br/><br/>  $('#a2').on('click', function (e) {<br/>    listContent("http://data.kaohsiung.gov.tw/Opendata/DownLoad.aspx?Type=2&CaseNo1=AV&CaseNo2=1&FileType=1&Lang=C");<br/>  }); <br/><br/>function listContent(service) {<br/>    var url = service;<br/>    if (url) {<br/>      $.getJSON(url).complete(function (data) {<br/>        $("#gk-219CcdN").gk("model", $.parseJSON(data.responseText));<br/><br/>        $('#gk-219CcdN a').on('click', function (e) {<br/>          var g1 = $(this).attr('s1');<br/>          var g2 = $(this).attr('s2');<br/>          var g3 = $(this).attr('s3');<br/>          var g4 = $(this).attr('s4');<br/>          var g5 = $(this).attr('s5');<br/>          $('.d1').text(g1);<br/>          $('.d2').text(g2);<br/>          $('.d3').text(g3);<br/>          $('.d4').text(g4);<br/>          $('.d5').text(g5);<br/>          mapAddress = g2;<br/>        });<br/>      });<br/>    }<br/>  }<br/>});<br/>$(document).on('pageshow', '#MapPage', function () {<br/>  $('#map1').gk('address', mapAddress);<br/>});</pre>
+      <br/>
+      <p>
+        程序都写好之后，就可以串接开放数据，也实际做出一个简易的查询平台了！
+        <br/>
+        <br/>范例链接：
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#id=6462014553587712" target="_blank">结合 JavaScript 应用 - 串接开放数据</a>
+        <br/>
+        <br/>
+        <br/>
+      </p>
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/banner.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>

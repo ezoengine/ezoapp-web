@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速开发行动 App 的最佳工具" />
+  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 开发行动 App 的云端服务，非常适合用来快速打造 App、行动组件与用户接口，同时支持前端技术的开发与学习。">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,云端平台,数据,组件,脚本,云端,软件,开发,工具,行动,触控,响应式,手机,平板,移动" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <!-- endbuild -->
+  <title>EZoApp 教学实作 - 制作特色按钮</title>
+</head>
+
+<body page="tutorial" page-content="tutorial_2_button" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
+    </div>
+    <img src="../img/img1_1.jpg" alt="EZoApp 快速开发行动 App 的利器" />
+  </div>
+
+  <div class="container">
+    <!--左侧选单-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>基本组件实作 - 制作特色按钮</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            延续上一节所提到的 button ，这一节将利用 button 组件搭配 CSS3 的阴影、边框、背景...等效果，设计美轮美奂的按钮，这一节主要会描述如何使用 CSS 的语法，对于相关语法不熟悉的朋友们，也希望能够多学习一些，毕竟使用 CSS 已经比直接利用 Java 或 Object C 来写 App 样式简单太多太多了，也期待大家能够写出非常漂亮的按钮作品喔！
+            <br/>
+            <br/>范例链接：
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">基本组件实作 - 制作特色按钮</a>
+            <br/>
+            <br/>这边也提供几个不错的 CSS 网站给大家参考学习：
+            <br/>
+            <a href="http://www.w3schools.com/css/" target="_blank">CSS - W3School</a> ( CSS 完整的在线教学 )
+            <br/>
+            <a href="http://www.css3maker.com/" target="_blank">CSS3 Maker</a> ( 国外快速产生的 CSS3 语法与效果的网站 1 )
+            <br/>
+            <a href="http://css3generator.com/" target="_blank">CSS3 Generator</a> ( 国外快速产生的 CSS3 语法与效果的网站 2 )
+            <br/>
+            <br/>由于 CSS 已经变成了一个趋势，EZoApp 也是会大量的使用 CSS 来做版面的编排，也希望大家在练习 EZoApp 之余，也学会 CSS 啰！
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank" class="tutorial-img-link" title="制作特色按钮">
+            <img alt="制作特色按钮" src="../img/tutorial/tutorial_2_button_01.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <br/>
+      <h5>
+        <strong>一、放上按钮</strong>
+      </h5>
+      <p>
+        我们直接使用拖拉的方式，把左侧的
+        <kbd>button</kbd> 组件拖曳进入编辑画面中，就会自动产生一个按钮。
+      </p>
+      <p>
+        <img alt="放上按钮" src="../img/tutorial/tutorial_2_button_02.gif" class="img-responsive" style="margin:20px 0;" />
+      </p>
+      <br/>
+      <h5>
+        <strong>二、快速复制按钮</strong>
+      </h5>
+      <p>
+        当鼠标点击编辑区域中的按钮，会发现元见右上角出现了几个小 icon，几个小 icon 的意思分别为：「绿色加号」复制并新增该组件，「红色叉叉」删除该组件，「黑色向上箭头」选取父层组件，如果我们要快速复制按钮，只要点选绿色加号，按钮就会自动产生。
+      </p>
+      <p>
+        <img alt="快速复制按钮" src="../img/tutorial/tutorial_2_button_03.gif" class="img-responsive" style="margin:20px 0;" />
+      </p>
+      <br/>
+      <h5>
+        <strong>三、认识按钮基本样式</strong>
+      </h5>
+      <p>
+        点选按钮后，我们便可以使用属性面板来调整按钮的属性，调整属性后，相关属性的样式名称也会加入程序代码内，，这里我们可以设定按钮 icon 的位置、按钮的大小...等属性，而其他比较进阶的属性，后续就利用 CSS 来调整，下方列出<a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">范例档案</a>中13个按钮的基本样式。
+      </p>
+      <pre>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn ui-mini"&gtButton&lt/a&gt<br/>&lta class="ui-btn"&gtButton1&lt/a&gt<br/>&lta class="ui-btn"&gtButton2&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn ui-mini ui-btn-icon-top ui-icon-delete"&gtButton&lt/a&gt<br/>&lta class="ui-btn ui-btn-icon-top ui-icon-delete"&gtButton&lt/a&gt<br/>&lta class="ui-btn ui-icon-delete ui-btn-icon-right"&gtButton&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt</pre>
+      <p>
+        <img alt="认识按钮基本样式" src="../img/tutorial/tutorial_2_button_04.gif" class="img-responsive" style="margin:20px 0;" />
+      </p>
+      <br/>
+      <h5>
+        <strong>四、建立按钮样式表单</strong>
+      </h5>
+      <p>
+        按钮组件放上编辑区域后，最后我们就是要利用 CSS 来编辑按钮的样式，除了可以控制长宽之外，也可以利用以下几个设定来设定按钮的样式：
+        <br/>
+        <ol style="padding-left:15px;">
+          <li style="list-style:upper-roman;">
+            <p>
+              <kbd>-webkit-box-radius:</kbd> 后方输入数值，来设定按钮四个角为圆角 (适用于 Chrome，Firefox 改为 -moz-box-radius，IE 改为 box-radius)，例如：</p><pre>-webkit-border-radius: 20px; //四个圆角的半径为20px</pre>
+          </li>
+          <li style="list-style:upper-roman;">
+            <p>
+              <kbd>-webkit-box-shadow:</kbd> 后方输入数值，来设定按钮阴影 (适用于 Chrome，Firefox 改为 -moz-box-shadow，IE 改为 box-shadow)，例如：</p><pre>-webkit-box-shadow: inset #ddd 0 0 10px; //内阴影<br/>-webkit-box-shadow: #ddd 0 0 10px;       //外阴影</pre>
+          </li>
+          <li style="list-style:upper-roman;">
+            <p>
+              <kbd>background:</kbd> 后方可带入背景图片，但因为 jQuery Mobile 组件的默认值，必须加入 !important 才能顺利呈现，例如：</p><pre>background: url(图片网址) center center no-repeat<strong>!important</strong>;</pre>
+          </li>
+          <li style="list-style:upper-roman;">
+            <p>
+              <kbd>display:</kbd> 因为按钮本身是区块 ( block ) 属性，如果要让按钮可以一个接一个的排下去，最简单的方法就是调整 display，例如：</p><pre>display: inline-block;</pre>
+          </li>
+        </ol>
+      </p>
+      <p>
+        <img alt="建立按钮样式表单" src="../img/tutorial/tutorial_2_button_05.gif" class="img-responsive" style="margin:20px 0; border-bottom:1px solid #ccc;" />
+      </p>
+      <p>上面列出几个比较特别需要注意的 CSS 样式，其他的其实都是基本的 CSS，大家可以自行撰写，并且立即看到效果，是不是相当的方便迅速呢！
+        <br/>再次列出这几个不错的 CSS 网站给大家参考学习：
+        <br/>
+        <a href="http://www.w3schools.com/css/" target="_blank">CSS - W3School</a> (CSS完整的在线教学)
+        <br/>
+        <a href="http://www.css3maker.com/" target="_blank">CSS3 Maker</a> ( 国外快速产生的 CSS3 语法与效果的网站 1 )
+        <br/>
+        <a href="http://css3generator.com/" target="_blank">CSS3 Generator</a> ( 国外快速产生的 CSS3 语法与效果的网站 2 )
+        <br/>
+        <br/>范例链接：
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">基本组件实作 - 制作特色按钮</a>
+        <br/>
+        <br/>
+        <br/>
+      </p>
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/banner.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>
