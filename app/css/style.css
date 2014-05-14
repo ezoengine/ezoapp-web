@@ -935,15 +935,15 @@ ol, li {
 #gotoTop{
   cursor:pointer;
   background: url(../img/go_top.png) center center no-repeat;
-  width:36px;
-  height:36px;
+  width:41px;
+  height:41px;
   position:fixed;
   bottom:0;
   right:0;
   z-index: 99999;
   display:none;
-  opacity:.5;
+  opacity:.8;
 }
 #gotoTop:hover{
-  opacity:.7!important;
+  opacity:1!important;
 }
