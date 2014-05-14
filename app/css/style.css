@@ -687,6 +687,21 @@ h2 {
   margin:0;
   list-style:none;
 }
+.left-menu>ul {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.left-menu>ul::-webkit-scrollbar {
+  width:3px;
+}
+.left-menu>ul::-webkit-scrollbar-track {
+  background:#eee;
+  border-radius: 3px;
+}
+.left-menu>ul::-webkit-scrollbar-thumb {
+  background:#ddd;
+  border-radius: 3px;
+}
 .left-menu>ul>li {
   font-size:18px;
   border-bottom:1px solid #ccc;
@@ -915,4 +930,20 @@ ol, li {
 }
 .right-content ol li {
   margin:0 0 5px;
+}
+
+#gotoTop{
+  cursor:pointer;
+  background: url(../img/go_top.png) center center no-repeat;
+  width:36px;
+  height:36px;
+  position:fixed;
+  bottom:0;
+  right:0;
+  z-index: 99999;
+  display:none;
+  opacity:.5;
+}
+#gotoTop:hover{
+  opacity:.7!important;
 }

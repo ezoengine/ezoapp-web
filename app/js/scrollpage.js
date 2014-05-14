@@ -1,27 +1,59 @@
 $(function() {
   'use strict';
   var $window = $(window),
-    leftMenuWidth = $('.left-menu').width();
+  windowHeight, menuWidth, menuHeight, menuTop, scrollNum, menuHeight;
+
+  $('.left-menu>ul').css({
+    'height': $window.height() - 90 + 'px'
+  });
+  menuHeight = $('.left-menu>ul').height();
+  menuWidth = $('.left-menu').width();
 
   $window.resize(function() {
-    leftMenuWidth = $('.left-menu').width();
+    windowHeight = $window.height();
+    menuWidth = $('.left-menu').width();
+    $('.left-menu>ul').css({
+      'height': $window.height() - 90 + 'px'
+    });
+    $('.left-menu>ul').css({
+      'width': menuWidth + 'px'
+    });
+    menuHeight = $('.left-menu>ul').height();
   });
 
   $window.scroll(function() {
-
     /**
      * 卷軸往下捲到一定程度，左側選單會固定不動
      */
+    scrollNum = $(document).height() - menuHeight - 90;
+    menuTop = $('.left-menu>ul').offset().top;
+
+    /* 卷軸往下捲到一定程度，左側選單會固定不動 */
     if ($window.width() >= 978) {
-      $window.scrollTop() > 200 ? $('.left-menu>ul').css({
-        'position': 'fixed',
-        'top': '65px',
-        'width': leftMenuWidth + 'px'
-      }) : $('.left-menu>ul').css({
-        'position': 'relative',
-        'top': '0',
-        'width': '100%'
-      });
+      if ($window.scrollTop() > 200 && $window.scrollTop() < scrollNum) {
+        $('.left-menu>ul').css({
+          'position': 'fixed',
+          'top': '65px',
+          'width': menuWidth + 'px',
+          'height': $window.height() - 90 + 'px'
+        });
+      }
+      if ($window.scrollTop() <= 200) {
+        $('.left-menu>ul').css({
+          'position': 'relative',
+          'top': '0',
+          'width': '100%',
+          'height': $window.height() - 90 + 'px'
+        });
+      }
+      if ($window.scrollTop() >= (scrollNum - 60)) {
+        $('.left-menu>ul').css({
+          'position': 'fixed',
+          'top': '65px',
+          'height': (menuHeight + $(document).height() - $window.scrollTop() - menuHeight - 170) + 'px',
+          'width': menuWidth + 'px'
+        });
+      }
     } else {
       $('.left-menu>ul').css({
         'position': 'relative',

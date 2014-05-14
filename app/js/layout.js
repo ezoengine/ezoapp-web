@@ -1,6 +1,14 @@
 $(function() {
   'use strict';
   var $window = $(window);
+  $('body').append(
+    '<div id="gotoTop" title="back to top"></div>'
+  );
+  $('#gotoTop').on('click', function() {
+    $('html,body').not(':animated').animate({
+      'scrollTop': '0'
+    }, 900);
+  });
 
   /*  語系判斷與切換按鈕  */
   var nowUrl = location.href;
@@ -57,6 +65,7 @@ $(function() {
   });
 
   /* 進入網站時，判斷瀏覽器語系，記錄cookie */
+
   function fn_check_cookie() {
     if (!$.cookie('ezoapp_web_cookie')) {
       var lang = window.navigator.userLanguage || window.navigator.language || window.navigator.browserLanguage;
@@ -117,17 +126,33 @@ $(function() {
 
   /* 捲動時上方選單高度與背景色變化 */
   $window.scroll(function() {
-    $window.scrollTop() > 0 ? $('.navbar-inverse').not(':animated').animate({
-      'padding': '0'
-    }).css({
-      'background': 'rgba(5,10,15,.85)'
-    }) : $('.navbar-inverse').animate({
-      'padding': '10px 0'
-    }, {
-      queue: false
-    }).css({
-      'background': 'rgba(7,7,7,1)'
-    });
+    var gotoTopPosition = $('.footer').offset().top - $window.scrollTop();
+    if ($window.scrollTop() > 0) {
+      $('.navbar-inverse').not(':animated').animate({
+        'padding': '0'
+      }).css({
+        'background': 'rgba(5,10,15,.85)'
+      });
+      if (gotoTopPosition < $window.height()) {
+        $('#gotoTop').css({
+          'bottom': ($window.height() - gotoTopPosition) + 'px'
+        });
+      } else {
+        $('#gotoTop').css({
+          'bottom': '0'
+        });
+      }
+      $window.width() > 992 ? $('#gotoTop').stop(true, false).fadeIn(200) : $('#gotoTop').hide();
+    } else {
+      $('.navbar-inverse').animate({
+        'padding': '10px 0'
+      }, {
+        queue: false
+      }).css({
+        'background': 'rgba(7,7,7,1)'
+      });
+      $window.width() > 992 ? $('#gotoTop').stop(true, false).fadeOut(200) : $('#gotoTop').hide();
+    }
   });
 
   /* google analytics */
@@ -143,6 +168,7 @@ $(function() {
   );
 
   /* 繁體中文 */
+
   function fn_zh_tw() {
     $('head').append(
       '<link rel="icon" href="favicon.ico" type="image/x-icon"/>' +
@@ -190,6 +216,7 @@ $(function() {
   }
 
   /* 简体中文 */
+
   function fn_zh_cn() {
     $('head').append(
       '<link rel="icon" href="../favicon.ico" type="image/x-icon"/>' +
