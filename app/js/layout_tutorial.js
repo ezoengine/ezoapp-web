@@ -142,4 +142,36 @@ $(function() {
     );
 
   }
+
+  function fn_en() {
+    $('.banner-content-text').append(
+      '<h1>EZoApp hands-on tutorial</h1>' +
+      '<h2>Programming feast of learning rapid app development</h2>'
+    );
+
+    /* tutorial left */
+    $('.tutorial-left-menu ul').append(
+      '<li><a>Basic component</a>' +
+      '<ul>' +
+      '<li page-content="tutorial_1_basic_grid"><a href="tutorial_1_basic_grid.html">1. Basic grid layout</a></li>' +
+      '<li page-content="tutorial_2_button"><a href="tutorial_2_button.html">2. Customized buttons</a></li>' +
+      '<li page-content="tutorial_3_google_font"><a href="tutorial_3_google_font.html">3. Google fonts</a></li>' +
+      '<li page-content="tutorial_4_droplist"><a href="tutorial_4_droplist.html">4. Droplist menus</a></li>' +
+      '<li page-content="tutorial_5_checklist"><a href="tutorial_5_checkbox.html">5. CheckBox</a></li>' +
+      '<li page-content="tutorial_6_home_page"><a href="tutorial_6_home_page.html">6. Entry point pages</a></li>' +
+      // '<li page-content="tutorial_7_button"><a href="tutorial_7_button.html">7. Button<span></span></a></li>' +
+      '</ul>' +
+      '</li>' +
+      '<li><a>Integrating JavaScript</a><i></i>' +
+      '<ul>' +
+      '<li page-content="tutorial_js_1_googlemap"><a href="tutorial_js_1_googlemap.html">1. Google Map app</a></li>' +
+      '<li page-content="tutorial_js_2_swipe_page"><a href="tutorial_js_2_swipe_page.html">2. Swipe Pages</a></li>' +
+      '<li page-content="tutorial_js_3_star_widget"><a href="tutorial_js_3_star_widget.html">3. Star Rating</a></li>' +
+      '<li page-content="tutorial_js_4_open_data"><a href="tutorial_js_4_open_data.html">4. Open Data</a></li>' +
+      '<li page-content="tutorial_js_5_rss"><a href="tutorial_js_5_rss.html">5. RSS Service<span></span></a></li>' +
+      '</ul>' +
+      '</li>'
+    );
+
+  }
 });

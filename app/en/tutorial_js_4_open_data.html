@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - the best mobile design tool" />
+  <meta name="description" content="EZoApp - Best tool for the rapid development of mobile apps
+Experiencing it right now">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX" />
+  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="../css/style-en.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <!-- endbuild -->
+  <title>Integrating JavaScript in your app - linking open data</title>
+</head>
+
+<body page="tutorial" page-content="tutorial_js_4_open_data" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
+    </div>
+    <img src="../img/img1_1.jpg" alt="Integrating JavaScript in your app - linking open data" />
+  </div>
+
+  <div class="container">
+    <!--左侧选单-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>Integrating JavaScript in your app - linking open data</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            You must have used some websites or apps that introduce gourmet food or tourist attractions of various places, or the very popular bicycle information, bus information and others. Information about transportation and other aspects of life can also be obtained on various platforms. Perhaps you are feeling curious and cannot help but wonder where the information comes from. In fact, many of the government offices' websites provide relevant public data for people to use. EZoApp also provides a feature that allows people to link to the JSON files containing governmental public data, from which they can easily obtain data and create related apps.
+            <br/>However, here is a small reminder-- because we are working on computers, and browsers on computers have a more strict security mechanism about obtaining data from external websites, we might encounter problems if we attempt to access the data through browsers directly. Therefore, we will use the Chrome browser, with a certain security feature turned off, in order to conduct tests in the following tutorial.
+            <br/>
+            <br/>Link of example:
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#id=6462014553587712" target="_blank">Integrating JavaScript in your app - linking open data</a>
+            <br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#id=6462014553587712" target="_blank" class="tutorial-img-link" title="Integrating JavaScript in your app - linking open data">
+            <img alt="Integrating JavaScript in your app - linking open data" src="../img/tutorial/tutorial_js_4_open_data_01.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <h5>
+        <strong>I. Selecting an open data platform to access files</strong>
+      </h5>
+      <p>As expected, you need to have files containing open data if you are to link to them. Here, we will use the open data platform of Kaohsiung City Government as our example. You can certainly use other open data platforms as well. After entering the open data platform, we will choose "Kaohsiung Travel Network – Dining Information" as our data source.
+        <br/>Link：
+        <a href="http://data.kaohsiung.gov.tw/Opendata/" target="_blank">Kaohsiung City Government Open Data</a>
+      </p>
+      <br/>
+      <h5>
+        <strong>II. Turning off browser security feature</strong>
+      </h5>
+      <p>If we want to conduct tests on computers, we must turn off certain security features in the browsers. This is because of the default security settings in browsers on computers. We will not have the same security issue on mobile devices. Thus, we will turn off certain settings in the browsers first.
+        <br/>On top of the Chrome program icon, click the right mouse button (we will use Chrome as our example here) and select "Properties"; go to "Shortcut" tab and find the "Target" field. After the filename "Chrome.exe", add the following texts "
+        <strong style="color:Red;">--args --disable-web-security</strong>". Click "OK" to close the Properties window. We are now ready to conduct our tests.
+      </p>
+      <img alt="Turning off browser security feature" src="../img/tutorial/tutorial_js_4_open_data_02.png" class="img-responsive" style="border-bottom:1px solid #ccc;" />
+      <br/>
+      <h5>
+        <strong>III. Adding new pages</strong>
+      </h5>
+      <p>In this example, we will make four new pages. The first page is the entry page pointing to different information (dining and other travel information); the second page displays the list of stores or tourist attractions acquired through the linking; the third page is the detailed information after clicking an item in the list; and the fourth page is the map.
+      </p>
+      <img alt="Adding new pages" src="../img/tutorial/tutorial_js_4_open_data_03.png" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>IV. Writing program code for each page</strong>
+      </h5>
+      <p>Copy-and-paste the program code into each corresponding page.
+        <br/>Entry page：
+      </p>
+      <pre>&ltdiv id="home" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtApp&lt/h3&gt<br/>  &lt/div&gt<br/>  &ltdiv role="main" class="ui-content"&gt<br/>    &ltimg src="img src"&gt<br/>    &ltdiv class="ui-grid-a" style="height:115px; margin:20px auto; width:90%;" id="home_btn"&gt<br/>      &ltdiv class="ui-block-a" style="height:100%; text-align:center;"&gt<br/>        &lta href="#ListPage" data-transition="slide" id="a1"&gt       <br/>          &ltimg src="icon"&gt<br/>          &lth4&gtgood eat&lt/h4&gt<br/>        &lt/a&gt<br/>      &lt/div&gt<br/>      &ltdiv class="ui-block-b" style="height:100%; text-align:center;"&gt<br/>        &lta href="#ListPage" data-transition="slide" id="a2"&gt       <br/>          &ltimg src="icon"&gt<br/>          &lth4&gtgood fun&lt/h4&gt<br/>        &lt/a&gt<br/>      &lt/div&gt<br/>    &lt/div&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre>
+      <p>
+        List page：
+      </p>
+      <pre>&ltdiv id="ListPage" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3 id="title"&gtHeader&lt/h3&gt<br/>    &lta class="ui-btn ui-btn-left" href="#home" data-transition="slide" <strong>data-direction="reverse"</strong>&gtBack&lt/a&gt<br/>     <br/>  &lt/div&gt<br/>  &ltdiv class="ui-content"&gt<br/>    &ltul <strong>id="gk-219CcdN" data-role="listview" data-inset="true" is="json-listview" service data-filter="true"</strong>&gt<br/>     <br/>      &ltli&gt<br/>        &lta href="#ContentPage" data-transition="slide" s1="{{Name}}" s2="{{Add}}" s3="{{Tel}}" s4="{{Opentime}}" s5="{{Description}}"&gt{{Name}}&lt/a&gt<br/>      &lt/li&gt<br/>    <br/>    &lt/ul&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre>
+      <p>
+        Detail Page：
+      </p>
+      <pre>&ltdiv id="ContentPage" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtDetail&lt/h3&gt<br/>    &lta class="ui-btn ui-btn-left" href="#ListPage" data-transition="slide" data-direction="reverse"&gtBack&lt/a&gt<br/>  &lt/div&gt<br/>  &ltdiv class="ui-content"&gt<br/>    &lth4&gtName：&ltspan class="d1"&gt&lt/span&gt&lt/h4&gt<br/>    &lth4&gt地址：&ltspan class="d2"&gt&lt/span&gt&lt/h4&gt<br/>    &lth4&gtPhone：&ltspan class="d3"&gt&lt/span&gt&lt/h4&gt<br/>    &lth4&gtTime：&ltspan class="d4"&gt&lt/span&gt&lt/h4&gt<br/>    &lth4&gtDesc：&ltbr&gt&ltspan class="d5"&gt&lt/span&gt&lt/h4&gt<br/>  &lt/div&gt<br/>  &ltdiv data-position="fixed" data-role="footer" data-theme="b"&gt<br/>    &ltdiv data-role="navbar"&gt<br/>      &ltul&gt<br/>        &ltli&gt<br/>          &lta data-icon="bars" class="ui-btn-active  ui-state-persist"&gtDetail&lt/a&gt<br/>        &lt/li&gt<br/>        &ltli id="btn2"&gt<br/>          &lta data-icon="location" href="#MapPage"&gt地图&lt/a&gt<br/>        &lt/li&gt<br/>      &lt/ul&gt<br/>    &lt/div&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre>
+      <p>
+        Map Page：
+      </p>
+      <pre>&ltdiv id="MapPage" data-role="page"&gt<br/>  &ltdiv data-role="header" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtmap&lt/h3&gt<br/>    &lta class="ui-btn ui-btn-left" href="#ListPage" data-transition="slide" data-direction="reverse"&gtBack&lt/a&gt<br/>  &lt/div&gt<br/>  &ltdiv class="ui-content"&gt<br/>    &ltdiv id="map1" is="gmap" style="width:310px;height:450px; zoom="16" address="Qianzhen, TW"&gt&lt/div&gt<br/>  &lt/div&gt<br/>  &ltdiv data-position="fixed" data-role="footer" data-theme="b"&gt<br/>    &ltdiv data-role="navbar" id="nav_bar"&gt<br/>      &ltul&gt<br/>        &ltli&gt<br/>          &lta data-icon="bars" href="#ContentPage"&gtDetail&lt/a&gt<br/>        &lt/li&gt<br/>        &ltli&gt<br/>          &lta data-icon="location" class="ui-btn-active  ui-state-persist"&gtmap&lt/a&gt<br/>        &lt/li&gt<br/>      &lt/ul&gt<br/>    &lt/div&gt<br/>  &lt/div&gt<br/>&lt/div&gt</pre>
+      <br/>
+      <p>The pages look roughly like those shown below:
+      </p>
+      <img alt="The pages look roughly like those shown below" src="../img/tutorial/tutorial_js_4_open_data_04.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>V. Writing JavaScript</strong>
+      </h5>
+      <p>Next, we will write the JavaScript file. This example uses a simpler method by just writing the information directly into the tag.
+      </p>
+      <pre>var mapAddress;<br/>$(document).on('pageinit', function () {<br/>  $('#home_btn a').on('click', function (e) {<br/>    var headerTitle = $(this).find('h4').text();<br/>    $('#title').text(headerTitle);<br/>  });<br/><br/>  $('#a1').on('click', function (e) {<br/>    listContent("http://data.kaohsiung.gov.tw/Opendata/DownLoad.aspx?Type=2&CaseNo1=AV&CaseNo2=2&FileType=1&Lang=C");<br/>  });<br/><br/>  $('#a2').on('click', function (e) {<br/>    listContent("http://data.kaohsiung.gov.tw/Opendata/DownLoad.aspx?Type=2&CaseNo1=AV&CaseNo2=1&FileType=1&Lang=C");<br/>  }); <br/><br/>function listContent(service) {<br/>    var url = service;<br/>    if (url) {<br/>      $.getJSON(url).complete(function (data) {<br/>        $("#gk-219CcdN").gk("model", $.parseJSON(data.responseText));<br/><br/>        $('#gk-219CcdN a').on('click', function (e) {<br/>          var g1 = $(this).attr('s1');<br/>          var g2 = $(this).attr('s2');<br/>          var g3 = $(this).attr('s3');<br/>          var g4 = $(this).attr('s4');<br/>          var g5 = $(this).attr('s5');<br/>          $('.d1').text(g1);<br/>          $('.d2').text(g2);<br/>          $('.d3').text(g3);<br/>          $('.d4').text(g4);<br/>          $('.d5').text(g5);<br/>          mapAddress = g2;<br/>        });<br/>      });<br/>    }<br/>  }<br/>});<br/>$(document).on('pageshow', '#MapPage', function () {<br/>  $('#map1').gk('address', mapAddress);<br/>});</pre>
+      <br/>
+      <p>
+        After the code is written, it is ready to link to the open data, and a simple information inquiry platform is created!
+        <br/>Link of example:
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#id=6462014553587712" target="_blank">Integrating JavaScript in your app - linking open data</a>
+        <br/>
+        <br/>
+        <br/>
+      </p>
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/jquery-cookie/jquery.cookie.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/banner.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>

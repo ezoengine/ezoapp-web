@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - the best mobile design tool" />
+  <meta name="description" content="EZoApp - Best tool for the rapid development of mobile apps
+Experiencing it right now">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX" />
+  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="../css/style-en.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <!-- endbuild -->
+  <title>Basic component hands-on practice - creating customized buttons</title>
+</head>
+
+<body page="tutorial" page-content="tutorial_2_button" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
+    </div>
+    <img src="../img/img1_1.jpg" alt="Basic component hands-on practice - creating customized buttons" />
+  </div>
+
+  <div class="container">
+    <!--左侧选单-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>Basic component hands-on practice - creating customized buttons</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            Continuing with button as mentioned in the previous section, we will use button component with the shadow, border, backgrounds and other effects in CSS3 to design beautiful buttons in this section. This section will mainly describe how to use CSS syntax. Even if you are not familiar with related syntax, you are encouraged to try to learn as much as possible. After all, using CSS is so much simpler than writing styles for the apps directly in Java or Object C. Trust you can all create beautiful buttons!
+            <br/>
+            <br/>Link of example:
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">Basic component hands-on practice - creating customized buttons</a>
+            <br/>
+            <br/>Here we provide a few good CSS websites for your reference:
+            <br/>
+            <a href="http://www.w3schools.com/css/" target="_blank">CSS - W3School</a> ( Complete online tutorial for CSS )
+            <br/>
+            <a href="http://www.css3maker.com/" target="_blank">CSS3 Maker</a> ( Overseas website that quickly generates CSS3 syntax and effects - 1 )
+            <br/>
+            <a href="http://css3generator.com/" target="_blank">CSS3 Generator</a> ( Overseas website that quickly generates CSS3 syntax and effects - 2 )
+            <br/>
+            <br/>Because CSS had become a trend, EZoApp will also use CSS extensively to edit layout. We hope that in addition to learning EZoApp, you will also learn CSS!
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank" class="tutorial-img-link" title="creating customized buttons">
+            <img alt="creating customized buttons" src="../img/tutorial/tutorial_2_button_01.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <br/>
+      <h5>
+        <strong>I. Adding a button</strong>
+      </h5>
+      <p>
+        We will directly drag a
+        <kbd>button</kbd> component from the left side into the editing screen to generate a button automatically.
+      </p>
+      <p>
+        <img alt="Adding a button" src="../img/tutorial/tutorial_2_button_02.gif" class="img-responsive" style="margin:20px 0;" />
+      </p>
+      <br/>
+      <h5>
+        <strong>II. Quickly duplicating buttons</strong>
+      </h5>
+      <p>
+        When you click on the button in the editing area, you will see a few small icons on the upper-right corner. These icons are: "green plus sign" for duplicating and adding a copy of the component; "red cross" for deleting the component; and "black upper arrow" for selecting parent component. If we want to quickly duplicate a button, just click on the green plus sign. A new button will be created automatically.
+      </p>
+      <p>
+        <img alt="Quickly duplicating buttons" src="../img/tutorial/tutorial_2_button_03.gif" class="img-responsive" style="margin:20px 0;" />
+      </p>
+      <br/>
+      <h5>
+        <strong>III. Understanding the basic styles of buttons</strong>
+      </h5>
+      <p>
+        When a button is clicked, we can use its attribute panel to adjust its attributes. After attributes are adjusted, corresponding style names will be added into the program code. Here we can set up the position, size and other attributes for the button. Other more advanced attributes will be adjusted using CSS. Thirteen basic styles for buttons in the <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">example</a> are listed below.
+      </p>
+      <pre>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn ui-mini"&gtButton&lt/a&gt<br/>&lta class="ui-btn"&gtButton1&lt/a&gt<br/>&lta class="ui-btn"&gtButton2&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn ui-mini ui-btn-icon-top ui-icon-delete"&gtButton&lt/a&gt<br/>&lta class="ui-btn ui-btn-icon-top ui-icon-delete"&gtButton&lt/a&gt<br/>&lta class="ui-btn ui-icon-delete ui-btn-icon-right"&gtButton&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt</pre>
+      <p>
+        <img alt="Understanding the basic styles of buttons" src="../img/tutorial/tutorial_2_button_04.gif" class="img-responsive" style="margin:20px 0;" />
+      </p>
+      <br/>
+      <h5>
+        <strong>IV. Creating a style sheet for buttons</strong>
+      </h5>
+      <p>
+        After placing button components in the editing area, we will finally use CSS to edit their styles. In addition to setting up length and width, we can also use attributes below to set up styles for buttons:
+        <br/>
+        <ol style="padding-left:15px;">
+          <li style="list-style:upper-roman;">
+            <p>
+              <kbd>-webkit-box-radius:</kbd> enter a number following it to make the four corners of the button round (applicable to Chrome; For Firefox, change it to -moz-box-radius; and for IE, change it to box-radius). For example:</p><pre>-webkit-border-radius: 20px;</pre>
+          </li>
+          <li style="list-style:upper-roman;">
+            <p>
+              <kbd>-webkit-box-shadow:</kbd> enter a number following it to set up the shadow effect for the button (applicable to Chrome; For Firefox, change it to -moz-box-shadow; and for IE, change it to box-shadow). For example:</p><pre>-webkit-box-shadow: inset #ddd 0 0 10px; //内阴影<br/>-webkit-box-shadow: #ddd 0 0 10px;       </pre>
+          </li>
+          <li style="list-style:upper-roman;">
+            <p>
+              <kbd>background:</kbd> you can enter a background image; however, because of the default value of jQuery Mobile component, you must add "!important" to display it correctly. For example:</p><pre>background: url(img url) center center no-repeat<strong>!important</strong>;</pre>
+          </li>
+          <li style="list-style:upper-roman;">
+            <p>
+              <kbd>display:</kbd> because buttons are block attributes themselves, if you want to arrange buttons one next to another, the easiest way is to adjust "display". For example:</p><pre>display: inline-block;</pre>
+          </li>
+        </ol>
+      </p>
+      <p>
+        <img alt="Creating a style sheet for buttons" src="../img/tutorial/tutorial_2_button_05.gif" class="img-responsive" style="margin:20px 0; border-bottom:1px solid #ccc;" />
+      </p>
+      <p>We listed several CSS styles above that deserve particularly attention. The others are actually basic CSS. You can write the code yourself and see the effect immediately. Isn't it quite convenient and quick?
+        <br/>The few good CSS websites are listed here again for your reference:
+        <br/>
+        <a href="http://www.w3schools.com/css/" target="_blank">CSS - W3School</a> (Complete online tutorial for CSS)
+        <br/>
+        <a href="http://www.css3maker.com/" target="_blank">CSS3 Maker</a> (Overseas website that quickly generates CSS3 syntax and effects - 1)
+        <br/>
+        <a href="http://css3generator.com/" target="_blank">CSS3 Generator</a> (Overseas website that quickly generates CSS3 syntax and effects - 2)
+        <br/>
+        <br/>Link of example:
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">Basic component hands-on practice - creating customized buttons</a>
+        <br/>
+        <br/>
+        <br/>
+      </p>
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/jquery-cookie/jquery.cookie.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/banner.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - the best mobile design tool" />
+  <meta name="description" content="EZoApp - Best tool for the rapid development of mobile apps
+Experiencing it right now">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX" />
+  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="../css/style-en.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <!-- endbuild -->
+  <title>Basic component hands-on practice – CheckBox design</title>
+</head>
+
+<body page="tutorial" page-content="tutorial_5_checklist" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
+    </div>
+    <img src="../img/img1_1.jpg" alt="Basic component hands-on practice – CheckBox design" />
+  </div>
+
+  <div class="container">
+    <!--左侧选单-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>Basic component hands-on practice – CheckBox design</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            In addition to the pull-down menu introduced in the previous section, checkbox is another frequently seen feature in web forms and app forms. In the past, using CSS, these types of form elements were difficult to modify; and they even appeared differently in different browsers. It’s quite a headache.
+            <br/>But, now, with EZoApp, you can quickly create checkboxes using the EZoApp’s drag-and-drop method and arrange them horizontally and vertically by using mouse clicks only. These checkboxes also use jQuery Mobile’ standard styles, styles that are frequently seen on mobile devices, thus avoiding lots of unnecessary troublesome work.
+            <br/>If you are not satisfied with the basic black and white styles, you can try to edit them with HTML or CSS. You can refer to the previous sections of "<a href="tutorial_2_button.html">Creating customized buttons</a>" and "<a href="tutorial_3_google_font.html">Using Google fonts</a>"; there are some good tutorials in them.
+            <br/>
+            <br/>Link of example:
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6278739709132800" target="_blank">CheckBox design (  vertical )</a>
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6234576707911680" target="_blank">CheckBox design ( horizontal )</a>
+            <br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6278739709132800" target="_blank" class="tutorial-img-link" title="CheckBox design (vertical)">
+            <img alt="设计 CheckBox" src="../img/tutorial/tutorial_5_checklist_03.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <br/>
+      <h5>
+        <strong>I. Adding a checkbox component</strong>
+      </h5>
+      <p>As usual, using EZoApp is about using its handy features. Use the drag-and-drop method to drag a controlgroup-checkbox component into the editing area directly, a
+        <kbd>Checkbox</kbd> component is created automatically.
+      </p>
+      <img alt="Adding a checkbox component" src="../img/tutorial/tutorial_5_checklist_04.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>II. Adding options</strong>
+      </h5>
+      <p>Next, use the method introduced earlier—click the options of checkbox, and then the green plus sign on the upper-right corner, new options are added automatically.
+      </p>
+      <img alt="Adding options" src="../img/tutorial/tutorial_5_checklist_05.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>III. Changing vertical and horizontal directions</strong>
+      </h5>
+      <p>What do we do if we want to change the vertical or horizontal direction? Just open the attribute panel and change the direction!
+      </p>
+      <img alt="Changing vertical and horizontal directions" src="../img/tutorial/tutorial_5_checklist_06.gif" class="img-responsive" />
+      <br/>
+      <h5>
+        <strong>IV. Writing CSS to modify styles</strong>
+      </h5>
+      <p>It has been pretty straight forward up to this point. Basically, everything can be done by using just the mouse. In this step, we will modify the styles directly to make the checkbox more appealing. The way to change it is by modifying the style of the
+        <kbd>legend</kbd> tag of the title. You can paste in the red program code directly to see the change of the style.
+      </p>
+      <pre>&ltlegend <strong>style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;"</strong>&gtCheckbox Group&lt/legend&gt</pre>
+      <img alt="Writing CSS to modify styles" src="../img/tutorial/tutorial_5_checklist_07.gif" class="img-responsive" style="border-bottom:1px solid #ccc;" />
+      <br/>
+      <p>After using EZoApp, don’t you feel designing screens is becoming pretty intuitive and easy? This is exactly one of the handiest features of EZoApp!
+        <br/>
+        <br/>Link of example:
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6278739709132800" target="_blank">CheckBox design (  vertical )</a>
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6234576707911680" target="_blank">CheckBox design ( horizontal )</a>
+        <br/>
+      </p>
+      <br/>
+      <br/>
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/jquery-cookie/jquery.cookie.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/banner.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>

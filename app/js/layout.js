@@ -262,4 +262,52 @@ $(function() {
       '<li><a href="http://ezoui.wordpress.com/" target="_blank"><img src="../img/logo04.png" alt="blog" title="Find us on blog" /></a></li>'
     );
   }
+
+  /* English */
+
+  function fn_en() {
+    $('head').append(
+      '<link rel="icon" href="../favicon.ico" type="image/x-icon"/>' +
+      '<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>'
+    );
+
+    /* top menu */
+    $('.top-menu').append(
+      '<li page="index"><a href="index.html">Home</a></li>' +
+      '<li page="play"><a href="http://jqmdesigner.appspot.com" target="_blank">Try</a></li>' +
+      '<li page="started"><a href="started.html">Get Started</a></li>' +
+      '<li page="tutorial"><a href="tutorial_1_basic_grid.html">Tutorial</a></li>' +
+      '<li page="aboutus"><a href="aboutus.html">About</a></li>' +
+      '<li page="blog"><a href="http://ezoui.wordpress.com/" target="_blank">Blog</a></li>' +
+      '<li class="language"><a>Language</a>' +
+      '<ul>' +
+      '<li class="language-tw"><a>繁体中文</a></li>' +
+      '<li class="language-cn"><a>简体中文</a></li>' +
+      '</ul>' +
+      '<li class="language-tw"><a>繁体中文</a>' +
+      '<li class="language-cn"><a>简体中文</a>' +
+      '</li>'
+    );
+
+    $('.navbar-header').append(
+      '<a class="navbar-brand" href="http://www.ezoui.com" title="EZoApp - Best tool for the rapid development of mobile apps"><img src="../img/logo.png" style="width:27px; margin:-3px 5px 0 0; border:none;">EZoApp</a>'
+    );
+
+    /* footer */
+    $('.footer-menu').append(
+      '<li page="index"><a href="index.html">Home</a></li>' +
+      '<li page="plays"><a href="http://jqmdesigner.appspot.com" target="_blank">Try</a></li>' +
+      '<li page="started"><a href="started.html">Get Started</a></li>' +
+      '<li page="tutorial"><a href="tutorial_1_basic_grid.html">Tutorial</a></li>' +
+      '<li page="aboutus"><a href="aboutus.html">About</a></li>' +
+      '<li page="blog"><a href="http://ezoui.wordpress.com/" target="_blank">Blog</a></li>'
+    );
+    $('.social-menu').append(
+      '<li><a href="mailto:EZoService@icsc.com.tw" target="_blank"><img src="../img/logo05.png" alt="mail to us" title="mail to us" /></a></li>' +
+      '<li><a href="https://plus.google.com/117990746163074166131" target="_blank"><img src="../img/logo01.png" alt="google+" title="Find us on Google+" /></a></li>' +
+      '<li><a href="https://www.facebook.com/EZoUI" target="_blank"><img src="../img/logo02.png" alt="faacebook" title="Find us on Facebook" /></a></li>' +
+      '<li><a href="https://twitter.com/EZoService/status/405605560386461696" target="_blank"><img src="../img/logo03.png" alt="twitter" title="Find us on Twitter" /></a></li>' +
+      '<li><a href="http://ezoui.wordpress.com/" target="_blank"><img src="../img/logo04.png" alt="blog" title="Find us on blog" /></a></li>'
+    );
+  }
 });
