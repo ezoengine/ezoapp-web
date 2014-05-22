@@ -251,7 +251,7 @@ $(function() {
     /* 上方主选单 */
     $('.top-menu').append(
       '<li page="index"><a href="index.html">首页</a></li>' +
-      '<li page="play"><a href="http://jqmdesigner.appspot.com" target="_blank">立刻体验</a></li>' +
+      '<li page="play"><a href="http://jqmdesigner.appsp0t.com" target="_blank">立刻体验</a></li>' +
       '<li page="started"><a href="started.html">基本介绍</a></li>' +
       '<li page="tutorial"><a href="tutorial_1_basic_grid.html">教学实作</a></li>' +
       '<li page="aboutus"><a href="aboutus.html">关于我们</a></li>' +
@@ -273,7 +273,7 @@ $(function() {
     /* footer选单 */
     $('.footer-menu').append(
       '<li page="index"><a href="index.html">首页</a></li>' +
-      '<li page="plays"><a href="http://jqmdesigner.appspot.com" target="_blank">立刻体验</a></li>' +
+      '<li page="plays"><a href="http://jqmdesigner.appsp0t.com" target="_blank">立刻体验</a></li>' +
       '<li page="started"><a href="started.html">基本介绍</a></li>' +
       '<li page="tutorial"><a href="tutorial_1_basic_grid.html">教学实作</a></li>' +
       '<li page="aboutus"><a href="aboutus.html">关于我们</a></li>' +

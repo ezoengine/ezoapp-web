@@ -174,9 +174,9 @@ $(function() {
       '<li><a>Integrating JavaScript</a><i></i>' +
       '<ul>' +
       '<li page-content="tutorial_js_1_googlemap"><a href="tutorial_js_1_googlemap.html">1. Google Map app</a></li>' +
-      '<li page-content="tutorial_js_2_swipe_page"><a href="tutorial_js_2_swipe_page.html">2. Swipe Pages</a></li>' +
+      '<li page-content="tutorial_js_2_swipe_page"><a href="tutorial_js_2_swipe_page.html">2. Page swiping</a></li>' +
       '<li page-content="tutorial_js_3_star_widget"><a href="tutorial_js_3_star_widget.html">3. Star Rating</a></li>' +
-      '<li page-content="tutorial_js_4_open_data"><a href="tutorial_js_4_open_data.html">4. Open Data</a></li>' +
+      '<li page-content="tutorial_js_4_open_data"><a href="tutorial_js_4_open_data.html">4. Linking open data</a></li>' +
       '<li page-content="tutorial_js_5_rss"><a href="tutorial_js_5_rss.html">5. RSS Service<span></span></a></li>' +
       '</ul>' +
       '</li>'
