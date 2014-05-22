@@ -1,4 +1,19 @@
 User-agent: *
 Disallow:/bower_components/
 Disallow:/css/
+Disallow:/js/
 Disallow:/pricing.html
+Disallow:/not-support-browser.html
+Disallow:/not-support-mobile.html
+Disallow:/en-us/sorry.html
+Disallow:/en-us/tutorial_7_button.html
+Disallow:/app/bower_components/
+Disallow:/app/css/
+Disallow:/app/js/
+Disallow:/app/pricing.html
+Disallow:/app/not-support-browser.html
+Disallow:/app/not-support-mobile.html
+Disallow:/app/en-us/sorry.html
+Disallow:/app/en-us/tutorial_7_button.html
+
+

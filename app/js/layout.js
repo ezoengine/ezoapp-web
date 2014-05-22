@@ -24,16 +24,16 @@ $(function() {
 
   /*  語系判斷與切換按鈕  */
   if (nowUrl.indexOf('en-us') == -1 && nowUrl.indexOf('zh-cn') == -1) {
-    _langLayout('zh-tw');
     _check_cookie('zh-tw');
+    _langLayout('zh-tw');
   }
   if (nowUrl.indexOf('zh-cn') != -1) {
-    _langLayout('zh-cn');
     _check_cookie('zh-cn');
+    _langLayout('zh-cn');
   }
   if (nowUrl.indexOf('en-us') != -1) {
-    _langLayout('en-us');
     _check_cookie('en-us');
+    _langLayout('en-us');
   }
 
   /* 載入 layout 之後，判斷是點選切換語系按鈕 */
