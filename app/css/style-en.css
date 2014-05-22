@@ -671,7 +671,7 @@ h2 {
 }
 .banner-content .banner-content-text {
   position:absolute;
-  top:90px;
+  top:100px;
   width:100%;
   z-index:2;
   text-align: center;
@@ -967,4 +967,25 @@ ol, li {
 }
 #gotoTop:hover{
   opacity:1!important;
+}
+.sorry div{
+  background:url(../img/sorry.jpg) 0 0 no-repeat;
+  margin: 50px auto 100px;
+  display:table;
+}
+.sorry h3,.sorry h4{
+  margin-left:230px;
+}
+.sorry h3{
+  font-size:32px;
+  font-weight: bold;
+  font-style: italic;
+}
+.sorry h4{
+  font-size:15px;
+  line-height: 20px;
+}
+.sorry h5{
+  margin-left:260px;
+  line-height: 20px;
 }
