@@ -10,98 +10,122 @@ $(function() {
     }, 900);
   });
 
-  /*  語系判斷與切換按鈕  */
-  var nowUrl = location.href;
-  var urlParts = nowUrl.split('/');
-  var urlPartsTemp = nowUrl.split('/');
-  var fileName = urlParts.pop();
-  if (fileName == '') {
-    fileName = 'index.html'
-  }
-  var languageCheck = urlParts.pop();
-  var Url_1 = urlPartsTemp.shift();
-  var Url_2 = urlPartsTemp.shift();
-  var Url_3 = urlPartsTemp.shift();
-  var webUrl = Url_1 + '//' + Url_2 + Url_3 + '/';
-  var enUrl = webUrl + 'en/' + fileName;
-  var cnUrl = webUrl + 'zh-cn/' + fileName;
-  var twUrl = webUrl + fileName;
-
-  fn_check_cookie();
-
-  /* 判斷不同語系網站，載入不同的 layout */
-  if (languageCheck == 'en') {
-    fn_en();
-  } else if (languageCheck == 'zh-cn') {
-    fn_zh_cn();
+  var webUrl, twUrl, cnUrl, enUrl,
+    nowUrl = location.href,
+    urlParts = nowUrl.split('/'),
+    fileName = urlParts.pop() || 'index.html';
+  if (urlParts[3] == 'app') {
+    webUrl = urlParts[0] + '//' + urlParts[2] + '/app/';
+    _langUrl(webUrl, fileName);
   } else {
-    fn_zh_tw();
+    webUrl = urlParts[0] + '//' + urlParts[2] + '/';
+    _langUrl(webUrl, fileName);
+  };
+
+  /*  語系判斷與切換按鈕  */
+  if (nowUrl.indexOf('en-us') == -1 && nowUrl.indexOf('zh-cn') == -1) {
+    _langLayout('zh-tw');
+    _check_cookie('zh-tw');
   }
-  if ($('.language-tw')) {
-    $('.language-tw a').attr('href', twUrl);
+  if (nowUrl.indexOf('zh-cn') != -1) {
+    _langLayout('zh-cn');
+    _check_cookie('zh-cn');
   }
-  if ($('.language-en')) {
-    $('.language-en a').attr('href', enUrl);
-  }
-  if ($('.language-cn')) {
-    $('.language-cn a').attr('href', cnUrl);
+  if (nowUrl.indexOf('en-us') != -1) {
+    _langLayout('en-us');
+    _check_cookie('en-us');
   }
 
   /* 載入 layout 之後，判斷是點選切換語系按鈕 */
-  $('.language-tw a').on('click', function() {
-    $.cookie('ezoapp_web_cookie', 'zh-tw', {
-      path: '/'
-    });
-  });
-  $('.language-cn a').on('click', function() {
-    $.cookie('ezoapp_web_cookie', 'zh-cn', {
-      path: '/'
-    });
-  });
-  $('.language-en a').on('click', function() {
-    $.cookie('ezoapp_web_cookie', 'en', {
-      path: '/'
-    });
-  });
+
+  function _langBtn() {
+    if ($('.language-tw')) {
+      $('.language-tw a').attr('href', twUrl).on('click', function() {
+        $.cookie('ezoapp_web_cookie', 'zh-tw', {
+          path: '/'
+        });
+      });
+    }
+    if ($('.language-en')) {
+      $('.language-en a').attr('href', enUrl).on('click', function() {
+        $.cookie('ezoapp_web_cookie', 'en-us', {
+          path: '/'
+        });
+      });
+    }
+    if ($('.language-cn')) {
+      $('.language-cn a').attr('href', cnUrl).on('click', function() {
+        $.cookie('ezoapp_web_cookie', 'zh-cn', {
+          path: '/'
+        });
+      });
+    }
+  }
+
+  /* 初始化網址 */
+
+  function _langUrl(url1, url2) {
+    twUrl = url1 + url2;
+    cnUrl = url1 + 'zh-cn/' + url2;
+    enUrl = url1 + 'en-us/' + url2;
+  }
+
+  /* 判斷不同語系網站，載入不同的 layout */
+
+  function _langLayout(langCheck1) {
+    if (langCheck1 == 'en-us') {
+      fn_en();
+    } else if (langCheck1 == 'zh-cn') {
+      fn_zh_cn();
+    } else {
+      fn_zh_tw();
+    }
+  }
 
   /* 進入網站時，判斷瀏覽器語系，記錄cookie */
 
-  function fn_check_cookie() {
+  function _check_cookie(langCheck2) {
     if (!$.cookie('ezoapp_web_cookie')) {
       var lang = window.navigator.userLanguage || window.navigator.language || window.navigator.browserLanguage;
-      if (lang.toLowerCase().indexOf('tw') > -1) {
+      if (lang.toLowerCase().indexOf('zh-tw') != -1) {
         $.cookie('ezoapp_web_cookie', 'zh-tw', {
           path: '/'
         });
         window.open(twUrl, '_self');
       }
-      if (lang.toLowerCase().indexOf('zh-cn') > -1) {
+      if (lang.toLowerCase().indexOf('zh-cn') != -1) {
         $.cookie('ezoapp_web_cookie', 'zh-cn', {
           path: '/'
         });
         window.open(cnUrl, '_self');
       }
-      if (lang.toLowerCase().indexOf('en') > -1) {
-        $.cookie('ezoapp_web_cookie', 'en', {
+      if (lang.toLowerCase().indexOf('en-us') != -1) {
+        $.cookie('ezoapp_web_cookie', 'en-us', {
+          path: '/'
+        });
+        window.open(enUrl, '_self');
+      }
+      if (lang.toLowerCase().indexOf('zh-tw') == -1 && lang.toLowerCase().indexOf('zh-cn') == -1 && lang.toLowerCase().indexOf('en-us') == -1) {
+        $.cookie('ezoapp_web_cookie', 'en-us', {
           path: '/'
         });
         window.open(enUrl, '_self');
       }
     } else {
-      if ($.cookie('ezoapp_web_cookie') == 'zh-tw' && languageCheck != Url_3) {
+      if ($.cookie('ezoapp_web_cookie') == 'zh-tw' && langCheck2 != 'zh-tw') {
         $.cookie('ezoapp_web_cookie', 'zh-tw', {
           path: '/'
         });
         window.open(twUrl, '_self');
       }
-      if ($.cookie('ezoapp_web_cookie') == 'zh-cn' && languageCheck != 'zh-cn') {
+      if ($.cookie('ezoapp_web_cookie') == 'zh-cn' && langCheck2 != 'zh-cn') {
         $.cookie('ezoapp_web_cookie', 'zh-cn', {
           path: '/'
         });
         window.open(cnUrl, '_self');
       }
-      if ($.cookie('ezoapp_web_cookie') == 'en' && languageCheck != 'en') {
-        $.cookie('ezoapp_web_cookie', 'en', {
+      if ($.cookie('ezoapp_web_cookie') == 'en-us' && langCheck2 != 'en-us') {
+        $.cookie('ezoapp_web_cookie', 'en-us', {
           path: '/'
         });
         window.open(enUrl, '_self');
@@ -213,6 +237,7 @@ $(function() {
       '<li><a href="https://twitter.com/EZoService/status/405605560386461696" target="_blank"><img src="img/logo03.png" alt="twitter" title="Find us on Twitter" /></a></li>' +
       '<li><a href="http://ezoui.wordpress.com/" target="_blank"><img src="img/logo04.png" alt="blog" title="Find us on blog" /></a></li>'
     );
+    _langBtn();
   }
 
   /* 简体中文 */
@@ -261,6 +286,7 @@ $(function() {
       '<li><a href="https://twitter.com/EZoService/status/405605560386461696" target="_blank"><img src="../img/logo03.png" alt="twitter" title="Find us on Twitter" /></a></li>' +
       '<li><a href="http://ezoui.wordpress.com/" target="_blank"><img src="../img/logo04.png" alt="blog" title="Find us on blog" /></a></li>'
     );
+    _langBtn();
   }
 
   /* English */
@@ -309,5 +335,6 @@ $(function() {
       '<li><a href="https://twitter.com/EZoService/status/405605560386461696" target="_blank"><img src="../img/logo03.png" alt="twitter" title="Find us on Twitter" /></a></li>' +
       '<li><a href="http://ezoui.wordpress.com/" target="_blank"><img src="../img/logo04.png" alt="blog" title="Find us on blog" /></a></li>'
     );
+    _langBtn();
   }
 });

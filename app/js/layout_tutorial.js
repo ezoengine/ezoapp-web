@@ -5,16 +5,25 @@ $(function() {
 
   /*  語系判斷與切換按鈕  */
   var nowUrl = location.href;
-  var urlParts = nowUrl.split('/');
-  var fileName = urlParts.pop();
-  var languageCheck = urlParts.pop();
 
-  if (languageCheck == 'en') {
-    fn_en();
-  } else if (languageCheck == 'zh-cn') {
-    fn_zh_cn();
-  } else {
-    fn_zh_tw();
+  if (nowUrl.indexOf('en-us') == -1 && nowUrl.indexOf('zh-cn') == -1) {
+    _langLayout('zh-tw');
+  }
+  if (nowUrl.indexOf('zh-cn') != -1) {
+    _langLayout('zh-cn');
+  }
+  if (nowUrl.indexOf('en-us') != -1) {
+    _langLayout('en-us');
+  }
+
+  function _langLayout(langCheck1) {
+    if (langCheck1 == 'en-us') {
+      fn_en();
+    } else if (langCheck1 == 'zh-cn') {
+      fn_zh_cn();
+    } else {
+      fn_zh_tw();
+    }
   }
 
   $('.tutorial-left-menu>ul').css({
