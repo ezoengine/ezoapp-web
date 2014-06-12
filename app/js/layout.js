@@ -8,6 +8,7 @@ $(function() {
     $('html,body').not(':animated').animate({
       'scrollTop': '0'
     }, 900);
+    ga('send', 'event', 'gotoTop', 'click', 'nav buttons', 4);
   });
 
   var webUrl, twUrl, cnUrl, enUrl,
