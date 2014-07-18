@@ -105,7 +105,7 @@ $(function() {
       '<li page-content="tutorial_4_droplist"><a href="tutorial_4_droplist.html">4. 建立下拉選單</a></li>' +
       '<li page-content="tutorial_5_checklist"><a href="tutorial_5_checkbox.html">5. 設計 CheckBox</a></li>' +
       '<li page-content="tutorial_6_home_page"><a href="tutorial_6_home_page.html">6. 打造入口頁面</a></li>' +
-      '<li page-content="tutorial_7_button"><a href="tutorial_7_button.html">7. 按鈕切換設定<span></span></a></li>' +
+      '<li page-content="tutorial_7_button"><a href="tutorial_7_button.html">7. 按鈕切換設定</a></li>' +
       '</ul>' +
       '</li>' +
       '<li><a>JavaScript 應用</a><i></i>' +
@@ -114,7 +114,8 @@ $(function() {
       '<li page-content="tutorial_js_2_swipe_page"><a href="tutorial_js_2_swipe_page.html">2. 滑動頁面實作</a></li>' +
       '<li page-content="tutorial_js_3_star_widget"><a href="tutorial_js_3_star_widget.html">3. 星號分數評比</a></li>' +
       '<li page-content="tutorial_js_4_open_data"><a href="tutorial_js_4_open_data.html">4. 串接開放資料</a></li>' +
-      '<li page-content="tutorial_js_5_rss"><a href="tutorial_js_5_rss.html">5. RSS 服務實作<span></span></a></li>' +
+      '<li page-content="tutorial_js_5_rss"><a href="tutorial_js_5_rss.html">5. RSS 服務實作</a></li>' +
+      '<li page-content="tutorial_js_6_3dbox"><a href="tutorial_js_6_3dbox.html">6. 滑動頁面立體切換<span></span></a></li>' +
       '</ul>' +
       '</li>'
     );
@@ -136,7 +137,7 @@ $(function() {
       '<li page-content="tutorial_4_droplist"><a href="tutorial_4_droplist.html">4. 建立下拉选单</a></li>' +
       '<li page-content="tutorial_5_checklist"><a href="tutorial_5_checkbox.html">5. 设计 CheckBox</a></li>' +
       '<li page-content="tutorial_6_home_page"><a href="tutorial_6_home_page.html">6. 打造入口页面</a></li>' +
-      '<li page-content="tutorial_7_button"><a href="tutorial_7_button.html">7. 按钮切换设定<span></span></a></li>' +
+      '<li page-content="tutorial_7_button"><a href="tutorial_7_button.html">7. 按钮切换设定</a></li>' +
       '</ul>' +
       '</li>' +
       '<li><a>JavaScript 应用</a><i></i>' +
@@ -145,7 +146,9 @@ $(function() {
       '<li page-content="tutorial_js_2_swipe_page"><a href="tutorial_js_2_swipe_page.html">2. 滑动页面实作</a></li>' +
       '<li page-content="tutorial_js_3_star_widget"><a href="tutorial_js_3_star_widget.html">3. 星号分数评比</a></li>' +
       '<li page-content="tutorial_js_4_open_data"><a href="tutorial_js_4_open_data.html">4. 串接开放资料</a></li>' +
-      '<li page-content="tutorial_js_5_rss"><a href="tutorial_js_5_rss.html">5. RSS 服务实作<span></span></a></li>' +
+      '<li page-content="tutorial_js_5_rss"><a href="tutorial_js_5_rss.html">5. RSS 服务实作</a></li>' +
+      '<li page-content="tutorial_js_6_3dbox"><a href="tutorial_js_6_3dbox.html">6. 滑动页面立体切换<span></span></a></li>' +
+
       '</ul>' +
       '</li>'
     );
@@ -177,7 +180,9 @@ $(function() {
       '<li page-content="tutorial_js_2_swipe_page"><a href="tutorial_js_2_swipe_page.html">2. Page swiping</a></li>' +
       '<li page-content="tutorial_js_3_star_widget"><a href="tutorial_js_3_star_widget.html">3. Star Rating</a></li>' +
       '<li page-content="tutorial_js_4_open_data"><a href="tutorial_js_4_open_data.html">4. Linking open data</a></li>' +
-      '<li page-content="tutorial_js_5_rss"><a href="tutorial_js_5_rss.html">5. RSS Service<span></span></a></li>' +
+      '<li page-content="tutorial_js_5_rss"><a href="tutorial_js_5_rss.html">5. RSS Service</a></li>' +
+      '<li page-content="tutorial_js_6_3dbox"><a href="tutorial_js_6_3dbox.html">6. Touch Sliding<span></span></a></li>' +
+
       '</ul>' +
       '</li>'
     );

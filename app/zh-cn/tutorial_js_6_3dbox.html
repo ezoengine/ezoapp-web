@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速开发行动 App 的最佳工具" />
+  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 开发行动 App 的云端服务，非常适合用来快速打造 App、行动组件与用户接口，同时支持前端技术的开发与学习。">
+  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,云端平台,数据,组件,脚本,云端,软件,开发,工具,行动,触控,响应式,手机,平板,移动" />
+  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tomorrow.css">
+  <!-- endbuild -->
+  <title>EZoApp 教学实作 - 滑动页面立体切换效果</title>
+</head>
+
+<body page="tutorial" page-content="tutorial_js_6_3dbox" onload="prettyPrint()">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
+    </div>
+    <img src="../img/img1_1.jpg" alt="EZoApp 快速开发行动 App 的利器" />
+  </div>
+
+  <div class="container">
+    <!--左侧选单-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>结合 JavaScript 应用 - 滑动页面立体切换效果</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            这篇要介绍 jQuery Mobile 一个鲜为人知但又非常好用的功能：触控！在使用行动版网页或是制作 hybrid App 的时候，触控通常都是一个大问题，一个单纯区分 tap 和 mousedown、mouseover 之类的行为，可能都会让程序变得十分复杂，好加在，jQuery Mobile 替我们解决掉了这个问题，既有的五种触控事件，涵盖了基本的手势行为 ( 当然多点触控就没办法了 )，因此我就利用触控事件，搭配 CSS3 的 transform 3D ，做出立体又酷炫的切换效果！
+            <br/>
+            <br/>范例链接：
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5323292810412032" target="_blank">结合 JavaScript 应用 - 滑动页面立体切换效果</a>
+            <br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5323292810412032" target="_blank" class="tutorial-img-link" title="滑动页面立体切换效果">
+            <img alt="滑动页面立体切换效果" src="../img/tutorial/tutorial_js_6_3dbox_01.gif" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <h5>
+        <strong>一、五种触控事件</strong>
+      </h5>
+      <p>要实做滑动切换页面，必须要先了解五种触控的事件：
+        <ul>
+          <li>tap 手指触碰</li>
+          <li>taphold 手指按住不放</li>
+          <li>swipe 滑动</li>
+          <li>swipeleft 往左滑</li>
+          <li>swiptright 往右滑</li>
+        </ul>
+      </p>
+      <br/>
+      <p>用法更简单了，就是 jQuery 的语法
+        <kbd>on.('tap',function(){})</kbd>或
+        <kbd>on.('swipe',function(){})</kbd>，跟一般按钮点击事件绑定的情形几乎一模一样，也因为如此，就更能将心力放在特效或内容的细节处理。
+      </p>
+      <br/>
+      <p>接着我先介绍一下 HTML 的结构，主要就是一个名为 box 的 div 包着四个小 div
+      </p>
+      <pre>   &ltdiv id="box" onselectstart="return false"&gt
+     &ltdiv id="box1" class="box-child"&gt1&lt/div&gt
+     &ltdiv id="box2" class="box-child"&gt2&lt/div&gt
+     &ltdiv id="box3" class="box-child"&gt3&lt/div&gt
+     &ltdiv id="box4" class="box-child"&gt4&lt/div&gt
+   &lt/div&gt</pre>
+      <br/>
+      <p>利用 css 让四个小 div 在 box 内排列成下图这样 ( 详细的 CSS 可以直接点选 范例，从右边选择 CSS 编辑面板参考 )：
+      </p>
+      <img alt="滑动页面立体切换效果" src="../img/tutorial/tutorial_js_6_3dbox_02.png" class="img-responsive" />
+      <br/>
+      <p>接着我们只需要让包着四个 div 的 box，每次滑动或点选按钮的时候，都旋转 90 度，就可以办到立体的切换效果，不过这里有个要注意的地方，就是
+        <kbd>transform-type</kbd>这个属性要记得设为
+        <kbd>preserve-3d</kbd>，这是把 box 宣告为一个立体的对象，否则默认值是 flat ，看到的四个小 div 就会迭在一起，不会立体啰！
+      </p>
+      <p>再来看到 js 的部分，在我做的范例里头，是先在下方四颗按钮绑上 on.('click',function(){}) 事件，然后每次滑动的时候，就会触发相对应的按钮，为什么要这么做呢？因为我也希望滑动时按钮也会对应着变色，为了让判断更为单纯，于是就只把切换角度的行为绑在按钮上，才不需要多做一次判断，下面的程序是第一颗按钮的 JS，angle 是一开始就宣告好的角度变量，主要是让 box 知道现在的角度是多少。
+      </p>
+      <pre>   $('#b1 a').on('click', function () {
+     $('#box').css({
+       '-webkit-transform': 'rotateY(0deg)',
+       '-moz-transform': 'rotateY(0deg)',
+       'transform': 'rotateY(0deg)'
+     });
+     angle = 0;
+   });</pre>
+      <br/>
+      <p>
+        这是往左滑动的 JS，要做一个角度的判断，这里写的比较简单，就是滑到 1 的时候就不会动了</p>
+      <p>
+        <pre>    $('#home').on('swipeleft', function () {
+     if (angle &lt= 0 && angle &gt -270) {
+       angle = angle - 90;
+       switch (angle) {
+       case -90:
+         $('#b2 a').click();
+         break;
+       case -180:
+         $('#b3 a').click();
+         break;
+       case -270:
+         $('#b4 a').click();
+         break;
+       }
+     }
+   });</pre>
+        <p>
+          如此一来，藉由滑动触发按钮，就可以做出相当精准的切换动作，搭配 CSS3 的 3D transform 效果，就能呈现相当立体的转场效果，当然，也可以利用动态的去计算旋转的角度，就能做出更多张页面的旋转，拿来做为相簿或是一些桌面都是相当的方便好用喔！
+          <br/>
+          <br/>最后再看一次范例：
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5323292810412032" target="_blank">结合 JavaScript 应用 - 滑动页面立体切换效果</a>
+          <br/>
+          <br/>
+        </p>
+
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/jquery-cookie/jquery.cookie.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="../bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="../js/layout_tutorial.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/banner.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>
