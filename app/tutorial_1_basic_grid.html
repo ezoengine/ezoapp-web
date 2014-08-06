@@ -2,173 +2,196 @@
 <html lang="zh-tw">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta http-equiv="pragma" content="no-cache">
-  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
-  <meta name="application-name" content="EZoApp - 快速開發行動 App 的最佳工具" />
-  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，非常適合用來快速打造 App、行動元件與使用者介面，同時支援前端技術的開發與學習。">
-  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
-  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts"/>
-  <!-- build:css css/vendor.css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <!-- endbuild -->
-  <!-- build:css(.tmp) css/tutorial.css -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/tomorrow.css">
-  <!-- endbuild -->
-  <title>EZoApp 教學實作 - grid 基礎排版</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+    <meta name="application-name" content="EZoApp - 快速開發行動 App 的最佳工具" />
+    <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，非常適合用來快速打造 App、行動元件與使用者介面，同時支援前端技術的開發與學習。">
+    <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
+    <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
+    <!-- build:css css/vendor.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- endbuild -->
+    <!-- build:css(.tmp) css/tutorial.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tomorrow.css">
+    <!-- endbuild -->
+    <title>EZoApp 教學實作 - grid 基礎排版</title>
 </head>
 
 <body page="tutorial" page-content="tutorial_1_basic_grid" onload="prettyPrint()">
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse  navbar-right">
+                <ul class="nav navbar-nav top-menu">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container banner-content">
+        <div class="banner-content-text">
+            <h1></h1>
+            <h2></h2>
+        </div>
+        <img src="img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
+    </div>
+
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse  navbar-right">
-        <ul class="nav navbar-nav top-menu">
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="container banner-content">
-    <div class="banner-content-text">
-      <h1></h1>
-      <h2></h2>
-    </div>
-    <img src="img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
-  </div>
-
-  <div class="container">
-    <!--左側選單-->
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
-      <ul>
-      </ul>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
-      <h3>
-        <strong>基本元件實作 - grid 基礎排版</strong>
-      </h3>
-      <div class="line"></div>
-      <div style="display:table;">
-        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
-          <p>
-            講到開發一支 App，排版往往是令開發者最頭痛的環節之一，甚至有時候會耗費超過了一半的開發時間在調整版面，俗話說的好，「魔鬼往往藏在細節裡」，看似很簡單的排版，卻往往會造成工程師大大的困擾。因此 EZoApp 提供了所見即所得的設計工具，只需要利用拖拉以及調整數字的方式，搭配大家熟悉的簡易 CSS 語法，就能夠輕鬆做出各式各樣的版面，而開發者更能夠將心力投入在其他的設計細節上。
-            <br/>這裡開始的 EZoApp 教學實作，將由簡單的排版開始介紹，相信只要有心！人人都可以成為排版大師的！
-            <br/>
-            <br/>範例連結：
-            <br/>
-            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank">基本元件實作 - grid 基礎排版</a>
-            <br/>
-            <br/>大家可以點選連結開啟 EZoApp 的 grid 排版範例，一面閱讀一面進行操作，相信對於 EZoApp 的使用，能夠更快上手喔！
-          </p>
+        <!--左側選單-->
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+            <ul>
+            </ul>
         </div>
-        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
-          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank" class="tutorial-img-link">
-            <img alt="grid 基礎排版" src="img/tutorial/tutorial_1_basic_grid_01.png" class="img-responsive" title="grid 基礎排版" />
-          </a>
-        </div>
-      </div>
-      <h5>
-        <strong>一、放上文字</strong>
-      </h5>
-      <p>
-        首先我們要放上文字，放上文字的方法很簡單，只需要用拖拉的方式將左側
-        <kbd>gk-text</kbd> 元件拖拉至畫面編輯區域當中，就能夠快速產生一個文字區塊，接著只需要改變文字以及用 CSS 將文字對齊就好囉！
-      </p>
-      <pre>&lth1 is="gk-text" style="<strong>text-align:center;</strong>"&gtOvi Maps&lt/h1&gt</pre>
-      <p>
-        <img alt="放上文字" src="img/tutorial/tutorial_1_basic_grid_02.gif" class="img-responsive" style="margin:20px 0;" />
-      </p>
-      <br/>
-      <h5>
-        <strong>二、放上 grid 元件</strong>
-      </h5>
-      <p>
-        相當快速的處理好文字之後，我們要來放上 grid 的元件，同樣以拖拉的方式把左側
-        <kbd>grid</kbd> 元件拖拉到編輯區域，就可以產生一個預設為三個欄位的 grid，如果我們要設定一個九宮格的 grid，只需要輕鬆拖拉三次即可完成，每個 grid 拖進去編輯區域後，都會產生下列對應的 HTML 程式碼，<kbd>class="ui-grid-b"</kbd> 是 jQuery Mobile 的預設格式，代表這是三個欄位的 grid。
-      </p>
-      <pre>&ltdiv <strong>class="ui-grid-b"</strong> style="height:95px;"&gt<br/>    &ltdiv class="ui-block-a" style="height:100%;"&gt&lt/div&gt<br/>    &ltdiv class="ui-block-b" style="height:100%;"&gt&lt/div&gt<br/>    &ltdiv class="ui-block-c" style="height:100%;"&gt&lt/div&gt<br/>&lt/div&gt</pre>
-      <p>
-        <img alt="放上 grid 元件" src="img/tutorial/tutorial_1_basic_grid_03.gif" class="img-responsive" style="margin:20px 0;" />
-      </p>
-      <br/>
-      <h5>
-        <strong>三、加入圖片與文字</strong>
-      </h5>
-      <p>
-        有了 grid 之後，我們只要在對應的欄位內，利用 3rd Party 元件的 <kbd>image</kbd> ，就能夠輕鬆的放上圖片元件，或是直接輸入圖片的 HTML 語法，也可以輕鬆加入圖片，這裡列出加入圖片的程式碼提供大家參考。
-        <br/>附帶說明一點，如果是自己加入的程式碼，可以在圖片的標籤內，加上 <kbd>is="dragable"</kbd> ，就能夠讓這張圖片轉換為 EZoApp 的圖片可拖拉元件，是不是相當的方便呢！
-      </p>
-      <pre>&ltdiv class="ui-grid-b" style="height:95px"&gt<br/>    &ltdiv class="ui-block-a" style="height:100%"&gt<br/>        &ltimg <strong>is="dragable"</strong> src="圖片網址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt標題&lt/h5&gt<br/>    &lt/div&gt
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+            <h3>
+                <strong>基本元件實作 - grid 基礎排版</strong>
+            </h3>
+            <div class="line"></div>
+            <div style="display:table;">
+                <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+                    <p>
+                        講到開發一支 App，排版往往是令開發者最頭痛的環節之一，甚至有時候會耗費超過了一半的開發時間在調整版面，俗話說的好，「魔鬼往往藏在細節裡」，看似很簡單的排版，卻往往會造成工程師大大的困擾。因此 EZoApp 提供了所見即所得的設計工具，只需要利用拖拉以及調整數字的方式，搭配大家熟悉的簡易 CSS 語法，就能夠輕鬆做出各式各樣的版面，而開發者更能夠將心力投入在其他的設計細節上。
+                        <br/>這裡開始的 EZoApp 教學實作，將由簡單的排版開始介紹，相信只要有心！人人都可以成為排版大師的！
+                        <br/>
+                        <br/>範例連結：
+                        <br/>
+                        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank">基本元件實作 - grid 基礎排版</a>
+                        <br/>
+                        <br/>大家可以點選連結開啟 EZoApp 的 grid 排版範例，一面閱讀一面進行操作，相信對於 EZoApp 的使用，能夠更快上手喔！
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+                    <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank" class="tutorial-img-link">
+                        <img alt="grid 基礎排版" src="img/tutorial/tutorial_1_basic_grid_01.png" class="img-responsive" title="grid 基礎排版" />
+                    </a>
+                </div>
+            </div>
+            <h5>
+                <strong>一、放上文字</strong>
+            </h5>
+            <p>
+                首先我們要放上文字，放上文字的方法很簡單，只需要用拖拉的方式將左側
+                <kbd>gk-text</kbd>元件拖拉至畫面編輯區域當中，就能夠快速產生一個文字區塊，接著只需要改變文字以及用 CSS 將文字對齊就好囉！
+            </p>
+            <pre>&lth1 is="gk-text" style="<strong>text-align:center;</strong>"&gtOvi Maps&lt/h1&gt</pre>
+            <p>
+                <img alt="放上文字" src="img/tutorial/tutorial_1_basic_grid_02.gif" class="img-responsive" style="margin:20px 0;" />
+            </p>
+            <br/>
+            <h5>
+                <strong>二、放上 grid 元件</strong>
+            </h5>
+            <p>
+                相當快速的處理好文字之後，我們要來放上 grid 的元件，同樣以拖拉的方式把左側
+                <kbd>grid</kbd>元件拖拉到編輯區域，就可以產生一個預設為三個欄位的 grid，如果我們要設定一個九宮格的 grid，只需要輕鬆拖拉三次即可完成，每個 grid 拖進去編輯區域後，都會產生下列對應的 HTML 程式碼，
+                <kbd>class="ui-grid-b"</kbd>是 jQuery Mobile 的預設格式，代表這是三個欄位的 grid。
+            </p>
+            <pre>&ltdiv <strong>class="ui-grid-b"</strong> style="height:95px;"&gt<br/>    &ltdiv class="ui-block-a" style="height:100%;"&gt&lt/div&gt<br/>    &ltdiv class="ui-block-b" style="height:100%;"&gt&lt/div&gt<br/>    &ltdiv class="ui-block-c" style="height:100%;"&gt&lt/div&gt<br/>&lt/div&gt</pre>
+            <p>
+                <img alt="放上 grid 元件" src="img/tutorial/tutorial_1_basic_grid_03.gif" class="img-responsive" style="margin:20px 0;" />
+            </p>
+            <br/>
+            <h5>
+                <strong>三、加入圖片與文字</strong>
+            </h5>
+            <p>
+                有了 grid 之後，我們只要在對應的欄位內，利用 3rd Party 元件的
+                <kbd>image</kbd>，就能夠輕鬆的放上圖片元件，或是直接輸入圖片的 HTML 語法，也可以輕鬆加入圖片，這裡列出加入圖片的程式碼提供大家參考。
+                <br/>附帶說明一點，如果是自己加入的程式碼，可以在圖片的標籤內，加上
+                <kbd>is="dragable"</kbd>，就能夠讓這張圖片轉換為 EZoApp 的圖片可拖拉元件，是不是相當的方便呢！
+            </p>
+            <pre>&ltdiv class="ui-grid-b" style="height:95px"&gt<br/>    &ltdiv class="ui-block-a" style="height:100%"&gt<br/>        &ltimg <strong>is="dragable"</strong> src="圖片網址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt標題&lt/h5&gt<br/>    &lt/div&gt
     &ltdiv class="ui-block-b" style="height:100%"&gt<br/>        &ltimg <strong>is="dragable"</strong>  src="圖片網址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt標題&lt/h5&gt<br/>    &lt/div&gt<br/>    &ltdiv class="ui-block-c" style="height:100%"&gt<br/>        &ltimg <strong>is="dragable"</strong>  src="圖片網址"/&gt<br/>        &lth5 is="gk-text" style="text-align:center;"&gt標題&lt/h5&gt<br/>    &lt/div&gt<br/>&lt/div&gt</pre>
-      <br/>
-      <h5>
-        <strong>四、放上 footer 元件</strong>
-      </h5>
-      <p>
-        當我們把圖片都一一放上之後，接著我們要製作一個 footer，製作 footer 的方法也相當簡單，只需要拖拉 <kbd>footer</kbd> 元件進入編輯區域，接著在 footer 的屬性面版上改變 footer 的樣式，就能夠輕鬆做出一個黑底樣式的 footer。
-      </p>
-      <p>
-        <img alt="放上 footer 元件" src="img/tutorial/tutorial_1_basic_grid_04.gif" class="img-responsive" style="margin:20px 0;" />
-      </p>
-      <br/>
-      <h5>
-        <strong>五、放上 button 元件</strong>
-      </h5>
-      <p>
-        最後我們仍然利用拖拉的方式，拖拉 <kbd>button</kbd> 元件放到編輯區域的 footer 上方，就可以在 footer 的左右兩邊建立按鈕，然後同樣的由屬性面板更換按鈕的 icon 與文字，就能夠很快速的做出一個帶有按鈕的 footer 囉！
-        <br/>當然，除了可以由屬性面板調整按鈕的屬性，因為按鈕的元件也是建構在 jQuery Mobile 的基礎元件之一，我們可以藉由下列的程式碼，更改按鈕的樣式，讓整體更具有設計感。
-      </p>
-      <pre>&ltdiv data-role="footer" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtInfoChamp&lt/h3&gt<br/>    &lta <strong>class="ui-btn ui-btn-left  ui-btn-icon-left ui-icon-gear ui-btn-icon-notext ui-corner-all"</strong> style="margin-top:0;"&gt&lt/a&gt<br/>    &lta <strong>class="ui-btn ui-btn-right ui-btn-icon-left ui-icon-delete ui-btn-icon-notext ui-corner-all"</strong> style="margin-top:0;"&gt&lt/a&gt<br/>&lt/div&gt</pre>
-      <p>
-        <img alt="放上 footer 元件" src="img/tutorial/tutorial_1_basic_grid_05.gif" class="img-responsive" style="margin:20px 0;" />
-        <br/>範例連結：
-        <br/>
-        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank">基本元件實作 - grid 基礎排版</a>
-        <br/>
-        <br/>
-        <br/>
-      </p>
+            <br/>
+            <h5>
+                <strong>四、放上 footer 元件</strong>
+            </h5>
+            <p>
+                當我們把圖片都一一放上之後，接著我們要製作一個 footer，製作 footer 的方法也相當簡單，只需要拖拉
+                <kbd>footer</kbd>元件進入編輯區域，接著在 footer 的屬性面版上改變 footer 的樣式，就能夠輕鬆做出一個黑底樣式的 footer。
+            </p>
+            <p>
+                <img alt="放上 footer 元件" src="img/tutorial/tutorial_1_basic_grid_04.gif" class="img-responsive" style="margin:20px 0;" />
+            </p>
+            <br/>
+            <h5>
+                <strong>五、放上 button 元件</strong>
+            </h5>
+            <p>
+                最後我們仍然利用拖拉的方式，拖拉
+                <kbd>button</kbd>元件放到編輯區域的 footer 上方，就可以在 footer 的左右兩邊建立按鈕，然後同樣的由屬性面板更換按鈕的 icon 與文字，就能夠很快速的做出一個帶有按鈕的 footer 囉！
+                <br/>當然，除了可以由屬性面板調整按鈕的屬性，因為按鈕的元件也是建構在 jQuery Mobile 的基礎元件之一，我們可以藉由下列的程式碼，更改按鈕的樣式，讓整體更具有設計感。
+            </p>
+            <pre>&ltdiv data-role="footer" data-position="fixed" data-theme="b"&gt<br/>    &lth3&gtInfoChamp&lt/h3&gt<br/>    &lta <strong>class="ui-btn ui-btn-left  ui-btn-icon-left ui-icon-gear ui-btn-icon-notext ui-corner-all"</strong> style="margin-top:0;"&gt&lt/a&gt<br/>    &lta <strong>class="ui-btn ui-btn-right ui-btn-icon-left ui-icon-delete ui-btn-icon-notext ui-corner-all"</strong> style="margin-top:0;"&gt&lt/a&gt<br/>&lt/div&gt</pre>
+            <p>
+                <img alt="放上 footer 元件" src="img/tutorial/tutorial_1_basic_grid_05.gif" class="img-responsive" style="margin:20px 0;" />
+                <br/>範例連結：
+                <br/>
+                <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank">基本元件實作 - grid 基礎排版</a>
+                <br/>
+                <br/>
+                <br/>
+            </p>
+        </div>
     </div>
-  </div>
 
 
 
-  <div class="container footer">
-    <div class="container">
-      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
-        <ul class="footer-menu">
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
-        <ul class="social-menu">
-        </ul>
-      </div>
+    <div class="container footer">
+        <div class="container">
+            <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+                <ul class="footer-menu">
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+                <ul class="social-menu">
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright"></div>
     </div>
-    <div class="container copyright"></div>
-  </div>
 
-  <!-- build:js js/vendor.js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <!-- endbuild -->
-  <!-- build:js js/prettify.js -->
-  <script src="bower_components/google-code-prettify/src/prettify.js"></script>
-  <!-- endbuild -->
-  <!-- build:js({app,.tmp}) js/tutorial.js -->
-  <script src="js/layout_tutorial.js"></script>
-  <script src="js/layout.js"></script>
-  <script src="js/banner.js"></script>
-  <!-- endbuild -->
+    <!-- build:js js/vendor.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/prettify.js -->
+    <script src="bower_components/google-code-prettify/src/prettify.js"></script>
+    <!-- endbuild -->
+    <!-- build:js({app,.tmp}) js/tutorial.js -->
+    <script src="js/layout_tutorial.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/banner.js"></script>
+    <!-- endbuild -->
+    <!-- Google 再营销代码 -->
+    <!-- ------------------------------------------------
+再营销代码不得与个人身份信息相关联，也不得放置在与敏感类别相关的网页上。有关如何设置代码的详细信息和说明，请访问：http://google.com/ads/remarketingsetup
+------------------------------------------------- -->
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 962590563;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
+        </div>
+    </noscript>
 
 </body>
 

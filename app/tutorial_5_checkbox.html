@@ -2,156 +2,175 @@
 <html lang="zh-tw">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta http-equiv="pragma" content="no-cache">
-  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
-  <meta name="application-name" content="EZoApp - 快速開發行動 App 的最佳工具" />
-  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，非常適合用來快速打造 App、行動元件與使用者介面，同時支援前端技術的開發與學習。">
-  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
-  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts"/>
-  <!-- build:css css/vendor.css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <!-- endbuild -->
-  <!-- build:css(.tmp) css/tutorial.css -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/tomorrow.css">
-  <!-- endbuild -->
-  <title>EZoApp 教學實作 - 設計 CheckBox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+    <meta name="application-name" content="EZoApp - 快速開發行動 App 的最佳工具" />
+    <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，非常適合用來快速打造 App、行動元件與使用者介面，同時支援前端技術的開發與學習。">
+    <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
+    <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
+    <!-- build:css css/vendor.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- endbuild -->
+    <!-- build:css(.tmp) css/tutorial.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tomorrow.css">
+    <!-- endbuild -->
+    <title>EZoApp 教學實作 - 設計 CheckBox</title>
 </head>
 
 <body page="tutorial" page-content="tutorial_5_checklist" onload="prettyPrint()">
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse  navbar-right">
-        <ul class="nav navbar-nav top-menu">
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="container banner-content">
-    <div class="banner-content-text">
-      <h1></h1>
-      <h2></h2>
-    </div>
-    <img src="img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
-  </div>
-
-  <div class="container">
-    <!--左側選單-->
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
-      <ul>
-      </ul>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
-      <h3 class="right-content-1">
-        <strong>基本元件實作 - 設計 CheckBox</strong>
-      </h3>
-      <div class="line"></div>
-      <div style="display:table;">
-        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
-          <p>
-            除了上一節介紹的下拉選單，CheckBox 也是網頁表單與 App 表單中相當常見的功能，以往我們使用 CSS ，面對這類型的表單元素都很難修改樣式，而且不同瀏覽器上顯示的樣式甚至不盡相同真是令人相當的頭疼。
-            <br/>但是現在有了 EZoApp 之後，大家就可以利用 EZoApp 的拖拉方式，快速的建立 CheckBox，只需要用滑鼠點選，就能夠進行水平和垂直方式的排列，而且樣式也採用 jQuery Mobile 的標準樣式，也是在行動裝置上常見的樣式，省去了許多不必要的麻煩工作。
-            <br/>如果大家不滿足於基本的黑白兩種樣式，可以自己嘗試看看使用 HTML 或 CSS 來進行編輯，可以參考前幾篇「<a href="tutorial_2_button.html">製作特色按鈕</a>」、「<a href="tutorial_3_google_font.html">使用 Google Fonts</a>」，都有一些不錯的教學介紹喔！
-            <br/>
-            <br/>範例連結：
-            <br/>
-            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6278739709132800" target="_blank">基本元件實作 - 設計 CheckBox ( 垂直 )</a>
-            <br/>
-            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6234576707911680" target="_blank">基本元件實作 - 設計 CheckBox ( 水平 )</a>
-            <br/>
-          </p>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse  navbar-right">
+                <ul class="nav navbar-nav top-menu">
+                </ul>
+            </div>
         </div>
-        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
-          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6278739709132800" target="_blank" class="tutorial-img-link" title="設計 CheckBox (垂直)">
-            <img alt="設計 CheckBox" src="img/tutorial/tutorial_5_checklist_03.png" class="img-responsive" />
-          </a>
+    </div>
+
+    <div class="container banner-content">
+        <div class="banner-content-text">
+            <h1></h1>
+            <h2></h2>
         </div>
-      </div>
-      <br/>
-      <h5>
-        <strong>一、放上 CheckBox 元件</strong>
-      </h5>
-      <p>一如往常，使用 EZoApp 就是要使用它好用的元件，直接利用拖拉的方式，將 <kbd>controlgroup-checkbox</kbd> 的元件拖曳到編輯區域，就會自動產生一個 CheckBox 元件。
-      </p>
-      <img alt="放上 CheckBox 元件" src="img/tutorial/tutorial_5_checklist_04.gif" class="img-responsive" />
-      <br/>
-      <h5>
-        <strong>二、增加選項</strong>
-      </h5>
-      <p>接下來我們利用之前介紹過的方法，點選 CheckBox 的選項，按下右上方的綠色加號，就會自動新增選項了。
-      </p>
-      <img alt="增加選項" src="img/tutorial/tutorial_5_checklist_05.gif" class="img-responsive" />
-      <br/>
-      <h5>
-        <strong>三、改變垂直與水平方向</strong>
-      </h5>
-      <p>如果我們要改變垂直或水平的方向該怎做呢？只要打開屬性面板，直接做方向的修改就可以囉！
-      </p>
-      <img alt="改變垂直與水平方向" src="img/tutorial/tutorial_5_checklist_06.gif" class="img-responsive" />
-      <br/>
-      <h5>
-        <strong>四、撰寫 CSS 變換樣式</strong>
-      </h5>
-      <p>一直到這一個步驟之前都相當容易，基本上都只需要動動滑鼠就可以解決，而這個步驟我們就是要直接修改樣式，讓 CheckBox 看起來更為美觀。修改的方式就是修改標題 <kbd>legend</kbd> 標籤的樣式，大家可以貼上下列紅色的的程式碼，就可以看到樣式的變化。
-      </p>
-      <pre>&ltlegend <strong>style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;"</strong>&gtCheckbox Group&lt/legend&gt</pre>
-      <img alt="撰寫 CSS 變換樣式" src="img/tutorial/tutorial_5_checklist_07.gif" class="img-responsive" style="border-bottom:1px solid #ccc;" />
-      <br/>
-      <p>使用了 EZoApp 之後，是不是覺得在設計畫面上變得相當的直覺容易呢！這就是 EZoApp 最好用的特色之一喔！
-        <br/>
-        <br/>範例連結：
-        <br/>
-        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6278739709132800" target="_blank">基本元件實作 - 設計 CheckBox (垂直)</a>
-        <br/>
-        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6234576707911680" target="_blank">基本元件實作 - 設計 CheckBox (水平)</a>
-        <br/>
-      </p>
-      <br/>
-      <br/>
+        <img src="img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
     </div>
-  </div>
 
-
-
-  <div class="container footer">
     <div class="container">
-      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
-        <ul class="footer-menu">
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
-        <ul class="social-menu">
-        </ul>
-      </div>
+        <!--左側選單-->
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+            <ul>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+            <h3 class="right-content-1">
+                <strong>基本元件實作 - 設計 CheckBox</strong>
+            </h3>
+            <div class="line"></div>
+            <div style="display:table;">
+                <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+                    <p>
+                        除了上一節介紹的下拉選單，CheckBox 也是網頁表單與 App 表單中相當常見的功能，以往我們使用 CSS ，面對這類型的表單元素都很難修改樣式，而且不同瀏覽器上顯示的樣式甚至不盡相同真是令人相當的頭疼。
+                        <br/>但是現在有了 EZoApp 之後，大家就可以利用 EZoApp 的拖拉方式，快速的建立 CheckBox，只需要用滑鼠點選，就能夠進行水平和垂直方式的排列，而且樣式也採用 jQuery Mobile 的標準樣式，也是在行動裝置上常見的樣式，省去了許多不必要的麻煩工作。
+                        <br/>如果大家不滿足於基本的黑白兩種樣式，可以自己嘗試看看使用 HTML 或 CSS 來進行編輯，可以參考前幾篇「<a href="tutorial_2_button.html">製作特色按鈕</a>」、「<a href="tutorial_3_google_font.html">使用 Google Fonts</a>」，都有一些不錯的教學介紹喔！
+                        <br/>
+                        <br/>範例連結：
+                        <br/>
+                        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6278739709132800" target="_blank">基本元件實作 - 設計 CheckBox ( 垂直 )</a>
+                        <br/>
+                        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6234576707911680" target="_blank">基本元件實作 - 設計 CheckBox ( 水平 )</a>
+                        <br/>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+                    <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6278739709132800" target="_blank" class="tutorial-img-link" title="設計 CheckBox (垂直)">
+                        <img alt="設計 CheckBox" src="img/tutorial/tutorial_5_checklist_03.png" class="img-responsive" />
+                    </a>
+                </div>
+            </div>
+            <br/>
+            <h5>
+                <strong>一、放上 CheckBox 元件</strong>
+            </h5>
+            <p>一如往常，使用 EZoApp 就是要使用它好用的元件，直接利用拖拉的方式，將
+                <kbd>controlgroup-checkbox</kbd>的元件拖曳到編輯區域，就會自動產生一個 CheckBox 元件。
+            </p>
+            <img alt="放上 CheckBox 元件" src="img/tutorial/tutorial_5_checklist_04.gif" class="img-responsive" />
+            <br/>
+            <h5>
+                <strong>二、增加選項</strong>
+            </h5>
+            <p>接下來我們利用之前介紹過的方法，點選 CheckBox 的選項，按下右上方的綠色加號，就會自動新增選項了。
+            </p>
+            <img alt="增加選項" src="img/tutorial/tutorial_5_checklist_05.gif" class="img-responsive" />
+            <br/>
+            <h5>
+                <strong>三、改變垂直與水平方向</strong>
+            </h5>
+            <p>如果我們要改變垂直或水平的方向該怎做呢？只要打開屬性面板，直接做方向的修改就可以囉！
+            </p>
+            <img alt="改變垂直與水平方向" src="img/tutorial/tutorial_5_checklist_06.gif" class="img-responsive" />
+            <br/>
+            <h5>
+                <strong>四、撰寫 CSS 變換樣式</strong>
+            </h5>
+            <p>一直到這一個步驟之前都相當容易，基本上都只需要動動滑鼠就可以解決，而這個步驟我們就是要直接修改樣式，讓 CheckBox 看起來更為美觀。修改的方式就是修改標題
+                <kbd>legend</kbd>標籤的樣式，大家可以貼上下列紅色的的程式碼，就可以看到樣式的變化。
+            </p>
+            <pre>&ltlegend <strong>style="-webkit-border-radius:10px 10px 0 0; background:-webkit-linear-gradient(#99f,#33a); text-shadow:none; color:#fff; width:279px; height:30px; padding-top:7px; padding-left:10px; margin-bottom:-6px;"</strong>&gtCheckbox Group&lt/legend&gt</pre>
+            <img alt="撰寫 CSS 變換樣式" src="img/tutorial/tutorial_5_checklist_07.gif" class="img-responsive" style="border-bottom:1px solid #ccc;" />
+            <br/>
+            <p>使用了 EZoApp 之後，是不是覺得在設計畫面上變得相當的直覺容易呢！這就是 EZoApp 最好用的特色之一喔！
+                <br/>
+                <br/>範例連結：
+                <br/>
+                <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6278739709132800" target="_blank">基本元件實作 - 設計 CheckBox (垂直)</a>
+                <br/>
+                <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6234576707911680" target="_blank">基本元件實作 - 設計 CheckBox (水平)</a>
+                <br/>
+            </p>
+            <br/>
+            <br/>
+        </div>
     </div>
-    <div class="container copyright"></div>
-  </div>
 
-  <!-- build:js js/vendor.js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <!-- endbuild -->
-  <!-- build:js js/prettify.js -->
-  <script src="bower_components/google-code-prettify/src/prettify.js"></script>
-  <!-- endbuild -->
-  <!-- build:js({app,.tmp}) js/tutorial.js -->
-  <script src="js/layout_tutorial.js"></script>
-  <script src="js/layout.js"></script>
-  <script src="js/banner.js"></script>
-  <!-- endbuild -->
 
+
+    <div class="container footer">
+        <div class="container">
+            <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+                <ul class="footer-menu">
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+                <ul class="social-menu">
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright"></div>
+    </div>
+
+    <!-- build:js js/vendor.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/prettify.js -->
+    <script src="bower_components/google-code-prettify/src/prettify.js"></script>
+    <!-- endbuild -->
+    <!-- build:js({app,.tmp}) js/tutorial.js -->
+    <script src="js/layout_tutorial.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/banner.js"></script>
+    <!-- endbuild -->
+    <!-- Google 再营销代码 -->
+    <!-- ------------------------------------------------
+再营销代码不得与个人身份信息相关联，也不得放置在与敏感类别相关的网页上。有关如何设置代码的详细信息和说明，请访问：http://google.com/ads/remarketingsetup
+------------------------------------------------- -->
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 962590563;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
+        </div>
+    </noscript>
 </body>
 
 </html>
