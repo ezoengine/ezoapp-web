@@ -2,215 +2,226 @@
 <html lang="zh-tw">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
-    <meta name="application-name" content="EZoApp - 快速開發行動 App 的最佳工具" />
-    <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，非常適合用來快速打造 App、行動元件與使用者介面，同時支援前端技術的開發與學習。">
-    <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
-    <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
-    <!-- build:css css/vendor.css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <!-- endbuild -->
-    <!-- build:css(.tmp) css/tutorial.css -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/tomorrow.css">
-    <!-- endbuild -->
-    <title>EZoApp 教學實作 - 製作特色按鈕</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速開發行動 App 的最佳工具" />
+
+  <meta itemprop="name" content="EZoApp 教學實作 - 製作特色按鈕">
+  <meta itemprop="image" content="http://www.ezoui.com/app/img/tutorial/tutorial_2_button_01.png">
+  <meta itemprop="description" content="EZoApp 將利用 button 元件搭配 CSS3 的陰影、邊框、背景...等效果，設計美輪美奐的按鈕。">
+
+  <meta name="description" content="EZoApp 將利用 button 元件搭配 CSS3 的陰影、邊框、背景...等效果，設計美輪美奐的按鈕。">
+  <meta name="keywords" content="App,Mobile,jQuery,jQuery Mobile,HTML5,按鈕,button,設計,css" />
+
+  <meta property="og:title" content="EZoApp 教學實作 - 製作特色按鈕">
+  <meta property="og:url" content="http://www.ezoui.com/app/tutorial_2_button.html">
+  <meta property="og:image" content="http://www.ezoui.com/app/img/tutorial/tutorial_2_button_01.png">
+  <meta property="og:description" content="EZoApp 將利用 button 元件搭配 CSS3 的陰影、邊框、背景...等效果，設計美輪美奐的按鈕。">
+
+  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/tutorial.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tomorrow.css">
+  <!-- endbuild -->
+  <title>EZoApp 教學實作 - 製作特色按鈕</title>
 </head>
 
 <body page="tutorial" page-content="tutorial_2_button" onload="prettyPrint()">
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse  navbar-right">
-                <ul class="nav navbar-nav top-menu">
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="container banner-content">
-        <div class="banner-content-text">
-            <h1></h1>
-            <h2></h2>
-        </div>
-        <img src="img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
-    </div>
-
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-        <!--左側選單-->
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
-            <ul>
-            </ul>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
-            <h3 class="right-content-1">
-                <strong>基本元件實作 - 製作特色按鈕</strong>
-            </h3>
-            <div class="line"></div>
-            <div style="display:table;">
-                <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
-                    <p>
-                        延續上一節所提到的 button ，這一節將利用 button 元件搭配 CSS3 的陰影、邊框、背景...等效果，設計美輪美奐的按鈕，這一節主要會描述如何使用 CSS 的語法，對於相關語法不熟悉的朋友們，也希望能夠多學習一些，畢竟使用 CSS 已經比直接利用 Java 或 Object C 來寫 App 樣式簡單太多太多了，也期待大家能夠寫出非常漂亮的按鈕作品喔！
-                        <br/>
-                        <br/>範例連結：
-                        <br/>
-                        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">基本元件實作 - 製作特色按鈕</a>
-                        <br/>
-                        <br/>這邊也提供幾個不錯的 CSS 網站給大家參考學習：
-                        <br/>
-                        <a href="http://www.w3schools.com/css/" target="_blank">CSS - W3School</a> ( CSS 完整的線上教學 )
-                        <br/>
-                        <a href="http://www.css3maker.com/" target="_blank">CSS3 Maker</a> ( 國外快速產生的 CSS3 語法與效果的網站 1 )
-                        <br/>
-                        <a href="http://css3generator.com/" target="_blank">CSS3 Generator</a> ( 國外快速產生的 CSS3 語法與效果的網站 2 )
-                        <br/>
-                        <br/>由於 CSS 已經變成了一個趨勢，EZoApp 也是會大量的使用 CSS 來做版面的編排，也希望大家在練習 EZoApp 之餘，也學會 CSS 囉！
-                    </p>
-                </div>
-                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
-                    <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank" class="tutorial-img-link" title="製作特色按鈕">
-                        <img alt="製作特色按鈕" src="img/tutorial/tutorial_2_button_01.png" class="img-responsive" />
-                    </a>
-                </div>
-            </div>
-            <br/>
-            <h5>
-                <strong>一、放上按鈕</strong>
-            </h5>
-            <p>
-                我們直接使用拖拉的方式，把左側的
-                <kbd>button</kbd>元件拖曳進入編輯畫面中，就會自動產生一個按鈕。
-            </p>
-            <p>
-                <img alt="放上按鈕" src="img/tutorial/tutorial_2_button_02.gif" class="img-responsive" style="margin:20px 0;" />
-            </p>
-            <br/>
-            <h5>
-                <strong>二、快速複製按鈕</strong>
-            </h5>
-            <p>
-                當滑鼠點擊編輯區域中的按鈕，會發現元見右上角出現了幾個小 icon，幾個小 icon 的意思分別為：「綠色加號」複製並新增該元件，「紅色叉叉」刪除該元件，「黑色向上箭頭」選取父層元件，如果我們要快速複製按鈕，只要點選綠色加號，按鈕就會自動產生。
-            </p>
-            <p>
-                <img alt="快速複製按鈕" src="img/tutorial/tutorial_2_button_03.gif" class="img-responsive" style="margin:20px 0;" />
-            </p>
-            <br/>
-            <h5>
-                <strong>三、認識按鈕基本樣式</strong>
-            </h5>
-            <p>
-                點選按鈕後，我們便可以使用屬性面板來調整按鈕的屬性，調整屬性後，相關屬性的樣式名稱也會加入程式碼內，，這裡我們可以設定按鈕 icon 的位置、按鈕的大小...等屬性，而其他比較進階的屬性，後續就利用 CSS 來調整，下方列出<a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">範例檔案</a>中13個按鈕的基本樣式。
-            </p>
-            <pre>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn ui-mini"&gtButton&lt/a&gt<br/>&lta class="ui-btn"&gtButton1&lt/a&gt<br/>&lta class="ui-btn"&gtButton2&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn ui-mini ui-btn-icon-top ui-icon-delete"&gtButton&lt/a&gt<br/>&lta class="ui-btn ui-btn-icon-top ui-icon-delete"&gtButton&lt/a&gt<br/>&lta class="ui-btn ui-icon-delete ui-btn-icon-right"&gtButton&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt</pre>
-            <p>
-                <img alt="認識按鈕基本樣式" src="img/tutorial/tutorial_2_button_04.gif" class="img-responsive" style="margin:20px 0;" />
-            </p>
-            <br/>
-            <h5>
-                <strong>四、建立按鈕樣式表</strong>
-            </h5>
-            <p>
-                按鈕元件放上編輯區域後，最後我們就是要利用 CSS 來編輯按鈕的樣式，除了可以控制長寬之外，也可以利用以下幾個設定來設定按鈕的樣式：
-                <br/>
-                <ol style="padding-left:15px;">
-                    <li style="list-style:upper-roman;">
-                        <p>
-                            <kbd>-webkit-box-radius:</kbd>後方輸入數值，來設定按鈕四個角為圓角 (適用於 Chrome，Firefox 改為 -moz-box-radius，IE 改為 box-radius)，例如：</p><pre>-webkit-border-radius: 20px; //四個圓角的半徑為20px</pre>
-                    </li>
-                    <li style="list-style:upper-roman;">
-                        <p>
-                            <kbd>-webkit-box-shadow:</kbd>後方輸入數值，來設定按鈕陰影 (適用於 Chrome，Firefox 改為 -moz-box-shadow，IE 改為 box-shadow)，例如：</p><pre>-webkit-box-shadow: inset #ddd 0 0 10px; //內陰影<br/>-webkit-box-shadow: #ddd 0 0 10px;       //外陰影</pre>
-                    </li>
-                    <li style="list-style:upper-roman;">
-                        <p>
-                            <kbd>background:</kbd>後方可帶入背景圖片，但因為 jQuery Mobile 元件的預設值，必須加入 !important 才能順利呈現，例如：</p><pre>background: url(圖片網址) center center no-repeat<strong>!important</strong>;</pre>
-                    </li>
-                    <li style="list-style:upper-roman;">
-                        <p>
-                            <kbd>display:</kbd>因為按鈕本身是區塊 ( block ) 屬性，如果要讓按鈕可以一個接一個的排下去，最簡單的方法就是調整 display，例如：</p><pre>display: inline-block;</pre>
-                    </li>
-                </ol>
-            </p>
-            <p>
-                <img alt="建立按鈕樣式表" src="img/tutorial/tutorial_2_button_05.gif" class="img-responsive" style="margin:20px 0; border-bottom:1px solid #ccc;" />
-            </p>
-            <p>上面列出幾個比較特別需要注意的 CSS 樣式，其他的其實都是基本的 CSS，大家可以自行撰寫，並且立即看到效果，是不是相當的方便迅速呢！
-                <br/>再次列出這幾個不錯的 CSS 網站給大家參考學習：
-                <br/>
-                <a href="http://www.w3schools.com/css/" target="_blank">CSS - W3School</a> (CSS完整的線上教學)
-                <br/>
-                <a href="http://www.css3maker.com/" target="_blank">CSS3 Maker</a> ( 國外快速產生的 CSS3 語法與效果的網站 1 )
-                <br/>
-                <a href="http://css3generator.com/" target="_blank">CSS3 Generator</a> ( 國外快速產生的 CSS3 語法與效果的網站 2 )
-                <br/>
-                <br/>範例連結：
-                <br/>
-                <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">基本元件實作 - 製作特色按鈕</a>
-                <br/>
-                <br/>
-                <br/>
-            </p>
-        </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
     </div>
+  </div>
 
-
-
-    <div class="container footer">
-        <div class="container">
-            <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
-                <ul class="footer-menu">
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
-                <ul class="social-menu">
-                </ul>
-            </div>
-        </div>
-        <div class="container copyright"></div>
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1></h1>
+      <h2></h2>
     </div>
+    <img src="img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
+  </div>
 
-    <!-- build:js js/vendor.js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <!-- endbuild -->
-    <!-- build:js js/prettify.js -->
-    <script src="bower_components/google-code-prettify/src/prettify.js"></script>
-    <!-- endbuild -->
-    <!-- build:js({app,.tmp}) js/tutorial.js -->
-    <script src="js/layout_tutorial.js"></script>
-    <script src="js/layout.js"></script>
-    <script src="js/banner.js"></script>
-    <!-- endbuild -->
+  <div class="container">
+    <!--左側選單-->
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 tutorial-left-menu">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>基本元件實作 - 製作特色按鈕</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;">
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8 icon-center" style="padding-left:0;">
+          <p>
+            延續上一節所提到的 button ，這一節將利用 button 元件搭配 CSS3 的陰影、邊框、背景...等效果，設計美輪美奐的按鈕，這一節主要會描述如何使用 CSS 的語法，對於相關語法不熟悉的朋友們，也希望能夠多學習一些，畢竟使用 CSS 已經比直接利用 Java 或 Object C 來寫 App 樣式簡單太多太多了，也期待大家能夠寫出非常漂亮的按鈕作品喔！
+            <br/>
+            <br/>範例連結：
+            <br/>
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">基本元件實作 - 製作特色按鈕</a>
+            <br/>
+            <br/>這邊也提供幾個不錯的 CSS 網站給大家參考學習：
+            <br/>
+            <a href="http://www.w3schools.com/css/" target="_blank">CSS - W3School</a> ( CSS 完整的線上教學 )
+            <br/>
+            <a href="http://www.css3maker.com/" target="_blank">CSS3 Maker</a> ( 國外快速產生的 CSS3 語法與效果的網站 1 )
+            <br/>
+            <a href="http://css3generator.com/" target="_blank">CSS3 Generator</a> ( 國外快速產生的 CSS3 語法與效果的網站 2 )
+            <br/>
+            <br/>由於 CSS 已經變成了一個趨勢，EZoApp 也是會大量的使用 CSS 來做版面的編排，也希望大家在練習 EZoApp 之餘，也學會 CSS 囉！
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank" class="tutorial-img-link" title="製作特色按鈕">
+            <img alt="製作特色按鈕" src="img/tutorial/tutorial_2_button_01.png" class="img-responsive" />
+          </a>
+        </div>
+      </div>
+      <br/>
+      <h5>
+        <strong>一、放上按鈕</strong>
+      </h5>
+      <p>
+        我們直接使用拖拉的方式，把左側的
+        <kbd>button</kbd>元件拖曳進入編輯畫面中，就會自動產生一個按鈕。
+      </p>
+      <p>
+        <img alt="放上按鈕" src="img/tutorial/tutorial_2_button_02.gif" class="img-responsive" style="margin:20px 0;" />
+      </p>
+      <br/>
+      <h5>
+        <strong>二、快速複製按鈕</strong>
+      </h5>
+      <p>
+        當滑鼠點擊編輯區域中的按鈕，會發現元見右上角出現了幾個小 icon，幾個小 icon 的意思分別為：「綠色加號」複製並新增該元件，「紅色叉叉」刪除該元件，「黑色向上箭頭」選取父層元件，如果我們要快速複製按鈕，只要點選綠色加號，按鈕就會自動產生。
+      </p>
+      <p>
+        <img alt="快速複製按鈕" src="img/tutorial/tutorial_2_button_03.gif" class="img-responsive" style="margin:20px 0;" />
+      </p>
+      <br/>
+      <h5>
+        <strong>三、認識按鈕基本樣式</strong>
+      </h5>
+      <p>
+        點選按鈕後，我們便可以使用屬性面板來調整按鈕的屬性，調整屬性後，相關屬性的樣式名稱也會加入程式碼內，，這裡我們可以設定按鈕 icon 的位置、按鈕的大小...等屬性，而其他比較進階的屬性，後續就利用 CSS 來調整，下方列出<a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">範例檔案</a>中13個按鈕的基本樣式。
+      </p>
+      <pre>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn ui-mini"&gtButton&lt/a&gt<br/>&lta class="ui-btn"&gtButton1&lt/a&gt<br/>&lta class="ui-btn"&gtButton2&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn ui-mini ui-btn-icon-top ui-icon-delete"&gtButton&lt/a&gt<br/>&lta class="ui-btn ui-btn-icon-top ui-icon-delete"&gtButton&lt/a&gt<br/>&lta class="ui-btn ui-icon-delete ui-btn-icon-right"&gtButton&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt<br/>&lta class="ui-btn"&gt&lt/a&gt</pre>
+      <p>
+        <img alt="認識按鈕基本樣式" src="img/tutorial/tutorial_2_button_04.gif" class="img-responsive" style="margin:20px 0;" />
+      </p>
+      <br/>
+      <h5>
+        <strong>四、建立按鈕樣式表</strong>
+      </h5>
+      <p>
+        按鈕元件放上編輯區域後，最後我們就是要利用 CSS 來編輯按鈕的樣式，除了可以控制長寬之外，也可以利用以下幾個設定來設定按鈕的樣式：
+        <br/>
+        <ol style="padding-left:15px;">
+          <li style="list-style:upper-roman;">
+            <p>
+              <kbd>-webkit-box-radius:</kbd>後方輸入數值，來設定按鈕四個角為圓角 (適用於 Chrome，Firefox 改為 -moz-box-radius，IE 改為 box-radius)，例如：</p><pre>-webkit-border-radius: 20px; //四個圓角的半徑為20px</pre>
+          </li>
+          <li style="list-style:upper-roman;">
+            <p>
+              <kbd>-webkit-box-shadow:</kbd>後方輸入數值，來設定按鈕陰影 (適用於 Chrome，Firefox 改為 -moz-box-shadow，IE 改為 box-shadow)，例如：</p><pre>-webkit-box-shadow: inset #ddd 0 0 10px; //內陰影<br/>-webkit-box-shadow: #ddd 0 0 10px;       //外陰影</pre>
+          </li>
+          <li style="list-style:upper-roman;">
+            <p>
+              <kbd>background:</kbd>後方可帶入背景圖片，但因為 jQuery Mobile 元件的預設值，必須加入 !important 才能順利呈現，例如：</p><pre>background: url(圖片網址) center center no-repeat<strong>!important</strong>;</pre>
+          </li>
+          <li style="list-style:upper-roman;">
+            <p>
+              <kbd>display:</kbd>因為按鈕本身是區塊 ( block ) 屬性，如果要讓按鈕可以一個接一個的排下去，最簡單的方法就是調整 display，例如：</p><pre>display: inline-block;</pre>
+          </li>
+        </ol>
+      </p>
+      <p>
+        <img alt="建立按鈕樣式表" src="img/tutorial/tutorial_2_button_05.gif" class="img-responsive" style="margin:20px 0; border-bottom:1px solid #ccc;" />
+      </p>
+      <p>上面列出幾個比較特別需要注意的 CSS 樣式，其他的其實都是基本的 CSS，大家可以自行撰寫，並且立即看到效果，是不是相當的方便迅速呢！
+        <br/>再次列出這幾個不錯的 CSS 網站給大家參考學習：
+        <br/>
+        <a href="http://www.w3schools.com/css/" target="_blank">CSS - W3School</a> (CSS完整的線上教學)
+        <br/>
+        <a href="http://www.css3maker.com/" target="_blank">CSS3 Maker</a> ( 國外快速產生的 CSS3 語法與效果的網站 1 )
+        <br/>
+        <a href="http://css3generator.com/" target="_blank">CSS3 Generator</a> ( 國外快速產生的 CSS3 語法與效果的網站 2 )
+        <br/>
+        <br/>範例連結：
+        <br/>
+        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">基本元件實作 - 製作特色按鈕</a>
+        <br/>
+        <br/>
+        <br/>
+      </p>
+    </div>
+  </div>
 
-    <!-- Google 再营销代码 -->
-    <!-- ------------------------------------------------
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/prettify.js -->
+  <script src="bower_components/google-code-prettify/src/prettify.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/tutorial.js -->
+  <script src="js/layout_tutorial.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/banner.js"></script>
+  <!-- endbuild -->
+
+  <!-- Google 再营销代码 -->
+  <!-- ------------------------------------------------
 再营销代码不得与个人身份信息相关联，也不得放置在与敏感类别相关的网页上。有关如何设置代码的详细信息和说明，请访问：http://google.com/ads/remarketingsetup
 ------------------------------------------------- -->
-    <script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 962590563;
-    var google_custom_params = window.google_tag_params;
-    var google_remarketing_only = true;
-    /* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
-        </div>
-    </noscript>
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 962590563;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
+    </div>
+  </noscript>
 </body>
 
 </html>

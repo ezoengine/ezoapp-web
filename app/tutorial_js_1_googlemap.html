@@ -7,9 +7,20 @@
   <meta http-equiv="pragma" content="no-cache">
   <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
   <meta name="application-name" content="EZoApp - 快速開發行動 App 的最佳工具" />
-  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，非常適合用來快速打造 App、行動元件與使用者介面，同時支援前端技術的開發與學習。">
-  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
-  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts"/>
+
+  <meta itemprop="name" content="EZoApp 教學實作 - Google 地圖應用">
+  <meta itemprop="image" content="http://www.ezoui.com/app/img/tutorial/tutorial_js_1_googlemap_01.png">
+  <meta itemprop="description" content="讓我們使用 EZoApp，以最快的速度來做出 Google 地圖的應用程式吧！">
+
+  <meta name="description" content="讓我們使用 EZoApp，以最快的速度來做出 Google 地圖的應用程式吧！">
+  <meta name="keywords" content="App,Mobile,jQuery,jQuery Mobile,google,google map,地圖" />
+
+  <meta property="og:title" content="EZoApp 教學實作 - Google 地圖應用">
+  <meta property="og:url" content="http://www.ezoui.com/app/tutorial_js_1_googlemap.html">
+  <meta property="og:image" content="http://www.ezoui.com/app/img/tutorial/tutorial_js_1_googlemap_01.png">
+  <meta property="og:description" content="讓我們使用 EZoApp，以最快的速度來做出 Google 地圖的應用程式吧！">
+
+  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
   <!-- build:css css/vendor.css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <!-- endbuild -->
@@ -81,14 +92,17 @@
       <h5>
         <strong>一、使用 navbar 元件製作按鈕頁籤</strong>
       </h5>
-      <p><kbd>navber</kbd> 元件是常用的元件之一，顧名思義就是一個導覽頁籤的元件，這個元件的程式碼也很簡單，有幾個按鈕就有幾個 &ltli&gt&lta&gt&lt/a&gt&lt/li&gt，如果有多個按鈕需求的使用者，就自行添加就會自動長出按鈕。
+      <p>
+        <kbd>navber</kbd>元件是常用的元件之一，顧名思義就是一個導覽頁籤的元件，這個元件的程式碼也很簡單，有幾個按鈕就有幾個 &ltli&gt&lta&gt&lt/a&gt&lt/li&gt，如果有多個按鈕需求的使用者，就自行添加就會自動長出按鈕。
       </p>
       <img alt="使用 navbar 元件製作按鈕頁籤" src="img/tutorial/tutorial_js_1_googlemap_02.gif" class="img-responsive" />
       <br/>
       <h5>
         <strong>二、使用 gmap 元件，建立地圖</strong>
       </h5>
-      <p><kbd>gmap</kbd> 元件是 EZo 研發團隊 所開發的元件，讓使用者可以簡單迅速的創造地圖，使用的方式也相當簡單，在元件的面版中，選擇 3rd Party 的元件，接著選擇 gmap 元件，拖曳進入畫面後，進行長寬尺寸的編輯，不過 <kbd>gmap</kbd> 元件不只有長寬尺寸的功能，你還可以改變 zoom 的數值控制地圖縮放的大小數字越大地圖放的越大，也可以由 address 來指定地圖置中的地點，是不是相當的方便呢！
+      <p>
+        <kbd>gmap</kbd>元件是 EZo 研發團隊 所開發的元件，讓使用者可以簡單迅速的創造地圖，使用的方式也相當簡單，在元件的面版中，選擇 3rd Party 的元件，接著選擇 gmap 元件，拖曳進入畫面後，進行長寬尺寸的編輯，不過
+        <kbd>gmap</kbd>元件不只有長寬尺寸的功能，你還可以改變 zoom 的數值控制地圖縮放的大小數字越大地圖放的越大，也可以由 address 來指定地圖置中的地點，是不是相當的方便呢！
       </p>
       <pre>&ltdiv is="gmap" style="width:100%;height:200px;" <strong>zoom="12" address="Qianzhen, TW"</strong>&gt&lt/div&gt</pre>
       <img alt="使用 gmap 元件，建立地圖" src="img/tutorial/tutorial_js_1_googlemap_03.gif" class="img-responsive" />
@@ -96,7 +110,8 @@
       <h5>
         <strong>三、貼上這串程式碼，地圖程式完成！</strong>
       </h5>
-      <p>光是放上元件就想要讓按鈕和地圖連動？說真的這實在有點難度，不過 EZoApp 已經幫我們把門檻大大的降低，只要把 <kbd>navbar</kbd> 的頁籤改成都市的名稱，然後在 JS 的頁籤貼上下列這串程式碼，地圖就會按照我們點選的都市，跳轉到以該都市為中心的地點囉！
+      <p>光是放上元件就想要讓按鈕和地圖連動？說真的這實在有點難度，不過 EZoApp 已經幫我們把門檻大大的降低，只要把
+        <kbd>navbar</kbd>的頁籤改成都市的名稱，然後在 JS 的頁籤貼上下列這串程式碼，地圖就會按照我們點選的都市，跳轉到以該都市為中心的地點囉！
       </p>
       <pre>$(document).on('pageinit', function () {    // 頁面開始時要執行的程式<br/>  $('#map_btn').on('click', function (e) {  // 點下 navbar 按鈕時要執行的程式<br/>    var addr = $(e.target).text();          // 讀取現在按下按鈕的都市名稱<br/>    $('#map').gk('address', addr);          // 以該都市為中心點顯示在地圖上<br/>  });<br/>});</pre>
       <br/>
@@ -146,24 +161,24 @@
   <script src="js/layout.js"></script>
   <script src="js/banner.js"></script>
   <!-- endbuild -->
-    <!-- Google 再营销代码 -->
-    <!-- ------------------------------------------------
+  <!-- Google 再营销代码 -->
+  <!-- ------------------------------------------------
 再营销代码不得与个人身份信息相关联，也不得放置在与敏感类别相关的网页上。有关如何设置代码的详细信息和说明，请访问：http://google.com/ads/remarketingsetup
 ------------------------------------------------- -->
-    <script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 962590563;
-    var google_custom_params = window.google_tag_params;
-    var google_remarketing_only = true;
-    /* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
-        </div>
-    </noscript>
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 962590563;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
+    </div>
+  </noscript>
 
 </body>
 

@@ -7,9 +7,20 @@
   <meta http-equiv="pragma" content="no-cache">
   <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
   <meta name="application-name" content="EZoApp - 快速开发行动 App 的最佳工具" />
-  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 开发行动 App 的云端服务，非常适合用来快速打造 App、行动组件与用户接口，同时支持前端技术的开发与学习。">
-  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,云端平台,数据,组件,脚本,云端,软件,开发,工具,行动,触控,响应式,手机,平板,移动" />
-  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts"/>
+
+  <meta itemprop="name" content="EZoApp 教学实作- RSS 服务实作">  
+  <meta itemprop="image" content="http://www.ezoui.c​​om/app/img/tutorial/tutorial_js_5_rss_01.png">  
+  <meta itemprop="description" content="这篇范例，将会介绍如何使用EZoApp 的RSS 元件，最快速的产出一系列的文章清单，快速的读取各式报章杂志的RSS，让我们轻松做出在行动装置平台上的RSS 阅读程式。">  
+
+  <meta name="d​​escription" content="这篇范例，将会介绍如何使用EZoApp 的RSS 元件，最快速的产出一系列的文章清单，快速的读取各式报章杂志的RSS，让我们轻松做出在行动装置平台上的RSS 阅读程式。">  
+  <meta name="keywords" content="App,Mobile,jQuery,jQuery Mobile,HTML5,AJAX,rss" />  
+
+  <meta property="og:title" content="EZoApp 教学实作- RSS 服务实作">  
+  <meta property="og:url" content="http://www.ezoui.c​​om/app/tutorial_js_5_rss.html">  
+  <meta property="og:imag​​e" content="http://www.ezoui.c​​om/app/img/tutorial/tutorial_js_5_rss_01.png">  
+  <meta property="og:description" content="这篇范例，将会介绍如何使用EZoApp 的RSS 元件，最快速的产出一系列的文章清单，快速的读取各式报章杂志的RSS，让我们轻松做出在行动装置平台上的RSS 阅读程式。">
+
+  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
   <!-- build:css css/vendor.css -->
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
   <!-- endbuild -->
@@ -63,7 +74,7 @@
             RSS 的英文全名是 Really Simple Syndication，顾名思义是个非常简单就能整合一切信息的服务，也是个有点像电子报或新闻组的东西，赋予我们非常强大的编辑设计能力，并让我们能简单的获取丰富的数据。
             <br/>比较常见的范例就像是藉由订阅报章杂志的 RSS，就能够获得最新的文章标题与预览内容，订阅气象局的 RSS 就能掌握最新的气象信息，订阅名人的部落格 RSS，就能无时无刻了解名人的最新文章动态...等，诸如此类，都是 RSS 所带给我们的便利。
             <br/>过去我们在 RSS 的应用范围，往往都是藉由 RSS 的阅读器或是 email 的通知方式进行，更不用去谈论该如何将这些非常有用的实时信息，应用到行动装置的平台上，而这篇范例，将会介绍如何使用 EZoApp 的
-            <kbd>RSS</kbd> 组件，最快速的产出一系列的文章列表，快速的读取各式报章杂志的 RSS，让我们轻松做出在行动装置平台上的 RSS 阅读程序。
+            <kbd>RSS</kbd>组件，最快速的产出一系列的文章列表，快速的读取各式报章杂志的 RSS，让我们轻松做出在行动装置平台上的 RSS 阅读程序。
             <br/>
 
             <br/>
@@ -85,14 +96,14 @@
       </h5>
       <p>在建立文章清单之前，我们首先要建立一个基本的样板，主要希望点选上方 header 的按钮，下方文章列表可以加载正确的 RSS 内容。
         <br/>与之前的章节所介绍的作法如出一辙，利用拖拉的方式将
-        <kbd>header</kbd> 、
-        <kbd>footer</kbd> 、
-        <kbd>navbar</kbd> 等组件放入画面当中。
+        <kbd>header</kbd>、
+        <kbd>footer</kbd>、
+        <kbd>navbar</kbd>等组件放入画面当中。
       </p>
       <img alt="建立基本样版" src="../img/tutorial/tutorial_js_5_rss_02.gif" class="img-responsive" />
       <br/>
       <p>接着我们在 navbar 的程序代码内，进行以下的修改，加入相对应的 RSS 网址，就完成了基本的样板。(
-        <kbd>RSS</kbd> 组件默认为 CNN 的 RSS 网址，请自行更换相对应的网址 )
+        <kbd>RSS</kbd>组件默认为 CNN 的 RSS 网址，请自行更换相对应的网址 )
       </p>
       <pre>
 &ltdiv data-role="navbar" class="menu"&gt
@@ -113,12 +124,12 @@
         <strong>二、使用 RSS 组件，建立文章列表</strong>
       </h5>
       <p>接着我们将 EZoApp 的
-        <kbd>RSS</kbd> 组件拖拉进入画面当中，可以看到自动产生了一个具有标题的列表画面，而列表上许多大括号的代码，是当我们按下 Preview 的按钮之后，会将对应的 RSS 内容放入大括号内。
+        <kbd>RSS</kbd>组件拖拉进入画面当中，可以看到自动产生了一个具有标题的列表画面，而列表上许多大括号的代码，是当我们按下 Preview 的按钮之后，会将对应的 RSS 内容放入大括号内。
       </p>
       <img alt="使用 RSS 组件，建立文章列表" src="../img/tutorial/tutorial_js_5_rss_03.gif" class="img-responsive" />
       <br/>
       <p>针对
-        <kbd>RSS</kbd> 组件的属性，除了可以藉由旁边的属性面板，进行最基本的修改，也可以直接修改程序代码编辑器中的 HTML 面板内的程序。
+        <kbd>RSS</kbd>组件的属性，除了可以藉由旁边的属性面板，进行最基本的修改，也可以直接修改程序代码编辑器中的 HTML 面板内的程序。
       </p>
       <pre>&ltdiv id="gk-428PVoA" is="rss-news" <strong>service="http://www.appledaily.com.tw/rss/newcreate/kind/rnews/type/111" rownum="3"</strong>&gt
 &lt!--service 请换成第一页的 RSS 网址 --&gt
@@ -181,7 +192,7 @@
       </h5>
       <p>
         因为 EZoApp 的
-        <kbd>RSS</kbd> 组件应用了 Google 所提供的 RSS 服务，因此在相对应的变量名称上就必须按照 Google 解析出来的名称规则进行 ( 也就是两个大括号内的变量名称 )，以下将列出几个 Google RSS 服务所提供的属性名称：
+        <kbd>RSS</kbd>组件应用了 Google 所提供的 RSS 服务，因此在相对应的变量名称上就必须按照 Google 解析出来的名称规则进行 ( 也就是两个大括号内的变量名称 )，以下将列出几个 Google RSS 服务所提供的属性名称：
         <ol>
           <li>
             <strong>author：</strong>作者信息</li>
@@ -240,24 +251,24 @@
   <script src="../js/layout.js"></script>
   <script src="../js/banner.js"></script>
   <!-- endbuild -->
-    <!-- Google 再营销代码 -->
-    <!-- ------------------------------------------------
+  <!-- Google 再营销代码 -->
+  <!-- ------------------------------------------------
 再营销代码不得与个人身份信息相关联，也不得放置在与敏感类别相关的网页上。有关如何设置代码的详细信息和说明，请访问：http://google.com/ads/remarketingsetup
 ------------------------------------------------- -->
-    <script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 962590563;
-    var google_custom_params = window.google_tag_params;
-    var google_remarketing_only = true;
-    /* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
-        </div>
-    </noscript>
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 962590563;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
+    </div>
+  </noscript>
 
 </body>
 

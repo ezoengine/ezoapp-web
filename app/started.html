@@ -2,831 +2,842 @@
 <html lang="zh-tw">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
-    <meta name="application-name" content="EZoApp - 快速開發行動 App 的最佳工具" />
-    <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，非常適合用來快速打造 App、行動元件與使用者介面，同時支援前端技術的開發與學習。">
-    <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,雲端平台,資料,元件,腳本,雲端,軟體,開發,工具,行動,觸控,響應式,手機,平板,移動" />
-    <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
-    <!-- build:css css/vendor.css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <!-- endbuild -->
-    <!-- build:css(.tmp) css/style.css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- endbuild -->
-    <title>EZoApp - 基本介紹</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
+  <meta name="application-name" content="EZoApp - 快速開發行動 App 的最佳工具" />
+
+  <meta itemprop="name" content="EZoApp - 基本介紹">
+  <meta itemprop="image" content="http://www.ezoui.com/app/img/fbshareImg.png">
+  <meta itemprop="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，以下將針對 EZoApp 進行基本的操作介紹，讓大家體驗 EZoApp 前所未有的魅力與感動！">
+
+  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，以下將針對 EZoApp 進行基本的操作介紹，讓大家體驗 EZoApp 前所未有的魅力與感動！">
+  <meta name="keywords" content="App,Mobile,jQuery,jQuery Mobile,HTML5,AJAX,iOS,Android,JavaScript,JSON,雲端平台,元件,雲端,開發工具,行動應用,phonegap" />
+
+  <meta property="og:title" content="EZoApp - 基本介紹">
+  <meta property="og:url" content="http://www.ezoui.com/app/started.html">
+  <meta property="og:image" content="http://www.ezoui.com/app/img/fbshareImg.png">
+  <meta property="og:description" content="EZoApp 是一套以 HTML5、jQuery Mobile 開發行動 App 的雲端服務，以下將針對 EZoApp 進行基本的操作介紹，讓大家體驗 EZoApp 前所未有的魅力與感動！">
+
+  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
+  <!-- build:css css/vendor.css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) css/style.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endbuild -->
+  <title>EZoApp - 基本介紹</title>
 </head>
 
 <body page="started">
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse  navbar-right">
-                <ul class="nav navbar-nav top-menu">
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="container banner-content">
-        <div class="banner-content-text">
-            <h1>EZoApp 介紹</h1>
-            <h2>認識最方便實用的 App 開發工具</h2>
-        </div>
-        <img src="img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
-    </div>
-
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 left-menu">
-            <ul>
-                <li class="left-menu-1 active"><a>基本介紹</a>
-                    <ul>
-                        <li><a>1.主選單列</a>
-                        </li>
-                        <li><a>2.畫面編輯區域</a>
-                        </li>
-                        <li><a>3.屬性面板</a>
-                        </li>
-                        <li><a>4.元件工具列</a>
-                        </li>
-                        <li><a>5.程式碼編輯區域</a>
-                        </li>
-                        <li><a>6.頁面區域</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="left-menu-1"><a>元件庫</a>
-                </li>
-                <li class="left-menu-1"><a>熱鍵列表<span></span></a>
-                </li>
-                <li class="left-menu-1"><a>教學影片</a>
-                </li>
-                <li class="left-menu-1"><a>範例分享</a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
-            <h3 class="right-content-1">
-                <strong>EZoApp 基本操作介紹</strong>
-            </h3>
-            <div class="line"></div>
-            <p>普遍來說，要開發手機的 App，就得使用相關平台的開發程式來進行，若需進行跨平台的開發，更要耗費大量的時間成本，在後續的維護上也是一大挑戰。近年來隨著瀏覽器等級與效能的大幅躍進，HTML5 + JavaScript + CSS3 的前端技術竄起，許多前端框架與跨平台展現的語法，有如雨後春筍般的萌生，jQuery Mobile 便是一套建立於 jQuery 與 jQuery UI 的強健基礎上，提供行動裝置跨平台的使用者介面的系統，也是近幾年來最夯的技術之一。
-                <br/>在眾多編輯器當中，近年來迅速受到開發者喜愛與關注的 EZoApp ，便是由 jQuery Mobile 為基礎而誕生的開發工具，EZoApp 不僅一應俱全的保留了 jQuery Mobile 所具備的優勢和功能，更結合了 EZo 研發團隊多年的開發實戰和經驗，讓使用者在瀏覽器上工作，撰寫簡單的語法，打造出無限可能的創意能量和跨平台產品，除此之外，EZoApp 採用雲端的運算與儲存方式，讓開發者更能輕鬆共享自己的程式代碼，設計師也可毫不費力的編輯畫面或進行操作體驗規劃，彼此相得益彰，創造更省時省力的工作方式。
-                <br/>以下將針對 EZoApp 進行基本的操作介紹，讓大家體驗 EZoApp 前所未有的魅力與感動！
-                <br/>
-                <br/>
-                <img src="img/started/promote1_01.png" class="img-responsive" />這是 EZoApp 的操作畫面，整體的顏色採用程式開發常見的色彩配置 ( 深色底 + 高亮度程式碼 + 高彩度程式碼提示 )，對於工程師而言，這應該是這非常簡潔的模式，而對於設計師來說，這就是個所得的開發畫面，因為就如同在網頁設計工具一樣，你寫了什麼程式碼，拉進去什麼圖，都會即時的展現在編輯的區域內，相當的方便且實用。
-                <br/>因為畫面的編排還滿容易上手的，其實不太需要花太多的時間，就可以熟悉如何操作，以下就介紹各個操作區塊的功能：
-                <br/>
-                <br/>
-            </p>
-            <h4 class="right-content-1-1">
-                <strong>1. 主選單列</strong>
-            </h4>
-            <p style="margin-left:20px;">
-                <img src="img/started/promote1_13.png" class="img-responsive" />在最上方具有五個按鈕，就是 EZoApp 的主選單，從左而右分別為：「Device 的尺寸及方向」、「預覽模式 / 設計模式」、「改變主題樣式」、「線上 Gallery 說明」以及「發佈」
-                <br/>
-                <img src="img/started/promote1_02.png" class="img-responsive" style="margin-top:10px;" />滑鼠移到第一個「Device 的尺寸及方向」按鈕上方，會彈出下拉式選單，除了第一個選項可以把 Device 的方向做水平和垂直的旋轉外，其他的都是產生相對應的 Device 尺寸，點選後 Device 的編輯畫面就會即時的呈現出來。
-                <br/>
-                <img src="img/started/promote1_0304.png" class="img-responsive" style="margin-top:10px;" />點選第二個按鈕「預覽」，就可以由原本的設計模式，進入發佈到手機上的預覽模式 ( 按鈕的 icon 也會不同 )，同時使用者也可以直接在預覽模式檢查程式的串接是否正確。
-                <br/>
-                <img src="img/started/promote1_05.png" class="img-responsive" style="margin-top:10px;" />若使用者需要不同的元件主題，可以點選這個按鈕來進行主題樣式的切換，目前主要有兩種樣式供使用者選擇，一種是預設的樣式 ( Default Style )，一種為扁平化的設計 ( flat style )，當然，使用者也可以依據自己的喜好，修改相關的 CSS 就能夠調整。
-                <br/>
-                <img src="img/started/promote1_06.png" class="img-responsive" style="margin-top:10px;" />點選 Gallery 的按鈕，可以發現 EZoApp 非常貼心的提供了豐富詳細的教學說明，除了有二十幾種範例之外，更有教學影片提供使用者學習參考。
-                <br/>
-                <img src="img/started/promote1_07.png" class="img-responsive" style="margin-top:10px;" />發佈的這個按鈕應該是所有開發者最愛的按鈕，因為點選這個按鈕的時間點，通常都是開發到一定程度或或是專案完成的時間，這個按鈕點選後，不僅會帶出完整的程式碼讓使用者使用，更可以選擇是否輸出為 apk 的格式，幫使用者做了全方位的服務。
-            </p>
-            <h4 class="right-content-1-1">
-                <strong>2. 畫面編輯區域</strong>
-            </h4>
-            <p style="margin-left:20px;">
-                <img src="img/started/promote1_20.png" class="img-responsive" />編輯區域就如同畫布一樣，使用者撰寫了程式碼之後，在區域上會即時的呈現，使用者也可以直接使用拖拉的方式，將元件拖拉進入編輯區域當中 ( 此時程式碼也會自動產生元件的程式碼 )，目光除了停留在撰寫程式碼外，最常將目光焦點擺放的區域就是這個區域了。 雖然說編輯區域司空見慣，但真正有特色的地方，在於當我們對於編輯區域進行了尺寸大小的變換，或是水平垂直方向的變換，內容的元件也都會進行調整，不會因為變換方向、大小或移動，導致程式碼必須重新寫，我們甚至可以藉由改變大小或方向，來測試自己的程式或畫面是否可以適應各個平台喔！
-            </p>
-            <h4 class="right-content-1-1">
-                <strong>3. 屬性面板</strong>
-            </h4>
-            <p style="margin-left:20px;">
-                <img src="img/started/promote1_21.png" class="img-responsive" />屬性面板將編輯區域中各個元素的屬性值，忠實且赤裸裸的表現出來，讓使用者在不需要撰寫程式碼的情況下，愜意的控制元件與畫面，而豐富的屬性控制，還可以針對頁面之間的轉換去做選擇，直接從繁複的轉場效果中挑選合適的效果，甚至也可以選擇 icon 樣式，對於程式撰寫來說，可以大幅縮短開發的時程，同時藉由屬性面板與程式碼之間的連動，使用者也能快速學習上手。
-            </p>
-            <h4 class="right-content-1-1">
-                <strong>4. 元件工具列</strong>
-            </h4>
-            <p style="margin-left:20px;">
-                <img src="img/started/promote1_22.png" class="img-responsive" />要談到 EZoApp 的最大亮點，這些元件工具就當之無愧了！身為開發工具的主角，勢必擁有相當過人的能力，除了承襲自 jQuery Mobile 的基本元件外，也包含了 EZo 開發團隊自行研發的套件 ( 放在 3rd Party 的頁籤內 )，後面會將這些元件的清單列表，方便大家使用的時候查找。
-            </p>
-            <h4 class="right-content-1-1">
-                <strong>5. 程式碼編輯區域</strong>
-            </h4>
-            <p style="margin-left:20px;">
-                <img src="img/started/promote1_23.png" class="img-responsive" />EZoApp 的程式編輯器，是程式設計師所熟悉的簡潔畫面與配色。不過雖然簡潔，該有的仍然是應有盡有，例如針對不同程式碼 tag 的顏色提示、不同區塊程式碼的收合展現、程式碼字體大小的調配...等，都滿足了基本的開發需求，同時，三組分別為 HTML、JS、CSS 的頁籤也讓使用者方便切換，而三種程式碼的顏色也不同喔！高度展現了開發團隊的細心與用心良苦。
-                <br/>
-                <img src="img/started/promote1_12.png" class="img-responsive" />EZoApp 也因應 jQuery Mobile 版本的變更而做了設計，使用者只要利用下拉選單，就能夠切換不同的 jQuery Mobile 版本，如此在編輯上，也較不會因為版本的不同，導致產生的畫面有所出入。 還有一點令人感到驚奇，使用者可以自行由 jQuery Mobile 的網站，抓取相關套件的程式碼來貼入編輯，如果是 jQuery Mobile 的官方元件，程式碼貼進來之後，就會變成在編輯區域可以拖拉控制的元件，是不是非常神奇呢！
-            </p>
-            <h4 class="right-content-1-1">
-                <strong>6. 頁面區域</strong>
-            </h4>
-            <p style="margin-left:20px;">
-                <img src="img/started/promote1_10.png" class="img-responsive" />最後介紹剩下的一個區域：Pages，因為 jQuery Mobile 顧名思義是為了開發手機上可以運行的網頁或程式介面，而 EZoApp 也是秉持這個精神與架構來設計，因此 Page 就變得格外重要，「頁面區域」的編輯面板，提供給使用者一個方便編輯與檢索所有頁面的區域，使用者可以在這個區域瀏覽成果 ( 就如同 PowerPoint 左側的頁面一樣 )，也可以新增、編輯和移動頁面，也因為有了頁面的工具，編輯起來就會更為順手和迅速了。
-            </p>
-            <br/>
-            <br/>
-
-
-
-            <h3 class="right-content-1">
-                <strong>元件庫</strong>
-            </h3>
-            <div class="line"></div>
-            <h4>
-                <strong>1. jQuery Mobile 元件：</strong>
-            </h4>
-            <div class="table-responsive">
-                <table class="table table-bordered  table-striped component-table">
-                    <tr>
-                        <td>
-                            <img src="img/started/promote1_22_01.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_02.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_03.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_04.png" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>header</td>
-                        <td>footer</td>
-                        <td>grid</td>
-                        <td>tabbar</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/started/promote1_22_05.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_06.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_07.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_08.png" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>navbar</td>
-                        <td>gk-text</td>
-                        <td>text-input</td>
-                        <td>range-input</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/started/promote1_22_09.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_10.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_11.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_12.png" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>search-input</td>
-                        <td>date-input</td>
-                        <td>collapsible-set</td>
-                        <td>icon</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/started/promote1_22_13.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_14.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_15.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_16.png" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>button</td>
-                        <td>listview</td>
-                        <td>controlgroup-radio</td>
-                        <td>controlgroup-checkbox</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/started/promote1_22_17.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_18.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_22_19.png" />
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>flipswitch</td>
-                        <td>selectmenu</td>
-                        <td>textarea-input</td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
-            <h4>
-                <strong>2. EZo 團隊開發 3rd Party 元件：</strong>
-            </h4>
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped component-table">
-                    <tr>
-                        <td>
-                            <img src="img/started/promote1_23_01.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_23_02.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_23_03.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_23_04.png" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>youtube</td>
-                        <td>gmap</td>
-                        <td>image</td>
-                        <td>raty</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/started/promote1_23_05.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_23_06.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_23_07.png" />
-                        </td>
-                        <td>
-                            <img src="img/started/promote1_23_08.png" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>bxslider</td>
-                        <td>qrcode</td>
-                        <td>mobipick</td>
-                        <td>imggallery</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="img/started/promote1_23_09.png" />
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>json-listview</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
-            <br/>
-            <br/>
-            <h3 class="right-content-1">
-                <strong>熱鍵列表</strong>
-            </h3>
-            <div class="line"></div>
-            <p>
-                在編輯程式碼的時候，往往需要熱鍵的輔助，來加速撰寫代碼的速度，下方列出 EZoApp 的熱鍵清單，除了可以從下方得知相關熱鍵外，如果在開發當中忘記了有哪些熱鍵，也可同時按下
-                <kbd>Ctrl</kbd>+
-                <kbd>Alt</kbd>+
-                <kbd>h</kbd>( 在 Mac 電腦上就按：
-                <kbd>Command</kbd>+
-                <kbd>Alt</kbd>+
-                <kbd>h</kbd>)，就可以開啟熱鍵代碼表。
-            </p>
-            <br/>
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped shortcuts-table">
-                    <tr>
-                        <th>
-                            <kbd>f2</kbd>
-                        </th>
-                        <td>toggleFoldWidget</td>
-                        <th>
-                            <kbd>insert</kbd>
-                        </th>
-                        <td>overwrite</td>
-                        <th>
-                            <kbd>up</kbd>
-                        </th>
-                        <td>golineup</td>
-                        <th>
-                            <kbd>down</kbd>
-                        </th>
-                        <td>golinedown</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Alt-left</kbd>
-                            <br/>
-                            <kbd>home</kbd>
-                        </th>
-                        <td>gotolinestart</td>
-                        <th>
-                            <kbd>left</kbd>
-                        </th>
-                        <td>gotoleft</td>
-                        <th>
-                            <kbd>Alt-right</kbd>
-                            <br/>
-                            <kbd>end</kbd>
-                        </th>
-                        <td>gotolineend</td>
-                        <th>
-                            <kbd>right</kbd>
-                        </th>
-                        <td>gotoright</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>pagedown</kbd>
-                        </th>
-                        <td>gotopagedown</td>
-                        <th>
-                            <kbd>pageup</kbd>
-                        </th>
-                        <td>gotopageup</td>
-                        <th>
-                            <kbd>delete</kbd>
-                        </th>
-                        <td>del</td>
-                        <th>
-                            <kbd>backspace</kbd>
-                            <br/>
-                            <kbd>Shift-backspace</kbd>
-                        </th>
-                        <td>backspace</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>tab</kbd>
-                        </th>
-                        <td>expandSnippet</td>
-                        <th>
-                            <kbd>Ctrl-,</kbd>
-                        </th>
-                        <td>showSettingsMenu</td>
-                        <th>
-                            <kbd>Ctrl-a</kbd>
-                        </th>
-                        <td>selectall</td>
-                        <th>
-                            <kbd>Ctrl-l</kbd>
-                        </th>
-                        <td>gotoline</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Ctrl-f1</kbd>
-                            <br/>
-                            <kbd>Alt-l</kbd>
-                        </th>
-                        <td>fold</td>
-                        <th>
-                            <kbd>Ctrl-k</kbd>
-                        </th>
-                        <td>findnext</td>
-                        <th>
-                            <kbd>Ctrl-f</kbd>
-                        </th>
-                        <td>find</td>
-                        <th>
-                            <kbd>Ctrl-home</kbd>
-                        </th>
-                        <td>gotostart</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Ctrl-end</kbd>
-                        </th>
-                        <td>gotoend</td>
-                        <th>
-                            <kbd>Ctrl-left</kbd>
-                        </th>
-                        <td>gotowordleft</td>
-                        <th>
-                            <kbd>Ctrl-right</kbd>
-                        </th>
-                        <td>gotowordright</td>
-                        <th>
-                            <kbd>Ctrl-up</kbd>
-                        </th>
-                        <td>scrollup</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Ctrl-down</kbd>
-                        </th>
-                        <td>scrolldown</td>
-                        <th>
-                            <kbd>Ctrl-p</kbd>
-                        </th>
-                        <td>jumptomatching</td>
-                        <th>
-                            <kbd>Ctrl-d</kbd>
-                        </th>
-                        <td>removeline</td>
-                        <th>
-                            <kbd>Ctrl-/</kbd>
-                        </th>
-                        <td>togglecomment</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Ctrl-h</kbd>
-                        </th>
-                        <td>replace</td>
-                        <th>
-                            <kbd>Ctrl-z</kbd>
-                        </th>
-                        <td>undo</td>
-                        <th>
-                            <kbd>Ctrl-y</kbd>
-                            <br/>
-                            <kbd>Ctrl-Shift-z</kbd>
-                        </th>
-                        <td>redo</td>
-                        <th>
-                            <kbd>Ctrl-backspace</kbd>
-                        </th>
-                        <td>removewordleft</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Ctrl-delete</kbd>
-                        </th>
-                        <td>removewordright</td>
-                        <th>
-                            <kbd>Ctrl-[</kbd>
-                        </th>
-                        <td>blockoutdent</td>
-                        <th>
-                            <kbd>Ctrl-]</kbd>
-                        </th>
-                        <td>blockindent</td>
-                        <th>
-                            <kbd>Ctrl-t</kbd>
-                        </th>
-                        <td>transposeletters</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Ctrl-u</kbd>
-                        </th>
-                        <td>touppercase</td>
-                        <th>
-                            <kbd>Alt-0</kbd>
-                        </th>
-                        <td>foldOther</td>
-                        <th>
-                            <kbd>Alt-e</kbd>
-                        </th>
-                        <td>goToNextError</td>
-                        <th>
-                            <kbd>Alt-f2</kbd>
-                        </th>
-                        <td>toggleParentFoldWidget</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Alt-k</kbd>
-                        </th>
-                        <td>selectOrFindNext</td>
-                        <th>
-                            <kbd>Alt-up</kbd>
-                        </th>
-                        <td>movelinesup</td>
-                        <th>
-                            <kbd>Alt-down</kbd>
-                        </th>
-                        <td>movelinesdown</td>
-                        <th>
-                            <kbd>Alt-backspace</kbd>
-                        </th>
-                        <td>removetolinestart</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Alt-delete</kbd>
-                        </th>
-                        <td>removetolineend</td>
-                        <th>
-                            <kbd>Alt-/</kbd>
-                        </th>
-                        <td>startAutocomplete</td>
-                        <th>
-                            <kbd>Ctrl-Alt-0</kbd>
-                        </th>
-                        <td>foldall</td>
-                        <th>
-                            <kbd>Ctrl-Alt-e</kbd>
-                        </th>
-                        <td>togglerecording</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Ctrl-Alt-s</kbd>
-                        </th>
-                        <td>sortlines</td>
-                        <th>
-                            <kbd>Ctrl-Alt-up</kbd>
-                        </th>
-                        <td>addCursorAbove</td>
-                        <th>
-                            <kbd>Ctrl-Alt-down</kbd>
-                        </th>
-                        <td>addCursorBelow</td>
-                        <th>
-                            <kbd>Ctrl-Alt-left</kbd>
-                        </th>
-                        <td>selectMoreBefore</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Ctrl-Alt-right</kbd>
-                        </th>
-                        <td>selectMoreAfter</td>
-                        <th>
-                            <kbd>Ctrl-Alt-l</kbd>
-                        </th>
-                        <td>splitIntoLines</td>
-                        <th>
-                            <kbd>Ctrl-Alt-a</kbd>
-                        </th>
-                        <td>alignCursors</td>
-                        <th>
-                            <kbd>Ctrl-Alt-h</kbd>
-                        </th>
-                        <td>showKeyboardShortcuts</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Shift-up</kbd>
-                        </th>
-                        <td>selectup</td>
-                        <th>
-                            <kbd>Shift-down</kbd>
-                        </th>
-                        <td>selectdown</td>
-                        <th>
-                            <kbd>Shift-left</kbd>
-                        </th>
-                        <td>selectleft</td>
-                        <th>
-                            <kbd>Shift-right</kbd>
-                        </th>
-                        <td>selectright</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Shift-pagedown</kbd>
-                        </th>
-                        <td>selectpagedown</td>
-                        <th>
-                            <kbd>Shift-pageup</kbd>
-                        </th>
-                        <td>selectpageup</td>
-                        <th>
-                            <kbd>Shift-home</kbd>
-                        </th>
-                        <td>selectlinestart</td>
-                        <th>
-                            <kbd>Shift-end</kbd>
-                        </th>
-                        <td>selectlineend</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Shift-delete</kbd>
-                        </th>
-                        <td>cut_or_delete</td>
-                        <th>
-                            <kbd>Shift-tab</kbd>
-                        </th>
-                        <td>outdent</td>
-                        <th>
-                            <kbd>Ctrl-Shift-f1</kbd>
-                            <br/>
-                            <kbd>Alt-Shift-l</kbd>
-                        </th>
-                        <td>unfold</td>
-                        <th>
-                            <kbd>Ctrl-Shift-k</kbd>
-                        </th>
-                        <td>findprevious</td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <kbd>Ctrl-Shift-home</kbd>
-                        </th>
-                        <td>selecttostart</td>
-                        <th>
-                            <kbd>Ctrl-Shift-end</kbd>
-                        </th>
-                        <td>selecttoend</td>
-                        <th>
-                            <kbd>Ctrl-Shift-left</kbd>
-                        </th>
-                        <td>selectwordleft</td>
-                        <th>
-                            <kbd>Ctrl-Shift-right</kbd>
-                        </th>
-                        <td>selectwordright</td>
-                    </tr>
-                </table>
-            </div>
-            <br/>
-            <br/>
-            <h3 class="right-content-1">
-                <strong>教學影片</strong>
-            </h3>
-            <div class="line"></div>
-            <div style="display:table;" class="started-link">
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
-                    <a href="https://www.youtube.com/watch?v=N0iGh-GjCbg" target="_blank">
-                        <img alt="jQuery Mobile Designer" src="img/started/youtube_01.jpg" class="img-responsive" />
-                    </a>
-                    <p>
-                        <a href="https://www.youtube.com/watch?v=N0iGh-GjCbg" target="_blank">jQuery Mobile Designer</a>
-                    </p>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
-                    <a href="https://www.youtube.com/watch?v=N_nwdING5Bk" target="_blank">
-                        <img alt="jQuery Mobile - add Panel component" src="img/started/youtube_02.jpg" class="img-responsive" />
-                    </a>
-                    <p>
-                        <a href="https://www.youtube.com/watch?v=N_nwdING5Bk" target="_blank">jQuery Mobile - add Panel component</a>
-                    </p>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
-                    <a href="https://www.youtube.com/watch?v=N-NtIrqcW8U" target="_blank">
-                        <img alt="jQuery Mobile - add Popup Component" src="img/started/youtube_03.jpg" class="img-responsive" />
-                    </a>
-                    <p>
-                        <a href="https://www.youtube.com/watch?v=N-NtIrqcW8U" target="_blank">jQuery Mobile - add Popup Component</a>
-                    </p>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
-                    <a href="https://www.youtube.com/watch?v=gwJFWqNs-0I" target="_blank">
-                        <img alt="Drag and Drop Coding for jQuery Mobile" src="img/started/youtube_04.jpg" class="img-responsive" />
-                    </a>
-                    <p>
-                        <a href="https://www.youtube.com/watch?v=gwJFWqNs-0I" target="_blank">Drag and Drop Coding for jQuery Mobile</a>
-                    </p>
-                </div>
-            </div>
-            <h3 class="right-content-1">
-                <strong>範例分享</strong>
-            </h3>
-            <div class="line"></div>
-            <div style="display:table;" class="started-link">
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
-                    <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6301764928143360" target="_blank">
-                        <img alt="List View" src="img/started/02_ListView.png" class="img-responsive" />
-                    </a>
-                    <p style="text-align:center;">
-                        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6301764928143360" target="_blank">List View</a>
-                    </p>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
-                    <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank">
-                        <img alt="Springboard 1" src="img/started/04_Springboard.png" class="img-responsive" />
-                    </a>
-                    <p style="text-align:center;">
-                        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank">Springboard 1</a>
-                    </p>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
-                    <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5078785875509248" target="_blank">
-                        <img alt="Springboard 2" src="img/started/06_Springboard.png" class="img-responsive" />
-                    </a>
-                    <p style="text-align:center;">
-                        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5078785875509248" target="_blank">Springboard 2</a>
-                    </p>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
-                    <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">
-                        <img alt="Button Gallery" src="img/started/08_ButtonGallery.png" class="img-responsive" />
-                    </a>
-                    <p style="text-align:center;">
-                        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">Button Gallery</a>
-                    </p>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
-                    <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5682931108413440" target="_blank">
-                        <img alt="Drink" src="img/started/17_Drink.png" class="img-responsive" />
-                    </a>
-                    <p style="text-align:center;">
-                        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5682931108413440" target="_blank">Drink</a>
-                    </p>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
-                    <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5434314779000832" target="_blank">
-                        <img alt="Widget Interactive" src="img/started/23_WidgetInteractive.png" class="img-responsive" />
-                    </a>
-                    <p style="text-align:center;">
-                        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5434314779000832" target="_blank">Widget Interactive</a>
-                    </p>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
-                    <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6501098755981312" target="_blank">
-                        <img alt="Change Map" src="img/started/18_ChangeMap.png" class="img-responsive" />
-                    </a>
-                    <p style="text-align:center;">
-                        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6501098755981312" target="_blank">Change Map</a>
-                    </p>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
-                    <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5081027949101056" target="_blank">
-                        <img alt="swipe Page" src="img/started/20_swipePage.png" class="img-responsive" />
-                    </a>
-                    <p style="text-align:center;">
-                        <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5081027949101056" target="_blank">swipe Page</a>
-                    </p>
-                </div>
-            </div>
-            <br/>
-            <br/>
-        </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  navbar-right">
+        <ul class="nav navbar-nav top-menu">
+        </ul>
+      </div>
     </div>
+  </div>
 
-
-
-    <div class="container footer">
-        <div class="container">
-            <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
-                <ul class="footer-menu">
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
-                <ul class="social-menu">
-                </ul>
-            </div>
-        </div>
-        <div class="container copyright"></div>
+  <div class="container banner-content">
+    <div class="banner-content-text">
+      <h1>EZoApp 介紹</h1>
+      <h2>認識最方便實用的 App 開發工具</h2>
     </div>
+    <img src="img/img1_1.jpg" alt="EZoApp 快速開發行動 App 的利器" />
+  </div>
 
-    <!-- build:js js/vendor.js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <!-- endbuild -->
-    <!-- build:js({app,.tmp}) js/started.js -->
-    <script src="js/layout.js"></script>
-    <script src="js/banner.js"></script>
-    <script src="js/scrollpage.js"></script>
-    <!-- endbuild -->
-    <!-- Google 再营销代码 -->
-    <!-- ------------------------------------------------
+  <div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 left-menu">
+      <ul>
+        <li class="left-menu-1 active"><a>基本介紹</a>
+          <ul>
+            <li><a>1.主選單列</a>
+            </li>
+            <li><a>2.畫面編輯區域</a>
+            </li>
+            <li><a>3.屬性面板</a>
+            </li>
+            <li><a>4.元件工具列</a>
+            </li>
+            <li><a>5.程式碼編輯區域</a>
+            </li>
+            <li><a>6.頁面區域</a>
+            </li>
+          </ul>
+        </li>
+        <li class="left-menu-1"><a>元件庫</a>
+        </li>
+        <li class="left-menu-1"><a>熱鍵列表<span></span></a>
+        </li>
+        <li class="left-menu-1"><a>教學影片</a>
+        </li>
+        <li class="left-menu-1"><a>範例分享</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 right-content">
+      <h3 class="right-content-1">
+        <strong>EZoApp 基本操作介紹</strong>
+      </h3>
+      <div class="line"></div>
+      <p>普遍來說，要開發手機的 App，就得使用相關平台的開發程式來進行，若需進行跨平台的開發，更要耗費大量的時間成本，在後續的維護上也是一大挑戰。近年來隨著瀏覽器等級與效能的大幅躍進，HTML5 + JavaScript + CSS3 的前端技術竄起，許多前端框架與跨平台展現的語法，有如雨後春筍般的萌生，jQuery Mobile 便是一套建立於 jQuery 與 jQuery UI 的強健基礎上，提供行動裝置跨平台的使用者介面的系統，也是近幾年來最夯的技術之一。
+        <br/>在眾多編輯器當中，近年來迅速受到開發者喜愛與關注的 EZoApp ，便是由 jQuery Mobile 為基礎而誕生的開發工具，EZoApp 不僅一應俱全的保留了 jQuery Mobile 所具備的優勢和功能，更結合了 EZo 研發團隊多年的開發實戰和經驗，讓使用者在瀏覽器上工作，撰寫簡單的語法，打造出無限可能的創意能量和跨平台產品，除此之外，EZoApp 採用雲端的運算與儲存方式，讓開發者更能輕鬆共享自己的程式代碼，設計師也可毫不費力的編輯畫面或進行操作體驗規劃，彼此相得益彰，創造更省時省力的工作方式。
+        <br/>以下將針對 EZoApp 進行基本的操作介紹，讓大家體驗 EZoApp 前所未有的魅力與感動！
+        <br/>
+        <br/>
+        <img src="img/started/promote1_01.png" class="img-responsive" />這是 EZoApp 的操作畫面，整體的顏色採用程式開發常見的色彩配置 ( 深色底 + 高亮度程式碼 + 高彩度程式碼提示 )，對於工程師而言，這應該是這非常簡潔的模式，而對於設計師來說，這就是個所得的開發畫面，因為就如同在網頁設計工具一樣，你寫了什麼程式碼，拉進去什麼圖，都會即時的展現在編輯的區域內，相當的方便且實用。
+        <br/>因為畫面的編排還滿容易上手的，其實不太需要花太多的時間，就可以熟悉如何操作，以下就介紹各個操作區塊的功能：
+        <br/>
+        <br/>
+      </p>
+      <h4 class="right-content-1-1">
+        <strong>1. 主選單列</strong>
+      </h4>
+      <p style="margin-left:20px;">
+        <img src="img/started/promote1_13.png" class="img-responsive" />在最上方具有五個按鈕，就是 EZoApp 的主選單，從左而右分別為：「Device 的尺寸及方向」、「預覽模式 / 設計模式」、「改變主題樣式」、「線上 Gallery 說明」以及「發佈」
+        <br/>
+        <img src="img/started/promote1_02.png" class="img-responsive" style="margin-top:10px;" />滑鼠移到第一個「Device 的尺寸及方向」按鈕上方，會彈出下拉式選單，除了第一個選項可以把 Device 的方向做水平和垂直的旋轉外，其他的都是產生相對應的 Device 尺寸，點選後 Device 的編輯畫面就會即時的呈現出來。
+        <br/>
+        <img src="img/started/promote1_0304.png" class="img-responsive" style="margin-top:10px;" />點選第二個按鈕「預覽」，就可以由原本的設計模式，進入發佈到手機上的預覽模式 ( 按鈕的 icon 也會不同 )，同時使用者也可以直接在預覽模式檢查程式的串接是否正確。
+        <br/>
+        <img src="img/started/promote1_05.png" class="img-responsive" style="margin-top:10px;" />若使用者需要不同的元件主題，可以點選這個按鈕來進行主題樣式的切換，目前主要有兩種樣式供使用者選擇，一種是預設的樣式 ( Default Style )，一種為扁平化的設計 ( flat style )，當然，使用者也可以依據自己的喜好，修改相關的 CSS 就能夠調整。
+        <br/>
+        <img src="img/started/promote1_06.png" class="img-responsive" style="margin-top:10px;" />點選 Gallery 的按鈕，可以發現 EZoApp 非常貼心的提供了豐富詳細的教學說明，除了有二十幾種範例之外，更有教學影片提供使用者學習參考。
+        <br/>
+        <img src="img/started/promote1_07.png" class="img-responsive" style="margin-top:10px;" />發佈的這個按鈕應該是所有開發者最愛的按鈕，因為點選這個按鈕的時間點，通常都是開發到一定程度或或是專案完成的時間，這個按鈕點選後，不僅會帶出完整的程式碼讓使用者使用，更可以選擇是否輸出為 apk 的格式，幫使用者做了全方位的服務。
+      </p>
+      <h4 class="right-content-1-1">
+        <strong>2. 畫面編輯區域</strong>
+      </h4>
+      <p style="margin-left:20px;">
+        <img src="img/started/promote1_20.png" class="img-responsive" />編輯區域就如同畫布一樣，使用者撰寫了程式碼之後，在區域上會即時的呈現，使用者也可以直接使用拖拉的方式，將元件拖拉進入編輯區域當中 ( 此時程式碼也會自動產生元件的程式碼 )，目光除了停留在撰寫程式碼外，最常將目光焦點擺放的區域就是這個區域了。 雖然說編輯區域司空見慣，但真正有特色的地方，在於當我們對於編輯區域進行了尺寸大小的變換，或是水平垂直方向的變換，內容的元件也都會進行調整，不會因為變換方向、大小或移動，導致程式碼必須重新寫，我們甚至可以藉由改變大小或方向，來測試自己的程式或畫面是否可以適應各個平台喔！
+      </p>
+      <h4 class="right-content-1-1">
+        <strong>3. 屬性面板</strong>
+      </h4>
+      <p style="margin-left:20px;">
+        <img src="img/started/promote1_21.png" class="img-responsive" />屬性面板將編輯區域中各個元素的屬性值，忠實且赤裸裸的表現出來，讓使用者在不需要撰寫程式碼的情況下，愜意的控制元件與畫面，而豐富的屬性控制，還可以針對頁面之間的轉換去做選擇，直接從繁複的轉場效果中挑選合適的效果，甚至也可以選擇 icon 樣式，對於程式撰寫來說，可以大幅縮短開發的時程，同時藉由屬性面板與程式碼之間的連動，使用者也能快速學習上手。
+      </p>
+      <h4 class="right-content-1-1">
+        <strong>4. 元件工具列</strong>
+      </h4>
+      <p style="margin-left:20px;">
+        <img src="img/started/promote1_22.png" class="img-responsive" />要談到 EZoApp 的最大亮點，這些元件工具就當之無愧了！身為開發工具的主角，勢必擁有相當過人的能力，除了承襲自 jQuery Mobile 的基本元件外，也包含了 EZo 開發團隊自行研發的套件 ( 放在 3rd Party 的頁籤內 )，後面會將這些元件的清單列表，方便大家使用的時候查找。
+      </p>
+      <h4 class="right-content-1-1">
+        <strong>5. 程式碼編輯區域</strong>
+      </h4>
+      <p style="margin-left:20px;">
+        <img src="img/started/promote1_23.png" class="img-responsive" />EZoApp 的程式編輯器，是程式設計師所熟悉的簡潔畫面與配色。不過雖然簡潔，該有的仍然是應有盡有，例如針對不同程式碼 tag 的顏色提示、不同區塊程式碼的收合展現、程式碼字體大小的調配...等，都滿足了基本的開發需求，同時，三組分別為 HTML、JS、CSS 的頁籤也讓使用者方便切換，而三種程式碼的顏色也不同喔！高度展現了開發團隊的細心與用心良苦。
+        <br/>
+        <img src="img/started/promote1_12.png" class="img-responsive" />EZoApp 也因應 jQuery Mobile 版本的變更而做了設計，使用者只要利用下拉選單，就能夠切換不同的 jQuery Mobile 版本，如此在編輯上，也較不會因為版本的不同，導致產生的畫面有所出入。 還有一點令人感到驚奇，使用者可以自行由 jQuery Mobile 的網站，抓取相關套件的程式碼來貼入編輯，如果是 jQuery Mobile 的官方元件，程式碼貼進來之後，就會變成在編輯區域可以拖拉控制的元件，是不是非常神奇呢！
+      </p>
+      <h4 class="right-content-1-1">
+        <strong>6. 頁面區域</strong>
+      </h4>
+      <p style="margin-left:20px;">
+        <img src="img/started/promote1_10.png" class="img-responsive" />最後介紹剩下的一個區域：Pages，因為 jQuery Mobile 顧名思義是為了開發手機上可以運行的網頁或程式介面，而 EZoApp 也是秉持這個精神與架構來設計，因此 Page 就變得格外重要，「頁面區域」的編輯面板，提供給使用者一個方便編輯與檢索所有頁面的區域，使用者可以在這個區域瀏覽成果 ( 就如同 PowerPoint 左側的頁面一樣 )，也可以新增、編輯和移動頁面，也因為有了頁面的工具，編輯起來就會更為順手和迅速了。
+      </p>
+      <br/>
+      <br/>
+
+
+
+      <h3 class="right-content-1">
+        <strong>元件庫</strong>
+      </h3>
+      <div class="line"></div>
+      <h4>
+        <strong>1. jQuery Mobile 元件：</strong>
+      </h4>
+      <div class="table-responsive">
+        <table class="table table-bordered  table-striped component-table">
+          <tr>
+            <td>
+              <img src="img/started/promote1_22_01.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_02.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_03.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_04.png" />
+            </td>
+          </tr>
+          <tr>
+            <td>header</td>
+            <td>footer</td>
+            <td>grid</td>
+            <td>tabbar</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/started/promote1_22_05.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_06.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_07.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_08.png" />
+            </td>
+          </tr>
+          <tr>
+            <td>navbar</td>
+            <td>gk-text</td>
+            <td>text-input</td>
+            <td>range-input</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/started/promote1_22_09.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_10.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_11.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_12.png" />
+            </td>
+          </tr>
+          <tr>
+            <td>search-input</td>
+            <td>date-input</td>
+            <td>collapsible-set</td>
+            <td>icon</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/started/promote1_22_13.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_14.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_15.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_16.png" />
+            </td>
+          </tr>
+          <tr>
+            <td>button</td>
+            <td>listview</td>
+            <td>controlgroup-radio</td>
+            <td>controlgroup-checkbox</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/started/promote1_22_17.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_18.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_22_19.png" />
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>flipswitch</td>
+            <td>selectmenu</td>
+            <td>textarea-input</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <h4>
+        <strong>2. EZo 團隊開發 3rd Party 元件：</strong>
+      </h4>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped component-table">
+          <tr>
+            <td>
+              <img src="img/started/promote1_23_01.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_23_02.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_23_03.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_23_04.png" />
+            </td>
+          </tr>
+          <tr>
+            <td>youtube</td>
+            <td>gmap</td>
+            <td>image</td>
+            <td>raty</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/started/promote1_23_05.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_23_06.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_23_07.png" />
+            </td>
+            <td>
+              <img src="img/started/promote1_23_08.png" />
+            </td>
+          </tr>
+          <tr>
+            <td>bxslider</td>
+            <td>qrcode</td>
+            <td>mobipick</td>
+            <td>imggallery</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/started/promote1_23_09.png" />
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>json-listview</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3 class="right-content-1">
+        <strong>熱鍵列表</strong>
+      </h3>
+      <div class="line"></div>
+      <p>
+        在編輯程式碼的時候，往往需要熱鍵的輔助，來加速撰寫代碼的速度，下方列出 EZoApp 的熱鍵清單，除了可以從下方得知相關熱鍵外，如果在開發當中忘記了有哪些熱鍵，也可同時按下
+        <kbd>Ctrl</kbd>+
+        <kbd>Alt</kbd>+
+        <kbd>h</kbd>( 在 Mac 電腦上就按：
+        <kbd>Command</kbd>+
+        <kbd>Alt</kbd>+
+        <kbd>h</kbd>)，就可以開啟熱鍵代碼表。
+      </p>
+      <br/>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped shortcuts-table">
+          <tr>
+            <th>
+              <kbd>f2</kbd>
+            </th>
+            <td>toggleFoldWidget</td>
+            <th>
+              <kbd>insert</kbd>
+            </th>
+            <td>overwrite</td>
+            <th>
+              <kbd>up</kbd>
+            </th>
+            <td>golineup</td>
+            <th>
+              <kbd>down</kbd>
+            </th>
+            <td>golinedown</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Alt-left</kbd>
+              <br/>
+              <kbd>home</kbd>
+            </th>
+            <td>gotolinestart</td>
+            <th>
+              <kbd>left</kbd>
+            </th>
+            <td>gotoleft</td>
+            <th>
+              <kbd>Alt-right</kbd>
+              <br/>
+              <kbd>end</kbd>
+            </th>
+            <td>gotolineend</td>
+            <th>
+              <kbd>right</kbd>
+            </th>
+            <td>gotoright</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>pagedown</kbd>
+            </th>
+            <td>gotopagedown</td>
+            <th>
+              <kbd>pageup</kbd>
+            </th>
+            <td>gotopageup</td>
+            <th>
+              <kbd>delete</kbd>
+            </th>
+            <td>del</td>
+            <th>
+              <kbd>backspace</kbd>
+              <br/>
+              <kbd>Shift-backspace</kbd>
+            </th>
+            <td>backspace</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>tab</kbd>
+            </th>
+            <td>expandSnippet</td>
+            <th>
+              <kbd>Ctrl-,</kbd>
+            </th>
+            <td>showSettingsMenu</td>
+            <th>
+              <kbd>Ctrl-a</kbd>
+            </th>
+            <td>selectall</td>
+            <th>
+              <kbd>Ctrl-l</kbd>
+            </th>
+            <td>gotoline</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Ctrl-f1</kbd>
+              <br/>
+              <kbd>Alt-l</kbd>
+            </th>
+            <td>fold</td>
+            <th>
+              <kbd>Ctrl-k</kbd>
+            </th>
+            <td>findnext</td>
+            <th>
+              <kbd>Ctrl-f</kbd>
+            </th>
+            <td>find</td>
+            <th>
+              <kbd>Ctrl-home</kbd>
+            </th>
+            <td>gotostart</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Ctrl-end</kbd>
+            </th>
+            <td>gotoend</td>
+            <th>
+              <kbd>Ctrl-left</kbd>
+            </th>
+            <td>gotowordleft</td>
+            <th>
+              <kbd>Ctrl-right</kbd>
+            </th>
+            <td>gotowordright</td>
+            <th>
+              <kbd>Ctrl-up</kbd>
+            </th>
+            <td>scrollup</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Ctrl-down</kbd>
+            </th>
+            <td>scrolldown</td>
+            <th>
+              <kbd>Ctrl-p</kbd>
+            </th>
+            <td>jumptomatching</td>
+            <th>
+              <kbd>Ctrl-d</kbd>
+            </th>
+            <td>removeline</td>
+            <th>
+              <kbd>Ctrl-/</kbd>
+            </th>
+            <td>togglecomment</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Ctrl-h</kbd>
+            </th>
+            <td>replace</td>
+            <th>
+              <kbd>Ctrl-z</kbd>
+            </th>
+            <td>undo</td>
+            <th>
+              <kbd>Ctrl-y</kbd>
+              <br/>
+              <kbd>Ctrl-Shift-z</kbd>
+            </th>
+            <td>redo</td>
+            <th>
+              <kbd>Ctrl-backspace</kbd>
+            </th>
+            <td>removewordleft</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Ctrl-delete</kbd>
+            </th>
+            <td>removewordright</td>
+            <th>
+              <kbd>Ctrl-[</kbd>
+            </th>
+            <td>blockoutdent</td>
+            <th>
+              <kbd>Ctrl-]</kbd>
+            </th>
+            <td>blockindent</td>
+            <th>
+              <kbd>Ctrl-t</kbd>
+            </th>
+            <td>transposeletters</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Ctrl-u</kbd>
+            </th>
+            <td>touppercase</td>
+            <th>
+              <kbd>Alt-0</kbd>
+            </th>
+            <td>foldOther</td>
+            <th>
+              <kbd>Alt-e</kbd>
+            </th>
+            <td>goToNextError</td>
+            <th>
+              <kbd>Alt-f2</kbd>
+            </th>
+            <td>toggleParentFoldWidget</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Alt-k</kbd>
+            </th>
+            <td>selectOrFindNext</td>
+            <th>
+              <kbd>Alt-up</kbd>
+            </th>
+            <td>movelinesup</td>
+            <th>
+              <kbd>Alt-down</kbd>
+            </th>
+            <td>movelinesdown</td>
+            <th>
+              <kbd>Alt-backspace</kbd>
+            </th>
+            <td>removetolinestart</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Alt-delete</kbd>
+            </th>
+            <td>removetolineend</td>
+            <th>
+              <kbd>Alt-/</kbd>
+            </th>
+            <td>startAutocomplete</td>
+            <th>
+              <kbd>Ctrl-Alt-0</kbd>
+            </th>
+            <td>foldall</td>
+            <th>
+              <kbd>Ctrl-Alt-e</kbd>
+            </th>
+            <td>togglerecording</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Ctrl-Alt-s</kbd>
+            </th>
+            <td>sortlines</td>
+            <th>
+              <kbd>Ctrl-Alt-up</kbd>
+            </th>
+            <td>addCursorAbove</td>
+            <th>
+              <kbd>Ctrl-Alt-down</kbd>
+            </th>
+            <td>addCursorBelow</td>
+            <th>
+              <kbd>Ctrl-Alt-left</kbd>
+            </th>
+            <td>selectMoreBefore</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Ctrl-Alt-right</kbd>
+            </th>
+            <td>selectMoreAfter</td>
+            <th>
+              <kbd>Ctrl-Alt-l</kbd>
+            </th>
+            <td>splitIntoLines</td>
+            <th>
+              <kbd>Ctrl-Alt-a</kbd>
+            </th>
+            <td>alignCursors</td>
+            <th>
+              <kbd>Ctrl-Alt-h</kbd>
+            </th>
+            <td>showKeyboardShortcuts</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Shift-up</kbd>
+            </th>
+            <td>selectup</td>
+            <th>
+              <kbd>Shift-down</kbd>
+            </th>
+            <td>selectdown</td>
+            <th>
+              <kbd>Shift-left</kbd>
+            </th>
+            <td>selectleft</td>
+            <th>
+              <kbd>Shift-right</kbd>
+            </th>
+            <td>selectright</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Shift-pagedown</kbd>
+            </th>
+            <td>selectpagedown</td>
+            <th>
+              <kbd>Shift-pageup</kbd>
+            </th>
+            <td>selectpageup</td>
+            <th>
+              <kbd>Shift-home</kbd>
+            </th>
+            <td>selectlinestart</td>
+            <th>
+              <kbd>Shift-end</kbd>
+            </th>
+            <td>selectlineend</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Shift-delete</kbd>
+            </th>
+            <td>cut_or_delete</td>
+            <th>
+              <kbd>Shift-tab</kbd>
+            </th>
+            <td>outdent</td>
+            <th>
+              <kbd>Ctrl-Shift-f1</kbd>
+              <br/>
+              <kbd>Alt-Shift-l</kbd>
+            </th>
+            <td>unfold</td>
+            <th>
+              <kbd>Ctrl-Shift-k</kbd>
+            </th>
+            <td>findprevious</td>
+          </tr>
+          <tr>
+            <th>
+              <kbd>Ctrl-Shift-home</kbd>
+            </th>
+            <td>selecttostart</td>
+            <th>
+              <kbd>Ctrl-Shift-end</kbd>
+            </th>
+            <td>selecttoend</td>
+            <th>
+              <kbd>Ctrl-Shift-left</kbd>
+            </th>
+            <td>selectwordleft</td>
+            <th>
+              <kbd>Ctrl-Shift-right</kbd>
+            </th>
+            <td>selectwordright</td>
+          </tr>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <h3 class="right-content-1">
+        <strong>教學影片</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;" class="started-link">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
+          <a href="https://www.youtube.com/watch?v=N0iGh-GjCbg" target="_blank">
+            <img alt="jQuery Mobile Designer" src="img/started/youtube_01.jpg" class="img-responsive" />
+          </a>
+          <p>
+            <a href="https://www.youtube.com/watch?v=N0iGh-GjCbg" target="_blank">jQuery Mobile Designer</a>
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
+          <a href="https://www.youtube.com/watch?v=N_nwdING5Bk" target="_blank">
+            <img alt="jQuery Mobile - add Panel component" src="img/started/youtube_02.jpg" class="img-responsive" />
+          </a>
+          <p>
+            <a href="https://www.youtube.com/watch?v=N_nwdING5Bk" target="_blank">jQuery Mobile - add Panel component</a>
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
+          <a href="https://www.youtube.com/watch?v=N-NtIrqcW8U" target="_blank">
+            <img alt="jQuery Mobile - add Popup Component" src="img/started/youtube_03.jpg" class="img-responsive" />
+          </a>
+          <p>
+            <a href="https://www.youtube.com/watch?v=N-NtIrqcW8U" target="_blank">jQuery Mobile - add Popup Component</a>
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
+          <a href="https://www.youtube.com/watch?v=gwJFWqNs-0I" target="_blank">
+            <img alt="Drag and Drop Coding for jQuery Mobile" src="img/started/youtube_04.jpg" class="img-responsive" />
+          </a>
+          <p>
+            <a href="https://www.youtube.com/watch?v=gwJFWqNs-0I" target="_blank">Drag and Drop Coding for jQuery Mobile</a>
+          </p>
+        </div>
+      </div>
+      <h3 class="right-content-1">
+        <strong>範例分享</strong>
+      </h3>
+      <div class="line"></div>
+      <div style="display:table;" class="started-link">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6301764928143360" target="_blank">
+            <img alt="List View" src="img/started/02_ListView.png" class="img-responsive" />
+          </a>
+          <p style="text-align:center;">
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6301764928143360" target="_blank">List View</a>
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank">
+            <img alt="Springboard 1" src="img/started/04_Springboard.png" class="img-responsive" />
+          </a>
+          <p style="text-align:center;">
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5752447301582848" target="_blank">Springboard 1</a>
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5078785875509248" target="_blank">
+            <img alt="Springboard 2" src="img/started/06_Springboard.png" class="img-responsive" />
+          </a>
+          <p style="text-align:center;">
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5078785875509248" target="_blank">Springboard 2</a>
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">
+            <img alt="Button Gallery" src="img/started/08_ButtonGallery.png" class="img-responsive" />
+          </a>
+          <p style="text-align:center;">
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6230094909538304" target="_blank">Button Gallery</a>
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5682931108413440" target="_blank">
+            <img alt="Drink" src="img/started/17_Drink.png" class="img-responsive" />
+          </a>
+          <p style="text-align:center;">
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5682931108413440" target="_blank">Drink</a>
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5434314779000832" target="_blank">
+            <img alt="Widget Interactive" src="img/started/23_WidgetInteractive.png" class="img-responsive" />
+          </a>
+          <p style="text-align:center;">
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5434314779000832" target="_blank">Widget Interactive</a>
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6501098755981312" target="_blank">
+            <img alt="Change Map" src="img/started/18_ChangeMap.png" class="img-responsive" />
+          </a>
+          <p style="text-align:center;">
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=6501098755981312" target="_blank">Change Map</a>
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 icon-center">
+          <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5081027949101056" target="_blank">
+            <img alt="swipe Page" src="img/started/20_swipePage.png" class="img-responsive" />
+          </a>
+          <p style="text-align:center;">
+            <a href="http://jqmdesigner.appspot.com/designer.html#&ref=5081027949101056" target="_blank">swipe Page</a>
+          </p>
+        </div>
+      </div>
+      <br/>
+      <br/>
+    </div>
+  </div>
+
+
+
+  <div class="container footer">
+    <div class="container">
+      <div class="col-sm-12 col-md-8 col-lg-8 icon-center">
+        <ul class="footer-menu">
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 icon-center footer-social-logo">
+        <ul class="social-menu">
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright"></div>
+  </div>
+
+  <!-- build:js js/vendor.js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbuild -->
+  <!-- build:js({app,.tmp}) js/started.js -->
+  <script src="js/layout.js"></script>
+  <script src="js/banner.js"></script>
+  <script src="js/scrollpage.js"></script>
+  <!-- endbuild -->
+  <!-- Google 再营销代码 -->
+  <!-- ------------------------------------------------
 再营销代码不得与个人身份信息相关联，也不得放置在与敏感类别相关的网页上。有关如何设置代码的详细信息和说明，请访问：http://google.com/ads/remarketingsetup
 ------------------------------------------------- -->
-    <script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 962590563;
-    var google_custom_params = window.google_tag_params;
-    var google_remarketing_only = true;
-    /* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
-        </div>
-    </noscript>
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 962590563;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
+    </div>
+  </noscript>
 
 </body>
 

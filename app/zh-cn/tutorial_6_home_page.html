@@ -7,9 +7,20 @@
   <meta http-equiv="pragma" content="no-cache">
   <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
   <meta name="application-name" content="EZoApp - 快速开发行动 App 的最佳工具" />
-  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 开发行动 App 的云端服务，非常适合用来快速打造 App、行动组件与用户接口，同时支持前端技术的开发与学习。">
-  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,云端平台,数据,组件,脚本,云端,软件,开发,工具,行动,触控,响应式,手机,平板,移动" />
-  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts"/>
+
+  <meta itemprop="name" content="EZoApp 教学实作- 打造入口页面">  
+  <meta itemprop="image" content="http://www.ezoui.c​​om/app/img/tutorial/tutorial_6_home_page_01.png">  
+  <meta itemprop="description" content="EZoApp 这套云端开发工具，运用它提供的现成元件​​，拖拉进入画面，藉由简单的程式码编撰( 有的画面甚至不需要)，就可以轻轻松松排列出合适的画面。">  
+
+  <meta name="d​​escription" content="EZoApp 这套云端开发工具，运用它提供的现成元件​​，拖拉进入画面，藉由简单的程式码编撰( 有的画面甚至不需要)，就可以轻轻松松排列出合适的画面。">  
+  <meta name="keywords" content="App,Mobile,jQuery,jQuery Mobile,HTML5,入口页面,设计" />  
+
+  <meta property="og:title" content="EZoApp 教学实作- 打造入口页面">  
+  <meta property="og:url" content="http://www.ezoui.c​​om/app/tutorial_6_home_page.html">  
+  <meta property="og:imag​​e" content="http://www.ezoui.c​​om/app/img/tutorial/tutorial_6_home_page_01.png">  
+  <meta property="og:description" content="EZoApp 这套云端开发工具，运用它提供的现成元件​​，拖拉进入画面，藉由简单的程式码编撰( 有的画面甚至不需要)，就可以轻轻松松排列出合适的画面。">
+
+  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
   <!-- build:css css/vendor.css -->
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
   <!-- endbuild -->
@@ -88,9 +99,9 @@
         <strong>二、利用属性面板修改属性</strong>
       </h5>
       <p>这里我们使用属性面板来编辑
-        <kbd>grid</kbd> 这个组件的属性，我们就可以设定
-        <kbd>grid</kbd> 的字段是一栏还是两栏，若是需要有两列以上，就直接再新增一个
-        <kbd>grid</kbd> 就可以啰！
+        <kbd>grid</kbd>这个组件的属性，我们就可以设定
+        <kbd>grid</kbd>的字段是一栏还是两栏，若是需要有两列以上，就直接再新增一个
+        <kbd>grid</kbd>就可以啰！
       </p>
       <img alt="利用属性面板修改属性" src="../img/tutorial/tutorial_6_home_page_03.gif" class="img-responsive" />
       <br/>
@@ -98,7 +109,7 @@
         <strong>三、塞入文字</strong>
       </h5>
       <p>我们同样利用拖拉的方式，就可以轻松的把文字加入到
-        <kbd>grid</kbd> 里头，点选文字，就可以进行编辑，不过这边有个要注意的地方，拖曳进来的文字默认为 h1 的字体大小且靠右对齐，因此我们可以将 h1 标签加入 style=”text-align:center’”，就能够让文字置中啰！
+        <kbd>grid</kbd>里头，点选文字，就可以进行编辑，不过这边有个要注意的地方，拖曳进来的文字默认为 h1 的字体大小且靠右对齐，因此我们可以将 h1 标签加入 style=”text-align:center’”，就能够让文字置中啰！
       </p>
       <pre>&lth1 <strong>style="text-align:center;"</strong>&gt文字&lt/h1&gt</pre>
       <img alt="塞入文字" src="../img/tutorial/tutorial_6_home_page_04.gif" class="img-responsive" />
@@ -107,7 +118,7 @@
         <strong>四、加入图片</strong>
       </h5>
       <p>关于图片的加载，我们这里使用了3rd Party 里头的
-        <kbd>image</kbd> 组件，不过因为该组件的默认宽度为 100%，高度为 250px，所以拖拉进入画面后会有变形的现象，不过我们只要手动进行修改宽高，并且填入所需的图片网址，就可以轻松的产生合适大小的图片。
+        <kbd>image</kbd>组件，不过因为该组件的默认宽度为 100%，高度为 250px，所以拖拉进入画面后会有变形的现象，不过我们只要手动进行修改宽高，并且填入所需的图片网址，就可以轻松的产生合适大小的图片。
       </p>
       <img alt="加入图片" src="../img/tutorial/tutorial_6_home_page_05.gif" class="img-responsive" />
       <br/>
@@ -115,10 +126,10 @@
         <strong>五、修改 header 与 footer 的主题样式</strong>
       </h5>
       <p>
-        <kbd>header</kbd> 与
-        <kbd>footer</kbd> 组件，是使用 jQuery Mobile 的基本组件，因此我们只要在
-        <kbd>header</kbd> 和
-        <kbd>footer</kbd> 的标签内，分别加入 data-theme="b" 的一小段程序代码，就可以把样式进行更换。
+        <kbd>header</kbd>与
+        <kbd>footer</kbd>组件，是使用 jQuery Mobile 的基本组件，因此我们只要在
+        <kbd>header</kbd>和
+        <kbd>footer</kbd>的标签内，分别加入 data-theme="b" 的一小段程序代码，就可以把样式进行更换。
       </p>
       <pre>&ltdiv data-role="header" data-position="fixed" <strong>data-theme="b"</strong>&gt<br/>    &lth3&gt我是 Header &lt/h3&gt<br/>&lt/div&gt</pre> 
       <img alt="修改 header 与 footer 的主题样式" src="../img/tutorial/tutorial_6_home_page_06.gif" class="img-responsive" />
@@ -170,24 +181,24 @@
   <script src="../js/layout.js"></script>
   <script src="../js/banner.js"></script>
   <!-- endbuild -->
-    <!-- Google 再营销代码 -->
-    <!-- ------------------------------------------------
+  <!-- Google 再营销代码 -->
+  <!-- ------------------------------------------------
 再营销代码不得与个人身份信息相关联，也不得放置在与敏感类别相关的网页上。有关如何设置代码的详细信息和说明，请访问：http://google.com/ads/remarketingsetup
 ------------------------------------------------- -->
-    <script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 962590563;
-    var google_custom_params = window.google_tag_params;
-    var google_remarketing_only = true;
-    /* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
-        </div>
-    </noscript>
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 962590563;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
+    </div>
+  </noscript>
 
 </body>
 

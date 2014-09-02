@@ -7,9 +7,20 @@
   <meta http-equiv="pragma" content="no-cache">
   <meta name="copyright" content="Copyright (c) by www.ezoui.com" />
   <meta name="application-name" content="EZoApp - 快速开发行动 App 的最佳工具" />
-  <meta name="description" content="EZoApp 是一套以 HTML5、jQuery Mobile 开发行动 App 的云端服务，非常适合用来快速打造 App、行动组件与用户接口，同时支持前端技术的开发与学习。">
-  <meta name="keywords" content="EZo,EZoApp,App,Mobile,Pad,Phone,jQuery,jQuery Mobile,Codiqa,HTML5,AJAX,XML,Cross Browsers,RIA,Smart Phone,iPhone,iOS,Android,Tablet,iPad,Java,.NET,PHP,JavaScript,JSON,EventBus,SpringBean,Cloud IDE,WYSIWYG,BeanScript,String,field,UX,云端平台,数据,组件,脚本,云端,软件,开发,工具,行动,触控,响应式,手机,平板,移动" />
-  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts"/>
+
+  <meta itemprop="name" content="EZoApp 教学实作- Google 地图应用">  
+  <meta itemprop="image" content="http://www.ezoui.c​​om/app/img/tutorial/tutorial_js_1_googlemap_01.png">  
+  <meta itemprop="description" content="让我们使用EZoApp，以最快的速度来做出Google 地图的应用程式吧！">  
+
+  <meta name="d​​escription" content="让我们使用EZoApp，以最快的速度来做出Google 地图的应用程式吧！">  
+  <meta name="keywords" content="App,Mobile,jQuery,jQuery Mobile,google,google map,地图" />  
+
+  <meta property="og:title" content="EZoApp 教学实作- Google 地图应用">  
+  <meta property="og:url" content="http://www.ezoui.c​​om/app/tutorial_js_1_googlemap.html">  
+  <meta property="og:imag​​e" content="http://www.ezoui.c​​om/app/img/tutorial/tutorial_js_1_googlemap_01.png">  
+  <meta property="og:description" content="让我们使用EZoApp，以最快的速度来做出Google 地图的应用程式吧！">
+
+  <link rel="author" href="https://plus.google.com/u/0/b/117990746163074166131/117990746163074166131/posts" />
   <!-- build:css css/vendor.css -->
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
   <!-- endbuild -->
@@ -82,7 +93,7 @@
         <strong>一、使用 navbar 组件制作按钮页签</strong>
       </h5>
       <p>
-        <kbd>navber</kbd> 组件是常用的组件之一，顾名思义就是一个导览页签的组件，这个组件的程序代码也很简单，有几个按钮就有几个 &ltli&gt&lta&gt&lt/a&gt&lt/li&gt，如果有多个按钮需求的用户，就自行添加就会自动长出按钮。
+        <kbd>navber</kbd>组件是常用的组件之一，顾名思义就是一个导览页签的组件，这个组件的程序代码也很简单，有几个按钮就有几个 &ltli&gt&lta&gt&lt/a&gt&lt/li&gt，如果有多个按钮需求的用户，就自行添加就会自动长出按钮。
       </p>
       <img alt="使用 navbar 组件制作按钮页签" src="../img/tutorial/tutorial_js_1_googlemap_02.gif" class="img-responsive" />
       <br/>
@@ -90,8 +101,8 @@
         <strong>二、使用 gmap 组件，建立地图</strong>
       </h5>
       <p>
-        <kbd>gmap</kbd> 组件是 EZo 研发团队 所开发的组件，让用户可以简单迅速的创造地图，使用的方式也相当简单，在组件的面版中，选择 3rd Party 的组件，接着选择 gmap 组件，拖曳进入画面后，进行长宽尺寸的编辑，不过
-        <kbd>gmap</kbd> 组件不只有长宽尺寸的功能，你还可以改变 zoom 的数值控制地图缩放的大小数字越大地图放的越大，也可以由 address 来指定地图置中的地点，是不是相当的方便呢！
+        <kbd>gmap</kbd>组件是 EZo 研发团队 所开发的组件，让用户可以简单迅速的创造地图，使用的方式也相当简单，在组件的面版中，选择 3rd Party 的组件，接着选择 gmap 组件，拖曳进入画面后，进行长宽尺寸的编辑，不过
+        <kbd>gmap</kbd>组件不只有长宽尺寸的功能，你还可以改变 zoom 的数值控制地图缩放的大小数字越大地图放的越大，也可以由 address 来指定地图置中的地点，是不是相当的方便呢！
       </p>
       <pre>&ltdiv is="gmap" style="width:100%;height:200px;" <strong>zoom="12" address="Qianzhen, TW"</strong>&gt&lt/div&gt</pre>
       <img alt="使用 gmap 组件，建立地图" src="../img/tutorial/tutorial_js_1_googlemap_03.gif" class="img-responsive" />
@@ -100,7 +111,7 @@
         <strong>三、贴上这串程序代码，地图程序完成！</strong>
       </h5>
       <p>光是放上组件就想要让按钮和地图连动？说真的这实在有点难度，不过 EZoApp 已经帮我们把门坎大大的降低，只要把
-        <kbd>navbar</kbd> 的页签改成都市的名称，然后在 JS 的页签贴上下列这串程序代码，地图就会按照我们点选的都市，跳转到以该都市为中心的地点啰！
+        <kbd>navbar</kbd>的页签改成都市的名称，然后在 JS 的页签贴上下列这串程序代码，地图就会按照我们点选的都市，跳转到以该都市为中心的地点啰！
       </p>
       <pre>$(document).on('pageinit', function () {    // 页面开始时要执行的程序<br/>  $('#map_btn').on('click', function (e) {  // 点下 navbar 按钮时要执行的程序<br/>    var addr = $(e.target).text();          // 读取现在按下按钮的都市名称<br/>    $('#map').gk('address', addr);          // 以该都市为中心点显示在地图上<br/>  });<br/>});</pre>
       <br/>
@@ -150,24 +161,24 @@
   <script src="../js/layout.js"></script>
   <script src="../js/banner.js"></script>
   <!-- endbuild -->
-    <!-- Google 再营销代码 -->
-    <!-- ------------------------------------------------
+  <!-- Google 再营销代码 -->
+  <!-- ------------------------------------------------
 再营销代码不得与个人身份信息相关联，也不得放置在与敏感类别相关的网页上。有关如何设置代码的详细信息和说明，请访问：http://google.com/ads/remarketingsetup
 ------------------------------------------------- -->
-    <script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 962590563;
-    var google_custom_params = window.google_tag_params;
-    var google_remarketing_only = true;
-    /* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
-        </div>
-    </noscript>
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 962590563;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962590563/?value=0&amp;guid=ON&amp;script=0" />
+    </div>
+  </noscript>
 
 </body>
 
