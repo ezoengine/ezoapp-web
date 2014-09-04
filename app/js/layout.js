@@ -4,12 +4,6 @@ $(function() {
   $('body').append(
     '<div id="gotoTop" title="back to top"></div>'
   );
-  $('#gotoTop').on('click', function() {
-    $('html,body').not(':animated').animate({
-      'scrollTop': '0'
-    }, 900);
-    ga('send', 'event', 'gotoTop', 'click', 'nav buttons', 4);
-  });
 
   var webUrl, twUrl, cnUrl, enUrl,
     nowUrl = location.href,
@@ -133,6 +127,16 @@ $(function() {
       }
     }
   }
+  /* GA */
+  $('.GAbtn').on('click', function() {
+    var gaName = $(this).attr('ga')
+    ga('send', 'event', gaName, 'click', nowUrl, 4);
+  });
+  $('#gotoTop').on('click', function() {
+    $('html,body').not(':animated').animate({
+      'scrollTop': '0'
+    }, 900);
+  });
 
   /* 判斷頁面讓主選單變色 */
   $('.top-menu li[page=' + $('body').attr('page') + ']').addClass('active').find('a').removeAttr('href');
@@ -192,6 +196,7 @@ $(function() {
     </script>"
   );
 
+
   /* 繁體中文 */
 
   function fn_zh_tw() {
@@ -203,7 +208,7 @@ $(function() {
     /* 上方主選單 */
     $('.top-menu').append(
       '<li page="index"><a href="index.html">首頁</a></li>' +
-      '<li page="play"><a href="http://jqmdesigner.appspot.com" target="_blank">立刻體驗</a></li>' +
+      '<li page="play"><a href="http://jqmdesigner.appspot.com" target="_blank" class="GAbtn" ga="EZoApp">立刻體驗</a></li>' +
       '<li page="started"><a href="started.html">基本介紹</a></li>' +
       '<li page="tutorial"><a href="tutorial_1_basic_grid.html">教學實作</a></li>' +
       '<li page="aboutus"><a href="aboutus.html">關於我們</a></li>' +
@@ -225,7 +230,7 @@ $(function() {
     /* footer選單 */
     $('.footer-menu').append(
       '<li page="index"><a href="index.html">首頁</a></li>' +
-      '<li page="plays"><a href="http://jqmdesigner.appspot.com" target="_blank">立刻體驗</a></li>' +
+      '<li page="plays"><a href="http://jqmdesigner.appspot.com" target="_blank" class="GAbtn"  ga="EZoApp">立刻體驗</a></li>' +
       '<li page="started"><a href="started.html">基本介紹</a></li>' +
       '<li page="tutorial"><a href="tutorial_1_basic_grid.html">教學實作</a></li>' +
       '<li page="aboutus"><a href="aboutus.html">關於我們</a></li>' +
@@ -252,7 +257,7 @@ $(function() {
     /* 上方主选单 */
     $('.top-menu').append(
       '<li page="index"><a href="index.html">首页</a></li>' +
-      '<li page="play"><a href="http://jqmdesigner.appsp0t.com" target="_blank">立刻体验</a></li>' +
+      '<li page="play"><a href="http://jqmdesigner.appsp0t.com" target="_blank" class="GAbtn"  ga="EZoApp">立刻体验</a></li>' +
       '<li page="started"><a href="started.html">基本介绍</a></li>' +
       '<li page="tutorial"><a href="tutorial_1_basic_grid.html">教学实作</a></li>' +
       '<li page="aboutus"><a href="aboutus.html">关于我们</a></li>' +
@@ -274,7 +279,7 @@ $(function() {
     /* footer选单 */
     $('.footer-menu').append(
       '<li page="index"><a href="index.html">首页</a></li>' +
-      '<li page="plays"><a href="http://jqmdesigner.appsp0t.com" target="_blank">立刻体验</a></li>' +
+      '<li page="plays"><a href="http://jqmdesigner.appsp0t.com" target="_blank" class="GAbtn" ga="EZoApp">立刻体验</a></li>' +
       '<li page="started"><a href="started.html">基本介绍</a></li>' +
       '<li page="tutorial"><a href="tutorial_1_basic_grid.html">教学实作</a></li>' +
       '<li page="aboutus"><a href="aboutus.html">关于我们</a></li>' +
@@ -301,7 +306,7 @@ $(function() {
     /* top menu */
     $('.top-menu').append(
       '<li page="index"><a href="index.html">Home</a></li>' +
-      '<li page="play"><a href="http://jqmdesigner.appspot.com" target="_blank">Try</a></li>' +
+      '<li page="play"><a href="http://jqmdesigner.appspot.com" target="_blank" class="GAbtn" ga="EZoApp">Try</a></li>' +
       '<li page="started"><a href="started.html">Get Started</a></li>' +
       '<li page="tutorial"><a href="tutorial_1_basic_grid.html">Tutorial</a></li>' +
       '<li page="aboutus"><a href="aboutus.html">About</a></li>' +
@@ -323,7 +328,7 @@ $(function() {
     /* footer */
     $('.footer-menu').append(
       '<li page="index"><a href="index.html">Home</a></li>' +
-      '<li page="plays"><a href="http://jqmdesigner.appspot.com" target="_blank">Try</a></li>' +
+      '<li page="plays"><a href="http://jqmdesigner.appspot.com" target="_blank" class="GAbtn" ga="EZoApp">Try</a></li>' +
       '<li page="started"><a href="started.html">Get Started</a></li>' +
       '<li page="tutorial"><a href="tutorial_1_basic_grid.html">Tutorial</a></li>' +
       '<li page="aboutus"><a href="aboutus.html">About</a></li>' +
