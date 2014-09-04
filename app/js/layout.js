@@ -132,6 +132,11 @@ $(function() {
     var gaName = $(this).attr('ga')
     ga('send', 'event', gaName, 'click', nowUrl, 4);
   });
+  $(window).scroll(function(){
+    ga('send', 'event', 'scroll', 'page', nowUrl, 4);
+  });
+
+  /* gotoTop button*/
   $('#gotoTop').on('click', function() {
     $('html,body').not(':animated').animate({
       'scrollTop': '0'
